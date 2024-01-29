@@ -6,6 +6,32 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
+    fontSize: {
+      title: ['48px'],
+      heading1: ['36px'],
+      heading2: ['24px'],
+      heading3: ['20px'],
+      subtitle: ['20px'],
+      subheading: ['18px'],
+      button: ['14px'],
+      normal: ['16px'],
+      semibold: ['16px'],
+      captionBig: ['14px'],
+      captionSmall: ['12px'],
+    },
+    fontWeight: {
+      title: 700,
+      heading1: 600,
+      heading2: 700,
+      heading3: 600,
+      subtitle: 400,
+      subheading: 400,
+      button: 600,
+      normal: 400,
+      semibold: 600,
+      captionBig: 500,
+      captionSmall: 400,
+    },
     extend: {
       colors: {
         brand: {
