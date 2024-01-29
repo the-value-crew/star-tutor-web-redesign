@@ -56,6 +56,10 @@ module.exports = {
           100: '#f4c9c5',
           800: '#eb4d3d',
         },
+        cta: {
+          default: '#d93726',
+          800: '#eb4d3d',
+        },
       },
       textColor: (theme) => ({
         primary: theme('colors.grey.900'),
