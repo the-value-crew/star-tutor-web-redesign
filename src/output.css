@@ -1091,6 +1091,18 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'\.\.\/images\/books\.png\'\)\]{
+  background-image: url('../images/books.png');
+}
+
+.bg-\[url\(\'src\/images\/books\.png\'\)\]{
+  background-image: url('src/images/books.png');
+}
+
+.bg-\[url\(\'\/src\/images\/books\.png\'\)\]{
+  background-image: url('/src/images/books.png');
+}
+
 .from-\[\#EEEEBB\]{
   --tw-gradient-from: #EEEEBB var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(238 238 187 / 0) var(--tw-gradient-to-position);
