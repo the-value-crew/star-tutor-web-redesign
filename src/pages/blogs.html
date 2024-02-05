@@ -3,36 +3,252 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../output.css" rel="stylesheet" />
-
-    <title>Blogs</title>
+    <title>About</title>
+    <link rel="stylesheet" href="../output.css" />
   </head>
   <body>
-    <nav
-      class="bg-[#121212] border border-solid border-[#393939] text-secondary-dark flex text-sm font-medium justify-around h-[74px] py-4"
-    >
-      <img
-        src="../images/theStarTutorLogo.png"
-        class="w-[166px] h-[31px] flex-shrink-0"
-      />
-      <div class="flex gap-[12px] items-center">
-        <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
-        <a class="py-[4px] px-[8px]" href="./src/pages/about.html">About</a>
-        <a class="py-[4px] px-[8px]" href="./src/pages/reviews.html">Reviews</a>
-        <a class="py-[4px] px-[8px] text-brand" href="#">Blogs</a>
-        <a class="py-[4px] px-[8px]" href="./src/pages/contact.html">Contact</a>
-        <a class="py-[4px] px-[8px]" href="./src/pages/whyUs.html"
-          >Why Choose Us?</a
-        >
-      </div>
-      <div>
+    <header class="bg-[#121212]">
+      <nav
+        class="container text-secondary-dark flex text-sm font-medium justify-around h-[74px] py-4"
+      >
+        <img
+          src="../images/theStarTutorLogo.png"
+          class="w-[166px] h-[31px] flex-shrink-0"
+        />
+        <div class="flex gap-[12px] items-center">
+          <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
+          <a class="py-[4px] px-[8px]" href="./about.html">About</a>
+          <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
+          <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
+          <a class="py-[4px] px-[8px]" href="./contact.html">Contact</a>
+          <a class="py-[4px] px-[8px] text-brand" href="#">Why Choose Us?</a>
+        </div>
         <button
           class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
         >
           Book A Free Consultation
         </button>
+      </nav>
+    </header>
+
+    <main>
+        <section class="flex flex-col justify-center items-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../images/about-bg.png'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
+            <div class="w-[1084px] text-primary-dark">
+                <p class="text-title font-title">Access Resources in The</p>
+                <p class="text-title font-title">Star Tutor's <span class="text-brand">Blog</span></p>
+            </div>
+        </section>
+
+        <section class="flex justify-center items-start">
+            <div class="mt-[90px] flex">
+                <div class="w-[45rem] flex flex-col justify-center pr-[56px]">
+                    <div class="flex gap-5 border-b-[1px]">
+                        <button class="text-button font-button border-b-2 text-[#D93726]">All</button>
+                        <button>GMAT</button>
+                        <button>ACT & SAT</button>
+                        <button>GRE</button>
+                        <button>ACT & SAT</button>
+                        <button>ACT & SAT</button>
+                    </div>
+
+                    <div class="flex flex-col my-[16px] gap-[20px]">
+                        <div class="border-2 border-grey-200 rounded-lg">
+                            <img class="w-full h-[304px] rounded-t-lg object-cover" src="../images/stress.png" />
+                            <div class="mt-[16px] px-[20px]">
+                                <h2 class="text-heading2 font-heading2">What GMAT and GRE tests feel like and what you can do about it</h2>
+                                <p>The cartoon above very closely depicts what it feels like taking the GMAT or the GRE. I am using metaphors to help you unders...</p>
+                            </div>
+                            <div class="flex flex-col px-[20px] pb-[20px]">
+                                <div class="flex items-center gap-[8px] mt-[10px]">
+                                    <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                                    <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] mt-[16px]">
+                                    <div class="flex items-center gap-[4px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M17.7077 6.2567V11.7626C17.7077 12.1965 17.6223 12.6261 17.4562 13.0269C17.2902 13.4276 17.0468 13.7919 16.7401 14.0986C16.4333 14.4054 16.0691 14.6487 15.6683 14.8147C15.2675 14.9807 14.8379 15.0662 14.4041 15.0662H12.2018L10.3848 16.8831C10.3353 16.9358 10.2756 16.9778 10.2093 17.0066C10.143 17.0352 10.0716 17.0501 9.99935 17.0501C9.9271 17.0501 9.85568 17.0352 9.78935 17.0066C9.7231 16.9778 9.66335 16.9358 9.61393 16.8831L7.79697 15.0662H5.59459C4.71842 15.0662 3.87815 14.7181 3.25861 14.0986C2.63907 13.4791 2.29102 12.6388 2.29102 11.7626V6.2567C2.29102 5.38053 2.63907 4.54026 3.25861 3.92072C3.87815 3.30117 4.71842 2.95312 5.59459 2.95312H14.4041C15.2803 2.95312 16.1205 3.30117 16.7401 3.92072C17.3596 4.54026 17.7077 5.38053 17.7077 6.2567Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-captionBig font-captionBig text-secondary">3 Comments</span>
+                                    </div>
+                                    <div class="flex items-center gap-[4px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M4.7918 7.84375H3.80555C2.98851 7.84375 2.32617 8.50613 2.32617 9.32313V16.2269C2.32617 17.044 2.98851 17.7063 3.80555 17.7063H4.7918C5.60884 17.7063 6.27118 17.044 6.27118 16.2269V9.32313C6.27118 8.50613 5.60884 7.84375 4.7918 7.84375Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.6331 10.2L16.4496 16.1175C16.3594 16.5716 16.1124 16.9795 15.7518 17.2697C15.3911 17.5601 14.94 17.7142 14.4771 17.7054H8.24398C7.72085 17.7054 7.21913 17.4976 6.84922 17.1276C6.4793 16.7577 6.27148 16.256 6.27148 15.7329V9.8154C6.28733 9.43556 6.38341 9.06348 6.55339 8.72348C6.72338 8.38356 6.96343 8.0834 7.25773 7.84286L8.07633 2.9116C8.09478 2.79656 8.14014 2.68751 8.20873 2.59332C8.27732 2.49914 8.36722 2.42249 8.47097 2.36961C8.5748 2.31674 8.68963 2.28914 8.80622 2.28906C8.92272 2.28899 9.03755 2.31643 9.14147 2.36916L10.0587 2.82285C10.6646 3.12245 11.1498 3.62055 11.4333 4.23423C11.7168 4.84791 11.7816 5.54017 11.617 6.19582L11.2027 7.833H15.7001C15.9926 7.83294 16.2815 7.89794 16.5457 8.0233C16.8101 8.14867 17.0432 8.33123 17.2282 8.55781C17.4132 8.7844 17.5455 9.04931 17.6156 9.33331C17.6856 9.61731 17.6916 9.9134 17.6331 10.2Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-captionBig font-captionBig text-secondary">24 Likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-2 border-grey-200 rounded-lg">
+                            <img class="w-full h-[304px] rounded-t-lg object-cover" src="../images/article1.png" />
+                            <div class="mt-[16px] px-[20px]">
+                                <h2 class="text-heading2 font-heading2">What Healthy Habits Can Help You Get A Higher GMAT/GRE Or SAT/ACT Score</h2>
+                                <p>The cartoon above very closely depicts what it feels like taking the GMAT or the GRE. I am using metaphors to help you unders...</p>
+                            </div>
+                            <div class="flex flex-col px-[20px] pb-[20px]">
+                                <div class="flex items-center gap-[8px] mt-[10px]">
+                                    <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                                    <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] mt-[16px]">
+                                    <div class="flex items-center gap-[4px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M17.7077 6.2567V11.7626C17.7077 12.1965 17.6223 12.6261 17.4562 13.0269C17.2902 13.4276 17.0468 13.7919 16.7401 14.0986C16.4333 14.4054 16.0691 14.6487 15.6683 14.8147C15.2675 14.9807 14.8379 15.0662 14.4041 15.0662H12.2018L10.3848 16.8831C10.3353 16.9358 10.2756 16.9778 10.2093 17.0066C10.143 17.0352 10.0716 17.0501 9.99935 17.0501C9.9271 17.0501 9.85568 17.0352 9.78935 17.0066C9.7231 16.9778 9.66335 16.9358 9.61393 16.8831L7.79697 15.0662H5.59459C4.71842 15.0662 3.87815 14.7181 3.25861 14.0986C2.63907 13.4791 2.29102 12.6388 2.29102 11.7626V6.2567C2.29102 5.38053 2.63907 4.54026 3.25861 3.92072C3.87815 3.30117 4.71842 2.95312 5.59459 2.95312H14.4041C15.2803 2.95312 16.1205 3.30117 16.7401 3.92072C17.3596 4.54026 17.7077 5.38053 17.7077 6.2567Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-captionBig font-captionBig text-secondary">3 Comments</span>
+                                    </div>
+                                    <div class="flex items-center gap-[4px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M4.7918 7.84375H3.80555C2.98851 7.84375 2.32617 8.50613 2.32617 9.32313V16.2269C2.32617 17.044 2.98851 17.7063 3.80555 17.7063H4.7918C5.60884 17.7063 6.27118 17.044 6.27118 16.2269V9.32313C6.27118 8.50613 5.60884 7.84375 4.7918 7.84375Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.6331 10.2L16.4496 16.1175C16.3594 16.5716 16.1124 16.9795 15.7518 17.2697C15.3911 17.5601 14.94 17.7142 14.4771 17.7054H8.24398C7.72085 17.7054 7.21913 17.4976 6.84922 17.1276C6.4793 16.7577 6.27148 16.256 6.27148 15.7329V9.8154C6.28733 9.43556 6.38341 9.06348 6.55339 8.72348C6.72338 8.38356 6.96343 8.0834 7.25773 7.84286L8.07633 2.9116C8.09478 2.79656 8.14014 2.68751 8.20873 2.59332C8.27732 2.49914 8.36722 2.42249 8.47097 2.36961C8.5748 2.31674 8.68963 2.28914 8.80622 2.28906C8.92272 2.28899 9.03755 2.31643 9.14147 2.36916L10.0587 2.82285C10.6646 3.12245 11.1498 3.62055 11.4333 4.23423C11.7168 4.84791 11.7816 5.54017 11.617 6.19582L11.2027 7.833H15.7001C15.9926 7.83294 16.2815 7.89794 16.5457 8.0233C16.8101 8.14867 17.0432 8.33123 17.2282 8.55781C17.4132 8.7844 17.5455 9.04931 17.6156 9.33331C17.6856 9.61731 17.6916 9.9134 17.6331 10.2Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-captionBig font-captionBig text-secondary">24 Likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-2 border-grey-200 rounded-lg">
+                            <img class="w-full h-[304px] rounded-t-lg object-cover" src="../images/question.png" />
+                            <div class="mt-[16px] px-[20px]">
+                                <h2 class="text-heading2 font-heading2">The Science Behind Test Anxiety and How to Overcome It</h2>
+                                <p>The cartoon above very closely depicts what it feels like taking the GMAT or the GRE. I am using metaphors to help you unders...</p>
+                            </div>
+                            <div class="flex flex-col px-[20px] pb-[20px]">
+                                <div class="flex items-center gap-[8px] mt-[10px]">
+                                    <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                                    <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                                </div>
+                                <div class="flex items-center gap-[16px] mt-[16px]">
+                                    <div class="flex items-center gap-[4px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M17.7077 6.2567V11.7626C17.7077 12.1965 17.6223 12.6261 17.4562 13.0269C17.2902 13.4276 17.0468 13.7919 16.7401 14.0986C16.4333 14.4054 16.0691 14.6487 15.6683 14.8147C15.2675 14.9807 14.8379 15.0662 14.4041 15.0662H12.2018L10.3848 16.8831C10.3353 16.9358 10.2756 16.9778 10.2093 17.0066C10.143 17.0352 10.0716 17.0501 9.99935 17.0501C9.9271 17.0501 9.85568 17.0352 9.78935 17.0066C9.7231 16.9778 9.66335 16.9358 9.61393 16.8831L7.79697 15.0662H5.59459C4.71842 15.0662 3.87815 14.7181 3.25861 14.0986C2.63907 13.4791 2.29102 12.6388 2.29102 11.7626V6.2567C2.29102 5.38053 2.63907 4.54026 3.25861 3.92072C3.87815 3.30117 4.71842 2.95312 5.59459 2.95312H14.4041C15.2803 2.95312 16.1205 3.30117 16.7401 3.92072C17.3596 4.54026 17.7077 5.38053 17.7077 6.2567Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-captionBig font-captionBig text-secondary">3 Comments</span>
+                                    </div>
+                                    <div class="flex items-center gap-[4px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M4.7918 7.84375H3.80555C2.98851 7.84375 2.32617 8.50613 2.32617 9.32313V16.2269C2.32617 17.044 2.98851 17.7063 3.80555 17.7063H4.7918C5.60884 17.7063 6.27118 17.044 6.27118 16.2269V9.32313C6.27118 8.50613 5.60884 7.84375 4.7918 7.84375Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.6331 10.2L16.4496 16.1175C16.3594 16.5716 16.1124 16.9795 15.7518 17.2697C15.3911 17.5601 14.94 17.7142 14.4771 17.7054H8.24398C7.72085 17.7054 7.21913 17.4976 6.84922 17.1276C6.4793 16.7577 6.27148 16.256 6.27148 15.7329V9.8154C6.28733 9.43556 6.38341 9.06348 6.55339 8.72348C6.72338 8.38356 6.96343 8.0834 7.25773 7.84286L8.07633 2.9116C8.09478 2.79656 8.14014 2.68751 8.20873 2.59332C8.27732 2.49914 8.36722 2.42249 8.47097 2.36961C8.5748 2.31674 8.68963 2.28914 8.80622 2.28906C8.92272 2.28899 9.03755 2.31643 9.14147 2.36916L10.0587 2.82285C10.6646 3.12245 11.1498 3.62055 11.4333 4.23423C11.7168 4.84791 11.7816 5.54017 11.617 6.19582L11.2027 7.833H15.7001C15.9926 7.83294 16.2815 7.89794 16.5457 8.0233C16.8101 8.14867 17.0432 8.33123 17.2282 8.55781C17.4132 8.7844 17.5455 9.04931 17.6156 9.33331C17.6856 9.61731 17.6916 9.9134 17.6331 10.2Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="text-captionBig font-captionBig text-secondary">24 Likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-[90px] w-[348px] pl-[56px] border-l-2">
+                <h3 class="text-heading3 font-heading3">Recents</h3>
+                <div class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.9996 14.0016L11.0996 11.1016" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search the website" />
+                </div>
+                <div class="mt-[24px] flex flex-col gap-[24px]">
+                    <div>
+                        <p class="text-semibold font-semibold">The Science Behind Test Anxiety and How to Overcome It</p>
+                        <div class="flex items-center gap-[8px] mt-[10px]">
+                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-semibold font-semibold">What Healthy Habits Can Help You Get A Higher GMAT/GRE Or SAT/ACT Score</p>
+                        <div class="flex items-center gap-[8px] mt-[10px]">
+                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-semibold font-semibold">The GRE Verbal Section: How to Boost Your Vocabulary and Reading Skills</p>
+                        <div class="flex items-center gap-[8px] mt-[10px]">
+                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-semibold font-semibold">Mastering the SAT: Top Tips for Stellar Scores</p>
+                        <div class="flex items-center gap-[8px] mt-[10px]">
+                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-semibold font-semibold">What GMAT and GRE tests feel like and what you can do about it</p>
+                        <div class="flex items-center gap-[8px] mt-[10px]">
+                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                        </div>
+                    </div>
+                </div>
+                <section class="w-full mt-[48px]">
+                    <button class="border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer
+      class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
+    >
+      <div class="container flex justify-between items-start">
+        <div class="w-[256px] flex flex-col gap-[12px] items-start">
+          <p class="capitalize text-heading2 font-heading2">Links</p>
+          <a class="font-normal capitalize text-normal">Home</a>
+          <a class="font-normal capitalize text-normal">About us</a>
+          <a class="font-normal capitalize text-normal">Reviews</a>
+          <a class="font-normal capitalize text-normal">Blog</a>
+          <a class="font-normal capitalize text-normal">Contact</a>
+        </div>
+        <div>
+          <div class="w-[256px] flex flex-col gap-[12px] items-start">
+            <p class="capitalize text-heading2 font-heading2">Contact</p>
+            <div class="flex gap-[22px] items-center">
+              <div
+                class="flex items-center justify-center px-[6px] h-[36px] bg-surface-brand-inverted rounded-[6px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M21.0591 18.0293V18.1593C20.9128 18.6977 20.6016 19.1768 20.169 19.5293C19.6846 20.0432 19.0943 20.4457 18.4391 20.7093C17.8557 20.9361 17.235 21.0515 16.609 21.0493H16.2791C14.9186 20.9821 13.5855 20.642 12.359 20.0493C12.069 19.9193 11.7891 19.7792 11.4991 19.6292C10.0853 18.8324 8.7867 17.8467 7.63905 16.6993C6.15672 15.3034 4.94027 13.6499 4.04902 11.8192C3.5497 10.8082 3.21225 9.72501 3.04902 8.60926C2.81808 7.42356 2.95414 6.19562 3.43904 5.08924V4.98926C3.73491 4.51487 4.0875 4.07827 4.48902 3.68921C4.69443 3.47242 4.93867 3.29608 5.20906 3.16925C5.49677 3.03184 5.81029 2.95684 6.12904 2.94922H6.26905C6.91753 3.0619 7.49768 3.42003 7.88905 3.94922C8.28905 4.38922 8.74905 4.82924 9.19905 5.27924L9.77906 5.84925C9.97049 6.01014 10.1273 6.20813 10.24 6.43134C10.3528 6.65454 10.4191 6.89833 10.435 7.14789C10.4509 7.39745 10.416 7.6476 10.3325 7.8833C10.249 8.11901 10.1186 8.33535 9.94905 8.51923C9.78905 8.70923 9.58904 8.92922 9.37904 9.13922L9.18904 9.32923C9.11005 9.40501 9.04862 9.49719 9.00904 9.59925C8.99865 9.67221 8.99865 9.74625 9.00904 9.81922C9.1341 10.1669 9.33184 10.484 9.58906 10.7492L9.66902 10.8293C10.079 11.3993 10.4991 11.9393 10.9991 12.5293C11.833 13.488 12.8196 14.3023 13.919 14.9392C13.9922 15.0037 14.0825 15.0454 14.1791 15.0592C14.2476 15.0795 14.3205 15.0795 14.3891 15.0592C14.6758 14.8932 14.93 14.6764 15.1391 14.4193C15.3209 14.195 15.5452 14.0088 15.7992 13.8715C16.0532 13.7342 16.3318 13.6484 16.6191 13.6192H16.7391C17.2751 13.6468 17.78 13.8796 18.1491 14.2693C18.3526 14.4451 18.5462 14.6321 18.729 14.8293L18.9991 15.1192L19.2791 15.3893L19.789 15.8993C20.082 16.1558 20.3561 16.4332 20.609 16.7293C20.9029 17.0986 21.0617 17.5573 21.0591 18.0293Z"
+                    fill="#0E0E0E"
+                  />
+                </svg>
+              </div>
+
+              <p class="text-button font-button">312-487-1783</p>
+            </div>
+            <div class="flex gap-[22px] items-center">
+              <div
+                class="flex items-center justify-center px-[6px] h-[36px] bg-surface-brand-inverted rounded-[6px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18.3451 3.83984H5.65516C4.8948 3.84247 4.16633 4.14568 3.62867 4.68334C3.09101 5.221 2.7878 5.94947 2.78516 6.70983V17.2898C2.7878 18.0502 3.09101 18.7787 3.62867 19.3163C4.16633 19.854 4.8948 20.1572 5.65516 20.1598H18.3451C19.1054 20.1572 19.8339 19.854 20.3716 19.3163C20.9092 18.7787 21.2124 18.0502 21.2151 17.2898V6.70983C21.2124 5.94947 20.9092 5.221 20.3716 4.68334C19.8339 4.14568 19.1054 3.84247 18.3451 3.83984ZM19.7151 8.08984L12.3951 12.6399C12.2769 12.7098 12.1425 12.7477 12.0051 12.7499C11.8599 12.7488 11.7179 12.7072 11.5951 12.6298L4.28516 7.94982V6.70983C4.28303 6.54869 4.31361 6.38879 4.37513 6.23983L12.0051 11.1099L19.6651 6.35982C19.6804 6.47599 19.6804 6.59367 19.6651 6.70983L19.7151 8.08984Z"
+                    fill="#0E0E0E"
+                  />
+                </svg>
+              </div>
+              <p class="text-button font-button">Testprepstar@gmail.com.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-    <div></div>
+    </footer>
   </body>
 </html>
