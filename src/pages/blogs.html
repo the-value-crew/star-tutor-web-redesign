@@ -9,7 +9,7 @@
   <body>
     <header class="bg-[#121212]">
       <nav
-        class="container text-secondary-dark flex text-sm font-medium justify-around h-[74px] py-4"
+        class="container text-secondary-dark flex text-sm font-medium justify-between items-center h-[74px] py-4"
       >
         <img
           src="../images/theStarTutorLogo.png"
@@ -21,7 +21,7 @@
           <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
           <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
           <a class="py-[4px] px-[8px]" href="./contact.html">Contact</a>
-          <a class="py-[4px] px-[8px] text-brand" href="#">Why Choose Us?</a>
+          <a class="py-[4px] px-[8px] text-brand" href="./whyUs.html">Why Choose Us?</a>
         </div>
         <button
           class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
@@ -33,15 +33,18 @@
 
     <main>
         <section class="flex flex-col justify-center items-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../images/about-bg.png'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-            <div class="w-[1084px] text-primary-dark">
-                <p class="text-title font-title">Access Resources in The</p>
-                <p class="text-title font-title">Star Tutor's <span class="text-brand">Blog</span></p>
+          <div  class="container flex flex-col justify-center h-[350px] text-title font-title">
+              <div class="text-primary-dark">
+                  <p class="text-title font-title">Access Resources in The</p>
+                  <p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
+              </div>
             </div>
         </section>
 
-        <section class="flex justify-center items-start">
+        <section class="container">
+          <div class="flex flex-col xl:flex-row items-start">
             <div class="mt-[90px] flex">
-                <div class="w-[45rem] flex flex-col justify-center pr-[56px]">
+                <div class="xl:w-[45rem] flex flex-col justify-center pr-[56px]">
                     <div class="flex gap-5 border-b-[1px]">
                         <button class="text-button font-button border-b-2 text-[#D93726]">All</button>
                         <button>GMAT</button>
@@ -139,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pt-[90px] w-[348px] pl-[56px] border-l-2">
+            <div class="pt-[90px] xl:w-[348px] xl:pl-[56px] border-none xl:border-l-2">
                 <h3 class="text-heading3 font-heading3">Recents</h3>
                 <div class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -186,9 +189,10 @@
                     </div>
                 </div>
                 <section class="w-full mt-[48px]">
-                    <button class="border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
+                    <button class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
                 </section>
             </div>
+          </div>
         </section>
     </main>
 
