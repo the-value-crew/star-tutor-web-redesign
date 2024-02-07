@@ -808,10 +808,6 @@ video {
   display: grid;
 }
 
-.h-\[116px\]{
-  height: 116px;
-}
-
 .h-\[120px\]{
   height: 120px;
 }
@@ -844,10 +840,6 @@ video {
   height: 392px;
 }
 
-.h-\[399px\]{
-  height: 399px;
-}
-
 .h-\[40px\]{
   height: 40px;
 }
@@ -868,6 +860,10 @@ video {
   height: 54px;
 }
 
+.h-\[558px\]{
+  height: 558px;
+}
+
 .h-\[584px\]{
   height: 584px;
 }
@@ -886,10 +882,6 @@ video {
 
 .h-\[78px\]{
   height: 78px;
-}
-
-.h-\[558px\]{
-  height: 558px;
 }
 
 .w-\[135px\]{
@@ -944,10 +936,6 @@ video {
   width: 624px;
 }
 
-.w-\[656px\]{
-  width: 656px;
-}
-
 .w-\[full\]{
   width: full;
 }
@@ -982,6 +970,10 @@ video {
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-col-reverse{
+  flex-direction: column-reverse;
 }
 
 .items-start{
@@ -1290,6 +1282,10 @@ video {
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\.\/images\/blog-article\.png\'\)\]{
+  background-image: url('./images/blog-article.png');
+}
+
 .bg-\[url\(\'\.\/images\/user\.jpg\'\)\]{
   background-image: url('./images/user.jpg');
 }
@@ -1298,20 +1294,8 @@ video {
   background-image: url('./images/user1.jpg');
 }
 
-.bg-\[url\(\'\/src\/images\/books\.png\'\)\]{
-  background-image: url('/src/images/books.png');
-}
-
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\.\.\/images\/blog-article\.png\'\)\]{
-  background-image: url('../images/blog-article.png');
-}
-
-.bg-\[url\(\'\.\/images\/blog-article\.png\'\)\]{
-  background-image: url('./images/blog-article.png');
 }
 
 .from-\[\#EEEEBB\]{
@@ -1642,11 +1626,6 @@ video {
   color: rgb(183 142 0 / var(--tw-text-opacity));
 }
 
-.text-brand-dark{
-  --tw-text-opacity: 1;
-  color: rgb(228 192 69 / var(--tw-text-opacity));
-}
-
 .text-brand-invert{
   --tw-text-opacity: 1;
   color: rgb(228 192 69 / var(--tw-text-opacity));
@@ -1713,8 +1692,8 @@ video {
 }
 
 @media (min-width: 1084px){
-  .xl\:h-\[558px\]{
-    height: 558px;
+  .xl\:h-\[459px\]{
+    height: 459px;
   }
 
   .xl\:w-\[348px\]{
@@ -1732,6 +1711,10 @@ video {
 
   .xl\:flex-row{
     flex-direction: row;
+  }
+
+  .xl\:flex-row-reverse{
+    flex-direction: row-reverse;
   }
 
   .xl\:border-l-2{
