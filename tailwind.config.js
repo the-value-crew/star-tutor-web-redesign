@@ -4,16 +4,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      'sm': '640px',
+      sm: '640px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      md: '768px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      lg: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1084px',
+      xl: '1084px',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1084px',
@@ -66,7 +66,7 @@ module.exports = {
           300: '#dadada',
           400: '#c1c1c1',
           500: '#7a7a7a',
-          700: '#424242',
+          700: '#484848',
           800: '#2d2d2d',
           900: '#0e0e0e',
         },
@@ -82,7 +82,7 @@ module.exports = {
       },
       textColor: (theme) => ({
         primary: theme('colors.grey.900'),
-        secondary: theme('colors.grey.800'),
+        secondary: theme('colors.grey.700'),
         invert: theme('colors.grey.100'),
         brand: theme('colors.brand.600'),
         'invert-secondary': theme('colors.grey.300'),

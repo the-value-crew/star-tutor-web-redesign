@@ -1653,7 +1653,7 @@ video {
 
 .text-secondary{
   --tw-text-opacity: 1;
-  color: rgb(45 45 45 / var(--tw-text-opacity));
+  color: rgb(72 72 72 / var(--tw-text-opacity));
 }
 
 .text-secondary-dark{
@@ -1664,6 +1664,11 @@ video {
 .text-tertiary{
   --tw-text-opacity: 1;
   color: rgb(122 122 122 / var(--tw-text-opacity));
+}
+
+.text-brand-invert-dark{
+  --tw-text-opacity: 1;
+  color: rgb(183 142 0 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1692,10 +1697,6 @@ video {
 }
 
 @media (min-width: 1084px){
-  .xl\:h-\[459px\]{
-    height: 459px;
-  }
-
   .xl\:w-\[348px\]{
     width: 348px;
   }
@@ -1711,10 +1712,6 @@ video {
 
   .xl\:flex-row{
     flex-direction: row;
-  }
-
-  .xl\:flex-row-reverse{
-    flex-direction: row-reverse;
   }
 
   .xl\:border-l-2{
