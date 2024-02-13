@@ -13,14 +13,15 @@ module.exports = {
       lg: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      xl: '1084px',
+      xl: { min: '1024px', max: '1440px' },
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1084px',
+      '2xl': '1440px',
       // => @media (min-width: 1536px) { ... }
     },
     container: {
       center: true,
+      padding: '1rem',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
@@ -28,23 +29,31 @@ module.exports = {
     fontSize: {
       title: ['48px'],
       heading1: ['36px'],
-      heading2: ['24px'],
+      heading2: ['36px'],
+      mobileHeading2: ['24px'],
       heading3: ['20px'],
+      heading3_mobile: ['18px'],
       subtitle: ['20px'],
+      subtitle_mobile: ['16px'],
       subheading: ['18px'],
+      subheading_mobile: ['14px'],
       button: ['14px'],
       normal: ['16px'],
       semibold: ['16px'],
+      largeRegular: ['18px'],
       captionBig: ['14px'],
       captionSmall: ['12px'],
     },
     fontWeight: {
       title: 700,
       heading1: 600,
-      heading2: 700,
+      heading2: 600,
+      mobileHeading2: 700,
       heading3: 600,
       subtitle: 400,
+      subtitle_mobile: 400,
       subheading: 400,
+      subheading_mobile: 400,
       button: 600,
       normal: 400,
       semibold: 600,
