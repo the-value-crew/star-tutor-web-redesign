@@ -4,19 +4,19 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      'sm': '640px',
+      'sm': '360px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '640px',
       // => @media (min-width: 768px) { ... }
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1084px',
+      'xl': '1440px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1084px',
+      '2xl': '1920px',
       // => @media (min-width: 1536px) { ... }
     },
     container: {

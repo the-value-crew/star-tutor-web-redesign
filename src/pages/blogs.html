@@ -3,37 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Blogs</title>
     <link rel="stylesheet" href="../output.css" />
   </head>
   <body>
-    <header class="bg-[#121212]">
-      <nav
-        class="container text-secondary-dark flex text-sm font-medium justify-between items-center h-[74px] py-4"
-      >
-        <img
-          src="../images/theStarTutorLogo.png"
-          class="w-[166px] h-[31px] flex-shrink-0"
-        />
-        <div class="flex gap-[12px] items-center">
-          <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
-          <a class="py-[4px] px-[8px]" href="./about.html">About</a>
-          <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
-          <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
-          <a class="py-[4px] px-[8px]" href="./contact.html">Contact</a>
-          <a class="py-[4px] px-[8px] text-brand" href="./whyUs.html">Why Choose Us?</a>
+    <header class="bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+      <nav class="lg:flex lg:items-center">
+        <div class="flex justify-between items-center">
+          <img
+            src="../images/theStarTutorLogo.png"
+            class="w-[166px] h-[31px] flex-shrink-0"
+          />
+          <button id="navBtn" class="lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M3 12.5H21M3 6.5H21M9 18.5H21" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
-        <button
-          class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
-        >
-          Book A Free Consultation
-        </button>
+        <div id="navMenu" class="hidden lg:w-full lg:flex lg:items-center text-secondary-dark">
+          <div class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center">
+            <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
+            <a class="py-[4px] px-[8px]" href="./about.html">About</a>
+            <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
+            <a class="text-brand py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
+            <a class="py-[4px] px-[8px]" href="../../index.html#contact">Contact</a>
+            <a class="py-[4px] px-[8px]" href="./whyUs.html">Why Choose Us?</a>
+          </div>
+          <button
+            class="bg-cta-default font-button shrink-0 py-[10px] px-[20px] rounded-[60px]"
+          >
+            Book A Free Consultation
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
-        <section class="flex flex-col justify-center items-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../images/about-bg.png'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-          <div  class="container flex flex-col justify-center h-[350px] text-title font-title">
+        <section class="flex flex-col justify-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../images/about-bg.png'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
+          <div  class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
               <div class="text-primary-dark">
                   <p class="text-title font-title">Access Resources in The</p>
                   <p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
@@ -41,10 +48,10 @@
             </div>
         </section>
 
-        <section class="container">
-          <div class="flex flex-col xl:flex-row items-start">
+        <section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+          <div class="flex flex-col lg:flex-row items-start gap-[56px]">
             <div class="mt-[90px] flex">
-                <div class="xl:w-[45rem] flex flex-col justify-center pr-[56px]">
+                <div class="flex flex-col justify-center">
                     <div class="flex gap-5 border-b-[1px]">
                         <button class="text-button font-button border-b-2 text-[#D93726]">All</button>
                         <button>GMAT</button>
@@ -142,64 +149,64 @@
                     </div>
                 </div>
             </div>
-            <div class="pt-[90px] xl:w-[348px] xl:pl-[56px] border-none xl:border-l-2">
-                <h3 class="text-heading3 font-heading3">Recents</h3>
-                <div class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.9996 14.0016L11.0996 11.1016" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <input type="text" placeholder="Search the website" />
-                </div>
-                <div class="mt-[24px] flex flex-col gap-[24px]">
-                    <div>
-                        <p class="text-semibold font-semibold">The Science Behind Test Anxiety and How to Overcome It</p>
-                        <div class="flex items-center gap-[8px] mt-[10px]">
-                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
-                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-semibold font-semibold">What Healthy Habits Can Help You Get A Higher GMAT/GRE Or SAT/ACT Score</p>
-                        <div class="flex items-center gap-[8px] mt-[10px]">
-                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
-                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-semibold font-semibold">The GRE Verbal Section: How to Boost Your Vocabulary and Reading Skills</p>
-                        <div class="flex items-center gap-[8px] mt-[10px]">
-                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
-                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-semibold font-semibold">Mastering the SAT: Top Tips for Stellar Scores</p>
-                        <div class="flex items-center gap-[8px] mt-[10px]">
-                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
-                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-semibold font-semibold">What GMAT and GRE tests feel like and what you can do about it</p>
-                        <div class="flex items-center gap-[8px] mt-[10px]">
-                            <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
-                            <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
-                        </div>
-                    </div>
-                </div>
-                <section class="w-full mt-[48px]">
-                    <button class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
-                </section>
-            </div>
+            <div class="pt-[90px] lg:px-[56px]">
+              <h3 class="text-heading3 font-heading3">Recents</h3>
+              <div class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.9996 14.0016L11.0996 11.1016" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <input type="text" placeholder="Search the website" />
+              </div>
+              <div class="mt-[24px] flex flex-col gap-[24px]">
+                  <div>
+                      <p class="text-semibold font-semibold">The Science Behind Test Anxiety and How to Overcome It</p>
+                      <div class="flex items-center gap-[8px] mt-[10px]">
+                          <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                          <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                      </div>
+                  </div>
+                  <div>
+                      <p class="text-semibold font-semibold">What Healthy Habits Can Help You Get A Higher GMAT/GRE Or SAT/ACT Score</p>
+                      <div class="flex items-center gap-[8px] mt-[10px]">
+                          <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                          <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                      </div>
+                  </div>
+                  <div>
+                      <p class="text-semibold font-semibold">The GRE Verbal Section: How to Boost Your Vocabulary and Reading Skills</p>
+                      <div class="flex items-center gap-[8px] mt-[10px]">
+                          <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                          <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                      </div>
+                  </div>
+                  <div>
+                      <p class="text-semibold font-semibold">Mastering the SAT: Top Tips for Stellar Scores</p>
+                      <div class="flex items-center gap-[8px] mt-[10px]">
+                          <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                          <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                      </div>
+                  </div>
+                  <div>
+                      <p class="text-semibold font-semibold">What GMAT and GRE tests feel like and what you can do about it</p>
+                      <div class="flex items-center gap-[8px] mt-[10px]">
+                          <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">GMAT/GRE Prep</span>
+                          <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+                      </div>
+                  </div>
+              </div>
+              <section class="w-full mt-[48px]">
+                  <button class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
+              </section>
           </div>
-        </section>
+        </div>
+      </section>
     </main>
 
     <footer
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >
-      <div class="container flex justify-between items-start">
+      <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start">
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
           <p class="capitalize text-heading2 font-heading2">Links</p>
           <a class="font-normal capitalize text-normal">Home</a>
@@ -254,5 +261,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../scripts/script.js"></script>
   </body>
 </html>

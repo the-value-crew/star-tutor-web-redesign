@@ -7,33 +7,40 @@
     <link rel="stylesheet" href="../output.css" />
   </head>
   <body>
-    <header class="bg-[#121212]">
-      <nav
-        class="container text-secondary-dark flex text-sm font-medium justify-between items-center h-[74px] py-4"
-      >
-        <img
-          src="../images/theStarTutorLogo.png"
-          class="w-[166px] h-[31px] flex-shrink-0"
-        />
-        <div class="flex gap-[12px] items-center">
-          <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
-          <a class="py-[4px] px-[8px]" href="./about.html">About</a>
-          <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
-          <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
-          <a class="py-[4px] px-[8px]" href="./contact.html">Contact</a>
-          <a class="py-[4px] px-[8px] text-brand" href="./whyUs.html">Why Choose Us?</a>
+    <header class="bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+      <nav class="lg:flex lg:items-center">
+        <div class="flex justify-between items-center">
+          <img
+            src="../images/theStarTutorLogo.png"
+            class="w-[166px] h-[31px] flex-shrink-0"
+          />
+          <button id="navBtn" class="lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M3 12.5H21M3 6.5H21M9 18.5H21" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
-        <button
-          class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
-        >
-          Book A Free Consultation
-        </button>
+        <div id="navMenu" class="hidden lg:w-full lg:flex lg:items-center text-secondary-dark">
+          <div class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center">
+            <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
+            <a class="text-brand py-[4px] px-[8px]" href="./about.html">About</a>
+            <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
+            <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
+            <a class="py-[4px] px-[8px]" href="../../index.html#contact">Contact</a>
+            <a class="py-[4px] px-[8px]" href="./whyUs.html">Why Choose Us?</a>
+          </div>
+          <button
+            class="bg-cta-default font-button shrink-0 py-[10px] px-[20px] rounded-[60px]"
+          >
+            Book A Free Consultation
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
         <section style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../images/about-bg.png'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-          <div  class="container flex flex-col justify-center h-[350px] text-title font-title">
+          <div  class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
             <div class="text-primary-dark">
                 <p class="text-title font-title">Learn <span class="text-brand-invert">about</span></p>
                 <p class="text-title font-title ml-[31.52px]">The Star Tutor</p>
@@ -41,10 +48,10 @@
             </div>
         </section>
 
-        <section class="flex flex-col items-center py-[120px]">
-            <div class="container">
+        <section class="flex flex-col items-start py-[120px]">
+            <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
                 <div class="relative flex flex-col justify-start gap-[28px]">
-                    <svg class="absolute top-[-70px] left-[260px]" xmlns="http://www.w3.org/2000/svg" width="174" height="128" viewBox="0 0 174 128" fill="none">
+                    <svg class="hidden xl:block absolute top-[-70px] left-[260px]" xmlns="http://www.w3.org/2000/svg" width="174" height="128" viewBox="0 0 174 128" fill="none">
                       <g clip-path="url(#clip0_578_9261)">
                         <path d="M106.502 37.4327C107.444 37.6402 108.4 37.8635 109.342 38.0975C110.223 38.3161 111.115 37.7813 111.331 36.9037C111.53 36.0982 111.093 35.2843 110.339 34.9857C110.27 34.9585 110.199 34.9358 110.127 34.9177C109.157 34.6765 108.172 34.4468 107.2 34.233C106.313 34.0385 105.438 34.5954 105.244 35.4785C105.052 36.3621 105.613 37.2361 106.502 37.4327Z" fill="#2D2D2D"/>
                         <path d="M78.5158 35.0991C79.4825 35.0485 80.462 35.0101 81.4252 34.9863C82.3331 34.9636 83.0479 34.2128 83.0221 33.308C83.0033 32.6313 82.5747 32.0602 81.9811 31.8252C81.7807 31.7459 81.5616 31.7049 81.3333 31.7096C80.3377 31.7347 79.328 31.7735 78.3305 31.8259C77.4233 31.8736 76.7303 32.6453 76.7818 33.548C76.8326 34.4521 77.6093 35.1453 78.5164 35.0976L78.5158 35.0991Z" fill="#2D2D2D"/>
@@ -82,7 +89,7 @@
                 </div>
                 <div class="mt-[60px]">
                     <h2 class="text-heading2 font-heading2">Who Do I Tutor?</h2>
-                    <p class="mt-[12px] leading-[25.6px]">
+                    <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
                         For many people around the world, including those in developed countries, tutoring is not typically the first option for a profession. Many people consider tutoring a job someone does “on the side” or something you do until you find a “better job”. I, however, chose a full-time career in standardized tests tutoring over a career in science research.<br>
                         I was a science student for 9 years, and then a researcher in genetics for a few as I tutored part time. Following positive reviews and numerous recommendations from previous students who had exceeded their expectations, I decided to dedicate my life to tutoring for various standardized tests.<br>
                         Individuals such as myself who are passionate about teaching usually end up in academic settings. Very few qualified educators are left to serve those who desperately need help preparing for the GMAT, GRE and SAT, tests that will have a huge impact on future educational and career paths.<br>
@@ -93,10 +100,10 @@
             </div>
         </section>
 
-        <section class="flex flex-col items-center py-[120px]">
-            <div class="container">
+        <section class="flex flex-col items-start py-[120px]">
+            <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
               <div class="relative flex flex-col justify-start gap-[28px]">
-                <svg class="absolute top-[-70px] left-[35px]" xmlns="http://www.w3.org/2000/svg" width="174" height="128" viewBox="0 0 174 128" fill="none">
+                <svg class="hidden xl:block absolute top-[-70px] left-[35px]" xmlns="http://www.w3.org/2000/svg" width="174" height="128" viewBox="0 0 174 128" fill="none">
                   <g clip-path="url(#clip0_578_9261)">
                     <path d="M106.502 37.4327C107.444 37.6402 108.4 37.8635 109.342 38.0975C110.223 38.3161 111.115 37.7813 111.331 36.9037C111.53 36.0982 111.093 35.2843 110.339 34.9857C110.27 34.9585 110.199 34.9358 110.127 34.9177C109.157 34.6765 108.172 34.4468 107.2 34.233C106.313 34.0385 105.438 34.5954 105.244 35.4785C105.052 36.3621 105.613 37.2361 106.502 37.4327Z" fill="#2D2D2D"/>
                     <path d="M78.5158 35.0991C79.4825 35.0485 80.462 35.0101 81.4252 34.9863C82.3331 34.9636 83.0479 34.2128 83.0221 33.308C83.0033 32.6313 82.5747 32.0602 81.9811 31.8252C81.7807 31.7459 81.5616 31.7049 81.3333 31.7096C80.3377 31.7347 79.328 31.7735 78.3305 31.8259C77.4233 31.8736 76.7303 32.6453 76.7818 33.548C76.8326 34.4521 77.6093 35.1453 78.5164 35.0976L78.5158 35.0991Z" fill="#2D2D2D"/>
@@ -136,7 +143,7 @@
                 </div>
                 <div class="mt-[60px]">
                     <h2 class="text-heading2 font-heading2">Music</h2>
-                    <p class="mt-[12px] leading-[25.6px]">
+                    <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
                         I am an amateur (but reasonably trained) singer. A couple of the songs I covered have played on the radio :). I sing in multiple languages and particularly enjoy singing in Romance languages.<br><br>
                         I recently read a book on vocal pedagogy, which, interestingly, also provided me with some unique insights on general teaching methods. While I don’t expect to capitalize on my musical endeavors, I definitely plan to record something when I find myself technically and aesthetically prepared to do so.<br>
                     </p>
@@ -150,7 +157,7 @@
     <footer
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >
-      <div class="container flex justify-between items-start">
+      <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start">
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
           <p class="capitalize text-heading2 font-heading2">Links</p>
           <a class="font-normal capitalize text-normal">Home</a>
@@ -205,5 +212,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../scripts/script.js"></script>
   </body>
 </html>
