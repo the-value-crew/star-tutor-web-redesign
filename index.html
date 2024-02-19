@@ -2,8 +2,9 @@
   <head>
     <title>Home</title>
     <link href="./src/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body class="bg-gradient-to-r from-[#EEEEBB] to-[#D4D3DC]">
+  <body class="bg-gradient-to-r from-[#EEEEBB] to-[#D4D3DC] overflow-x-hidden">
     <header class="bg-[#121212]">
       <nav
         class="container text-secondary-dark 2xl:flex text-sm font-medium justify-around items-center h-[74px] py-4 hidden"
@@ -579,16 +580,22 @@
     <!-- Introduction section -->
 
     <div
+      id="introSection"
       class="2xl:my-[370px] sm:mb-[120px] xl:mt-[140px] mb-[80px] flex flex-wrap gap-[40px] 2xl:gap-[112px] xl:gap-[88px] container sm:items-center sm:justify-center"
     >
       <div
-        class="bg-[url('../src/images/introImage.jpeg')] 2xl:w-[348px] 2xl:h-[426px] xl:h-[338px] xl:w-[343px] w-[149px] h-[138px] flex-shrink-0 bg-cover bg-no-repeat scrollAnimationLeft"
+        class="bg-[url('../src/images/introImage.jpeg')] 2xl:w-[348px] 2xl:h-[426px] xl:h-[338px] xl:w-[343px] w-[149px] h-[138px] flex-shrink-0 bg-cover bg-no-repeat"
+        id="introLeft"
       ></div>
 
       <div
-        class="w-[624px] xl:w-[512.5px] flex flex-col gap-[20px] sm:text-center lg:text-left scrollAnimationRight"
+        class="w-[624px] xl:w-[512.5px] flex flex-col gap-[20px] sm:text-center lg:text-left"
+        id="introRight"
       >
-        <div class="relative inline-flex flex-col gap-2 xl:items-start">
+        <div
+          class="relative inline-flex flex-col gap-2 xl:items-start"
+          id="introIntroduction"
+        >
           <p class="uppercase text-tertiary font-subheading text-subheading">
             Introduction
           </p>
@@ -663,12 +670,15 @@
             </defs>
           </svg>
         </div>
-        <div class="hidden 2xl:block">
+        <div class="hidden 2xl:block" id="introQuestion">
           <p class="hidden font-normal text-secondary text-heading3 2xl:block">
             What the founder has to say to you.
           </p>
         </div>
-        <div class="flex flex-col items-start sm:gap-[20px] gap-2">
+        <div
+          class="flex flex-col items-start sm:gap-[20px] gap-2"
+          id="introContent"
+        >
           <p
             class="font-normal leading-relaxed text-secondary text-normal overflow-hidden h-[104px] 2xl:h-[156px] text-ellipsis"
           >
@@ -689,7 +699,7 @@
             Tara B, Founder
           </p>
         </div>
-        <div>
+        <div id="introButton">
           <button
             class="bg-[#C84A3D] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
           >
@@ -2687,7 +2697,7 @@
       >
         <div class="flex flex-col gap-[39px] items-start">
           <img
-            src="kfdj"
+            src="./src/images/introImage.png"
             class="2xl:h-[372px] 2xl:w-[532px] xl:h-[480.6px] xl:w-[463px] sm:w-[600px] sm:h-[372px] w-[328px] h-[330px]"
           />
           <div class="w-[368px] space-y-2">
@@ -2855,4 +2865,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const introSection = document.getElementById('introSection');
+    const introLeft = document.getElementById('introLeft');
+    const introIntroduction = document.getElementById('introIntroduction');
+    const introQuestion = document.getElementById('introQuestion');
+    const introContent = document.getElementById('introContent');
+    const introButton = document.getElementById('introButton');
+
+    window.onscroll = () => {
+      const { offsetTop: offset, offsetHeight: height } = introSection;
+      const top = window.scrollY;
+      const bottom = top + window.innerHeight;
+
+      if (top < offset && bottom > offset) {
+        introLeft.style.transform = 'translateX(0%)';
+        // introRight.style.transform = 'translateX(0%)';
+        introIntroduction.style.transform = 'translateX(0%)';
+        introQuestion.style.transform = 'translateX(0%)';
+        introContent.style.transform = 'translateX(0%)';
+        introButton.style.transform = 'translateX(0%)';
+      } else {
+        introLeft.style.transform = 'translateX(-50%)';
+        // introRight.style.transform = 'translateX(70%)';
+        introIntroduction.style.transform = 'translateX(60%)';
+        introQuestion.style.transform = 'translateX(60%)';
+        introContent.style.transform = 'translateX(70%)';
+        introButton.style.transform = 'translateX(80%)';
+      }
+    };
+  </script>
 </html>

@@ -124,6 +124,15 @@
   }
 }
 
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @layer utilities {
   /* .heroSectionIn {
     animation: heroSectionSlideInLeft 1s ease-in-out;
@@ -146,9 +155,37 @@
     animation: revealDottedArrow 3s linear 3s forwards; /* Adjust the delay as needed */
   }
 
-  /* .heroSectionInY {
-    animation: heroSectionSlideInLeftY 1.1s ease-in-out;
+  /* .aos-init[data-aos='slideInFromRight'] {
+    opacity: 1;
+    transition-property: transform;
+  }
+
+  .aos-animate[data-aos='slideInFromRight'] {
+    transform: translateX(0);
+    animation-name: slideInFromRight;
   } */
+
+  #introLeft {
+    transform: translateX(-50%);
+    transition: 1s;
+  }
+
+  #introIntroduction {
+    transform: translateX(60%);
+    transition: 1s;
+  }
+  #introContent {
+    transform: translateX(70%);
+    transition: 1s;
+  }
+  #introButton {
+    transform: translateX(80%);
+    transition: 1s;
+  }
+  #introQuestion {
+    transform: translateX(60%);
+    transition: 1s;
+  }
 
   .masonry {
     column-gap: 1.5em;
