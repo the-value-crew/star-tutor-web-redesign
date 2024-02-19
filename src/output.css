@@ -1748,6 +1748,10 @@ video {
   outline-offset: 2px;
 }
 
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* .heroSectionIn {
     animation: heroSectionSlideInLeft 1s ease-in-out;
   } */
@@ -1902,6 +1906,20 @@ video {
 
   100% {
     transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes revealDottedArrow {
+  0% {
+    stroke-dashoffset: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    /* Fully reveal the arrow */
+    opacity: 1;
+    /* Make the arrow fully visible */
   }
 }
 

@@ -112,6 +112,18 @@
   }
 }
 
+@keyframes revealDottedArrow {
+  0% {
+    stroke-dashoffset: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0; /* Fully reveal the arrow */
+    opacity: 1; /* Make the arrow fully visible */
+  }
+}
+
 @layer utilities {
   /* .heroSectionIn {
     animation: heroSectionSlideInLeft 1s ease-in-out;
@@ -125,6 +137,13 @@
   .heroSectionRight {
     animation: slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
       slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+  }
+
+  .dotted-arrow path {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    opacity: 0; /* Initially hide the arrow */
+    animation: revealDottedArrow 3s linear 3s forwards; /* Adjust the delay as needed */
   }
 
   /* .heroSectionInY {
