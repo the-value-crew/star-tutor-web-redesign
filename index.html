@@ -713,10 +713,17 @@
 
     <div class="2xl:mb-[320px] sm:mb-[120px] mb-[80px]">
       <div
+        id="reviewsSection"
         class="flex flex-col sm:gap-[60px] gap-[40px] container sm:items-center"
       >
-        <div class="inline-flex flex-col gap-4 sm:items-center">
-          <div class="relative flex flex-col gap-2 sm:items-center">
+        <div
+          class="inline-flex flex-col gap-4 sm:items-center"
+          id="reviewsText"
+        >
+          <div
+            class="relative flex flex-col gap-2 sm:items-center"
+            id="reviewText"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="172"
@@ -815,11 +822,13 @@
               </defs>
             </svg>
             <p
+              id="reviewsHeading"
               class="uppercase text-tertiary sm:font-subheading sm:text-subheading font-subheading_mobile text-subheading_mobile"
             >
               Reviews
             </p>
             <p
+              id="reviewsTitle"
               class="leading-tight text-primary 2xl:font-title 2xl:text-title sm:font-title sm:text-title text-mobileHeading2 font-mobileHeading2"
             >
               What our <span class="text-brand"> Clients say </span>
@@ -827,6 +836,7 @@
             </p>
           </div>
           <p
+            id="reviewsSubTitle"
             class="sm:font-normal text-secondary sm:text-heading3 font-subtitle_mobile text-subtitle_mobile"
           >
             Read any of over 300 reviews our clients left on
@@ -835,6 +845,7 @@
           </p>
         </div>
         <div
+          id="reviewsContent"
           class="grid 2xl:grid-cols-3 gap-[20px] items-center justify-center container xl:grid-cols-2"
         >
           <div
@@ -1590,7 +1601,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div id="reviewsButton">
           <button
             class="bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
@@ -2867,6 +2878,7 @@
   </footer>
 
   <script>
+    // Introduction section animation
     const introSection = document.getElementById('introSection');
     const introLeft = document.getElementById('introLeft');
     const introIntroduction = document.getElementById('introIntroduction');
@@ -2874,12 +2886,23 @@
     const introContent = document.getElementById('introContent');
     const introButton = document.getElementById('introButton');
 
+    // Reviews section animation
+    const reviewsSection = document.getElementById('reviewsSection');
+    const reviewsHeading = document.getElementById('reviewsHeading');
+    const reviewsContent = document.getElementById('reviewsContent');
+    const reviewsTitle = document.getElementById('reviewsTitle');
+    const reviewsSubTitle = document.getElementById('reviewsSubTitle');
+    const reviewsButton = document.getElementById('reviewsButton');
+
     window.onscroll = () => {
-      const { offsetTop: offset, offsetHeight: height } = introSection;
+      const { offsetTop: introOffset, offsetHeight: height } = introSection;
+      const { offsetTop: reviewsOffset, offsetHeight: reviewsHeight } =
+        reviewsSection;
+
       const top = window.scrollY;
       const bottom = top + window.innerHeight;
 
-      if (top < offset && bottom > offset) {
+      if (top < introOffset && bottom > introOffset) {
         introLeft.style.transform = 'translateX(0%)';
         // introRight.style.transform = 'translateX(0%)';
         introIntroduction.style.transform = 'translateX(0%)';
@@ -2893,6 +2916,28 @@
         introQuestion.style.transform = 'translateX(60%)';
         introContent.style.transform = 'translateX(70%)';
         introButton.style.transform = 'translateX(80%)';
+      }
+
+      if (bottom > reviewsOffset) {
+        // Calculate scroll progress through the reviews section
+        const progress = Math.max(
+          0,
+          Math.min(1, (bottom - reviewsOffset) / (reviewsHeight / 2))
+        );
+        // Set the opacity based on scroll progress
+        reviewsSection.style.opacity = progress;
+        reviewsHeading.style.transform = 'translateY(0%)';
+        reviewsHeading.style.transition = '1s';
+        reviewsTitle.style.transform = 'translateY(0%)';
+        reviewsSubTitle.style.transform = 'translateY(0%)';
+        reviewsContent.style.transform = 'translateY(0%)';
+        reviewsButton.style.transform = 'translateY(0%)';
+      } else {
+        reviewsHeading.style.transform = 'translateY(100%)';
+        reviewsTitle.style.transform = 'translateY(100%)';
+        reviewsSubTitle.style.transform = 'translateY(300%)';
+        reviewsContent.style.transform = 'translateY(10%)';
+        reviewsButton.style.transform = 'translateY(100%)';
       }
     };
   </script>

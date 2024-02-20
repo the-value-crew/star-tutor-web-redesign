@@ -187,6 +187,31 @@
     transition: 1s;
   }
 
+  #reviewsSection {
+    opacity: 0.1;
+  }
+  #reviewsHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #reviewsTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #reviewsSubTitle {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #reviewsContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+
+  #reviewsButton {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+
   .masonry {
     column-gap: 1.5em;
     column-count: 2;
