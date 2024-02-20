@@ -960,6 +960,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[532px\]{
+  max-width: 532px;
+}
+
 .flex-initial{
   flex: 0 1 auto;
 }
@@ -1752,14 +1756,6 @@ video {
   outline-offset: 2px;
 }
 
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1776,6 +1772,32 @@ video {
 .heroSectionRight {
   animation: slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
       slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+}
+
+.aboutSlideInLeft {
+  animation: aboutSlideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.aboutArrowInTop {
+  animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+/* Apply the animation to the elements */
+
+.whyTab {
+  animation: whyTab 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.whoAmITab {
+  animation: whoAmITab 0.5s ease-in-out forwards;
+}
+
+.achievementTab {
+  animation: achievementTab 0.5s ease-in-out forwards;
+}
+
+.teachingTab {
+  animation: achievementTab 0.5s ease-in-out forwards;
 }
 
 /* .aos-init[data-aos='slideInFromRight'] {
@@ -1838,6 +1860,31 @@ video {
 }
 
 #reviewsButton {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#valueSubHeading {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#valueTitle {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#valueHeading3 {
+  transform: translateY(300%);
+  transition: 2s;
+}
+
+#valueContent {
+  transform: translateY(10%);
+  transition: 2s;
+}
+
+#valueButton {
   transform: translateY(100%);
   transition: 2s;
 }
@@ -1989,6 +2036,74 @@ video {
   }
 
   to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutSlideInLeft {
+  from {
+    transform: translateX(-5%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutArrowInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes whyTab {
+  0% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes whoAmITab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes achievementTab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes teachingTab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+
+  100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }

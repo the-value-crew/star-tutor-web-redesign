@@ -133,6 +133,68 @@
   }
 }
 
+@keyframes aboutSlideInLeft {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutArrowInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes whyTab {
+  0% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes whoAmITab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes achievementTab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes teachingTab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @layer utilities {
   /* .heroSectionIn {
     animation: heroSectionSlideInLeft 1s ease-in-out;
@@ -153,6 +215,28 @@
     stroke-dashoffset: 100%;
     opacity: 0; /* Initially hide the arrow */
     animation: revealDottedArrow 3s linear 3s forwards; /* Adjust the delay as needed */
+  }
+
+  .aboutSlideInLeft {
+    animation: aboutSlideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+
+  .aboutArrowInTop {
+    animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+
+  /* Apply the animation to the elements */
+  .whyTab {
+    animation: whyTab 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+  .whoAmITab {
+    animation: whoAmITab 0.5s ease-in-out forwards;
+  }
+  .achievementTab {
+    animation: achievementTab 0.5s ease-in-out forwards;
+  }
+  .teachingTab {
+    animation: achievementTab 0.5s ease-in-out forwards;
   }
 
   /* .aos-init[data-aos='slideInFromRight'] {
@@ -208,6 +292,27 @@
   }
 
   #reviewsButton {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+
+  #valueSubHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #valueTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #valueHeading3 {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #valueContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+  #valueButton {
     transform: translateY(100%);
     transition: 2s;
   }
