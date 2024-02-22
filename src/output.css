@@ -602,8 +602,8 @@ video {
   left: -150px;
 }
 
-.left-\[150px\]{
-  left: 150px;
+.left-\[125px\]{
+  left: 125px;
 }
 
 .left-\[260px\]{
@@ -658,6 +658,10 @@ video {
   top: -45px;
 }
 
+.top-\[-50\]{
+  top: -50;
+}
+
 .top-\[-55px\]{
   top: -55px;
 }
@@ -672,10 +676,6 @@ video {
 
 .top-\[-85px\]{
   top: -85px;
-}
-
-.top-\[-95px\]{
-  top: -95px;
 }
 
 .top-\[-97px\]{
@@ -1774,11 +1774,11 @@ video {
       slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
 }
 
-.aboutSlideInLeft {
-  animation: aboutSlideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+.slideInLeft {
+  animation: slideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
 
-.aboutArrowInTop {
+.arrowInTop {
   animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
 
@@ -1864,6 +1864,10 @@ video {
   transition: 2s;
 }
 
+#valueSection {
+  opacity: 0.1;
+}
+
 #valueSubHeading {
   transform: translateY(100%);
   transition: 2s;
@@ -1886,6 +1890,107 @@ video {
 
 #valueButton {
   transform: translateY(100%);
+  transition: 2s;
+}
+
+#statsSection {
+  opacity: 0.1;
+}
+
+#statsSubHeading {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#statsTitle {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#statsHeading3 {
+  transform: translateY(300%);
+  transition: 2s;
+}
+
+#statsContent {
+  transform: translateY(10%);
+  transition: 2s;
+}
+
+#successSection {
+  opacity: 0.1;
+}
+
+#successSubHeading {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#successTitle {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#successHeading3 {
+  transform: translateY(300%);
+  transition: 2s;
+}
+
+#successContent {
+  transform: translateY(10%);
+  transition: 2s;
+}
+
+#blogsSection {
+  opacity: 0.1;
+}
+
+#blogsSubHeading {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#blogsTitle {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#blogsHeading3 {
+  transform: translateY(300%);
+  transition: 2s;
+}
+
+#blogsContent {
+  transform: translateY(10%);
+  transition: 2s;
+}
+
+#blogsButton {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#contactSection {
+  opacity: 0.1;
+}
+
+#contactSubHeading {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#contactTitle {
+  transform: translateY(100%);
+  transition: 2s;
+}
+
+#contactHeading3 {
+  transform: translateY(300%);
+  transition: 2s;
+}
+
+#contactContent {
+  transform: translateY(10%);
   transition: 2s;
 }
 
@@ -2040,7 +2145,7 @@ video {
   }
 }
 
-@keyframes aboutSlideInLeft {
+@keyframes slideInLeft {
   from {
     transform: translateX(-5%);
   }
