@@ -4,24 +4,25 @@ module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      sm: '640px',
+      sm: '360px',
       // => @media (min-width: 640px) { ... }
 
-      md: '768px',
+      md: '640px',
       // => @media (min-width: 768px) { ... }
 
       lg: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      xl: { min: '1024px', max: '1440px' },
+      xl: '1440px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1440px',
+      '2xl': '1920px',
       // => @media (min-width: 1536px) { ... }
     },
     container: {
       center: true,
       padding: '1rem',
+      margin: '0px',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
