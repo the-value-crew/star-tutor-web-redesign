@@ -34,23 +34,24 @@
     </header>
 
     <main>
-      <section
-        style="
-          background: linear-gradient(
+      <section class="relative h-[350px] overflow-hidden">
+        <img
+          src="../images/onlyBook.png"
+          class="absolute right-0 bottom-0 z-10 hidden imageSlideInRight md:right-[-150px] lg:block"
+        />
+
+        <div
+          class="absolute w-full h-full"
+          style="
+            background: linear-gradient(
               0deg,
-              rgba(0, 0, 0, 0.3) 0%,
-              rgba(0, 0, 0, 0) 66.62%
-            ),
-            linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url('../images/about-bg.png'), lightgray 50% / cover no-repeat;
-          background-position: center;
-          background-size: cover;
-        "
-      >
+              rgba(62, 64, 66, 1) 0%,
+              rgba(88, 96, 96, 1) 100%
+            );
+            background-position: center;
+            background-size: cover;
+          "
+        ></div>
         <div
           class="container flex flex-col justify-center h-[350px] text-title font-title"
         >
