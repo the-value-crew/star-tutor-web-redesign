@@ -64,27 +64,37 @@
 
     <main>
       <section
-        class="flex flex-col justify-center h-[350px] text-title font-title"
-        style="
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.3) 0%,
-              rgba(0, 0, 0, 0) 66.62%
-            ),
-            linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url('../images/about-bg.png'), lightgray 50% / cover no-repeat;
-          background-position: center;
-          background-size: cover;
-        "
+        class="flex flex-col justify-center h-[350px] text-title font-title relative overflow-hidden"
+        style="background-position: center; background-size: cover"
       >
+        <img
+          src="../images/about-bg.png"
+          class="absolute object-cover w-full h-full imageSlideInRight -z-10"
+        />
+
+        <div
+          class="absolute w-full h-full"
+          style="
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(0, 0, 0, 0) 66.62%
+              ),
+              linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.5) 0%,
+                rgba(0, 0, 0, 0.5) 100%
+              ),
+              url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+            background-position: center;
+            background-size: cover;
+          "
+        ></div>
         <div
           class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title"
         >
-          <div class="text-primary-dark">
+          <div class="text-primary-dark slideInLeft">
             <p class="text-title font-title">Access Resources in The</p>
             <p class="text-title font-title">
               Star Tutor's <span class="text-brand-invert">Blog</span>
@@ -101,15 +111,15 @@
             <div class="flex flex-col justify-center">
               <div class="flex gap-5 border-b-[1px]">
                 <button
-                  class="text-button font-button border-b-2 text-[#D93726]"
+                  class="whyTab text-button font-button border-b-2 text-[#D93726]"
                 >
                   All
                 </button>
-                <button>GMAT</button>
-                <button>ACT & SAT</button>
-                <button>GRE</button>
-                <button>ACT & SAT</button>
-                <button>ACT & SAT</button>
+                <button class="teachingTab">GMAT</button>
+                <button class="teachingTab">ACT & SAT</button>
+                <button class="teachingTab">GRE</button>
+                <button class="teachingTab">ACT & SAT</button>
+                <button class="teachingTab">ACT & SAT</button>
               </div>
 
               <div class="flex flex-col my-[16px] gap-[20px]">

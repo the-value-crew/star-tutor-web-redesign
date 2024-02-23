@@ -195,6 +195,17 @@
   }
 }
 
+@keyframes imageSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%) translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
 @layer utilities {
   /* .heroSectionIn {
     animation: heroSectionSlideInLeft 1s ease-in-out;
@@ -223,6 +234,10 @@
 
   .arrowInTop {
     animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+
+  .imageSlideInRight {
+    animation: imageSlideInRight 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
   }
 
   /* Apply the animation to the elements */

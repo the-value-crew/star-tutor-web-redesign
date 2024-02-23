@@ -704,6 +704,10 @@ video {
   top: 74.9px;
 }
 
+.-z-10{
+  z-index: -10;
+}
+
 .z-0{
   z-index: 0;
 }
@@ -900,6 +904,10 @@ video {
 
 .h-\[78px\]{
   height: 78px;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .w-\[135px\]{
@@ -1319,6 +1327,11 @@ video {
 .bg-surface-secondary{
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/src\/images\/introImage\.jpeg\'\)\]{
@@ -1760,6 +1773,10 @@ video {
   text-decoration-line: underline;
 }
 
+.opacity-50{
+  opacity: 0.5;
+}
+
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1793,7 +1810,23 @@ video {
   animation: slideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
 
+.arrowInTop {
+  animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.imageSlideInRight {
+  animation: imageSlideInRight 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
 /* Apply the animation to the elements */
+
+.whyTab {
+  animation: whyTab 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.teachingTab {
+  animation: achievementTab 0.5s ease-in-out forwards;
+}
 
 /* .aos-init[data-aos='slideInFromRight'] {
     opacity: 1;
@@ -2205,6 +2238,18 @@ video {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes imageSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%) translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
