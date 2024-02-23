@@ -4,32 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Why choose us?</title>
-    <link href="../output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../output.css" />
   </head>
   <body>
-    <header class="bg-[#121212]">
-      <nav
-        class="container text-secondary-dark flex text-sm font-medium justify-between items-center h-[74px] py-4"
-      >
-        <img
-          src="../images/theStarTutorLogo.png"
-          class="w-[166px] h-[31px] flex-shrink-0"
-        />
-        <div class="flex gap-[12px] items-center">
-          <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
-          <a class="py-[4px] px-[8px]" href="./about.html">About</a>
-          <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
-          <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
-          <a class="py-[4px] px-[8px]" href="./contact.html">Contact</a>
-          <a class="py-[4px] px-[8px] text-brand" href="./whyUs.html"
-            >Why Choose Us?</a
-          >
+    <header
+      class="bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]"
+    >
+      <nav class="lg:flex lg:items-center">
+        <div class="flex items-center justify-between">
+          <img
+            src="../images/theStarTutorLogo.png"
+            class="w-[166px] h-[31px] flex-shrink-0"
+          />
+          <button id="navBtn" class="lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+            >
+              <path
+                d="M3 12.5H21M3 6.5H21M9 18.5H21"
+                stroke="#FCFCFC"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-        <button
-          class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
+        <div
+          id="navMenu"
+          class="hidden lg:w-full lg:flex lg:items-center text-secondary-dark"
         >
-          Book A Free Consultation
-        </button>
+          <div
+            class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center"
+          >
+            <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
+            <a class="py-[4px] px-[8px]" href="./about.html">About</a>
+            <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
+            <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
+            <a class="py-[4px] px-[8px]" href="../../index.html#contact"
+              >Contact</a
+            >
+            <a class="text-brand py-[4px] px-[8px]" href="./whyUs.html"
+              >Why Choose Us?</a
+            >
+          </div>
+          <button
+            class="bg-cta-default font-button shrink-0 py-[10px] px-[20px] rounded-[60px]"
+          >
+            Book A Free Consultation
+          </button>
+        </div>
       </nav>
     </header>
 
@@ -52,7 +80,7 @@
         "
       >
         <div
-          class="container flex flex-col justify-center h-[350px] text-title font-title"
+          class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title"
         >
           <div class="text-primary-dark">
             <p class="text-title font-title slideInLeft">
@@ -821,7 +849,9 @@
     <footer
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >
-      <div class="container flex items-start justify-between">
+      <div
+        class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start"
+      >
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
           <p class="capitalize text-heading2 font-heading2">Links</p>
           <a class="font-normal capitalize text-normal">Home</a>
@@ -876,5 +906,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../scripts/script.js"></script>
   </body>
 </html>

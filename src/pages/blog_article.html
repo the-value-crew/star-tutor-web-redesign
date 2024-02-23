@@ -7,36 +7,43 @@
     <link rel="stylesheet" href="../output.css">
 </head>
 <body>
-    <header class="bg-[#121212]">
-        <nav
-          class="container text-secondary-dark flex text-sm font-medium justify-between items-center h-[74px] py-4"
-        >
-          <img
-            src="../images/theStarTutorLogo.png"
-            class="w-[166px] h-[31px] flex-shrink-0"
-          />
-          <div class="flex gap-[12px] items-center">
-            <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
-            <a class="py-[4px] px-[8px]" href="./about.html">About</a>
-            <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
-            <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
-            <a class="py-[4px] px-[8px]" href="./contact.html">Contact</a>
-            <a class="py-[4px] px-[8px] text-brand" href="./whyUs.html">Why Choose Us?</a>
+    <header class="bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+        <nav class="lg:flex lg:items-center">
+          <div class="flex justify-between items-center">
+            <img
+              src="../images/theStarTutorLogo.png"
+              class="w-[166px] h-[31px] flex-shrink-0"
+            />
+            <button id="navBtn" class="lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M3 12.5H21M3 6.5H21M9 18.5H21" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
-          <button
-            class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
-          >
-            Book A Free Consultation
-          </button>
+          <div id="navMenu" class="hidden lg:w-full lg:flex lg:items-center text-secondary-dark">
+            <div class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center">
+              <a class="py-[4px] px-[8px]" href="../../index.html">Home</a>
+              <a class="py-[4px] px-[8px]" href="./about.html">About</a>
+              <a class="py-[4px] px-[8px]" href="./reviews.html">Reviews</a>
+              <a class="py-[4px] px-[8px]" href="./blogs.html">Blogs</a>
+              <a class="py-[4px] px-[8px]" href="../../index.html#contact">Contact</a>
+              <a class="py-[4px] px-[8px]" href="./whyUs.html">Why Choose Us?</a>
+            </div>
+            <button
+              class="bg-cta-default font-button shrink-0 py-[10px] px-[20px] rounded-[60px]"
+            >
+              Book A Free Consultation
+            </button>
+          </div>
         </nav>
       </header>
 
     <main class="flex flex-col items-center">
         <section class="mt-[60px]">
-            <div class="container">
+            <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
                 <div class="h-[558px] bg-[url('./images/blog-article.png')] bg-center bg-cover"></div>
-                <p class="my-[30px] text-title font-title">What GMAT and GRE tests feel like and what you can do about it</p>
-                <div>
+                <p class="my-[30px] text-heading1 font-heading1">What GMAT and GRE tests feel like and what you can do about it</p>
+                <div class="text-subheading font-subheading">
                     <p class="py-[6px]">The cartoon above very closely depicts what it feels like taking the GMAT or the GRE. I am using metaphors to help you understand different types of experiences and challenges, and for each challenge, I am suggesting solutions that you can incorporate early on in your training. Some of the suggestions may not be immediately obvious and may require more research on your part.</p>
                     <p class="py-[6px]">
                         <h3 class="text-heading3 font-heading3">1. You</h3>
@@ -134,14 +141,14 @@
         <section class="w-full px-[350px] mt-[76px]">
             <h2 class="text-heading2 font-heading2">Comments (24)</h2>
             <div class="flex py-[24px] px-[24px] gap-[8px]">
-                <div class="w-[40px] h-[40px] bg-[url('./images/user.jpg')] bg-center bg-cover rounded-full"></div>
+                <div class="w-[40px] h-[40px] bg-[url('./src/images/user.jpg')] bg-center bg-cover rounded-full"></div>
                 <input class="h-[40px] outline-none w-full bg-surface-secondary resize-none rounded-full indent-[10px]" placeholder="Write a comment" />
             </div>
             <hr>
             <div>
                 <div class="flex flex-col py-[24px] px-[24px] gap-[8px]">
                     <div class="flex gap-[7px]">
-                        <div class="w-[40px] h-[40px] bg-[url('./images/user1.jpg')] bg-center bg-cover rounded-full"></div>
+                        <div class="w-[40px] h-[40px] bg-[url('./src/images/user1.jpg')] bg-center bg-cover rounded-full"></div>
                         <div class="flex flex-col">
                             <span class="text-semibold font-semibold">Sam W</span>
                             <span class="text-captionSmall font-captionSmall">15 Dec 2023</span>
@@ -168,7 +175,7 @@
                 </div>
                 <div class="flex flex-col py-[24px] px-[24px] gap-[8px]">
                     <div class="flex gap-[7px]">
-                        <div class="w-[40px] h-[40px] bg-[url('./images/user1.jpg')] bg-center bg-cover rounded-full"></div>
+                        <div class="w-[40px] h-[40px] bg-[url('./src/images/user1.jpg')] bg-center bg-cover rounded-full"></div>
                         <div class="flex flex-col">
                             <span class="text-semibold font-semibold">Michael J</span>
                             <span class="text-captionSmall font-captionSmall">15 Dec 2023</span>
@@ -268,7 +275,7 @@
     <footer
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >
-      <div class="container flex justify-between items-start">
+      <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start">
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
           <p class="capitalize text-heading2 font-heading2">Links</p>
           <a class="font-normal capitalize text-normal">Home</a>
@@ -323,5 +330,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="module" src="../scripts/script.js"></script>
   </body>
 </html>
