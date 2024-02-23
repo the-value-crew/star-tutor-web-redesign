@@ -555,17 +555,13 @@ video {
 }
 
 @media (min-width: 360px){
-@media (min-width: 360px){
   .container{
-    max-width: 360px;
     max-width: 360px;
   }
 }
 
 @media (min-width: 640px){
-@media (min-width: 640px){
   .container{
-    max-width: 640px;
     max-width: 640px;
   }
 }
@@ -577,15 +573,7 @@ video {
 }
 
 @media (min-width: 1440px){
-@media (min-width: 1440px){
   .container{
-    max-width: 1440px;
-  }
-}
-
-@media (min-width: 1920px){
-  .container{
-    max-width: 1920px;
     max-width: 1440px;
   }
 }
@@ -716,14 +704,6 @@ video {
   top: 74.9px;
 }
 
-.left-\[150px\]{
-  left: 150px;
-}
-
-.top-\[-95px\]{
-  top: -95px;
-}
-
 .z-0{
   z-index: 0;
 }
@@ -818,8 +798,8 @@ video {
   margin-top: 90px;
 }
 
-.mt-\[320px\]{
-  margin-top: 320px;
+.mt-\[96px\]{
+  margin-top: 96px;
 }
 
 .block{
@@ -886,6 +866,10 @@ video {
   height: 40px;
 }
 
+.h-\[420px\]{
+  height: 420px;
+}
+
 .h-\[459px\]{
   height: 459px;
 }
@@ -914,12 +898,12 @@ video {
   height: 67px;
 }
 
-.h-\[78px\]{
-  height: 78px;
+.h-\[74px\]{
+  height: 74px;
 }
 
-.h-\[420px\]{
-  height: 420px;
+.h-\[78px\]{
+  height: 78px;
 }
 
 .w-\[135px\]{
@@ -1051,6 +1035,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-around{
+  justify-content: space-around;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -1101,10 +1089,6 @@ video {
 
 .gap-\[20px\]{
   gap: 20px;
-}
-
-.gap-\[21px\]{
-  gap: 21px;
 }
 
 .gap-\[22px\]{
@@ -1400,10 +1384,6 @@ video {
   padding: 16px;
 }
 
-.p-\[16px\]{
-  padding: 16px;
-}
-
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1457,6 +1437,11 @@ video {
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-\[10px\]{
@@ -1517,11 +1502,6 @@ video {
 .py-\[80px\]{
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.px-\[16px\]{
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .pb-\[11px\]{
@@ -1817,27 +1797,7 @@ video {
   animation: slideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
 }
 
-.arrowInTop {
-  animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
-}
-
 /* Apply the animation to the elements */
-
-.whyTab {
-  animation: whyTab 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
-}
-
-.whoAmITab {
-  animation: whoAmITab 0.5s ease-in-out forwards;
-}
-
-.achievementTab {
-  animation: achievementTab 0.5s ease-in-out forwards;
-}
-
-.teachingTab {
-  animation: achievementTab 0.5s ease-in-out forwards;
-}
 
 /* .aos-init[data-aos='slideInFromRight'] {
     opacity: 1;
@@ -2253,10 +2213,6 @@ video {
 }
 
 @media (min-width: 360px){
-  .sm\:items-center{
-    align-items: center;
-  }
-
   .sm\:text-center{
     text-align: center;
   }
@@ -2443,6 +2399,11 @@ video {
     padding-right: 40px;
   }
 
+  .lg\:px-\[56px\]{
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+
   .lg\:text-left{
     text-align: left;
   }
@@ -2505,6 +2466,10 @@ video {
     margin-left: 121.25px;
   }
 
+  .xl\:mt-\[116\.3px\]{
+    margin-top: 116.3px;
+  }
+
   .xl\:mt-\[14px\]{
     margin-top: 14px;
   }
@@ -2537,10 +2502,6 @@ video {
     height: 426px;
   }
 
-  .xl\:h-\[510px\]{
-    height: 510px;
-  }
-
   .xl\:h-\[546px\]{
     height: 546px;
   }
@@ -2555,14 +2516,6 @@ video {
 
   .xl\:w-\[412px\]{
     width: 412px;
-  }
-
-  .xl\:w-\[45rem\]{
-    width: 45rem;
-  }
-
-  .xl\:w-\[464px\]{
-    width: 464px;
   }
 
   .xl\:w-\[511px\]{
@@ -2634,8 +2587,9 @@ video {
     gap: 60px;
   }
 
-  .xl\:border-l-2{
-    border-left-width: 2px;
+  .xl\:px-\[200px\]{
+    padding-left: 200px;
+    padding-right: 200px;
   }
 
   .xl\:py-\[40px\]{
@@ -2643,25 +2597,8 @@ video {
     padding-bottom: 40px;
   }
 
-  .xl\:px-\[200px\]{
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-
-  .xl\:pl-\[56px\]{
-    padding-left: 56px;
-  }
-
-  .xl\:text-heading2{
-    font-size: 36px;
-  }
-
   .xl\:text-title{
     font-size: 48px;
-  }
-
-  .xl\:font-heading2{
-    font-weight: 600;
   }
 
   .xl\:font-title{
@@ -2674,8 +2611,20 @@ video {
     margin-bottom: 320px;
   }
 
+  .\32xl\:mt-\[122px\]{
+    margin-top: 122px;
+  }
+
   .\32xl\:mt-\[320px\]{
     margin-top: 320px;
+  }
+
+  .\32xl\:mt-\[37\.5px\]{
+    margin-top: 37.5px;
+  }
+
+  .\32xl\:mt-\[60px\]{
+    margin-top: 60px;
   }
 
   .\32xl\:block{
@@ -2718,29 +2667,21 @@ video {
     gap: 112px;
   }
 
-  .\32xl\:py-\[16px\]{
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
   .\32xl\:px-\[418px\]{
     padding-left: 418px;
     padding-right: 418px;
+  }
+
+  .\32xl\:py-\[16px\]{
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .\32xl\:text-heading2{
     font-size: 36px;
   }
 
-  .\32xl\:text-title{
-    font-size: 48px;
-  }
-
   .\32xl\:font-heading2{
     font-weight: 600;
-  }
-
-  .\32xl\:font-title{
-    font-weight: 700;
   }
 }
