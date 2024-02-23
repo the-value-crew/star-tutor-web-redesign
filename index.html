@@ -2,17 +2,18 @@
   <head>
     <title>Home</title>
     <link href="./src/output.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-gradient-to-r from-[#EEEEBB] to-[#D4D3DC] overflow-x-hidden">
     <header class="bg-[#121212]">
       <nav
         class="container text-secondary-dark lg:flex text-md font-medium justify-around items-center h-[74px] py-4 hidden"
       >
-        <img
-          src="./src/images/theStarTutorLogo.png"
-          class="w-[166px] h-[31px] flex-shrink-0"
-        />
+        <figure>
+          <img
+            src="./src/images/theStarTutorLogo.png"
+            class="w-[166px] h-[31px] flex-shrink-0"
+          />
+        </figure>
         <div class="flex gap-[12px] items-center">
           <a
             class="py-[4px] px-[8px] text-brand-invert-dark"
@@ -71,30 +72,33 @@
       <nav
         class="container text-secondary-dark flex text-md font-medium justify-around items-center h-[63px] py-4 lg:hidden"
       >
-        <img
-          src="./src/images/theStarTutorLogo.png"
-          class="w-[166px] h-[31px] flex-shrink-0"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-        >
-          <path
-            d="M3 12.5H21M3 6.5H21M9 18.5H21"
-            stroke="#FCFCFC"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+        <figure>
+          <img
+            src="./src/images/theStarTutorLogo.png"
+            class="w-[166px] h-[31px] flex-shrink-0"
           />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M3 12.5H21M3 6.5H21M9 18.5H21"
+              stroke="#FCFCFC"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </figure>
       </nav>
     </header>
 
     <!-- Hero section -->
-    <div
+    <!-- for 1440 and higher -->
+    <main
       class="xl:h-[600px] xl:flex xl:justify-center items-center gap-[112px] hidden"
     >
       <div
@@ -380,16 +384,16 @@
             </defs>
           </svg>
           <div>
-            <p class="leading-tight text-primary text-title font-title">
+            <h1 class="leading-tight text-primary text-title font-title">
               Excel in your tests for
               <span class="text-brand"> GMAT/GRE. </span>
-            </p>
+            </h1>
           </div>
 
-          <span class="font-normal leading-relaxed text-secondary"
-            >With 15 years of in-person and 8 years online coaching expertize, I
-            have helped students achieve top GMAT & GRE Quant scores.</span
-          >
+          <p class="font-normal leading-relaxed text-secondary">
+            With 15 years of in-person and 8 years online coaching expertize, I
+            have helped students achieve top GMAT & GRE Quant scores.
+          </p>
         </div>
         <div>
           <button
@@ -402,11 +406,13 @@
       <div
         class="xl:relative xl:w-[348px] xl:h-[420px] hidden xl:block heroSectionRight"
       >
-        <img
-          src="./src/images/starTutor.png"
-          alt="star-tutor"
-          class="xl:absolute w-[348px] h-[420px] flex-shrink-0 rounded-lg"
-        />
+        <figure>
+          <img
+            src="./src/images/starTutor.png"
+            alt="star-tutor"
+            class="xl:absolute w-[348px] h-[420px] flex-shrink-0 rounded-lg"
+          />
+        </figure>
 
         <img
           src="./src/images/greyBlur.png"
@@ -421,20 +427,21 @@
           class="xl:w-[348px] xl:h-[140px] xl:absolute xl:z-1000 xl:bottom-0 xl:left-[92px]"
         />
       </div>
-    </div>
+    </main>
 
-    <div
+    <!-- for 1024 - 1440 -->
+    <main
       class="items-center gap-[60px] lg:mt-[60px] lg:flex lg:flex-col hidden xl:hidden"
     >
       <div class="flex items-center gap-[49px]">
-        <div>
+        <figure>
           <img
             src="./src/images/starTutor.png"
             alt="star-tutor"
             class="w-[464px] h-[510px] flex-shrink-0 rounded-lg"
           />
-        </div>
-        <div class="relative w-[408px] h-[160px]">
+        </figure>
+        <figure class="relative w-[408px] h-[160px]">
           <img src="./src/images/homeReviewTablet.png" class="absolute z-10" />
           <img
             src="./src/images/greyBlur.png"
@@ -444,7 +451,7 @@
             src="./src/images/greyBlur.png"
             class="absolute top-[74.9px] left-[72px]"
           />
-        </div>
+        </figure>
       </div>
       <div
         class="lg:w-[944px] lg:flex lg:gap-[28px] lg:flex-col lg:justify-center lg:items-center text-center"
@@ -453,16 +460,16 @@
           class="lg:w-[624px] flex flex-col gap-[20px] items-center justify-center"
         >
           <div>
-            <p class="leading-tight text-primary text-title font-title">
+            <h1 class="leading-tight text-primary text-title font-title">
               Excel in your tests for
               <span class="text-brand"> GMAT/GRE. </span>
-            </p>
+            </h1>
           </div>
 
-          <span class="font-normal leading-relaxed text-secondary"
-            >With 15 years of in-person and 8 years online coaching expertize, I
-            have helped students achieve top GMAT & GRE Quant scores.</span
-          >
+          <p class="font-normal leading-relaxed text-secondary">
+            With 15 years of in-person and 8 years online coaching expertize, I
+            have helped students achieve top GMAT & GRE Quant scores.
+          </p>
         </div>
         <div>
           <button
@@ -472,21 +479,24 @@
           </button>
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class="items-center gap-[117.55px] flex flex-col lg:hidden mb-[120px]">
+    <!-- for 0-1023 -->
+    <main
+      class="items-center gap-[117.55px] flex flex-col lg:hidden mb-[120px]"
+    >
       <div class="relative">
-        <div>
+        <figure>
           <img
             src="./src/images/starTutor.png"
             alt="star-tutor"
             class="w-[640px] h-[634.75px]"
           />
-        </div>
+        </figure>
         <div
           class="absolute bottom-[-80px] left-[50%] transform translate-x-[-50%]"
         >
-          <div class="relative w-[408px] h-[160px]">
+          <figure class="relative w-[408px] h-[160px]">
             <img
               src="./src/images/homeReviewTablet.png"
               class="absolute z-10"
@@ -499,24 +509,24 @@
               src="./src/images/greyBlur.png"
               class="absolute top-[50.71px] left-[52.54px]"
             />
-          </div>
+          </figure>
         </div>
       </div>
       <div class="flex flex-col gap-[28px] container">
         <div class="flex flex-col md:gap-[20px] gap-[12px]">
           <div>
-            <p
+            <h1
               class="leading-tight text-primary md:text-title md:font-title text-mobileHeading2 font-mobileHeading2"
             >
               Excel in your tests for
               <span class="text-brand"> GMAT/GRE. </span>
-            </p>
+            </h1>
           </div>
 
-          <span class="font-normal leading-relaxed text-secondary"
-            >With 15 years of in-person and 8 years online coaching expertize, I
-            have helped students achieve top GMAT & GRE Quant scores.</span
-          >
+          <p class="font-normal leading-relaxed text-secondary">
+            With 15 years of in-person and 8 years online coaching expertize, I
+            have helped students achieve top GMAT & GRE Quant scores.
+          </p>
         </div>
         <div>
           <button
@@ -526,26 +536,24 @@
           </button>
         </div>
       </div>
-    </div>
+    </main>
 
     <!-- Score card -->
-
-    <div
+    <figure
       class="flex items-center justify-center mt-[90px] mb-[120px] container xl:mb-[200px]"
     >
       <img src="./src/images/scoreCard.png" class="lg:w-[942px] xl:h-[546px]" />
-    </div>
+    </figure>
 
     <!-- Introduction section -->
-
-    <div
+    <section
       id="introSection"
       class="md:mb-[120px] lg:mb-[120px] xl:mb-[200px] lg:mt-[140px] mb-[80px] flex lg:flex-row flex-col gap-[40px] xl:gap-[108px] 2xl:[gap-112px] lg:gap-[88px] container md:items-center md:justify-center"
     >
-      <div
+      <figure
         class="bg-[url('../src/images/introImage.jpeg')] xl:w-[348px] xl:h-[426px] lg:h-[338px] lg:w-[343px] w-[149px] h-[138px] flex-shrink-0 bg-cover bg-no-repeat"
         id="introLeft"
-      ></div>
+      ></figure>
 
       <div
         class="w-[624px] xl:w-[512.5px] flex flex-col gap-[20px] md:text-center lg:text-left"
@@ -555,14 +563,14 @@
           class="relative inline-flex flex-col gap-2 xl:items-start"
           id="introIntroduction"
         >
-          <p class="uppercase text-tertiary font-subheading text-subheading">
+          <h2 class="uppercase text-tertiary font-subheading text-subheading">
             Introduction
-          </p>
-          <p
+          </h2>
+          <h1
             class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title font-mobileHeading2 text-mobileHeading2"
           >
             A short <span class="text-brand">Message</span>
-          </p>
+          </h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="116"
@@ -629,12 +637,15 @@
             </defs>
           </svg>
         </div>
-        <div class="hidden 2xl:block" id="introQuestion">
-          <p class="hidden font-normal text-secondary text-heading3 2xl:block">
-            What the founder has to say to you.
-          </p>
-        </div>
-        <div
+
+        <h3
+          class="hidden font-normal text-secondary text-heading3 2xl:block"
+          id="introQuestion"
+        >
+          What the founder has to say to you.
+        </h3>
+
+        <article
           class="flex flex-col items-start md:gap-[20px] gap-2"
           id="introContent"
         >
@@ -657,7 +668,7 @@
           <p class="font-semibold text-secondary text-normal md:text-cemter">
             Tara B, Founder
           </p>
-        </div>
+        </article>
         <div id="introButton">
           <button
             class="bg-[#C84A3D] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
@@ -666,16 +677,16 @@
           </button>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Reviews section -->
 
-    <div class="2xl:mb-[320px] md:mb-[120px] mb-[80px] xl:mb-[200px]">
-      <div
+    <section class="2xl:mb-[320px] md:mb-[120px] mb-[80px] xl:mb-[200px]">
+      <section
         id="reviewsSection"
         class="flex flex-col md:gap-[60px] gap-[40px] container md:items-center"
       >
-        <div
+        <section
           class="inline-flex flex-col gap-4 md:items-center"
           id="reviewsText"
         >
@@ -689,7 +700,7 @@
               height="151"
               viewBox="0 0 172 151"
               fill="none"
-              class="absolute top-[-55px] left-[79px] hidden 2xl:block"
+              class="absolute top-[-55px] left-[79px] hidden xl:block"
             >
               <g clip-path="url(#clip0_505_3370)">
                 <path
@@ -780,35 +791,35 @@
                 </clipPath>
               </defs>
             </svg>
-            <p
+            <h2
               id="reviewsHeading"
               class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
             >
               Reviews
-            </p>
-            <p
+            </h2>
+            <h1
               id="reviewsTitle"
               class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
             >
               What our <span class="text-brand"> Clients say </span>
               about us
-            </p>
+            </h1>
           </div>
-          <p
+          <h3
             id="reviewsSubTitle"
             class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
           >
             Read any of over 300 reviews our clients left on
             <span class="underline">Google</span> and
             <span class="underline">Yelp</span>
-          </p>
-        </div>
-        <div>
-          <div
+          </h3>
+        </section>
+        <section>
+          <section
             id="reviewsContent"
             class="grid xl:grid-cols-3 gap-[20px] grid-cols-1 items-center justify-center container lg:grid-cols-2"
           >
-            <div
+            <article
               class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px] flex-initial"
             >
               <div class="flex gap-[4px]">
@@ -889,9 +900,9 @@
                   >
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div
+            <article
               class="flex-initial 2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -976,9 +987,9 @@
                   >
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div
+            <article
               class="flex-initial 2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1063,8 +1074,8 @@
                   >
                 </p>
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="flex-initial 2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1148,8 +1159,8 @@
                   >
                 </p>
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="flex-initial 2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1230,8 +1241,8 @@
                   >
                 </p>
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1312,8 +1323,8 @@
                   >
                 </p>
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1394,8 +1405,8 @@
                   >
                 </p>
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1478,8 +1489,8 @@
                   >
                 </p>
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
               <div class="flex gap-[4px]">
@@ -1560,9 +1571,9 @@
                   >
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </article>
+          </section>
+        </section>
 
         <div id="reviewsButton">
           <button
@@ -1571,24 +1582,24 @@
             See more reviews
           </button>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
 
     <!-- Value section -->
 
-    <div
+    <section
       class="flex flex-col md:gap-[60px] gap-[40px] md:items-center md:mb-[120px] mb-[80px] container xl:mb-[200px]"
       id="valueSection"
     >
-      <div class="flex-col gap-4">
-        <div class="relative flex flex-col gap-2 md:items-center">
+      <section class="flex-col gap-4">
+        <section class="relative flex flex-col gap-2 md:items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="174"
             height="135"
             viewBox="0 0 174 135"
             fill="none"
-            class="absolute left-[-110px] top-[-55px] hidden 2xl:block"
+            class="absolute left-[-110px] top-[-55px] hidden xl:block"
           >
             <g clip-path="url(#clip0_505_4468)">
               <path
@@ -1679,35 +1690,35 @@
               </clipPath>
             </defs>
           </svg>
-          <p
+          <h2
             id="valueSubHeading"
             class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
           >
             Value
-          </p>
-          <p
+          </h2>
+          <h1
             id="valueTitle"
             class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
           >
             <span class="text-brand"> Why</span>
             The Star Tutor?
-          </p>
-        </div>
-        <p
+          </h1>
+        </section>
+        <h3
           id="valueHeading3"
           class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
         >
           12 Reasons why our clients recommend you chose us.
-        </p>
-      </div>
-      <div
+        </h3>
+      </section>
+      <section
         id="valueContent"
         class="grid xl:grid-cols-3 md:grid-cols-1 lg:grid-cols-2 gap-[20px]"
       >
-        <div class="flex-grow rounded-xl bg-grey-100">
-          <div class="flex items-center justify-center">
+        <article class="flex-grow rounded-xl bg-grey-100">
+          <figure class="flex items-center justify-center">
             <img src="./src/images/coachingImage.png" class="md:h-[350px]" />
-          </div>
+          </figure>
           <div
             class="flex flex-col pt-[24px] pl-[20px] pb-[32px] pr-[20px] gap-[20px] xl:w-[412px]"
           >
@@ -1726,11 +1737,11 @@
               how to strategize and “win”!
             </p>
           </div>
-        </div>
-        <div class="flex-grow rounded-xl bg-grey-100">
-          <div class="flex items-center justify-center">
+        </article>
+        <article class="flex-grow rounded-xl bg-grey-100">
+          <figure class="flex items-center justify-center">
             <img src="./src/images/qualityImage.png" class="md:h-[350px]" />
-          </div>
+          </figure>
           <div
             class="flex flex-col pt-[24px] pl-[20px] pb-[32px] pr-[20px] gap-[20px] xl:w-[412px]"
           >
@@ -1757,11 +1768,11 @@
               analyses.
             </p>
           </div>
-        </div>
-        <div class="block rounded-xl bg-grey-100 lg:hidden xl:block">
-          <div class="flex items-center justify-center w-full">
+        </article>
+        <article class="block rounded-xl bg-grey-100 lg:hidden xl:block">
+          <figure class="flex items-center justify-center w-full">
             <img src="./src/images/placementImage.png" class="md:h-[350px]" />
-          </div>
+          </figure>
           <div
             class="flex flex-col pt-[24px] pl-[20px] pb-[32px] pr-[20px] gap-[20px]"
           >
@@ -1775,8 +1786,8 @@
               admitted to Harvard Business School!” -Brad M
             </p>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
       <div id="valueButton">
         <button
           class="bg-[#C84A3D] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
@@ -1784,22 +1795,22 @@
           See more reasons
         </button>
       </div>
-    </div>
+    </section>
 
     <!-- Stats section -->
-    <div
+    <section
       class="2xl:mt-[320px] flex flex-col md:gap-[20px] xl:gap-[60px] gap-[40px] md:mb-[120px] mb-[80px] container md:items-center xl:mb-[200px]"
       id="statsSection"
     >
-      <div class="inline-flex flex-col gap-4 md:items-center">
-        <div class="relative flex flex-col gap-2 md:items-center">
+      <section class="inline-flex flex-col gap-4 md:items-center">
+        <section class="relative flex flex-col gap-2 md:items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="260"
             height="114"
             viewBox="0 0 260 114"
             fill="none"
-            class="absolute left-[-150px] top-[-45px] hidden 2xl:block"
+            class="absolute left-[-150px] top-[-45px] hidden xl:block"
           >
             <g clip-path="url(#clip0_505_3480)">
               <path
@@ -1990,49 +2001,49 @@
               </clipPath>
             </defs>
           </svg>
-          <p
+          <h2
             id="statsSubHeading"
             class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
           >
             Stats
-          </p>
-          <p
+          </h2>
+          <h1
             id="statsTitle"
             class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
           >
             The <span class="text-brand">Numbers </span>
             are safe
-          </p>
-        </div>
-        <p
+          </h1>
+        </section>
+        <h3
           id="statsHeading3"
           class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
         >
           We have helped the community over the years and will continue doing so
-        </p>
-      </div>
+        </h3>
+      </section>
 
-      <div
+      <section
         id="statsContent"
         class="2xl:flex 2xl:items-center 2xl:justify-center gap-[20px] xl:grid-cols-2 xl:grid container md:grid md:grid-cols-2"
       >
-        <div
+        <article
           class="2xl:w-[256px] px-[12px] xl:py-[40px] py-[20px] sm:text-center flex flex-col gap-2 border-r border-solid border-grey-300"
         >
           <p class="text-brand font-heading1 text-heading1">98%</p>
           <span class="font-normal text-secondary text-normal">
             5 star reviews out of 176 reviews
           </span>
-        </div>
-        <div
+        </article>
+        <article
           class="2xl:w-[256px] px-[12px] xl:py-[40px] py-[20px] sm:text-center flex flex-col gap-2 border-r border-solid border-grey-300"
         >
           <p class="text-brand font-heading1 text-heading1">150</p>
           <span class="font-normal text-secondary text-normal">
             Students admitted to M7 Business schools and top graduate programs
           </span>
-        </div>
-        <div
+        </article>
+        <article
           class="2xl:w-[256px] px-[12px] xl:py-[40px] flex flex-col gap-2 sm:text-center border-r border-solid border-grey-300"
         >
           <p class="text-brand font-heading1 text-heading1">1</p>
@@ -2040,8 +2051,8 @@
             Rank on Yelp chicago and Boston when you search for GMAT Tutor or
             GRE Tutor
           </span>
-        </div>
-        <div
+        </article>
+        <article
           class="2xl:w-[256px] px-[12px] xl:py-[40px] py-[20px] sm:text-center flex flex-col gap-2 border-r border-solid border-grey-300"
         >
           <p class="text-brand font-heading1 text-heading1">15+</p>
@@ -2049,24 +2060,24 @@
             Years of in-person and online coaching experience with clients in 16
             countries
           </span>
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+    </section>
 
     <!-- Success stories section -->
-    <div
+    <section
       id="successSection"
       class="2xl:mt-[320px] md:mb-[120px] mb-[80px] flex flex-col items-center md:gap-[60px] gap-[40px] container xl:mb-[200px]"
     >
-      <div class="inline-flex flex-col gap-4 md:items-center">
-        <div class="relative flex flex-col gap-2 md:items-center">
+      <section class="inline-flex flex-col gap-4 md:items-center">
+        <section class="relative flex flex-col gap-2 md:items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="172"
             height="151"
             viewBox="0 0 172 151"
             fill="none"
-            class="absolute top-[-62px] right-[100px] hidden 2xl:block"
+            class="absolute top-[-62px] right-[100px] hidden xl:block"
           >
             <g clip-path="url(#clip0_505_4343)">
               <path
@@ -2157,127 +2168,127 @@
               </clipPath>
             </defs>
           </svg>
-          <p
+          <h2
             id="successSubHeading"
             class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
           >
             Success Stories
-          </p>
-          <p
+          </h2>
+          <h1
             id="successTitle"
             class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
           >
             Inspiring University <span class="text-brand">Placements</span>
-          </p>
-        </div>
-        <p
+          </h1>
+        </section>
+        <h3
           id="successHeading3"
           class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
         >
           Our clients got placed in the top tier universities in the world
-        </p>
-      </div>
+        </h3>
+      </section>
 
-      <div
+      <section
         class="grid gap-[20px] items-center justify-center xl:grid-cols-4 container md:grid-cols-2"
       >
-        <div
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/stanford.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/wharton.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/harvardBusiness.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/chicagoBooth.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/northwestern.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/mitManagement.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/columbiaBusiness.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/berkeley.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/tuck.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/michigan.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/londonBusiness.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/nyu.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/insead.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/duke.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/londonSchool.png" />
-        </div>
-        <div
+        </figure>
+        <figure
           class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md"
         >
           <img src="./src/images/universities/ucla.png" />
-        </div>
-      </div>
-    </div>
+        </figure>
+      </section>
+    </section>
 
     <!-- Blogs section -->
-    <div
+    <section
       class="2xl:mt-[320px] md:mb-[120px] mb-[80px] flex flex-col md:gap-[60px] gap-[40px] md:items-center container xl:mb-[200px]"
       id="blogsSection"
     >
-      <div class="inline-flex flex-col gap-4 md:items-center">
-        <div class="relative flex flex-col gap-2 md:items-center">
+      <section class="inline-flex flex-col gap-4 md:items-center">
+        <section class="relative flex flex-col gap-2 md:items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="164"
             height="164"
             viewBox="0 0 164 164"
             fill="none"
-            class="absolute top-[-97px] right-[105px] hidden 2xl:block"
+            class="absolute top-[-97px] right-[105px] hidden xl:block"
           >
             <g clip-path="url(#clip0_505_4363)">
               <path
@@ -2368,46 +2379,48 @@
               </clipPath>
             </defs>
           </svg>
-          <p
+          <h2
             id="blogsSubHeading"
             class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
           >
             Blogs
-          </p>
-          <p
+          </h2>
+          <h1
             id="blogsTitle"
             class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
           >
             Read our <span class="text-brand">Blogs</span>
-          </p>
-        </div>
-        <p
+          </h1>
+        </section>
+        <h3
           id="blogsHeading3"
           class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
         >
           These blogs will help you gain insights on the psychology behind the
           tests.
-        </p>
-      </div>
+        </h3>
+      </section>
 
-      <div
+      <section
         class="flex flex-wrap gap-[20px] justify-center container"
         id="blogsContent"
       >
-        <div
+        <article
           class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg bg-surface-primary shadow-md 2xl:w-[532px] xl:w-[511px] max-w-[462px]"
         >
-          <img
-            src="./src/images/stress.png"
-            class="w-full h-[304px] self-stretch"
-          />
+          <figure>
+            <img
+              src="./src/images/stress.png"
+              class="w-full h-[304px] self-stretch"
+            />
+          </figure>
           <div class="px-[20px] flex flex-col gap-[20px] text-justify">
             <div class="flex flex-col items-start gap-[12px] self-stretch">
-              <p
+              <h2
                 class="overflow-hidden capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2"
               >
                 What GMAT and GRE tests feel like and what you can do about it
-              </p>
+              </h2>
               <p
                 class="h-[54px] text-secondary overflow-hidden text-ellipsis font-normal text-normal"
               >
@@ -2474,24 +2487,26 @@
               </div>
             </div>
           </div>
-        </div>
-        <div
+        </article>
+        <article
           class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg bg-surface-primary shadow-md 2xl:w-[532px] xl:w-[511px] max-w-[462px]"
         >
-          <img
-            src="./src/images/test.png"
-            class="w-full h-[304px] self-stretch"
-          />
+          <figure>
+            <img
+              src="./src/images/test.png"
+              class="w-full h-[304px] self-stretch"
+            />
+          </figure>
           <div class="px-[20px] flex flex-col gap-[20px]">
             <div
               class="flex flex-col items-start gap-[12px] self-stretch text-justify"
             >
-              <p
+              <h2
                 class="overflow-hidden capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2"
               >
                 What Healthy Habits Can Help You Get A Higher GMAT/GRE Or
                 SAT/ACT Score
-              </p>
+              </h2>
               <p
                 class="h-[54px] text-secondary overflow-hidden text-ellipsis font-normal text-normal"
               >
@@ -2558,8 +2573,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
       <div id="blogsButton">
         <button
           class="bg-[#C84A3D] rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
@@ -2567,10 +2582,10 @@
           Explore more topics
         </button>
       </div>
-    </div>
+    </section>
 
     <!-- Contact section -->
-    <div
+    <section
       id="contactSection"
       class="2xl:mt-[320px] md:mb-[120px] flex flex-col gap-[60px] container xl:mb-[200px]"
     >
@@ -2582,7 +2597,7 @@
             height="100"
             viewBox="0 0 173 100"
             fill="none"
-            class="absolute hidden 2xl:block left-[125px] top-[-50]"
+            class="absolute hidden xl:block left-[125px] top-[-50]"
           >
             <g clip-path="url(#clip0_1075_1185)">
               <path
@@ -2669,38 +2684,40 @@
               </clipPath>
             </defs>
           </svg>
-          <p
+          <h2
             id="contactSubHeading"
             class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
           >
             Contact
-          </p>
-          <p
+          </h2>
+          <h1
             id="contactTitle"
             class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
           >
             Take the <span class="text-brand">First Step </span>towards a better
             score!
-          </p>
+          </h1>
         </div>
-        <p
+        <h3
           id="contactHeading3"
           class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
         >
           This is exactly what will happen after you submit your form
-        </p>
+        </h3>
       </div>
 
-      <div
+      <section
         id="contactContent"
         class="flex 2xl:gap-[112px] lg:gap-[60px] gap-5 flex-wrap items-center justify-center"
       >
         <div class="flex flex-col gap-[39px] items-start lg:w-[463px]">
-          <img
-            src="./src/images/introImage.png"
-            class="2xl:h-[372px] 2xl:w-[532px] lg:h-[480.6px] lg:w-[463px] md:w-[600px] md:h-[372px] w-[328px] h-[330px]"
-          />
-          <div class="w-[368px] space-y-2">
+          <figure>
+            <video
+              src="./src/images/introImage.png"
+              class="2xl:h-[372px] 2xl:w-[532px] lg:h-[480.6px] lg:w-[463px] md:w-[600px] md:h-[372px] w-[328px] h-[330px]"
+            />
+          </figure>
+          <article class="w-[368px] space-y-2">
             <div class="flex gap-[5px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -2758,7 +2775,7 @@
                 You will be talking to The star tutor (No account Managers)
               </p>
             </div>
-          </div>
+          </article>
         </div>
         <div class="pt-[16.5px] flex flex-col gap-[38px]">
           <form class="flex flex-col gap-[13px]">
@@ -2798,8 +2815,8 @@
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   </body>
 
   <footer
