@@ -1,42 +1,37 @@
 <html>
   <head>
     <title>Home</title>
-    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body class="bg-gradient-to-r from-[#EEEEBB] to-[#D4D3DC] overflow-x-hidden">
-    <header class="bg-[#121212]">
-      <nav
-        class="container text-secondary-dark lg:flex text-md font-medium justify-around items-center h-[74px] py-4 hidden"
-      >
-        <figure>
+    <header class="bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+      <nav class="lg:flex lg:items-center">
+        <div class="flex items-center justify-between">
           <img
             src="./src/images/theStarTutorLogo.png"
             class="w-[166px] h-[31px] flex-shrink-0"
           />
-        </figure>
-        <div class="flex gap-[12px] items-center">
-          <a
-            class="py-[4px] px-[8px] text-brand-invert-dark"
-            href="../../index.html"
-            >Home</a
-          >
-          <a class="py-[4px] px-[8px]" href="./src/pages/about.html">About</a>
-          <a class="py-[4px] px-[8px]" href="./src/pages/reviews.html"
-            >Reviews</a
-          >
-          <a class="py-[4px] px-[8px]" href="./src/pages/blogs.html">Blogs</a>
-          <a class="py-[4px] px-[8px]" href="./src/pages/contact.html"
-            >Contact</a
-          >
-          <a class="py-[4px] px-[8px]" href="./src/pages/whyUs.html"
-            >Why Choose Us?</a
-          >
+          <button id="navBtn" class="lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M3 12.5H21M3 6.5H21M9 18.5H21" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
-        <button
-          class="bg-cta-default rounded-[60px] py-[10px] px-5 text-primary-dark font-button"
-        >
-          Book A Free Consultation
-        </button>
+        <div id="navMenu" class="hidden lg:w-full lg:flex lg:items-center text-secondary-dark">
+          <div class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center">
+            <a class="text-brand py-[4px] px-[8px]" href="./index.html">Home</a>
+            <a class="py-[4px] px-[8px]" href="./src/pages/about.html">About</a>
+            <a class="py-[4px] px-[8px]" href="./src/pages/reviews.html">Reviews</a>
+            <a class="py-[4px] px-[8px]" href="./src/pages/blogs.html">Blogs</a>
+            <a class="py-[4px] px-[8px]" href="./index.html#contact">Contact</a>
+            <a class="py-[4px] px-[8px]" href="./src/pages/whyUs.html">Why Choose Us?</a>
+          </div>
+          <button
+            class="bg-cta-default font-button shrink-0 py-[10px] px-[20px] rounded-[60px]"
+          >
+            Book A Free Consultation
+          </button>
+        </div>
       </nav>
       <!-- <nav
         class="container text-secondary-dark xl:flex text-md font-medium justify-around items-center h-[74px] py-4 hidden"
@@ -2815,14 +2810,13 @@
             </button>
           </div>
         </div>
-      </section>
+      </div>
     </section>
+
     <footer
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >
-      <div
-        class="container flex flex-wrap items-start justify-between gap-[60px]"
-      >
+      <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start">
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
           <p class="capitalize text-heading2 font-heading2">Links</p>
           <a class="font-normal capitalize text-normal">Home</a>
