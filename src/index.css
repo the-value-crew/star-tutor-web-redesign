@@ -339,7 +339,6 @@
   #statsSection {
     opacity: 0.1;
   }
-
   #statsSubHeading {
     transform: translateY(100%);
     transition: 2s;
