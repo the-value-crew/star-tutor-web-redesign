@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroSectionSlideInLeft {
+  0% {
+    opacity: 0;
+
+    transform: translateX(-100%) translateY(50px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(10px) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes heroSectionSlideInLeftY {
+  0% {
+    opacity: 0.8;
+
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInXLeft {
+  0% {
+    opacity: 0.8;
+    transform: translateX(-100%) translateY(250px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(10px) translateY(50px);
+  }
+  /* 90% {
+    opacity: 1;
+    transform: translateX(5px) translateY(50px);
+  } */
+
+  100% {
+    /* opacity: 1; */
+    transform: translateX(0) translateY(50px);
+  }
+}
+
+@keyframes slideInYLeft {
+  0% {
+    transform: translateX(0) translateY(50px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInXRight {
+  0% {
+    opacity: 0.8;
+    transform: translateX(100%) translateY(250px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-10px) translateY(50px);
+  }
+  /* 90% {
+    opacity: 1;
+    transform: translateX(-5px) translateY(50px);
+  } */
+
+  100% {
+    /* opacity: 1; */
+    transform: translateX(0) translateY(50px);
+  }
+}
+
+@keyframes slideInYRight {
+  0% {
+    transform: translateX(0) translateY(50px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes revealDottedArrow {
+  0% {
+    stroke-dashoffset: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0; /* Fully reveal the arrow */
+    opacity: 1; /* Make the arrow fully visible */
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutArrowInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes whyTab {
+  0% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes whoAmITab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes achievementTab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes teachingTab {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%) translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@layer utilities {
+  /* .heroSectionIn {
+    animation: heroSectionSlideInLeft 1s ease-in-out;
+  } */
+
+  .heroSectionIn {
+    animation: slideInXLeft 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
+      slideInYLeft 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+  }
+
+  .heroSectionRight {
+    animation: slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
+      slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+  }
+
+  .dotted-arrow path {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    opacity: 0; /* Initially hide the arrow */
+    animation: revealDottedArrow 3s linear 3s forwards; /* Adjust the delay as needed */
+  }
+
+  .slideInLeft {
+    animation: slideInLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+
+  .arrowInTop {
+    animation: aboutArrowInTop 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+
+  .imageSlideInRight {
+    animation: imageSlideInRight 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+
+  /* Apply the animation to the elements */
+  .whyTab {
+    animation: whyTab 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+  }
+  .whoAmITab {
+    animation: whoAmITab 0.5s ease-in-out forwards;
+  }
+  .achievementTab {
+    animation: achievementTab 0.5s ease-in-out forwards;
+  }
+  .teachingTab {
+    animation: achievementTab 0.5s ease-in-out forwards;
+  }
+
+  /* .aos-init[data-aos='slideInFromRight'] {
+    opacity: 1;
+    transition-property: transform;
+  }
+
+  .aos-animate[data-aos='slideInFromRight'] {
+    transform: translateX(0);
+    animation-name: slideInFromRight;
+  } */
+
+  #introLeft {
+    transform: translateX(-50%);
+    transition: 1s;
+  }
+
+  #introIntroduction {
+    transform: translateX(60%);
+    transition: 1s;
+  }
+  #introContent {
+    transform: translateX(70%);
+    transition: 1s;
+  }
+  #introButton {
+    transform: translateX(80%);
+    transition: 1s;
+  }
+  #introQuestion {
+    transform: translateX(60%);
+    transition: 1s;
+  }
+
+  #reviewsSection {
+    opacity: 0.1;
+  }
+  #reviewsHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #reviewsTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #reviewsSubTitle {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #reviewsContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+
+  #reviewsButton {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+
+  #valueSection {
+    opacity: 0.1;
+  }
+
+  #valueSubHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #valueTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #valueHeading3 {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #valueContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+  #valueButton {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+
+  #statsSection {
+    opacity: 0.1;
+  }
+
+  #statsSubHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #statsTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #statsHeading3 {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #statsContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+
+  #successSection {
+    opacity: 0.1;
+  }
+  #successSubHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #successTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #successHeading3 {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #successContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+
+  #blogsSection {
+    opacity: 0.1;
+  }
+  #blogsSubHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #blogsTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #blogsHeading3 {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #blogsContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+  #blogsButton {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+
+  #contactSection {
+    opacity: 0.1;
+  }
+  #contactSubHeading {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #contactTitle {
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  #contactHeading3 {
+    transform: translateY(300%);
+    transition: 2s;
+  }
+  #contactContent {
+    transform: translateY(10%);
+    transition: 2s;
+  }
+
+  .masonry {
+    column-gap: 1.5em;
+    column-count: 2;
+  }
+  .masonry-sm {
+    column-gap: 1.5em;
+    column-count: 2;
+  }
+  .masonry-md {
+    column-gap: 1.5em;
+    column-count: 3;
+  }
+  .break-inside {
+    break-inside: avoid;
+  }
+  .whyUs {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 66.62%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+      url(<path-to-image>), lightgray 50% / cover no-repeat;
+  }
+
+  .scrollAnimationLeft {
+    animation: slideInLeft 0.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  .scrollAnimationRight {
+    animation: slideInRight 0.5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+}
