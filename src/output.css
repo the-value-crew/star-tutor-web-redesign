@@ -902,10 +902,6 @@ video {
   height: 67px;
 }
 
-.h-\[74px\]{
-  height: 74px;
-}
-
 .h-\[78px\]{
   height: 78px;
 }
@@ -1041,10 +1037,6 @@ video {
 
 .justify-between{
   justify-content: space-between;
-}
-
-.justify-around{
-  justify-content: space-around;
 }
 
 .gap-2{
@@ -1447,11 +1439,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-\[10px\]{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1728,11 +1715,6 @@ video {
   color: rgb(228 192 69 / var(--tw-text-opacity));
 }
 
-.text-brand-invert-dark{
-  --tw-text-opacity: 1;
-  color: rgb(183 142 0 / var(--tw-text-opacity));
-}
-
 .text-cta-default{
   --tw-text-opacity: 1;
   color: rgb(217 55 38 / var(--tw-text-opacity));
@@ -1787,10 +1769,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .heroSectionIn {
-    animation: heroSectionSlideInLeft 1s ease-in-out;
-  } */
-
 .heroSectionIn {
   animation: slideInXLeft 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
       slideInYLeft 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
@@ -1822,16 +1800,6 @@ video {
 .teachingTab {
   animation: achievementTab 0.5s ease-in-out forwards;
 }
-
-/* .aos-init[data-aos='slideInFromRight'] {
-    opacity: 1;
-    transition-property: transform;
-  }
-
-  .aos-animate[data-aos='slideInFromRight'] {
-    transform: translateX(0);
-    animation-name: slideInFromRight;
-  } */
 
 #introLeft {
   transform: translateX(-50%);
@@ -2257,6 +2225,11 @@ video {
 @media (min-width: 640px){
   .md\:right-\[-150px\]{
     right: -150px;
+  }
+
+  .md\:my-\[120px\]{
+    margin-top: 120px;
+    margin-bottom: 120px;
   }
 
   .md\:mb-\[120px\]{
