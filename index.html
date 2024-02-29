@@ -503,11 +503,58 @@
     </main>
 
     <!-- Score card -->
-    <figure
-      class="flex items-center justify-center mt-[90px] mb-[120px] container xl:mb-[200px]"
+    <div
+      id="scoreCardSection"
+      class="container h-[621px] mt-[90px] mb-[120px] relative w-full"
     >
-      <img src="./src/images/scoreCard.png" class="lg:w-[942px] xl:h-[546px]" />
-    </figure>
+      <div class="isActiveImageLeft" id="scoreCardDup">
+        <div class="xl:h-[621px] xl:w-[1084px]">
+          <img src="./src/images/scoreCard.png" class="w-full h-full" />
+        </div>
+      </div>
+
+      <div class="isActiveImageRight" id="scoresCard">
+        <div class="xl:h-[621px] xl:w-[1084px]">
+          <img src="./src/images/scoresCard.png" class="w-full h-full" />
+        </div>
+      </div>
+
+      <div id="mainScoreCard" class="isActive">
+        <div
+          class="relative flex justify-center xl:h-[621px] xl:w-[1090px] bg-transparent perspective hover:flipImage flipCardTransform"
+        >
+          <figure
+            class="flex items-center justify-center container xl:mb-[200px] absolute z-10 hiddenBackface xl:h-[621px] xl:w-[1090px]"
+          >
+            <img
+              id="scoreCard"
+              src="./src/images/scoreCard.png"
+              class="w-full h-full"
+            />
+          </figure>
+          <div
+            class="xl:h-[621px] xl:w-[1084px] bg-[#1D222B] flex justify-center items-center text-invert absolute flipImage"
+          >
+            <div class="flex flex-col gap-[47px] xl:w-[685px]">
+              <div class="flex flex-col">
+                <h2 class="text-heading2">680 to 770 GMAT score</h2>
+                <p class="uppercase text-subheading">Calvin</p>
+              </div>
+              <div class="text-invert text-subtitle">
+                Calvin scored a 770 on the GMAT on his first attempt, but before
+                meeting with Tara B, he was at 680 on a GMATPrep practice test.
+                Follwing this excellent score, Calvin was admitted to Harvard
+                Business School. “I worked with Tara for several weeks this past
+                spring on GMAT math, which culminated in a 770 GMAT score (99th
+                percentile: 49Q / 45V). I'm writing this review because I am
+                pleased with my score, and believe that Tara is directly
+                responsible for the good results…
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Introduction section -->
     <section
@@ -2898,6 +2945,31 @@
     const contactHeading3 = document.getElementById('contactHeading3');
     const contactContent = document.getElementById('contactContent');
 
+    // Score card animation
+    const scoreCardDup = document.getElementById('scoreCardDup');
+    const scoresCard = document.getElementById('scoresCard');
+    const mainScoreCard = document.getElementById('mainScoreCard');
+
+    const elements = [scoreCardDup, scoresCard, mainScoreCard];
+
+    elements.forEach((element) => {
+      element.addEventListener('click', () => {
+        if (!element.classList.contains('isActive')) {
+          const activeElement = document.querySelector('.isActive');
+          if (activeElement) {
+            const activeElementClasses = [...activeElement.classList];
+            const clickedElementClasses = [...element.classList];
+
+            activeElement.className = '';
+            element.className = '';
+
+            activeElement.classList.add(...clickedElementClasses);
+            element.classList.add(...activeElementClasses);
+          }
+        }
+      });
+    });
+
     window.onscroll = () => {
       const { offsetTop: introOffset, offsetHeight: height } = introSection;
       const { offsetTop: reviewsOffset, offsetHeight: reviewsHeight } =
@@ -3048,5 +3120,17 @@
         contactContent.style.transform = 'translateY(10%)';
       }
     };
+
+    // scoreCard.onmouseenter = function () {
+    //   scoreCard.classList.add('flipImage');
+    // };
+
+    // scoreCardSection.onmouseover = function () {
+    //   scoreCard.classList.add('flipImage');
+    // };
+
+    // scoreCardSection.onmouseout = function () {
+    //   scoreCard.classList.remove('flipImage');
+    // };
   </script>
 </html>

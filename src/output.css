@@ -894,6 +894,10 @@ video {
   height: 558px;
 }
 
+.h-\[621px\]{
+  height: 621px;
+}
+
 .h-\[634\.75px\]{
   height: 634.75px;
 }
@@ -1123,6 +1127,10 @@ video {
   gap: 40px;
 }
 
+.gap-\[47px\]{
+  gap: 47px;
+}
+
 .gap-\[49px\]{
   gap: 49px;
 }
@@ -1285,6 +1293,11 @@ video {
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#1D222B\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 34 43 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#C84A3D\]{
   --tw-bg-opacity: 1;
   background-color: rgb(200 74 61 / var(--tw-bg-opacity));
@@ -1323,6 +1336,10 @@ video {
 .bg-surface-secondary{
   --tw-bg-opacity: 1;
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
 }
 
 .bg-\[url\(\'\.\.\/src\/images\/introImage\.jpeg\'\)\]{
@@ -1725,6 +1742,11 @@ video {
   color: rgb(14 14 14 / var(--tw-text-opacity));
 }
 
+.text-invert{
+  --tw-text-opacity: 1;
+  color: rgb(252 252 252 / var(--tw-text-opacity));
+}
+
 .text-primary{
   --tw-text-opacity: 1;
   color: rgb(14 14 14 / var(--tw-text-opacity));
@@ -1887,6 +1909,55 @@ video {
       linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
       url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
+
+.flipImage {
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+
+.flipCardTransform {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.hiddenBackface {
+  backface-visibility: hidden;
+}
+
+.isActiveImageLeft {
+  position: absolute;
+  left: -75%;
+  transition: 1s;
+  height: 50%;
+}
+
+.isActiveImageRight {
+  position: absolute;
+  right: -75%;
+  transition: 1s;
+  height: 50%;
+}
+
+.isActive {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+
+.isActiveImageLeft img,
+  .isActiveImageRight img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* an active class for making it center otherwise making it left or right  */
 
 @keyframes slideInLeft {
   from {
@@ -2107,6 +2178,11 @@ video {
   }
 }
 
+.hover\:flipImage:hover {
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+
 @media (min-width: 360px){
   .sm\:text-center{
     text-align: center;
@@ -2252,10 +2328,6 @@ video {
 
   .lg\:w-\[624px\]{
     width: 624px;
-  }
-
-  .lg\:w-\[942px\]{
-    width: 942px;
   }
 
   .lg\:w-\[944px\]{
@@ -2410,12 +2482,20 @@ video {
     height: 426px;
   }
 
-  .xl\:h-\[546px\]{
-    height: 546px;
-  }
-
   .xl\:h-\[600px\]{
     height: 600px;
+  }
+
+  .xl\:h-\[621px\]{
+    height: 621px;
+  }
+
+  .xl\:w-\[1084px\]{
+    width: 1084px;
+  }
+
+  .xl\:w-\[1090px\]{
+    width: 1090px;
   }
 
   .xl\:w-\[348px\]{
@@ -2436,6 +2516,10 @@ video {
 
   .xl\:w-\[533px\]{
     width: 533px;
+  }
+
+  .xl\:w-\[685px\]{
+    width: 685px;
   }
 
   .xl\:w-fit{

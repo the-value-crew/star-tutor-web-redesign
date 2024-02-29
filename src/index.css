@@ -359,4 +359,51 @@
     animation-timeline: view();
     animation-range: entry;
   }
+
+  .flipImage {
+    transform: rotateY(180deg);
+    transition: 1s;
+  }
+
+  .flipCardTransform {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+
+  .hiddenBackface {
+    backface-visibility: hidden;
+  }
+
+  .isActiveImageLeft {
+    position: absolute;
+    left: -75%;
+    transition: 1s;
+    height: 50%;
+  }
+
+  .isActiveImageRight {
+    position: absolute;
+    right: -75%;
+    transition: 1s;
+    height: 50%;
+  }
+
+  .isActive {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+  }
+
+  .isActiveImageLeft img,
+  .isActiveImageRight img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  /* an active class for making it center otherwise making it left or right  */
 }
