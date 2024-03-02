@@ -380,16 +380,18 @@
 
   .isActiveImageLeft {
     position: absolute;
-    left: -75%;
+    left: -60%;
     transition: 1s;
-    height: 50%;
+
+    transform: scale(0.7);
   }
 
   .isActiveImageRight {
     position: absolute;
-    right: -75%;
+    right: -60%;
     transition: 1s;
-    height: 50%;
+
+    transform: scale(0.7);
   }
 
   .isActive {
@@ -397,13 +399,12 @@
     left: 50%;
     transform: translateX(-50%);
     transition: 1s;
+    height: 100%;
   }
 
-  .isActiveImageLeft img,
-  .isActiveImageRight img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+  .inactive {
+    display: none;
   }
+
   /* an active class for making it center otherwise making it left or right  */
 }

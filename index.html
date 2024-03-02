@@ -519,6 +519,17 @@
         </div>
       </div>
 
+      <div id="scoresCard2" class="inactive">
+        <div class="xl:h-[621px] xl:w-[1084px]">
+          <img src="./src/images/books.png" class="w-full h-full" />
+        </div>
+      </div>
+      <div id="scoresCard3" class="inactive">
+        <div class="xl:h-[621px] xl:w-[1084px]">
+          <img src="./src/images/coachingImage.png" class="w-full h-full" />
+        </div>
+      </div>
+
       <div id="mainScoreCard" class="isActive">
         <div
           class="relative flex justify-center xl:h-[621px] xl:w-[1090px] bg-transparent perspective hover:flipImage flipCardTransform"
@@ -2949,26 +2960,52 @@
     const scoreCardDup = document.getElementById('scoreCardDup');
     const scoresCard = document.getElementById('scoresCard');
     const mainScoreCard = document.getElementById('mainScoreCard');
+    const scoresCard2 = document.getElementById('scoresCard2');
+    const scoresCard3 = document.getElementById('scoresCard3');
 
-    const elements = [scoreCardDup, scoresCard, mainScoreCard];
+    const elements = [
+      scoreCardDup,
+      scoresCard,
+      mainScoreCard,
+      scoresCard2,
+      scoresCard3,
+    ];
 
-    elements.forEach((element) => {
-      element.addEventListener('click', () => {
-        if (!element.classList.contains('isActive')) {
-          const activeElement = document.querySelector('.isActive');
-          if (activeElement) {
-            const activeElementClasses = [...activeElement.classList];
-            const clickedElementClasses = [...element.classList];
+    let activeIndex = elements.findIndex((image) =>
+      image.classList.contains('isActive')
+    );
 
-            activeElement.className = '';
-            element.className = '';
+    function updateClasses() {
+      elements.forEach((element, index) => {
+        element.className = ''; // Reset all classes
 
-            activeElement.classList.add(...clickedElementClasses);
-            element.classList.add(...activeElementClasses);
-          }
+        if (index === activeIndex) {
+          element.classList.add('isActive');
+        } else if (
+          index ===
+          (activeIndex - 1 + elements.length) % elements.length
+        ) {
+          element.classList.add('isActiveImageLeft');
+        } else if (index === (activeIndex + 1) % elements.length) {
+          element.classList.add('isActiveImageRight');
+        } else {
+          element.classList.add('inactive');
         }
       });
+    }
+
+    elements.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        if (element.classList.contains('isActiveImageRight')) {
+          activeIndex = (activeIndex + 1) % elements.length;
+        } else if (element.classList.contains('isActiveImageLeft')) {
+          activeIndex = (activeIndex - 1 + elements.length) % elements.length;
+        }
+        updateClasses();
+      });
     });
+
+    updateClasses(); // Initial setup
 
     window.onscroll = () => {
       const { offsetTop: introOffset, offsetHeight: height } = introSection;
