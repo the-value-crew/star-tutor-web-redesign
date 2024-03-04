@@ -360,8 +360,20 @@
     animation-range: entry;
   }
 
-  .flipImage {
+  /* Apply the flip animation only when the parent has the isActive class */
+  .isActive .flipImage:hover {
     transform: rotateY(180deg);
+    transition: 1s;
+  }
+
+  .flipDiv {
+    transform: rotateY(180deg);
+    transition: 1s;
+  }
+
+  /* Don't apply the flip animation when the parent doesn't have the isActive class */
+  :not(.isActive) .flipImage {
+    transform: rotateY(0deg);
     transition: 1s;
   }
 
@@ -380,31 +392,69 @@
 
   .isActiveImageLeft {
     position: absolute;
-    left: -60%;
     transition: 1s;
-
     transform: scale(0.7);
+    opacity: 0.8;
   }
 
   .isActiveImageRight {
     position: absolute;
-    right: -60%;
     transition: 1s;
-
     transform: scale(0.7);
+    opacity: 0.6;
+  }
+
+  .isActiveImageLeft::before,
+  .isActiveImageRight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
   }
 
   .isActive {
     position: absolute;
     left: 50%;
+    z-index: 100;
     transform: translateX(-50%);
     transition: 1s;
     height: 100%;
   }
 
+  @screen sm {
+    .isActiveImageLeft {
+      left: -80%;
+    }
+
+    .isActiveImageRight {
+      right: -80%;
+    }
+  }
+
+  @screen md {
+    .isActiveImageLeft {
+      left: -95%;
+    }
+
+    .isActiveImageRight {
+      right: -95%;
+    }
+  }
+
+  @screen xl {
+    .isActiveImageLeft {
+      left: -60%;
+    }
+
+    .isActiveImageRight {
+      right: -60%;
+    }
+  }
+
   .inactive {
     display: none;
   }
-
-  /* an active class for making it center otherwise making it left or right  */
 }

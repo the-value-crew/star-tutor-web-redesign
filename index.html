@@ -505,46 +505,55 @@
     <!-- Score card -->
     <div
       id="scoreCardSection"
-      class="container h-[621px] mt-[90px] mb-[120px] relative w-full"
+      class="container xl:h-[621px] lg:h-[546px] mt-[90px] mb-[120px] relative w-full"
     >
       <div class="isActiveImageLeft" id="scoreCardDup">
-        <div class="xl:h-[621px] xl:w-[1084px]">
-          <img src="./src/images/scoreCard.png" class="w-full h-full" />
+        <div class="xl:h-[621px] xl:w-[1084px] lg:w-[942px] lg:h-[546px]">
+          <img
+            src="./src/images/scoreCard.png"
+            class="w-full h-full rounded-2xl"
+          />
         </div>
       </div>
 
       <div class="isActiveImageRight" id="scoresCard">
-        <div class="xl:h-[621px] xl:w-[1084px]">
-          <img src="./src/images/scoresCard.png" class="w-full h-full" />
+        <div class="xl:h-[621px] xl:w-[1084px] lg:w-[942px] lg:h-[546px]">
+          <img
+            src="./src/images/scoresCard.png"
+            class="w-full h-full rounded-2xl"
+          />
         </div>
       </div>
 
       <div id="scoresCard2" class="inactive">
-        <div class="xl:h-[621px] xl:w-[1084px]">
-          <img src="./src/images/books.png" class="w-full h-full" />
+        <div class="xl:h-[621px] xl:w-[1084px] lg:w-[942px] lg:h-[546px]">
+          <img src="./src/images/books.png" class="w-full h-full rounded-2xl" />
         </div>
       </div>
       <div id="scoresCard3" class="inactive">
-        <div class="xl:h-[621px] xl:w-[1084px]">
-          <img src="./src/images/coachingImage.png" class="w-full h-full" />
+        <div class="xl:h-[621px] xl:w-[1084px] lg:w-[942px] lg:h-[546px]">
+          <img
+            src="./src/images/coachingImage.png"
+            class="w-full h-full rounded-2xl"
+          />
         </div>
       </div>
 
       <div id="mainScoreCard" class="isActive">
         <div
-          class="relative flex justify-center xl:h-[621px] xl:w-[1090px] bg-transparent perspective hover:flipImage flipCardTransform"
+          class="relative flex justify-center xl:h-[621px] xl:w-[1090px] lg:w-[942px] lg:h-[546px] bg-transparent perspective flipImage flipCardTransform"
         >
           <figure
-            class="flex items-center justify-center container xl:mb-[200px] absolute z-10 hiddenBackface xl:h-[621px] xl:w-[1090px]"
+            class="flex justify-center items-center xl:mb-[200px] absolute z-10 hiddenBackface xl:h-[621px] xl:w-[1090px] lg:w-[942px] lg:h-[546px]"
           >
             <img
               id="scoreCard"
               src="./src/images/scoreCard.png"
-              class="w-full h-full"
+              class="object-center w-full h-full rounded-2xl"
             />
           </figure>
           <div
-            class="xl:h-[621px] xl:w-[1084px] bg-[#1D222B] flex justify-center items-center text-invert absolute flipImage"
+            class="xl:h-[621px] xl:w-[1084px] lg:w-[942px] lg:h-[546px] bg-[#1D222B] flex justify-center items-center text-invert absolute flipDiv rounded-2xl"
           >
             <div class="flex flex-col gap-[47px] xl:w-[685px]">
               <div class="flex flex-col">

@@ -894,10 +894,6 @@ video {
   height: 558px;
 }
 
-.h-\[621px\]{
-  height: 621px;
-}
-
 .h-\[634\.75px\]{
   height: 634.75px;
 }
@@ -1387,6 +1383,11 @@ video {
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-10{
@@ -1910,8 +1911,22 @@ video {
       url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
-.flipImage {
+/* Apply the flip animation only when the parent has the isActive class */
+
+.isActive .flipImage:hover {
   transform: rotateY(180deg);
+  transition: 1s;
+}
+
+.flipDiv {
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+
+/* Don't apply the flip animation when the parent doesn't have the isActive class */
+
+:not(.isActive) .flipImage {
+  transform: rotateY(0deg);
   transition: 1s;
 }
 
@@ -1930,31 +1945,71 @@ video {
 
 .isActiveImageLeft {
   position: absolute;
-  left: -60%;
   transition: 1s;
   transform: scale(0.7);
+  opacity: 0.8;
 }
 
 .isActiveImageRight {
   position: absolute;
-  right: -60%;
   transition: 1s;
   transform: scale(0.7);
+  opacity: 0.6;
+}
+
+.isActiveImageLeft::before,
+  .isActiveImageRight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .isActive {
   position: absolute;
   left: 50%;
+  z-index: 100;
   transform: translateX(-50%);
   transition: 1s;
   height: 100%;
 }
 
+@media (min-width: 360px) {
+  .isActiveImageLeft {
+    left: -80%;
+  }
+
+  .isActiveImageRight {
+    right: -80%;
+  }
+}
+
+@media (min-width: 640px) {
+  .isActiveImageLeft {
+    left: -95%;
+  }
+
+  .isActiveImageRight {
+    right: -95%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .isActiveImageLeft {
+    left: -60%;
+  }
+
+  .isActiveImageRight {
+    right: -60%;
+  }
+}
+
 .inactive {
   display: none;
 }
-
-/* an active class for making it center otherwise making it left or right  */
 
 @keyframes slideInLeft {
   from {
@@ -2175,11 +2230,6 @@ video {
   }
 }
 
-.hover\:flipImage:hover {
-  transform: rotateY(180deg);
-  transition: 1s;
-}
-
 @media (min-width: 360px){
   .sm\:text-center{
     text-align: center;
@@ -2311,6 +2361,10 @@ video {
     height: 480.6px;
   }
 
+  .lg\:h-\[546px\]{
+    height: 546px;
+  }
+
   .lg\:w-\[343px\]{
     width: 343px;
   }
@@ -2325,6 +2379,10 @@ video {
 
   .lg\:w-\[624px\]{
     width: 624px;
+  }
+
+  .lg\:w-\[942px\]{
+    width: 942px;
   }
 
   .lg\:w-\[944px\]{
