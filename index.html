@@ -541,7 +541,7 @@
 
       <div id="mainScoreCard" class="isActive">
         <div
-          class="relative flex justify-center xl:h-[621px] xl:w-[1090px] lg:w-[942px] lg:h-[546px] bg-transparent perspective flipImage flipCardTransform"
+          class="relative flex justify-center xl:h-[621px] xl:w-[1090px] lg:w-[942px] lg:h-[546px] bg-transparent perspective flipImage flipCardTransform rounded-2xl overflow-hidden"
         >
           <figure
             class="flex justify-center items-center xl:mb-[200px] absolute z-10 hiddenBackface xl:h-[621px] xl:w-[1090px] lg:w-[942px] lg:h-[546px]"
@@ -3011,10 +3011,26 @@
           activeIndex = (activeIndex - 1 + elements.length) % elements.length;
         }
         updateClasses();
+
+        startAutoplay();
       });
     });
 
-    updateClasses(); // Initial setup
+    let autoplayId = null;
+
+    function startAutoplay() {
+      if (autoplayId !== null) {
+        clearInterval(autoplayId);
+      }
+
+      autoplayId = setInterval(() => {
+        activeIndex = (activeIndex + 1) % elements.length;
+        updateClasses();
+      }, 3000);
+    }
+
+    updateClasses();
+    startAutoplay();
 
     window.onscroll = () => {
       const { offsetTop: introOffset, offsetHeight: height } = introSection;
