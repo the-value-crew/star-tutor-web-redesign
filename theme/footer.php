@@ -1,3 +1,15 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the `#content` element and all content thereafter.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package thestartutor
+ */
+
+?>
     <footer
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >

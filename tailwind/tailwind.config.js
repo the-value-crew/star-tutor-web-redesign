@@ -1,23 +1,31 @@
-/** @type {import('tailwindcss').Config} */
+// Set the Preflight flag based on the build target.
+const includePreflight = 'editor' === process.env._TW_TARGET ? false : true;
+
 module.exports = {
-  content: ['./theme/*.php'],
-  darkMode: 'class',
+	presets: [
+		// Manage Tailwind Typography's configuration in a separate file.
+		require('./tailwind-typography.config.js'),
+	],
+	content: [
+		// Ensure changes to PHP files and `theme.json` trigger a rebuild.
+		'./theme/**/*.php',
+	],
+	darkMode: 'class',
   theme: {
     screens: {
-      sm: '360px',
+      'sm': '360px',
       // => @media (min-width: 640px) { ... }
 
-      md: '640px',
+      'md': '640px',
       // => @media (min-width: 768px) { ... }
 
-      lg: '1024px',
+      'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      xl: '1440px',
+      'xl': '1440px',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1920px',
-
       // => @media (min-width: 1536px) { ... }
     },
     container: {
@@ -25,44 +33,44 @@ module.exports = {
       padding: '1rem',
       margin: '0px',
     },
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-    },
-    fontSize: {
-      title: ['48px'],
-      heading1: ['36px'],
-      heading2: ['36px'],
-      mobileHeading2: ['24px'],
-      heading3: ['20px'],
-      heading3_mobile: ['18px'],
-      subtitle: ['20px'],
-      subtitle_mobile: ['16px'],
-      subheading: ['18px'],
-      subheading_mobile: ['14px'],
-      button: ['14px'],
-      normal: ['16px'],
-      semibold: ['16px'],
-      largeRegular: ['18px'],
-      captionBig: ['14px'],
-      captionSmall: ['12px'],
-    },
-    fontWeight: {
-      title: 700,
-      heading1: 600,
-      heading2: 600,
-      mobileHeading2: 700,
-      heading3: 600,
-      subtitle: 400,
-      subtitle_mobile: 400,
-      subheading: 400,
-      subheading_mobile: 400,
-      button: 600,
-      normal: 400,
-      semibold: 600,
-      captionBig: 500,
-      captionSmall: 400,
-    },
     extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+			},
+			fontSize: {
+				title: ['48px'],
+				heading1: ['36px'],
+				heading2: ['36px'],
+				mobileHeading2: ['24px'],
+				heading3: ['20px'],
+				heading3_mobile: ['18px'],
+				subtitle: ['20px'],
+				subtitle_mobile: ['16px'],
+				subheading: ['18px'],
+				subheading_mobile: ['14px'],
+				button: ['14px'],
+				normal: ['16px'],
+				semibold: ['16px'],
+				largeRegular: ['18px'],
+				captionBig: ['14px'],
+				captionSmall: ['12px'],
+			},
+			fontWeight: {
+				title: 700,
+				heading1: 600,
+				heading2: 600,
+				mobileHeading2: 700,
+				heading3: 600,
+				subtitle: 400,
+				subtitle_mobile: 400,
+				subheading: 400,
+				subheading_mobile: 400,
+				button: 600,
+				normal: 400,
+				semibold: 600,
+				captionBig: 500,
+				captionSmall: 400,
+			},
       colors: {
         brand: {
           default: '#E4C045',
@@ -146,5 +154,20 @@ module.exports = {
       backgroundColor: ['dark'],
     },
   },
-  plugins: [],
+	corePlugins: {
+		// Disable Preflight base styles in builds targeting the editor.
+		preflight: includePreflight,
+	},
+	plugins: [
+		// Add Tailwind Typography (via _tw fork).
+		require('@_tw/typography'),
+
+		// Extract colors and widths from `theme.json`.
+		require('@_tw/themejson'),
+
+		// Uncomment below to add additional first-party Tailwind plugins.
+		// require('@tailwindcss/forms'),
+		// require('@tailwindcss/aspect-ratio'),
+		// require('@tailwindcss/container-queries'),
+	],
 };

@@ -8,6 +8,21 @@ get_header();
 
 $about_bg_img = thestartutor_get_static_img("about-bg.png");
 $music_img = thestartutor_get_static_img("music.png");
+
+$aboutme_args = array(
+  "post_type"         => "about_me_content",
+  "order_by"          => "id",
+  "order"             => "ASC",
+);
+$aboutme_wp_query = new WP_Query($aboutme_args);
+
+$myhobby_args = array(
+  "post_type"         => "hobbies",
+  "order_by"          => "id",
+  "order"             => "ASC",
+);
+$myhobby_wp_query = new WP_Query($myhobby_args);
+
 ?>
 
     <main>
@@ -60,27 +75,39 @@ $music_img = thestartutor_get_static_img("music.png");
                     </svg>
                     <p class="text-title font-title">Who is <span class="text-brand">The Star Tutor?</span></p>
                     <div class="inline-flex gap-[40px] border-b-[1px]">
-                        <span class="pb-[8px] pr-[10px] text-semibold font-semibold border-b-2 border-brand-default">Why I Tutor</span>
+                        <?php
+                          if($aboutme_wp_query->have_posts()) {
+                            while($aboutme_wp_query->have_posts()) {
+                              $aboutme_wp_query->the_post();
+                        ?>
+                        <button class="aboutme--tablinks pb-[8px] pr-[10px]" onclick="openTabContent(event, 'aboutme', '<?php the_ID(); ?>')"><?php the_title(); ?></button>
+                        <?php
+                            }
+                          }
 
-                        <span class="pb-[8px] pr-[10px]">Who I am</span>
-                        <span class="pb-[8px] pr-[10px]">Achievements</span>
-                        <span class="pb-[8px] pr-[10px]">Teaching style</span>
+                          wp_reset_postdata();
+                        ?>
                     </div>
+                </div>
+                <?php
+                  if($aboutme_wp_query->have_posts()) {
+                    while($aboutme_wp_query->have_posts()) {
+                      $aboutme_wp_query->the_post();
+                ?>
+                <div id="aboutme-post-<?php the_ID(); ?>" class="aboutme--tabcontent hidden mt-[60px]">
+                  <h2 class="text-heading2 font-heading2"><?php the_title(); ?></h2>
+                  <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
+                    <?php the_field("content"); ?>
+                  </p>
+                </div>
+                <?php
+                    }
+                  }
 
-                </div>
-                <div class="mt-[60px]">
-                    <h2 class="text-heading2 font-heading2">Who Do I Tutor?</h2>
-                    <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
-                        For many people around the world, including those in developed countries, tutoring is not typically the first option for a profession. Many people consider tutoring a job someone does “on the side” or something you do until you find a “better job”. I, however, chose a full-time career in standardized tests tutoring over a career in science research.<br>
-                        I was a science student for 9 years, and then a researcher in genetics for a few as I tutored part time. Following positive reviews and numerous recommendations from previous students who had exceeded their expectations, I decided to dedicate my life to tutoring for various standardized tests.<br>
-                        Individuals such as myself who are passionate about teaching usually end up in academic settings. Very few qualified educators are left to serve those who desperately need help preparing for the GMAT, GRE and SAT, tests that will have a huge impact on future educational and career paths.<br>
-                        Every day, I work hard to come up with new ideas and tips that facilitate test preparation and to update my teaching methods and content, and my love and dedication for my work directly shows in my students’ results.<br>
-                        Preparing for a standardized test is not a fun journey. I am here to make your journey as easy and stress free as possible.
-                    </p>
-                </div>
+                  wp_reset_postdata();
+                ?>
             </div>
         </section>
-
 
         <section class="flex flex-col items-start py-[120px]">
             <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
@@ -120,26 +147,47 @@ $music_img = thestartutor_get_static_img("music.png");
                   <p class="text-title font-title"><span class="text-brand">Other Hobbies</span> outside of work</p>
 
                   <div class="flex gap-[40px] border-b-[1px]">
-                    <span class="pb-[8px] pr-[10px] text-semibold font-semibold border-b-2 border-brand-default">Music</span>
-                    <span class="pb-[8px] pr-[10px]">Science</span>
-                    <span class="pb-[8px] pr-[10px]">Languages</span>
+                    <?php
+                      if($myhobby_wp_query->have_posts()) {
+                        while($myhobby_wp_query->have_posts()) {
+                          $myhobby_wp_query->the_post();
+                    ?>
+                    <button class="myhobby--tablinks pb-[8px] pr-[10px]" onclick="openTabContent(event, 'myhobby', '<?php the_ID(); ?>')"><?php the_title(); ?></button>
+                    <?php
+                        }
+                      }
 
-                    <span class="pb-[8px] pr-[10px]">Writing</span>
-                    <span class="pb-[8px] pr-[10px]">Painting</span>
-                    <span class="pb-[8px] pr-[10px]">Travelling</span>
+                      wp_reset_postdata();
+                    ?>
                   </div>
 
-                </div>
-                <div class="mt-[60px]">
-                    <h2 class="text-heading2 font-heading2">Music</h2>
-                    <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
-                        I am an amateur (but reasonably trained) singer. A couple of the songs I covered have played on the radio :). I sing in multiple languages and particularly enjoy singing in Romance languages.<br><br>
-                        I recently read a book on vocal pedagogy, which, interestingly, also provided me with some unique insights on general teaching methods. While I don’t expect to capitalize on my musical endeavors, I definitely plan to record something when I find myself technically and aesthetically prepared to do so.<br>
-                    </p>
-                </div>
-                <div class="mt-[40px]" style="height: 348px; border-radius: 12px; background: url('<?php echo $music_img; ?>'); background-position: center; background-size: cover;">
-                </div>
+                </div>                
 
+                <?php
+                  if($myhobby_wp_query->have_posts()) {
+                    while($myhobby_wp_query->have_posts()) {
+                      $myhobby_wp_query->the_post();
+                ?>
+                <div id="myhobby-post-<?php the_ID(); ?>" class="myhobby--tabcontent hidden mt-[60px]">
+                  <h2 class="text-heading2 font-heading2"><?php the_title(); ?></h2>
+                  <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
+                    <?php the_content(); ?>
+                  </p>
+                  <?php
+                    if(get_the_post_thumbnail_url()) {
+                  ?>
+                    <div class="mt-[40px]" style="height: 348px; border-radius: 12px; background-image: url('<?php the_post_thumbnail_url(); ?>'); background-position: center; background-size: cover;">
+                    </div>
+                  <?php
+                    }
+                  ?>
+                </div>
+                <?php
+                    }
+                  }
+
+                  wp_reset_postdata();
+                ?>
             </div>
         </section>
     </main>

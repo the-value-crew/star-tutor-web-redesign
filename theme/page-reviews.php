@@ -11,6 +11,12 @@ $yelp_img = thestartutor_get_static_img("medias/yelp.png");
 $google_reviews_img = thestartutor_get_static_img("medias/googleReviews.png");
 $facebook_img = thestartutor_get_static_img("medias/facebook.png");
 
+$args = array(
+  "post_type"         => "reviews",
+  "posts_per_page"    => 10
+);
+$wp_query = new WP_Query($args);
+
 ?>
 
     <main>
@@ -56,29 +62,28 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
               class="text-primary pr-[10px] pb-[8px] border-b-2 font-semibold text-semibold border-brand-default"
               >All Reviews</a
             >
+            <?php
+              $review_of = acf_get_field('review_of')["choices"];
+              foreach($review_of as $key => $val) {
+            ?>
             <a
-
               href="#"
               class="text-primary pr-[10px] pb-[8px] font-normal text-normal"
-              >GRE Reviews</a
+              ><?php echo $val; ?></a
             >
-
-
-            <a
-              href="#"
-              class="text-tertiary pr-[10px] pb-[8px] font-normal text-normal"
-              >ACT/SAT Reviews</a
-            >
-            <a
-              href="#"
-              class="text-tertiary pr-[10px] pb-[8px] font-normal text-normal"
-
-              >Other Tests & Maths Reviews</a
-            >
-
+            <?php
+              }
+            ?>
           </div>
           <div class="mt-[28px] grid grid-rows-[repeat(2, auto)] items-start lg:grid-cols-2 xl:grid-cols-3 gap-[21px] xl:gap-y-[32px]">
-
+            <?php
+              if($wp_query->have_posts()) {
+                while($wp_query->have_posts()) {
+                  $wp_query->the_post();
+            ?>
+            <?php
+              if($wp_query->current_post == 0) {
+            ?>
             <div
               class="xl:col-span-3 flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
 
@@ -89,39 +94,13 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
                     class="leading-relaxed text-heading2 font-heading2 text-primary"
 
                   >
-                    Cal L
+                    <?php the_field("reviewer_name"); ?>
                   </p>
 
                   <div class="flex gap-[4px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-
-                    >
-                      <path
-
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-
-                    </svg>
+                    <?php
+                      for ($i = 0; $i < (int)get_field("stars"); $i++) {
+                    ?>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -134,41 +113,21 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
                         fill="#E4C045"
                       />
                     </svg>
-
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
+                    <?php
+                      }
+                    ?>
                   </div>
                 </div>
                 <div
                   class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]"
                 >
 
-                  <p>15 Jan 2023</p>
-                  <p>(Review on Yelp)</p>
+                  <p><?php echo DateTime::createFromFormat("m/d/Y", get_field("date_posted"))->format("M d, Y"); ?></p>
+                  <p>(Review on <?php
+                    $choices = get_field_object("review_from")["choices"];
+                    $key = get_field("review_from");
+                    echo $choices[$key];
+                  ?>)</p>
 
                 </div>
               </div>
@@ -178,78 +137,22 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
                   class="self-stretch font-normal leading-relaxed text-normal text-secondary"
                 >
                   <div class="xl:hidden">
-                    Tara is absolutely the best. With his help, I improved my GMAT
-                  score 140 points and was admitted to Harvard Business School!
+                    <?php echo wp_trim_words(get_field("review"), 60); ?>
                   </div>
                   <div class="hidden xl:block mt-[16px] space-y-[16px]">
                     <p class="capitalize font-heading2 text-heading2">
-                      770 GMAT score & Harvard Business School!
+                      <?php the_title(); ?>
                     </p>
                     <p class="font-normal text-normal">
-                      I worked with Tara for several weeks this past spring on GMAT
-                      math, which culminated in a 770 GMAT score (99th percentile: 49Q /
-                      45V). I’m writing this review because I am pleased with my score,
-                      and believe that Tara is directly responsible for the good
-                      results, as I had been scoring in the high-600s / low-700s on
-                      practice tests prior to working with him. A few points I’d like to
-                      touch on: <br />
-                      1) Intellect – Tara is, hands down, one of the smartest people
-                      I’ve ever met. He is so quick with numbers, which was very helpful
-                      while we were going through the hardest GMAT math problems. He has
-                      an advanced science degree from University of Chicago and is
-                      quantitatively solid. <br />
-                      2) Ability to teach difficult concepts – during the actual GMAT
-                      exam, especially toward the end of the quantitative section (where
-                      the questions are the very hardest if you’re getting the earlier
-                      ones correct), there were 7 or 8 questions where I remember
-                      arriving at an answer and thinking “wow, this is exactly how Tara
-
-                      taught me to do it,” or “I’m glad that Tara taught me that
-                      shortcut.” The time we spent together definitely contributed to my
-                      ability to get some of the hardest GMAT questions right. <br />
-                      3) Dedication / alignment of interests – one of the things I
-                      worried most about when finding a tutor was whether the individual
-                      would have my best interests at heart. From the beginning, Tara
-                      was highly invested in my success. I’d get text messages from him
-                      (at random times) with photos of GMAT problems and solutions that
-                      would be similar to the ones we had gone through during our
-                      sessions – they would include helpful tips and “here’s another way
-                      to approach it if you get stuck” type commentary. It is clear that
-                      Tara takes immense pride in his work, and he’s always thinking
-                      about you, even outside of your sessions. He also spent lots of
-                      time outside of class looking through specific questions that I
-                      had emailed him in advance. Also, he sent me messages of
-                      encouragement and helped me manage some of the emotional /
-                      psychological aspects of the test as well. He clearly had an
-                      intrinsic urge to help me do well. <br />4) Personality – I know
-                      this might not seem immediately relevant to some folks, but I also
-                      want to note that Tara is humble, ­­understanding, and patient. He
-                      has a very cool / calm / collected demeanor, which makes him very
-
-                      easy to work with. Despite the GMAT being a horror of an exam, I
-                      always looked forward to our sessions. He’s also open-minded about
-                      how you arrive at your answers – I’ve found that some tutors try
-                      to force you to do problems their way, but Tara takes the time to
-
-                      figure out how you approach the problem, and then gives an
-                      objective critique of your approach (often, he has a much faster
-                      way that he can show you). He is very easygoing and low-ego.
-                      <br />I took the Manhattan GMAT course a few years ago, and have
-                      done a bunch of Manhattan and Official Guide problems, with lots
-                      of spinning my wheels and no real improvement. Tara added
-                      direction and structure to my studying, and taught me how to
-                      approach the toughest math problems. I took a lot of time deciding
-                      which tutor I wanted to work with, and I’m very glad that I went
-                      with Tara. I think this is some of the best money I’ve ever spent,
-                      and it was completely worth it.<br />
-                      I unconditionally recommend Tara. Happy to discuss this further if
-                      anyone is on the fence or has any questions at all. Feel free to
-                      shoot me a message at coliou2 @ gmail. Good luck!
+                      <?php the_field("review"); ?>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+            <?php
+              } else {
+            ?>
             <div
               class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
             >
@@ -258,209 +161,7 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
                   <p
                     class="leading-relaxed text-heading2 font-heading2 text-primary"
                   >
-                    Jacob N
-                  </p>
-                  <div class="flex gap-[4px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]"
-                >
-                  <p>15 Jan 2023</p>
-
-                  <p>(Review on Yelp)</p>
-                </div>
-              </div>
-
-
-              <div class="flex flex-col gap-2">
-                <p
-                  class="self-stretch font-normal leading-relaxed text-normal text-secondary"
-                >
-                  Tara is absolutely the best. With his help, I improved my GMAT
-
-                  score 140 points and was admitted to Harvard Business School!
-                </p>
-              </div>
-
-            </div>
-            <div
-              class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
-
-            >
-              <div class="space-y-[8px]">
-                <div class="flex items-center justify-between">
-                  <p
-                    class="leading-relaxed text-heading2 font-heading2 text-primary"
-
-                  >
-                    Brad M
-                  </p>
-                  <div class="flex gap-[4px]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-
-                    >
-                      <path
-
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-                      />
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
-                        fill="#E4C045"
-
-                      />
-                    </svg>
-                  </div>
-
-                </div>
-                <div
-                  class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]"
-                >
-                  <p>15 Jan 2023</p>
-                  <p>(Review on Yelp)</p>
-                </div>
-              </div>
-
-
-              <div class="flex flex-col gap-2">
-                <p
-                  class="self-stretch font-normal leading-relaxed text-normal text-secondary"
-                >
-                  Tara is absolutely the best. With his help, I improved my GMAT
-                  score 140 points and was admitted to Harvard Business School!
-                </p>
-              </div>
-            </div>
-            <div
-
-              class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]"
-            >
-              <div class="space-y-[8px]">
-                <div class="flex items-center justify-between">
-                  <p
-                    class="leading-relaxed text-heading2 font-heading2 text-primary"
-                  >
-                    Thomas J
+                    <?php the_field("reviewer_name"); ?>
                   </p>
 
                   <div class="flex gap-[4px]">
@@ -537,8 +238,13 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
                 <div
                   class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]"
                 >
-                  <p>15 Jan 2023</p>
-                  <p>(Review on Yelp)</p>
+                  <p><?php echo DateTime::createFromFormat("m/d/Y", get_field("date_posted"))->format("M d, Y"); ?></p>
+                  <p>(Review on
+                  <?php
+                    $choices = get_field_object("review_from")["choices"];
+                    $key = get_field("review_from");
+                    echo $choices[$key];
+                  ?>)</p>
 
                 </div>
               </div>
@@ -547,20 +253,27 @@ $facebook_img = thestartutor_get_static_img("medias/facebook.png");
                 <p
                   class="self-stretch font-normal leading-relaxed text-normal text-secondary"
                 >
-                  Tara is absolutely the best. With his help, I improved my GMAT
-                  score 140 points and was admitted to Harvard Business School!
+                  <?php echo wp_trim_words(get_field("review"), 60); ?>
                 </p>
               </div>
             </div>
+            <?php
+                  }
+                }
+              }
+
+              wp_reset_postdata();
+            ?>
           </div>
 
         </div>
         <div class="mt-[44px] 2xl:mt-[60px] flex justify-center">
-          <button
+          <a
+            href="/reviews/"
             class="text-cta-default py-[16px] px-[32px] rounded-[60px] border border-solid border-[#C84A3D] font-button text-button"
           >
             See More Reviews
-          </button>
+          </a>
         </div>
         <div>
           <div>

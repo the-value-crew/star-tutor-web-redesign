@@ -1,8 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,800;1,900&display=swap');
+@import "./custom/file-header.css";
+/**
+ * The line above injects the WordPress file header. It needs to be first,
+ * before this comment.
+ */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/**
+ * This injects custom `@font-face` rules.
+ */
+@import "./custom/fonts.css";
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins, then adds custom base styles.
+ */
+@import "tailwindcss/base";
+@import "./custom/base.css";
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins, then adds custom component classes.
+ *
+ * The `@import-glob` line imports all CSS files from the `components`
+ * directory (except for `components.css`, which is imported on the following
+ * line). This is meant to simplify the process of integrating styles from
+ * JavaScript components or WordPress plugins.
+ */
+@import "tailwindcss/components";
+@import-glob "./custom/components/**/!(components).css";
+@import "./custom/components/components.css";
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins, then adds custom utility classes.
+ */
+@import "tailwindcss/utilities";
+@import "./custom/utilities.css";
 
 @keyframes slideInLeft {
   from {
@@ -457,4 +489,24 @@
     animation-timeline: view();
     animation-range: entry;
   }
+}
+
+.wpcf7 {
+  @apply pt-[16.5px] flex flex-col gap-[38px];
+}
+
+.wpcf7-custom-form {
+  @apply flex flex-col gap-[13px];
+}
+
+.wpcf7-custom-form input {
+  @apply md:w-[440px] lg:w-[421px] p-[10px] border rounded-[4px] border-solid border-grey-300 bg-surface-primary text-captionBig font-captionBig;
+}
+
+.wpcf7-custom-form textarea {
+  @apply md:w-[440px] lg:w-[421px] h-[120px] pt-[17px] pl-[10px] pb-[11px] pr-[16px] border rounded-[4px] border-solid border-grey-300 bg-surface-primary text-captionBig font-captionBig;
+}
+
+.wpcf7-custom-form input[type="submit"] {
+  @apply w-auto bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button;
 }

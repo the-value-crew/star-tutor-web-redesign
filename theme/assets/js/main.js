@@ -211,3 +211,20 @@ window.onscroll = () => {
     contactContent.style.transform = 'translateY(10%)';
   }
 };
+
+function openTabContent(evt, context, tabId) {
+  let i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName(`${context}--tabcontent`);
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName(`${context}--tablinks`);
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" text-semibold font-semibold border-b-2 border-brand-default", "");
+  }
+  document.getElementById(`${context}-post-${tabId}`).style.display = "block";
+  evt.currentTarget.className += " text-semibold font-semibold border-b-2 border-brand-default";
+}
+
+document.querySelectorAll(".aboutme--tablinks")[0].click();
+document.querySelectorAll(".myhobby--tablinks")[0].click();

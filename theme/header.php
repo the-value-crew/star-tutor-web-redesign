@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * The header for our theme
+ *
+ * This is the template that displays the `head` element and everything up
+ * until the `#content` element.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package thestartutor
+ */
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,11 +54,12 @@
               )
             );
           ?>
-          <button
+          <a
+            href="/#contact"
             class="bg-cta-default font-button shrink-0 py-[10px] px-[20px] rounded-[60px]"
           >
             Book A Free Consultation
-          </button>
+          </a>
         </div>
       </nav>
     </header>

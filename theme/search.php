@@ -1,30 +1,32 @@
 <?php
-
-/* 
- * Template Name: Blog Page
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package thestartutor
  */
 
 get_header();
 
-$about_bg_img = thestartutor_get_static_img("about-bg.png");
-
-$args = array(
-    "post_type"         => "post",
-    "posts_per_page"    => 10
+$recents_args = array(
+	"post_type"         => "post",
+	"posts_per_page"    => 10
 );
-$wp_query = new WP_Query($args);
-
+$recents_wp_query = new WP_Query($recents_args);
 ?>
 
-    <main>
-      <section class="flex flex-col justify-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-          <div  class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
-              <div class="text-primary-dark">
-                  <p class="text-title font-title">Access Resources in The</p>
-                  <p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
-              </div>
-            </div>
-        </section>
+		<main>
+      <section class="flex flex-col justify-center text-title font-title mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+				<?php
+				printf(
+					/* translators: 1: search result title. 2: search term. */
+					'<h1 class="page-title">%1$s <span>%2$s</span></h1>',
+					esc_html__( 'Search results for:', 'thestartutor' ),
+					get_search_query()
+				);
+				?>
+      </section>
 
         <section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
           <div class="flex flex-col lg:flex-row items-start gap-[56px]">
@@ -43,9 +45,9 @@ $wp_query = new WP_Query($args);
 
                     <div class="flex flex-col my-[16px] gap-[20px]">
                         <?php
-                            if($wp_query->have_posts()) {
-                                while($wp_query->have_posts()) {
-                                    $wp_query->the_post();
+                            if(have_posts()) {
+                                while(have_posts()) {
+                                    the_post();
                         ?>
                         <div class="border-2 border-grey-200 rounded-lg">
                             <img class="w-full h-[304px] rounded-t-lg object-cover" src="<?php the_post_thumbnail_url() ?>" />
@@ -78,8 +80,6 @@ $wp_query = new WP_Query($args);
                         <?php
                                 }
                             }
-
-                            wp_reset_postdata();
                         ?>
                     </div>
                 </div>
@@ -92,14 +92,14 @@ $wp_query = new WP_Query($args);
                       <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M13.9996 14.0016L11.0996 11.1016" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <input type="text" name="s" placeholder="Search the website" />
+                  <input type="text" name="s" value="<?php echo "$s"; ?>" placeholder="Search the website" />
                   <input class="hidden" type="submit" value="Submit" />
               </form>
               <div class="mt-[24px] flex flex-col gap-[24px]">
                     <?php
-                        if($wp_query->have_posts()) {
-                            while($wp_query->have_posts()) {
-                                $wp_query->the_post();
+                        if($recents_wp_query->have_posts()) {
+                            while($recents_wp_query->have_posts()) {
+                                $recents_wp_query->the_post();
                     ?>
                   <div>
                       <p class="text-semibold font-semibold"><?php the_title(); ?></p>
@@ -124,5 +124,4 @@ $wp_query = new WP_Query($args);
     </main>
 
 <?php
-
 get_footer();
