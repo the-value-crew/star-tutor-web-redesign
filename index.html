@@ -9,10 +9,10 @@
     >
       <nav class="lg:flex lg:items-center">
         <div class="flex items-center justify-between">
-          <img
-            src="./src/images/theStarTutorLogo.png"
-            class="w-[166px] h-[31px] flex-shrink-0"
-          />
+          <div
+            class="bg-[url('/src/images/theStarTutorLogo.png')] w-[166px] h-[31px]"
+          ></div>
+
           <button id="navBtn" class="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,18 +36,22 @@
           class="hidden lg:w-full lg:flex lg:items-center text-secondary-dark"
         >
           <div
-            class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center"
+            class="flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center gap-[28px]"
           >
-            <a class="text-brand py-[4px] px-[8px]" href="./index.html">Home</a>
-            <a class="py-[4px] px-[8px]" href="./src/pages/about.html">About</a>
-            <a class="py-[4px] px-[8px]" href="./src/pages/reviews.html"
+            <a class="text-brand" href="./index.html">Home</a>
+            <a class="hover:text-primary-dark" href="./src/pages/about.html"
+              >About</a
+            >
+            <a class="hover:text-primary-dark" href="./src/pages/reviews.html"
               >Reviews</a
             >
-            <a class="py-[4px] px-[8px]" href="./src/pages/blogs.html">Blogs</a>
-            <a class="py-[4px] px-[8px]" href="./src/pages/contact.html"
+            <a class="hover:text-primary-dark" href="./src/pages/blogs.html"
+              >Blogs</a
+            >
+            <a class="hover:text-primary-dark" href="./src/pages/contact.html"
               >Contact</a
             >
-            <a class="py-[4px] px-[8px]" href="./src/pages/whyUs.html"
+            <a class="hover:text-primary-dark" href="./src/pages/whyUs.html"
               >Why Choose Us?</a
             >
           </div>
@@ -370,13 +374,9 @@
       <div
         class="xl:relative xl:w-[348px] xl:h-[420px] hidden xl:block heroSectionRight"
       >
-        <figure>
-          <img
-            src="./src/images/starTutor.png"
-            alt="star-tutor"
-            class="xl:absolute w-[348px] h-[420px] flex-shrink-0 rounded-lg"
-          />
-        </figure>
+        <div
+          class="bg-[url('/src/images/starTutor.png')] w-[348px] h-[420px] rounded-lg bg-cover"
+        ></div>
 
         <img
           src="./src/images/greyBlur.png"
@@ -398,13 +398,10 @@
       class="items-center gap-[60px] lg:mt-[60px] lg:flex lg:flex-col hidden xl:hidden"
     >
       <div class="flex items-center gap-[49px]">
-        <figure>
-          <img
-            src="./src/images/starTutor.png"
-            alt="star-tutor"
-            class="w-[464px] h-[510px] flex-shrink-0 rounded-lg"
-          />
-        </figure>
+        <div
+          class="bg-[url('/src/images/starTutor.png')] w-[464px] h-[510px] rounded-lg bg-cover"
+        ></div>
+
         <figure class="relative w-[408px] h-[160px]">
           <img src="./src/images/homeReviewTablet.png" class="absolute z-10" />
           <img
@@ -445,18 +442,15 @@
       </div>
     </main>
 
-    <!-- for 0-1023 -->
+    <!-- for 640-1023 -->
     <main
       class="items-center gap-[117.55px] flex flex-col lg:hidden mb-[120px]"
     >
       <div class="relative">
-        <figure>
-          <img
-            src="./src/images/starTutor.png"
-            alt="star-tutor"
-            class="w-[640px] h-[634.75px]"
-          />
-        </figure>
+        <div
+          class="bg-[url('/src/images/starTutor.png')] w-[360px] h-[348.46px] md:w-[640px] md:h-[634.75px] rounded-lg bg-cover"
+        ></div>
+
         <div
           class="absolute bottom-[-80px] left-[50%] transform translate-x-[-50%]"
         >

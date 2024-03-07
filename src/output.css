@@ -910,6 +910,10 @@ video {
   height: 100%;
 }
 
+.h-\[348\.46px\]{
+  height: 348.46px;
+}
+
 .w-\[135px\]{
   width: 135px;
 }
@@ -968,6 +972,10 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[360px\]{
+  width: 360px;
 }
 
 .max-w-\[462px\]{
@@ -1338,6 +1346,10 @@ video {
   background-color: transparent;
 }
 
+.bg-\[u\]{
+  background-color: u;
+}
+
 .bg-\[url\(\'\.\.\/src\/images\/introImage\.jpeg\'\)\]{
   background-image: url('../src/images/introImage.jpeg');
 }
@@ -1356,6 +1368,18 @@ video {
 
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\/src\/images\/theStarTutorLogo\.png\'\)\]{
+  background-image: url('./src/images/theStarTutorLogo.png');
+}
+
+.bg-\[url\(\'\/src\/images\/theStarTutorLogo\.png\'\)\]{
+  background-image: url('/src/images/theStarTutorLogo.png');
+}
+
+.bg-\[url\(\'\/src\/images\/starTutor\.png\'\)\]{
+  background-image: url('/src/images/starTutor.png');
 }
 
 .from-\[\#EEEEBB\]{
@@ -1945,14 +1969,14 @@ video {
 
 .isActiveImageLeft {
   position: absolute;
-  transition: 1s;
+  transition: 0.6s;
   transform: scale(0.7);
   opacity: 0.8;
 }
 
 .isActiveImageRight {
   position: absolute;
-  transition: 1s;
+  transition: 0.6s;
   transform: scale(0.7);
   opacity: 0.6;
 }
@@ -2230,6 +2254,11 @@ video {
   }
 }
 
+.hover\:text-primary-dark:hover{
+  --tw-text-opacity: 1;
+  color: rgb(252 252 252 / var(--tw-text-opacity));
+}
+
 @media (min-width: 360px){
   .sm\:text-center{
     text-align: center;
@@ -2262,12 +2291,20 @@ video {
     height: 372px;
   }
 
+  .md\:h-\[634\.75px\]{
+    height: 634.75px;
+  }
+
   .md\:w-\[440px\]{
     width: 440px;
   }
 
   .md\:w-\[600px\]{
     width: 600px;
+  }
+
+  .md\:w-\[640px\]{
+    width: 640px;
   }
 
   .md\:grid-cols-1{
