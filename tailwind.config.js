@@ -21,9 +21,14 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     container: {
-      center: true,
-      padding: '1rem',
-      margin: '0px',
+      // center: true,
+      padding: {
+        sm: '16px',
+        md: '20px',
+        lg: '40px',
+        // xl: '200px',
+        '2xl': '0px',
+      },
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
