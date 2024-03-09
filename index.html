@@ -2971,7 +2971,19 @@
                 </svg>
               </div>
 
-              <p class="text-button font-button">312-487-1783</p>
+              <div class="relative">
+                <p
+                  class="text-button font-button hover:cursor-pointer"
+                  id="phoneNumber"
+                >
+                  312-487-1783
+                </p>
+                <span
+                  id="phoneCopied"
+                  class="text-xs font-medium text-[#344054] px-2 py-[2px] bg-[#EAECF0] whitespace-nowrap hidden absolute"
+                  >Phone number copied to clipboard</span
+                >
+              </div>
             </div>
             <div class="flex gap-[22px] items-center">
               <div
@@ -3053,6 +3065,18 @@
     const contactTitle = document.getElementById('contactTitle');
     const contactHeading3 = document.getElementById('contactHeading3');
     const contactContent = document.getElementById('contactContent');
+
+    // Phone card copy to clipboard
+    const phoneNumber = document.getElementById('phoneNumber');
+    const phoneCopied = document.getElementById('phoneCopied');
+
+    phoneNumber.addEventListener('click', () => {
+      navigator.clipboard.writeText(phoneNumber.textContent);
+      phoneCopied.style.display = 'block';
+      setTimeout(() => {
+        phoneCopied.style.display = 'none';
+      }, 2000);
+    });
 
     // Score card animation
     const scoreCardDup = document.getElementById('scoreCardDup');

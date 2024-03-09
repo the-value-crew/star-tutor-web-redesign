@@ -1221,6 +1221,10 @@ video {
   text-overflow: ellipsis;
 }
 
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -1373,6 +1377,16 @@ video {
 .bg-cta-400{
   --tw-bg-opacity: 1;
   background-color: rgb(200 74 61 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#344054\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 64 84 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#EAECF0\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 236 240 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/src\/images\/introImage\.jpeg\'\)\]{
@@ -1556,6 +1570,11 @@ video {
   padding-bottom: 80px;
 }
 
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pb-\[11px\]{
   padding-bottom: 11px;
 }
@@ -1676,6 +1695,11 @@ video {
   font-size: 48px;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-button{
   font-weight: 600;
 }
@@ -1730,6 +1754,10 @@ video {
 
 .font-title{
   font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .uppercase{
@@ -1810,6 +1838,11 @@ video {
 .text-tertiary{
   --tw-text-opacity: 1;
   color: rgb(122 122 122 / var(--tw-text-opacity));
+}
+
+.text-\[\#344054\]{
+  --tw-text-opacity: 1;
+  color: rgb(52 64 84 / var(--tw-text-opacity));
 }
 
 .underline{
