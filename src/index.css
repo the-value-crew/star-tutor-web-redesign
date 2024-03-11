@@ -360,9 +360,16 @@
     animation-range: entry;
   }
 
+  .isActive .flipImage {
+    transform: rotateY(180deg);
+    transition: 1s;
+    transition-delay: 1.5s; /* Delay when not being hovered over */
+  }
+
   /* Apply the flip animation only when the parent has the isActive class */
   .isActive .flipImage:hover {
     transform: rotateY(180deg);
+    transition-delay: 0s;
     transition: 1s;
   }
 
@@ -374,6 +381,7 @@
   /* Don't apply the flip animation when the parent doesn't have the isActive class */
   :not(.isActive) .flipImage {
     transform: rotateY(0deg);
+    transition-delay: 1.5s;
     transition: 1s;
   }
 
@@ -394,7 +402,7 @@
     position: absolute;
     transition: 0.6s;
     transform: scale(0.7);
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   .isActiveImageRight {
@@ -412,7 +420,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.9);
   }
 
   .isActive {
@@ -436,21 +445,40 @@
 
   @screen md {
     .isActiveImageLeft {
-      left: -95%;
+      left: -50%;
     }
 
     .isActiveImageRight {
-      right: -95%;
+      right: -50%;
+    }
+  }
+
+  @screen lg {
+    .isActiveImageLeft {
+      left: -55%;
+    }
+
+    .isActiveImageRight {
+      right: -55%;
     }
   }
 
   @screen xl {
     .isActiveImageLeft {
-      left: -60%;
+      left: -40%;
     }
 
     .isActiveImageRight {
-      right: -60%;
+      right: -40%;
+    }
+  }
+  @screen 2xl {
+    .isActiveImageLeft {
+      left: -25%;
+    }
+
+    .isActiveImageRight {
+      right: -25%;
     }
   }
 
