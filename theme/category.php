@@ -1,39 +1,36 @@
 <?php
 
 /*
- * Template Name: Blog Page
+ * Template Name: Category Page
  */
 
 get_header();
 
 $about_bg_img = thestartutor_get_static_img("about-bg.png");
 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$wp_query = new WP_Query(
-    array(
-        "post_type" => "post",
-        "posts_per_page" => 5,
-        "paged" => $paged,
-    )
-);
+$current_page_cat = get_the_category() ? get_the_category()[0] : null;
 
-$recents_wp_query = new WP_Query(
-    array(
-        "post_type"         => "post",
-        "posts_per_page"    => 5,
-    )
+$args = array(
+    "post_type"         => "post",
+		"posts_per_page"    => 10,
+		"category_name" 		=> $current_page_cat->slug ?? null,
 );
+$wp_query = new WP_Query($args);
+
+
 
 ?>
 
-    <main>
+		<main>
+			<?php
+				if(is_category($current_page_cat->slug ?? null)) {
+			?>
       <section class="flex flex-col justify-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
           <div  class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
               <div class="text-primary-dark">
-                  <p class="text-title font-title">Access Resources in The</p>
-                  <p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
+								<p class="text-title font-title">Category: <?php echo get_the_category()[0]->name; ?></p>
               </div>
-            </div>
+          </div>
         </section>
 
         <section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
@@ -51,13 +48,13 @@ $recents_wp_query = new WP_Query(
                         <button>ACT & SAT</button>
                     </div>
 
-                    <div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">
+                    <div class="flex flex-col my-[16px] gap-[20px]">
                         <?php
-                            if($wp_query->have_posts()) {
-                                while($wp_query->have_posts()) {
+                            if(have_posts()) {
+                                while(have_posts()) {
                                     the_post();
                         ?>
-                        <div class="border-2 border-grey-200 rounded-lg lg:min-w-[627px]">
+                        <div class="border-2 border-grey-200 rounded-lg">
                             <img class="w-full h-[304px] rounded-t-lg object-cover" src="<?php the_post_thumbnail_url() ?>" />
                             <div class="mt-[16px] px-[20px]">
                                 <h2 class="text-heading2 font-heading2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -73,7 +70,7 @@ $recents_wp_query = new WP_Query(
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M17.7077 6.2567V11.7626C17.7077 12.1965 17.6223 12.6261 17.4562 13.0269C17.2902 13.4276 17.0468 13.7919 16.7401 14.0986C16.4333 14.4054 16.0691 14.6487 15.6683 14.8147C15.2675 14.9807 14.8379 15.0662 14.4041 15.0662H12.2018L10.3848 16.8831C10.3353 16.9358 10.2756 16.9778 10.2093 17.0066C10.143 17.0352 10.0716 17.0501 9.99935 17.0501C9.9271 17.0501 9.85568 17.0352 9.78935 17.0066C9.7231 16.9778 9.66335 16.9358 9.61393 16.8831L7.79697 15.0662H5.59459C4.71842 15.0662 3.87815 14.7181 3.25861 14.0986C2.63907 13.4791 2.29102 12.6388 2.29102 11.7626V6.2567C2.29102 5.38053 2.63907 4.54026 3.25861 3.92072C3.87815 3.30117 4.71842 2.95312 5.59459 2.95312H14.4041C15.2803 2.95312 16.1205 3.30117 16.7401 3.92072C17.3596 4.54026 17.7077 5.38053 17.7077 6.2567Z" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-																				<span class="text-captionBig font-captionBig text-secondary"><?php echo get_comments_number(); ?> Comments</span>
+                                        <span class="text-captionBig font-captionBig text-secondary">3 Comments</span>
                                     </div>
                                     <div class="flex items-center gap-[4px]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -87,9 +84,9 @@ $recents_wp_query = new WP_Query(
                         </div>
                         <?php
                                 }
-                                thestartutor_the_posts_navigation();
+							    thestartutor_the_posts_navigation();
                             }
-?>
+                        ?>
                     </div>
                 </div>
             </div>
@@ -106,10 +103,10 @@ $recents_wp_query = new WP_Query(
               </form>
               <div class="mt-[24px] flex flex-col gap-[24px]">
                     <?php
-if($recents_wp_query->have_posts()) {
-    while($recents_wp_query->have_posts()) {
-        $recents_wp_query->the_post();
-        ?>
+                        if($wp_query->have_posts()) {
+                            while($wp_query->have_posts()) {
+                                $wp_query->the_post();
+                    ?>
                   <div>
                       <p class="text-semibold font-semibold"><?php the_title(); ?></p>
                       <div class="flex items-center gap-[8px] mt-[10px]">
@@ -118,18 +115,31 @@ if($recents_wp_query->have_posts()) {
                       </div>
                   </div>
                   <?php
-    }
-}
+														}
+                        }
 
-wp_reset_postdata();
-?>
+                        wp_reset_postdata();
+                    ?>
               </div>
               <section class="w-full mt-[48px]">
                   <button class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
               </section>
           </div>
         </div>
-      </section>
+			</section>
+			<?php
+				} else {
+			?>
+      <section class="flex flex-col justify-center h-[350px] text-title font-title" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
+				<div  class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+					<div class="text-primary-dark">
+						<p class="text-title font-title">No such category found!</p>
+					</div>
+				</div>
+			</section>
+			<?php
+				}
+			?>
     </main>
 
 <?php

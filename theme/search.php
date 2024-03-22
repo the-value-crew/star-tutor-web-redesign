@@ -11,17 +11,26 @@ get_header();
 
 $recents_args = array(
 	"post_type"         => "post",
-	"posts_per_page"    => 10
+	"posts_per_page"    => 10,
 );
 $recents_wp_query = new WP_Query($recents_args);
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$post_wp_query = new WP_Query(
+	array(
+		"post_type"         => "post",
+		"posts_per_page"    => 5,
+		"paged" => $paged,
+	)
+);
 ?>
 
 		<main>
-      <section class="flex flex-col justify-center text-title font-title mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+      <section class="flex flex-col text-title font-title mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
 				<?php
 				printf(
 					/* translators: 1: search result title. 2: search term. */
-					'<h1 class="page-title">%1$s <span>%2$s</span></h1>',
+					'<h1>%1$s <span>%2$s</span></h1>',
 					esc_html__( 'Search results for:', 'thestartutor' ),
 					get_search_query()
 				);
@@ -45,11 +54,11 @@ $recents_wp_query = new WP_Query($recents_args);
 
                     <div class="flex flex-col my-[16px] gap-[20px]">
                         <?php
-                            if(have_posts()) {
-                                while(have_posts()) {
-                                    the_post();
+                            if($post_wp_query->have_posts()) {
+                                while($post_wp_query->have_posts()) {
+                                    $post_wp_query->the_post();
                         ?>
-                        <div class="border-2 border-grey-200 rounded-lg">
+                        <div class="border-2 border-grey-200 rounded-lg min-w-full lg:min-w-[627px]">
                             <img class="w-full h-[304px] rounded-t-lg object-cover" src="<?php the_post_thumbnail_url() ?>" />
                             <div class="mt-[16px] px-[20px]">
                                 <h2 class="text-heading2 font-heading2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -78,46 +87,57 @@ $recents_wp_query = new WP_Query($recents_args);
                             </div>
                         </div>
                         <?php
-                                }
-                            }
+																}
+																thestartutor_the_posts_navigation();
+														} else {
+												?>
+												<div>
+													<span class="font-title text-title">No results found!</span>
+												</div>
+												<?php
+													}
+
+													wp_reset_postdata();
                         ?>
-                    </div>
+										</div>
                 </div>
             </div>
-            <div class="pt-[90px] lg:px-[56px]">
-              <h3 class="text-heading3 font-heading3">Recents</h3>
+						<div class="pt-[90px] lg:px-[56px]">
+							<div class="lg:max-w-[348px]">
+								<h3 class="text-heading3 font-heading3">Recents</h3>
 
-              <form class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]" action="<?php echo get_home_url(); ?>">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M13.9996 14.0016L11.0996 11.1016" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <input type="text" name="s" value="<?php echo "$s"; ?>" placeholder="Search the website" />
-                  <input class="hidden" type="submit" value="Submit" />
-              </form>
-              <div class="mt-[24px] flex flex-col gap-[24px]">
-                    <?php
-                        if($recents_wp_query->have_posts()) {
-                            while($recents_wp_query->have_posts()) {
-                                $recents_wp_query->the_post();
-                    ?>
-                  <div>
-                      <p class="text-semibold font-semibold"><?php the_title(); ?></p>
-                      <div class="flex items-center gap-[8px] mt-[10px]">
-                          <span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]"><?php the_category(); ?></span>
-                          <span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
-                      </div>
-                  </div>
-                  <?php
-                            }
-                        }
+								<form class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]" action="<?php echo get_home_url(); ?>">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+												<path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M13.9996 14.0016L11.0996 11.1016" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										<input type="text" name="s" value="<?php echo "$s"; ?>" placeholder="Search the website" />
+										<input class="hidden" type="submit" value="Submit" />
+								</form>
+								<div class="mt-[24px] flex flex-col gap-[24px]">
+											<?php
+													if($recents_wp_query->have_posts()) {
+															while($recents_wp_query->have_posts()) {
+																	$recents_wp_query->the_post();
+											?>
+										<div>
+												<p class="text-semibold font-semibold"><?php the_title(); ?></p>
+												<div class="flex items-center gap-[8px] mt-[10px]">
+														<span class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]"><?php the_category(); ?></span>
+														<span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+												</div>
+										</div>
+										<?php
+															}
+													}
 
-                        wp_reset_postdata();
-                    ?>
-              </div>
-              <section class="w-full mt-[48px]">
-                  <button class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
-              </section>
+													wp_reset_postdata();
+											?>
+								</div>
+								<section class="w-full mt-[48px]">
+										<button class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect on Facebook</button>
+								</section>
+							</div>
           </div>
         </div>
       </section>

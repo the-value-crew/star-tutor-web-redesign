@@ -22,7 +22,7 @@
   <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header class="w-full sticky top-0 z-[100] bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
-      <nav class="relative lg:flex lg:items-center">
+      <nav class="2xl:max-w-[1084px] relative lg:flex lg:justify-center lg:items-center">
         <div class="flex justify-between lg:justify-start items-center">
         <?php
           $custom_logo_id = get_theme_mod("custom_logo");

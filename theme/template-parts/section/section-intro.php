@@ -2,6 +2,9 @@
 
 $intro_img = thestartutor_get_static_img("introImage.jpeg");
 
+$intro_post = get_post(646);
+$intro = $intro_post->post_content;
+
 ?>
     <!-- Introduction section -->
     <section
@@ -111,20 +114,9 @@ $intro_img = thestartutor_get_static_img("introImage.jpeg");
           <p
             class="font-normal leading-relaxed text-secondary text-normal overflow-hidden h-[104px] 2xl:h-[156px] text-ellipsis"
           >
-            Hello, Prospective Clients, <br />
-            Has your score hit a plateau after using conventional test prep
-            services? Or have you just started and are struggling with your GMAT
-            or GRE preparation? I can help! I understand that taking exams
-            repeatedly can be expensive and demoralizing. After all, tests such
-            as the GRE and the GMAT affect your entire career and even your
-            future potential income. With an experienced guide, however, the
-            maze of test preparation is far less daunting. Hundreds of my
-            clients who had reached a cap and stopped progressing ultimately
-            succeeded after seeking my help, and you can read their success
-            stories We will be in this together, and you can do this! Let’s make
-            this your last test!
+						<?php echo wp_trim_words($intro, 60); ?>
           </p>
-          <p class="font-semibold text-secondary text-normal md:text-cemter">
+          <p class="font-semibold text-secondary text-normal md:text-center">
             Tara B, Founder
           </p>
         </article>

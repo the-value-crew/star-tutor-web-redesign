@@ -228,7 +228,7 @@ if(!function_exists("thestartutor_custom_walker_nav_menu_setup")) {
   function thestartutor_custom_walker_nav_menu_setup() {
     require_once("inc/CustomWalkerNavMenu.php");
   }
-  
+
   add_action("after_setup_theme", "thestartutor_custom_walker_nav_menu_setup");
 }
 

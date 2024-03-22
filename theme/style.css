@@ -1316,6 +1316,10 @@ body{
   position: relative;
 }
 
+.sticky{
+  position: sticky;
+}
+
 .bottom-\[-55px\]{
   bottom: -55px;
 }
@@ -1384,12 +1388,16 @@ body{
   right: 190px;
 }
 
+.top-0{
+  top: 0px;
+}
+
 .top-\[-45px\]{
   top: -45px;
 }
 
-.top-\[-50\]{
-  top: -50;
+.top-\[-50px\]{
+  top: -50px;
 }
 
 .top-\[-55px\]{
@@ -1428,20 +1436,16 @@ body{
   top: 74.9px;
 }
 
-.top-\[-70\]{
-  top: -70;
-}
-
-.top-\[-50px\]{
-  top: -50px;
-}
-
 .z-0{
   z-index: 0;
 }
 
 .z-10{
   z-index: 10;
+}
+
+.z-\[100\]{
+  z-index: 100;
 }
 
 .my-\[16px\]{
@@ -1506,10 +1510,6 @@ body{
   margin-top: 40px;
 }
 
-.mt-\[44px\]{
-  margin-top: 44px;
-}
-
 .mt-\[48px\]{
   margin-top: 48px;
 }
@@ -1532,6 +1532,13 @@ body{
 
 .mt-\[96px\]{
   margin-top: 96px;
+}
+
+.line-clamp-6{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
 }
 
 .block{
@@ -1610,10 +1617,6 @@ body{
   height: 510px;
 }
 
-.h-\[54px\]{
-  height: 54px;
-}
-
 .h-\[558px\]{
   height: 558px;
 }
@@ -1622,16 +1625,12 @@ body{
   height: 634.75px;
 }
 
-.h-\[67px\]{
-  height: 67px;
-}
-
 .h-\[78px\]{
   height: 78px;
 }
 
-.w-\[135px\]{
-  width: 135px;
+.max-h-0{
+  max-height: 0px;
 }
 
 .w-\[149px\]{
@@ -1690,8 +1689,16 @@ body{
   width: 100%;
 }
 
+.min-w-full{
+  min-width: 100%;
+}
+
 .max-w-\[462px\]{
   max-width: 462px;
+}
+
+.max-w-\[720px\]{
+  max-width: 720px;
 }
 
 .max-w-none{
@@ -1877,12 +1884,6 @@ body{
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[16px\] > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(16px * var(--tw-space-y-reverse));
-}
-
 .space-y-\[8px\] > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(8px * calc(1 - var(--tw-space-y-reverse)));
@@ -1960,11 +1961,6 @@ body{
 
 .border-solid{
   border-style: solid;
-}
-
-.border-\[\#C84A3D\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(200 74 61 / var(--tw-border-opacity));
 }
 
 .border-\[\#dadada\]{
@@ -2131,6 +2127,11 @@ body{
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-\[10px\]{
@@ -2389,11 +2390,6 @@ body{
   color: rgb(228 192 69 / var(--tw-text-opacity));
 }
 
-.text-cta-default{
-  --tw-text-opacity: 1;
-  color: rgb(217 55 38 / var(--tw-text-opacity));
-}
-
 .text-grey-900{
   --tw-text-opacity: 1;
   color: rgb(14 14 14 / var(--tw-text-opacity));
@@ -2437,6 +2433,16 @@ body{
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
 }
 
 .ease-in-out{
@@ -3055,6 +3061,10 @@ body{
 }
 
 @media (min-width: 1024px){
+  .lg\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:mb-\[120px\]{
     margin-bottom: 120px;
   }
@@ -3083,6 +3093,10 @@ body{
     height: 480.6px;
   }
 
+  .lg\:max-h-\[500px\]{
+    max-height: 500px;
+  }
+
   .lg\:w-\[343px\]{
     width: 343px;
   }
@@ -3107,6 +3121,14 @@ body{
     width: 100%;
   }
 
+  .lg\:min-w-\[627px\]{
+    min-width: 627px;
+  }
+
+  .lg\:max-w-\[348px\]{
+    max-width: 348px;
+  }
+
   .lg\:max-w-\[720px\]{
     max-width: 720px;
   }
@@ -3123,8 +3145,16 @@ body{
     flex-direction: column;
   }
 
+  .lg\:flex-nowrap{
+    flex-wrap: nowrap;
+  }
+
   .lg\:items-center{
     align-items: center;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
   }
 
   .lg\:justify-center{
@@ -3141,6 +3171,10 @@ body{
 
   .lg\:gap-\[88px\]{
     gap: 88px;
+  }
+
+  .lg\:overflow-auto{
+    overflow: auto;
   }
 
   .lg\:px-\[40px\]{
@@ -3205,10 +3239,6 @@ body{
 
   .xl\:z-10{
     z-index: 10;
-  }
-
-  .xl\:col-span-3{
-    grid-column: span 3 / span 3;
   }
 
   .xl\:mb-\[200px\]{
@@ -3380,10 +3410,6 @@ body{
     margin-top: 37.5px;
   }
 
-  .\32xl\:mt-\[60px\]{
-    margin-top: 60px;
-  }
-
   .\32xl\:block{
     display: block;
   }
@@ -3410,6 +3436,10 @@ body{
 
   .\32xl\:w-\[532px\]{
     width: 532px;
+  }
+
+  .\32xl\:max-w-\[1084px\]{
+    max-width: 1084px;
   }
 
   .\32xl\:items-center{
