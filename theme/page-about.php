@@ -30,7 +30,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
           <div  class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
             <div class="text-primary-dark">
                 <p class="text-title font-title">Learn <span class="text-brand-invert">about</span></p>
-                <p class="text-title font-title ml-[31.52px]">The Star Tutor</p>
+                <p class="text-title font-title">The Star Tutor</p>
             </div>
             </div>
         </section>
