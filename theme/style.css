@@ -1470,10 +1470,6 @@ body{
   margin-bottom: 80px;
 }
 
-.ml-\[31\.52px\]{
-  margin-left: 31.52px;
-}
-
 .mt-\[100px\]{
   margin-top: 100px;
 }
@@ -1689,16 +1685,16 @@ body{
   width: 100%;
 }
 
-.min-w-full{
-  min-width: 100%;
-}
-
 .max-w-\[462px\]{
   max-width: 462px;
 }
 
 .max-w-\[720px\]{
   max-width: 720px;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .max-w-none{
@@ -2970,6 +2966,46 @@ body{
   color: rgb(252 252 252 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1920px){
+  .\32xl\:container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  @media (min-width: 360px){
+    .\32xl\:container{
+      max-width: 360px;
+    }
+  }
+
+  @media (min-width: 640px){
+    .\32xl\:container{
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 1024px){
+    .\32xl\:container{
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1440px){
+    .\32xl\:container{
+      max-width: 1440px;
+    }
+  }
+
+  @media (min-width: 1920px){
+    .\32xl\:container{
+      max-width: 1920px;
+    }
+  }
+}
+
 .prose-a\:text-primary :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))){
   --tw-text-opacity: 1;
   color: rgb(14 14 14 / var(--tw-text-opacity));
@@ -3117,16 +3153,20 @@ body{
     width: 944px;
   }
 
+  .lg\:w-auto{
+    width: auto;
+  }
+
   .lg\:w-full{
     width: 100%;
   }
 
-  .lg\:min-w-\[627px\]{
-    min-width: 627px;
-  }
-
   .lg\:max-w-\[348px\]{
     max-width: 348px;
+  }
+
+  .lg\:max-w-\[627px\]{
+    max-width: 627px;
   }
 
   .lg\:max-w-\[720px\]{
