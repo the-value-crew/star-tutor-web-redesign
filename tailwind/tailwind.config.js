@@ -11,29 +11,29 @@ module.exports = {
 		'./theme/**/*.php',
 	],
 	darkMode: 'class',
-  theme: {
-    screens: {
-      'sm': '360px',
-      // => @media (min-width: 640px) { ... }
+	theme: {
+		screens: {
+			sm: '360px',
+			// => @media (min-width: 640px) { ... }
 
-      'md': '640px',
-      // => @media (min-width: 768px) { ... }
+			md: '640px',
+			// => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
+			lg: '1024px',
+			// => @media (min-width: 1024px) { ... }
 
-      'xl': '1440px',
-      // => @media (min-width: 1280px) { ... }
+			xl: '1440px',
+			// => @media (min-width: 1280px) { ... }
 
-      '2xl': '1920px',
-      // => @media (min-width: 1536px) { ... }
-    },
-    container: {
-      center: true,
-      padding: '1rem',
-      margin: '0px',
-    },
-    extend: {
+			'2xl': '1920px',
+			// => @media (min-width: 1536px) { ... }
+		},
+		container: {
+			center: true,
+			padding: '1rem',
+			margin: '0px',
+		},
+		extend: {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 			},
@@ -71,89 +71,95 @@ module.exports = {
 				captionBig: 500,
 				captionSmall: 400,
 			},
-      colors: {
-        brand: {
-          default: '#E4C045',
-          600: '#B78E00',
-          900: '#785D00',
-          400: '#EEF082',
-        },
-        grey: {
-          default: '#7a7a7a',
-          100: '#fcfcfc',
-          200: '#f1f1f1',
-          300: '#dadada',
-          400: '#c1c1c1',
-          500: '#7a7a7a',
-          700: '#484848',
-          800: '#2d2d2d',
-          900: '#0e0e0e',
-        },
-        secondary: {
-          default: '#d93726',
-          100: '#f4c9c5',
-          800: '#eb4d3d',
-        },
-        cta: {
-          default: '#d93726',
-          800: '#eb4d3d',
-        },
-      },
-      textColor: (theme) => ({
-        primary: theme('colors.grey.900'),
-        secondary: theme('colors.grey.700'),
-        invert: theme('colors.grey.100'),
-        brand: theme('colors.brand.600'),
-        'invert-secondary': theme('colors.grey.300'),
-        'brand-invert': theme('colors.brand.default'),
-        tertiary: theme('colors.grey.500'),
-        'primary-dark': theme('colors.grey.100'),
-        'secondary-dark': theme('colors.grey.300'),
-        'invert-dark': theme('colors.grey.900'),
-        'brand-dark': theme('colors.brand.default'),
-        'invert-secondary-dark': theme('colors.grey.700'),
-        'brand-invert-dark': theme('colors.brand.600'),
-        'tertiary-dark': theme('colors.grey.500'),
-      }),
+			backgroundImage: {
+				heroSectionGradient:
+					'linear-gradient(to right, rgba(238, 238, 187, 0.5), rgba(212, 211, 220, 0.5))',
+				otherSectionGradient:
+					'linear-gradient(to right, rgba(238, 238, 187, 0.2), rgba(212, 211, 220, 0.2))',
+			},
+			colors: {
+				brand: {
+					default: '#E4C045',
+					600: '#B78E00',
+					900: '#785D00',
+					400: '#EEF082',
+				},
+				grey: {
+					default: '#7a7a7a',
+					100: '#fcfcfc',
+					200: '#f1f1f1',
+					300: '#dadada',
+					400: '#c1c1c1',
+					500: '#7a7a7a',
+					700: '#484848',
+					800: '#2d2d2d',
+					900: '#0e0e0e',
+				},
+				secondary: {
+					default: '#d93726',
+					100: '#f4c9c5',
+					800: '#eb4d3d',
+				},
+				cta: {
+					default: '#d93726',
+					800: '#eb4d3d',
+				},
+			},
+			textColor: (theme) => ({
+				primary: theme('colors.grey.900'),
+				secondary: theme('colors.grey.700'),
+				invert: theme('colors.grey.100'),
+				brand: theme('colors.brand.600'),
+				'invert-secondary': theme('colors.grey.300'),
+				'brand-invert': theme('colors.brand.default'),
+				tertiary: theme('colors.grey.500'),
+				'primary-dark': theme('colors.grey.100'),
+				'secondary-dark': theme('colors.grey.300'),
+				'invert-dark': theme('colors.grey.900'),
+				'brand-dark': theme('colors.brand.default'),
+				'invert-secondary-dark': theme('colors.grey.700'),
+				'brand-invert-dark': theme('colors.brand.600'),
+				'tertiary-dark': theme('colors.grey.500'),
+			}),
 
-      backgroundColor: (theme) => ({
-        'surface-primary': theme('colors.grey.100'),
-        'surface-secondary': theme('colors.grey.200'),
-        'surface-brand': theme('colors.brand.default'),
-        'surface-invert': theme('colors.grey.900'),
-        'surface-invert-secondary': theme('colors.grey.800'),
-        'surface-brand-secondary': '#1b2945',
-        'surface-brand-inverted': theme('colors.brand.600'),
-        'surface-brand-bg': theme('colors.brand.00'),
-        'surface-tertiary': theme('colors.grey.300'),
-        'surface-primary-dark': theme('colors.grey.900'),
-        'surface-secondary-dark': theme('colors.grey.800'),
-        'surface-brand-dark': theme('colors.brand.600'),
-        'surface-invert-dark': theme('colors.grey.100'),
-        'surface-invert-secondary-dark': theme('colors.grey.200'),
-        'surface-brand-secondary-dark': '#1b2945',
-        'surface-brand-inverted-dark': theme('colors.brand.default'),
-        'surface-brand-bg-dark': theme('colors.brand.900'),
-        'surface-tertiary-dark': theme('colors.grey.700'),
-        'cta-default': theme('colors.secondary.default'),
-        'cta-pressed': theme('colors.secondary.800'),
-        'cta-default-dark': theme('colors.secondary.800'),
-        'cta-pressed-dark': theme('colors.secondary.def'),
-      }),
-      stroke: (theme) => ({
-        'stroke-1': theme('colors.grey.200'),
-        'stroke-inverted': theme('colors.grey.800'),
-        'stroke-2': theme('colors.grey.300'),
-        'stroke-2-inverted': theme('colors.grey.700'),
-      }),
-    },
-  },
-  variants: {
-    extend: {
-      textColor: ['dark'],
-      backgroundColor: ['dark'],
-    },
-  },
+			backgroundColor: (theme) => ({
+				'surface-primary': theme('colors.grey.100'),
+				'surface-secondary': theme('colors.grey.200'),
+				'surface-brand': theme('colors.brand.default'),
+				'surface-invert': theme('colors.grey.900'),
+				'surface-invert-secondary': theme('colors.grey.800'),
+				'surface-brand-secondary': '#1b2945',
+				'surface-brand-inverted': theme('colors.brand.600'),
+				'surface-brand-bg': theme('colors.brand.00'),
+				'surface-tertiary': theme('colors.grey.300'),
+				'surface-primary-dark': theme('colors.grey.900'),
+				'surface-secondary-dark': theme('colors.grey.800'),
+				'surface-brand-dark': theme('colors.brand.600'),
+				'surface-invert-dark': theme('colors.grey.100'),
+				'surface-invert-secondary-dark': theme('colors.grey.200'),
+				'surface-brand-secondary-dark': '#1b2945',
+				'surface-brand-inverted-dark': theme('colors.brand.default'),
+				'surface-brand-bg-dark': theme('colors.brand.900'),
+				'surface-tertiary-dark': theme('colors.grey.700'),
+				'cta-default': theme('colors.secondary.default'),
+				'cta-pressed': theme('colors.secondary.800'),
+				'cta-default-dark': theme('colors.secondary.800'),
+				'cta-pressed-dark': theme('colors.secondary.def'),
+			}),
+			stroke: (theme) => ({
+				'stroke-1': theme('colors.grey.200'),
+				'stroke-inverted': theme('colors.grey.800'),
+				'stroke-2': theme('colors.grey.300'),
+				'stroke-2-inverted': theme('colors.grey.700'),
+			}),
+		},
+	},
+	variants: {
+		extend: {
+			textColor: ['dark'],
+			backgroundColor: ['dark'],
+		},
+	},
 	corePlugins: {
 		// Disable Preflight base styles in builds targeting the editor.
 		preflight: includePreflight,

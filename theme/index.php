@@ -19,9 +19,13 @@ $test_img = thestartutor_get_static_img("test.png");
 $stress_img = thestartutor_get_static_img("stress.png");
 $intro_img_png = thestartutor_get_static_img("introImage.png");
 
+
 ?>
 
-    <?php get_template_part("template-parts/section/section", "hero"); ?>
+
+
+
+<?php get_template_part("template-parts/section/section", "hero"); ?>
 
     <?php get_template_part("template-parts/section/section", "score-card"); ?>
 
@@ -40,5 +44,7 @@ $intro_img_png = thestartutor_get_static_img("introImage.png");
     <?php get_template_part("template-parts/section/section", "contact"); ?>
 
 <?php
+
+
 
 get_footer();

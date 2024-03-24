@@ -1,4 +1,4 @@
-# Ignore all files:
+ # Ignore all files:
 *.*
 
 # Negate the above pattern for CSS files in the `tailwind` folder and for

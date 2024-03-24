@@ -10,7 +10,7 @@
  */
 
 ?>
-    <footer
+    <footer 
       class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark"
     >
       <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start">
@@ -48,7 +48,19 @@
                 </svg>
               </div>
 
-              <p class="text-button font-button">312-487-1783</p>
+              <div class="relative">
+                <p
+                  class="text-button font-button hover:cursor-pointer"
+                  id="phoneNumber"
+                >
+<?php echo get_field("footer_phone",13);?>
+                </p>
+                <span
+                  id="phoneCopied"
+                  class="rounded-[4px] text-xs font-medium text-[#344054] px-2 py-[2px] bg-[#EAECF0] whitespace-nowrap hidden absolute border border-solid"
+                  >Phone number copied to clipboard</span
+                >
+              </div>
 
             </div>
             <div class="flex gap-[22px] items-center">
@@ -70,7 +82,19 @@
 
                 </svg>
               </div>
-              <p class="text-button font-button">Testprepstar@gmail.com.</p>
+              <div class="relative">
+                <p
+                  class="text-button font-button hover:cursor-pointer"
+                  id="email"
+                >
+<?php echo get_field("footer_email", 13); ?>
+                </p>
+                <span
+                  id="emailCopied"
+                  class=" rounded-[4px] text-xs font-medium text-[#344054] px-2 py-[2px] bg-[#EAECF0] whitespace-nowrap hidden absolute border border-solid "
+                  >Email copied to clipboard</span
+                >
+              </div>
             </div>
           </div>
         </div>

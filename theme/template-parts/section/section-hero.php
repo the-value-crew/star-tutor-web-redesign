@@ -6,10 +6,13 @@ $grey_blur_img = thestartutor_get_static_img("greyBlur.png");
 $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
 
 ?>
+
+
+
     <!-- Hero section -->
     <!-- for 1440 and higher -->
     <main
-      class="xl:h-[600px] xl:flex xl:justify-center items-center gap-[112px] hidden"
+      class="xl:h-[600px] xl:flex xl:justify-center items-center gap-[112px] hidden bg-heroSectionGradient"
     >
       <div
         class="xl:gap-8 xl:justify-start xl:flex xl:flex-col xl:relative heroSectionIn"
@@ -32,7 +35,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.5s forwards;
                 "
               />
 
@@ -44,7 +47,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s linear 3s forwards;
+                  animation: revealDottedArrow 0.5s linear 2.5s forwards;
                 "
               />
 
@@ -56,7 +59,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s linear 3s forwards;
+                  animation: revealDottedArrow 0.5s linear 2.5s forwards;
                 "
               />
 
@@ -68,7 +71,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.1s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.6s forwards;
                 "
               />
 
@@ -80,7 +83,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.1s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.6s forwards;
                 "
               />
 
@@ -92,7 +95,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.1s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.6s forwards;
                 "
               />
 
@@ -104,7 +107,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.2s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.7s forwards;
                 "
               />
 
@@ -116,7 +119,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.2s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.7s forwards;
                 "
               />
 
@@ -128,7 +131,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.2s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.7s forwards;
                 "
               />
 
@@ -140,7 +143,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.3s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.8s forwards;
                 "
               />
 
@@ -152,7 +155,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.3s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.8s forwards;
                 "
               />
 
@@ -164,7 +167,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.3s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.8s forwards;
                 "
               />
 
@@ -176,7 +179,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.4s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.9s forwards;
                 "
               />
 
@@ -188,7 +191,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.4s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.9s forwards;
                 "
               />
 
@@ -200,7 +203,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.4s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 2.9s forwards;
                 "
               />
 
@@ -212,7 +215,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.5s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 3s forwards;
                 "
               />
 
@@ -224,7 +227,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.5s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 3s forwards;
                 "
               />
 
@@ -236,7 +239,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s ease-in-out 3.5s forwards;
+                  animation: revealDottedArrow 0.5s ease-in-out 3s forwards;
                 "
               />
 
@@ -248,7 +251,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s linear 3.6s forwards;
+                  animation: revealDottedArrow 0.5s linear 3.1s forwards;
                 "
               />
 
@@ -260,7 +263,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s linear 3.6s forwards;
+                  animation: revealDottedArrow 0.5s linear 3.1s forwards;
                 "
               />
 
@@ -272,7 +275,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
                   stroke-dasharray: 100%;
                   stroke-dashoffset: 100%;
                   opacity: 0;
-                  animation: revealDottedArrow 0.5s linear 3.6s forwards;
+                  animation: revealDottedArrow 0.5s linear 3.1s forwards;
                 "
               />
             </g>
@@ -294,66 +297,92 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
             </defs>
           </svg>
           <div>
-            <h1 class="leading-tight text-primary text-title font-title">
-              Excel in your tests for
-              <span class="text-brand"> GMAT/GRE. </span>
-            </h1>
+            <?php echo the_field("hero_title"); ?>
+
           </div>
 
           <p class="font-normal leading-relaxed text-secondary">
-            With 15 years of in-person and 8 years online coaching expertize, I
-            have helped students achieve top GMAT & GRE Quant scores.
+            <?php echo get_field('hero_content'); ?>
           </p>
         </div>
         <div>
-          <a
-            href="/#contact"
+          <button
             class="bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
-            Book A Free Consultation
-          </a>
+          <?php echo get_field('hero_button'); ?>
+          </button>
         </div>
       </div>
       <div
         class="xl:relative xl:w-[348px] xl:h-[420px] hidden xl:block heroSectionRight"
       >
-        <figure>
-          <img
-            src="<?php echo $star_tutor_img; ?>"
-            alt="star-tutor"
-            class="xl:absolute w-[348px] h-[420px] flex-shrink-0 rounded-lg"
-          />
-        </figure>
+        <div
+        style="background-image: url(<?php echo get_field("hero_image"); ?>)"
+          class=" w-[348px] h-[420px] bg-cover bg-[#F1E4B8] rounded-[40px] object-cover"
+        ></div>
 
-        <img
-          src="<?php echo $grey_blur_img; ?>"
-          class="xl:absolute xl:left-[107.44px] xl:bottom-[-14.5px] z-0"
-        />
-        <img
-          src="<?php echo $grey_blur_img; ?>"
+        <div class="absolute bottom-0 z-10 left-24">
+        <div class="w-[348px] px-[20px] py-[10px] flex flex-col items-start gap-4 rounded-lg border-solid border border-[#F1F1F1] bg-surface-primary">
+          <div class="flex gap-1">
+            <?php for($i=0; $i<5; $i++): ?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                <path d="M19.0013 9.37241C18.9535 9.55724 18.8588 9.72666 18.7263 9.86407L15.1179 12.8724L16.2263 17.4557C16.2672 17.6716 16.244 17.8947 16.1596 18.0974C16.079 18.2723 15.9559 18.4242 15.8013 18.5391C15.6424 18.6539 15.4551 18.7231 15.2596 18.7391H15.1596C15.0008 18.7367 14.8443 18.6998 14.7012 18.6307L10.6763 16.0891L6.71797 18.5474C6.52727 18.6529 6.31052 18.7021 6.09297 18.6891C5.90194 18.6652 5.71922 18.5967 5.55962 18.4891C5.40358 18.3726 5.28017 18.2178 5.20134 18.0397C5.12252 17.8617 5.09092 17.6662 5.10958 17.4724L6.23457 12.8141L2.68466 9.86407C2.64503 9.83432 2.61105 9.79766 2.58456 9.75574C2.478 9.61824 2.40651 9.45691 2.37602 9.28566C2.34554 9.11432 2.35702 8.93826 2.40959 8.77243C2.46658 8.60626 2.56069 8.45523 2.68466 8.33076C2.80602 8.20478 2.95823 8.11282 3.12625 8.0641C3.17026 8.05534 3.2156 8.05534 3.25961 8.0641L7.9346 7.67243L9.70964 3.38908C9.79972 3.2034 9.93781 3.04517 10.1096 2.93076C10.2668 2.82984 10.448 2.77232 10.6346 2.76408C10.818 2.752 11.0014 2.78639 11.168 2.86408C11.3361 2.94808 11.4817 3.07093 11.593 3.22243L11.6512 3.33908L13.4346 7.63075L18.1013 8.0641H18.1846C18.3701 8.1121 18.5415 8.20351 18.6846 8.33076C18.8244 8.46351 18.9276 8.62994 18.9846 8.81409C19.0346 8.99621 19.0404 9.18766 19.0013 9.37241Z" fill="#E4C045"/>
+              </svg>
+              <?php endfor; ?>
+            </div>
+              <span class = " font-captionBig text-captionBig">
+              <?php echo get_field('hero_review_content'); ?>
+            </span>
+            <span class = " font-heading3 text-heading3">
+              - <?php echo get_field('hero_review_author')?> <span class = "text-captionBig text-tertiary font-captionBig">(<?php echo get_field('hero_review_from'); ?>)</span>
+            </span>
+</div>
+</div>
+
+<img
+        src="<?php echo $grey_blur_img; ?>"
+
           class="xl:absolute xl:mt-[14px] xl:ml-[121.25px] xl:bottom-[-28.5px]"
         />
         <img
-          src="<?php echo $review_michelle_img; ?>"
+        src="<?php echo $grey_blur_img; ?>"
           class="xl:w-[348px] xl:h-[140px] xl:absolute xl:z-1000 xl:bottom-0 xl:left-[92px]"
         />
       </div>
     </main>
-
     <!-- for 1024 - 1440 -->
     <main
-      class="items-center gap-[60px] lg:mt-[60px] lg:flex lg:flex-col hidden xl:hidden"
+      class="items-center gap-[60px] lg:pt-[60px] lg:flex lg:flex-col hidden xl:hidden bg-heroSectionGradient"
     >
       <div class="flex items-center gap-[49px]">
         <figure>
-          <img
-            src="<?php echo $star_tutor_img; ?>"
-            alt="star-tutor"
-            class="w-[464px] h-[510px] flex-shrink-0 rounded-lg"
-          />
+        <div
+        style="background-image: url(<?php echo get_field("hero_image"); ?>)"
+          class="w-[464px] h-[510px] rounded-lg bg-cover"
+        ></div>
+          
         </figure>
         <figure class="relative w-[408px] h-[160px]">
-          <img src="<?php echo $home_review_tablet_img; ?>" class="absolute z-10" />
+          <div class="absolute z-10">
+
+        <div class="w-[348px] px-[20px] py-[10px] flex flex-col items-start gap-4 rounded-lg border-solid border border-[#F1F1F1] bg-surface-primary">
+          <div class="flex gap-1">
+            <?php for($i=0; $i<5; $i++): ?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                <path d="M19.0013 9.37241C18.9535 9.55724 18.8588 9.72666 18.7263 9.86407L15.1179 12.8724L16.2263 17.4557C16.2672 17.6716 16.244 17.8947 16.1596 18.0974C16.079 18.2723 15.9559 18.4242 15.8013 18.5391C15.6424 18.6539 15.4551 18.7231 15.2596 18.7391H15.1596C15.0008 18.7367 14.8443 18.6998 14.7012 18.6307L10.6763 16.0891L6.71797 18.5474C6.52727 18.6529 6.31052 18.7021 6.09297 18.6891C5.90194 18.6652 5.71922 18.5967 5.55962 18.4891C5.40358 18.3726 5.28017 18.2178 5.20134 18.0397C5.12252 17.8617 5.09092 17.6662 5.10958 17.4724L6.23457 12.8141L2.68466 9.86407C2.64503 9.83432 2.61105 9.79766 2.58456 9.75574C2.478 9.61824 2.40651 9.45691 2.37602 9.28566C2.34554 9.11432 2.35702 8.93826 2.40959 8.77243C2.46658 8.60626 2.56069 8.45523 2.68466 8.33076C2.80602 8.20478 2.95823 8.11282 3.12625 8.0641C3.17026 8.05534 3.2156 8.05534 3.25961 8.0641L7.9346 7.67243L9.70964 3.38908C9.79972 3.2034 9.93781 3.04517 10.1096 2.93076C10.2668 2.82984 10.448 2.77232 10.6346 2.76408C10.818 2.752 11.0014 2.78639 11.168 2.86408C11.3361 2.94808 11.4817 3.07093 11.593 3.22243L11.6512 3.33908L13.4346 7.63075L18.1013 8.0641H18.1846C18.3701 8.1121 18.5415 8.20351 18.6846 8.33076C18.8244 8.46351 18.9276 8.62994 18.9846 8.81409C19.0346 8.99621 19.0404 9.18766 19.0013 9.37241Z" fill="#E4C045"/>
+              </svg>
+              <?php endfor; ?>
+            </div>
+              <span class = " font-captionBig text-captionBig">
+              <?php echo get_field('hero_review_content'); ?>
+
+            </span>
+            <span class = " font-heading3 text-heading3">
+              - <?php echo get_field('hero_review_author')?> <span class = "text-captionBig text-tertiary font-captionBig">(<?php echo get_field('hero_review_from'); ?>)</span>
+            </span>
+            </div>
+            </div>
+         
           <img
             src="<?php echo $grey_blur_img; ?>"
             class="absolute top-[42.33px] left-[41.3px]"
@@ -395,31 +424,47 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
 
     <!-- for 0-1023 -->
     <main
-      class="items-center gap-[117.55px] flex flex-col lg:hidden mb-[120px]"
+      class="items-center gap-[117.55px] flex flex-col lg:hidden bg-heroSectionGradient mb-[55px]"
     >
       <div class="relative">
-        <figure>
-          <img
-            src="<?php echo $star_tutor_img; ?>"
-            alt="star-tutor"
-            class="w-[640px] h-[634.75px]"
-          />
-        </figure>
         <div
-          class="absolute bottom-[-80px] left-[50%] transform translate-x-[-50%]"
+          style="background-image: url(<?php echo get_field("hero_image"); ?>)"
+          class="
+          w-[360px] h-[348.46px] md:w-[640px] md:h-[634.75px] rounded-lg bg-cover"
+
+        ></div>
+
+
+        <div
+          class="absolute bottom-[-80px]  transform left-[20px]"
         >
           <figure class="relative w-[408px] h-[160px]">
+          <div class="absolute z-10">
+
+<div class="md:w-[348px] w-[328px] px-[20px] py-[10px] flex flex-col items-start gap-4 rounded-lg border-solid border border-[#F1F1F1] bg-surface-primary">
+  <div class="flex gap-1">
+    <?php for($i=0; $i<5; $i++): ?>
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+        <path d="M19.0013 9.37241C18.9535 9.55724 18.8588 9.72666 18.7263 9.86407L15.1179 12.8724L16.2263 17.4557C16.2672 17.6716 16.244 17.8947 16.1596 18.0974C16.079 18.2723 15.9559 18.4242 15.8013 18.5391C15.6424 18.6539 15.4551 18.7231 15.2596 18.7391H15.1596C15.0008 18.7367 14.8443 18.6998 14.7012 18.6307L10.6763 16.0891L6.71797 18.5474C6.52727 18.6529 6.31052 18.7021 6.09297 18.6891C5.90194 18.6652 5.71922 18.5967 5.55962 18.4891C5.40358 18.3726 5.28017 18.2178 5.20134 18.0397C5.12252 17.8617 5.09092 17.6662 5.10958 17.4724L6.23457 12.8141L2.68466 9.86407C2.64503 9.83432 2.61105 9.79766 2.58456 9.75574C2.478 9.61824 2.40651 9.45691 2.37602 9.28566C2.34554 9.11432 2.35702 8.93826 2.40959 8.77243C2.46658 8.60626 2.56069 8.45523 2.68466 8.33076C2.80602 8.20478 2.95823 8.11282 3.12625 8.0641C3.17026 8.05534 3.2156 8.05534 3.25961 8.0641L7.9346 7.67243L9.70964 3.38908C9.79972 3.2034 9.93781 3.04517 10.1096 2.93076C10.2668 2.82984 10.448 2.77232 10.6346 2.76408C10.818 2.752 11.0014 2.78639 11.168 2.86408C11.3361 2.94808 11.4817 3.07093 11.593 3.22243L11.6512 3.33908L13.4346 7.63075L18.1013 8.0641H18.1846C18.3701 8.1121 18.5415 8.20351 18.6846 8.33076C18.8244 8.46351 18.9276 8.62994 18.9846 8.81409C19.0346 8.99621 19.0404 9.18766 19.0013 9.37241Z" fill="#E4C045"/>
+      </svg>
+      <?php endfor; ?>
+    </div>
+      <span class = " font-captionBig text-captionBig">
+<?php echo get_field('hero_review_content');?>
+    </span>
+    <span class = " font-heading3 text-heading3">
+      - <?php echo get_field("hero_review_author")?> <span class = "text-captionBig text-tertiary font-captionBig">(<?php echo get_field("hero_review_from")?>)</span>
+    </span>
+    </div>
+    </div>
             <img
-              src="<?php echo $home_review_tablet_img; ?>"
-              class="absolute z-10"
+  src = "<?php echo $grey_blur_img; ?>"
+              class="absolute bottom-[-25px]  transform left-[40px] w-[240px] h-[104px]"
             />
             <img
-              src="<?php echo $grey_blur_img; ?>"
-              class="absolute top-[24.2px] left-[48.95px]"
-            />
-            <img
-              src="<?php echo $grey_blur_img; ?>"
-              class="absolute top-[50.71px] left-[52.54px]"
+            src = "<?php echo $grey_blur_img; ?>"
+
+              class="absolute bottom-[-30px]  transform left-[30px] w-[240px] h-[104px]"
             />
           </figure>
         </div>
@@ -436,17 +481,17 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
           </div>
 
           <p class="font-normal leading-relaxed text-secondary">
-            With 15 years of in-person and 8 years online coaching expertize, I
-            have helped students achieve top GMAT & GRE Quant scores.
+          <?php echo get_field("hero_content"); ?>
+            
           </p>
         </div>
         <div>
-          <a
-            href="/#contact"
+          <button
             class="bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
-            Book A Free Consultation
-          </a>
+          <?php echo get_field("hero_button"); ?>
+
+          </button>
         </div>
       </div>
     </main>

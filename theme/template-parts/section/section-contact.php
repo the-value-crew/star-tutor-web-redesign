@@ -1,17 +1,21 @@
     <!-- Contact section -->
+    <div class="container flex items-center justify-center w-full m-auto">
+      <div
+        class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]"
+      >
     <section
       id="contact"
-      class="2xl:mt-[320px] md:mb-[120px] flex flex-col gap-[60px] container xl:mb-[200px]"
+      class=" flex flex-col gap-[60px] 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]"
     >
       <div class="inline-flex flex-col gap-4 md:items-center">
         <div class="relative flex flex-col gap-2 md:items-center">
-          <svg
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width="173"
             height="100"
             viewBox="0 0 173 100"
             fill="none"
-            class="absolute hidden xl:block left-[125px] top-[-50px]"
+            class="absolute top-[-100px] hidden xl:block left-[60px]"
           >
             <g clip-path="url(#clip0_1075_1185)">
               <path
@@ -102,21 +106,17 @@
             id="contactSubHeading"
             class="uppercase text-tertiary md:font-subheading md:text-subheading font-subheading_mobile text-subheading_mobile"
           >
-            Contact
+          <?php echo get_field('contact_heading', 13);?>
+
           </h2>
-          <h1
-            id="contactTitle"
-            class="leading-tight text-primary xl:font-title xl:text-title lg:font-heading2 lg:text-heading2 md:font-title md:text-title text-mobileHeading2 font-mobileHeading2"
-          >
-            Take the <span class="text-brand">First Step </span>towards a better
-            score!
-          </h1>
+          <?php echo the_field('contact_title', 13);?>
         </div>
         <h3
           id="contactHeading3"
           class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile"
         >
-          This is exactly what will happen after you submit your form
+        <?php echo get_field('contact_subheading', 13);?>
+
         </h3>
       </div>
 
@@ -148,7 +148,8 @@
                 />
               </svg>
               <p class="font-normal text-secondary text-normal">
-                We can provide free diagnostic consultation
+<?php echo get_field('contact_content_1', 13); ?>
+                
               </p>
             </div>
             <div class="flex gap-[5px]">
@@ -167,7 +168,8 @@
                 />
               </svg>
               <p class="font-normal text-secondary text-normal">
-                We will respond within 24 hours
+              <?php echo get_field('contact_content_2', 13); ?>
+
               </p>
             </div>
             <div class="flex gap-[5px]">
@@ -186,14 +188,20 @@
                 />
               </svg>
               <p class="font-normal text-secondary text-normal">
-                You will be talking to The star tutor (No account Managers)
+<?php echo get_field('contact_content_3', 13); ?>
               </p>
             </div>
           </article>
         </div>
-        <?php
+
+          <?php
           echo do_shortcode('[contact-form-7 title="Contact form"]');
-        ?>
+          ?>
+
       </div>
     </section>
   </section>
+
+  </div>
+  </div>
+  
