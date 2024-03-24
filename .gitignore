@@ -15,3 +15,6 @@ thestartutor.zip
 
 # Ignore .DS_Store files from macOS:
 .DS_Store
+
+.phpactor.json
+.php-cs-fixer.cache

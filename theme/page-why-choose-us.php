@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * Template Name: Why Choose Us? Page
  */
 

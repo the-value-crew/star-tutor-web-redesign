@@ -11,7 +11,7 @@ get_header();
 
 $args = array(
     "post_type"         => "post",
-    "posts_per_page"    => 10
+    "posts_per_page"    => 2,
 );
 $wp_query = new WP_Query($args);
 
@@ -23,26 +23,23 @@ $wp_query = new WP_Query($args);
                 <!-- <div style="background-image: url('')" class="h-[558px] bg-center bg-cover"></div> -->
                 <?php thestartutor_post_thumbnail(); ?>
                 <p class="my-[30px] text-heading1 font-heading1"><?php the_title(); ?></p>
-                <div class="text-subheading font-subheading">
-				<?php the_content(); ?>
+                <div class="tst-single text-subheading font-subheading">
+									<?php the_content(); ?>
                 </div>
             </div>
         </section>
 
         <section class="w-full mt-[60px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
             <h2 class="text-heading2 font-heading2">More Blogs For You</h2>
-            <div class="flex my-[16px] gap-[10px]">
-                <div
-                    class="flex flex-wrap gap-[20px]"
-                    id="blogsContent"
-                >
+            <div class="w-full flex flex-col my-[16px] gap-[10px]">
+                <div class="w-full flex flex-wrap lg:flex-nowrap gap-[20px]">
                     <?php
                     if(have_posts()) {
                         while(have_posts()) {
-                        the_post();
-                    ?>
+                            the_post();
+                            ?>
                     <article
-                    class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg bg-surface-primary shadow-md 2xl:w-[532px] xl:w-[511px] max-w-[462px]"
+                    class="w-full pb-[8px] flex flex-col gap-[32px] items-start rounded-lg bg-surface-primary shadow-md"
                     >
                     <figure class="w-full">
                         <img
@@ -119,13 +116,13 @@ $wp_query = new WP_Query($args);
                         }
                     }
 
-                    wp_reset_postdata();
-                    ?>
+wp_reset_postdata();
+?>
                 </div>
             </div>
         </section>
 
-        <section class="w-full px-[350px] mt-[48px]">
+        <section class="w-full mt-[48px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
             <button class="border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Explore More Topics</button>
         </section>
     </main>

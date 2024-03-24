@@ -1,0 +1,20 @@
+.page-numbers {
+	border: 1px solid #bbb;
+	padding: 2px 5px;
+}
+
+.page-numbers.current {
+	color: #bbb;
+}
+
+.tst-single {
+	line-height: 30px;
+}
+
+.tst-single p {
+	padding-bottom: 24px;
+}
+
+.tst-single h2, .tst-single h3, .tst-single h4, .tst-single h5, .tst-single h6 {
+	padding-bottom: 8px;
+}

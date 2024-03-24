@@ -2,6 +2,9 @@
 
 $intro_img = thestartutor_get_static_img("introImage.jpeg");
 
+$intro_post = get_post(646);
+$intro = $intro_post->post_content;
+
 ?>
     <!-- Introduction section -->
 <div class="container flex items-center justify-center w-full m-auto">

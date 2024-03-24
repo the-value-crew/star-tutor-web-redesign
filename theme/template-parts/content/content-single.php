@@ -154,7 +154,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="w-full px-[350px] mt-[76px]">
             <h2 class="text-heading2 font-heading2">Comments (24)</h2>
             <div class="flex py-[24px] px-[24px] gap-[8px]">
