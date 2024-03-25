@@ -1,22 +1,56 @@
-const navBtn = document.getElementById("navBtn");
-navBtn.addEventListener("click", () => {
-  const navMenu = document.getElementById("navMenu");
-	if(navMenu.classList.contains("max-h-0")) {
-		navMenu.classList.remove("max-h-0");
-		navMenu.classList.add("max-h-[500px]");
+const navBtn = document.getElementById('navBtn');
+navBtn.addEventListener('click', () => {
+	const navMenu = document.getElementById('navMenu');
+	if (navMenu.classList.contains('max-h-0')) {
+		navMenu.classList.remove('max-h-0');
+		navMenu.classList.add('max-h-[500px]');
 	} else {
-		navMenu.classList.remove("max-h-[500px]");
-		navMenu.classList.add("max-h-0");
+		navMenu.classList.remove('max-h-[500px]');
+		navMenu.classList.add('max-h-0');
 	}
 });
 
-// Introduction section animation
-const introSection = document.getElementById('introSection');
-const introLeft = document.getElementById('introLeft');
-const introIntroduction = document.getElementById('introIntroduction');
-const introQuestion = document.getElementById('introQuestion');
-const introContent = document.getElementById('introContent');
-const introButton = document.getElementById('introButton');
+let seeMoreLinks = document.querySelectorAll('.see-more');
+
+seeMoreLinks.forEach((link) => {
+	link.addEventListener('click', function (e) {
+		console.log('See more link clicked');
+		e.preventDefault();
+
+		// Get the extra content related to this link only
+		let extraContent = this.parentNode.querySelector('.extra-content');
+		let visibleContent = this.parentNode.querySelector('.visible-content');
+
+		if (
+			extraContent.style.display === 'none' ||
+			extraContent.style.display === ''
+		) {
+			extraContent.style.display = 'inline';
+			visibleContent.style.display = 'inline';
+			extraContent.textContent = extraContent.textContent.trim();
+			visibleContent.textContent = visibleContent.textContent.trim();
+			visibleContent.textContent = visibleContent.textContent.replace(
+				'...',
+				''
+			);
+			this.textContent = 'See less...';
+		} else {
+			extraContent.style.display = 'none';
+			visibleContent.style.display = 'inline';
+			visibleContent.textContent = visibleContent.textContent + '...';
+			this.textContent = 'See more...';
+		}
+	});
+});
+
+if (window.location.pathname === '/') {
+	// Introduction section animation
+	const introSection = document.getElementById('introSection');
+	const introLeft = document.getElementById('introLeft');
+	const introIntroduction = document.getElementById('introIntroduction');
+	const introQuestion = document.getElementById('introQuestion');
+	const introContent = document.getElementById('introContent');
+	const introButton = document.getElementById('introButton');
 
 	// Reviews section animation
 	const reviewsSection = document.getElementById('reviewsSection');
@@ -305,55 +339,58 @@ updateClasses();
 startAutoplay();
 
 function openTabContent(event, context, tabId, containerType) {
-  let i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName(`${context}--tabcontent`);
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName(`${context}--tablinks`);
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" text-semibold font-semibold border-b-2 border-brand-default", "");
-  }
-  document.getElementById(`${context}-post-${tabId}`).style.display = containerType;
-  event.currentTarget.className += " text-semibold font-semibold border-b-2 border-brand-default";
+	let i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName(`${context}--tabcontent`);
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = 'none';
+	}
+	tablinks = document.getElementsByClassName(`${context}--tablinks`);
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(
+			' text-semibold font-semibold border-b-2 border-brand-default',
+			''
+		);
+	}
+	document.getElementById(`${context}-post-${tabId}`).style.display =
+		containerType;
+	event.currentTarget.className +=
+		' text-semibold font-semibold border-b-2 border-brand-default';
 }
 
-const aboutMeTabLink = document.querySelectorAll(".aboutme--tablinks")[0];
-if(aboutMeTabLink) aboutMeTabLink.click();
+const aboutMeTabLink = document.querySelectorAll('.aboutme--tablinks')[0];
+if (aboutMeTabLink) aboutMeTabLink.click();
 
-const myHobbyTabLink = document.querySelectorAll(".myhobby--tablinks")[0];
-if(myHobbyTabLink) myHobbyTabLink.click();
+const myHobbyTabLink = document.querySelectorAll('.myhobby--tablinks')[0];
+if (myHobbyTabLink) myHobbyTabLink.click();
 
-
-const reviewsTabLink = document.querySelectorAll(".reviews--tablinks")[0];
-if(reviewsTabLink) reviewsTabLink.click();
+const reviewsTabLink = document.querySelectorAll('.reviews--tablinks')[0];
+if (reviewsTabLink) reviewsTabLink.click();
 
 function expandReviewContent(event, context, divId) {
-	const status = event.target.getAttribute("data-status");
+	const status = event.target.getAttribute('data-status');
 	const divEl = document.getElementById(`${context}-${divId}`);
-	divEl.classList.add("lg:col-span-2");
-	const divContentBody = divEl.querySelector(".review-content-body");
-	if(status === "less") {
-		divContentBody.classList.remove("line-clamp-6");
-		event.target.innerHTML = "See Less...";
-		event.target.setAttribute("data-status", "more");
-	}
-	else {
-		divContentBody.classList.add("line-clamp-6");
-		event.target.innerHTML = "See More...";
-		event.target.setAttribute("data-status", "less");
+	divEl.classList.add('lg:col-span-2');
+	const divContentBody = divEl.querySelector('.review-content-body');
+	if (status === 'less') {
+		divContentBody.classList.remove('line-clamp-6');
+		event.target.innerHTML = 'See Less...';
+		event.target.setAttribute('data-status', 'more');
+	} else {
+		divContentBody.classList.add('line-clamp-6');
+		event.target.innerHTML = 'See More...';
+		event.target.setAttribute('data-status', 'less');
 		return;
 	}
 	const allReviewsDiv = divEl.parentElement.children;
-	let newAllReviewsDivHTML = "";
-	for(let reviewDiv of allReviewsDiv) {
-		if(reviewDiv !== divEl)	{
-			const contentBody = reviewDiv.querySelector(".review-content-body");
-			const btn = reviewDiv.querySelector(".review-content-toggler");
-			reviewDiv.classList.remove("lg:col-span-2");
-			contentBody.classList.add("line-clamp-6");
-			btn.innerHTML = "See More...";
-			btn.setAttribute("data-status", "less");
+	let newAllReviewsDivHTML = '';
+	for (let reviewDiv of allReviewsDiv) {
+		if (reviewDiv !== divEl) {
+			const contentBody = reviewDiv.querySelector('.review-content-body');
+			const btn = reviewDiv.querySelector('.review-content-toggler');
+			reviewDiv.classList.remove('lg:col-span-2');
+			contentBody.classList.add('line-clamp-6');
+			btn.innerHTML = 'See More...';
+			btn.setAttribute('data-status', 'less');
 			newAllReviewsDivHTML += reviewDiv.outerHTML;
 		}
 	}
@@ -361,13 +398,14 @@ function expandReviewContent(event, context, divId) {
 }
 
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {
-	const reviewContentDivs = divs ?? document.querySelectorAll("[id^=review-content");
-	if(reviewContentDivs) {
-		for(let el of reviewContentDivs) {
-			const contentBody = el.querySelector(".review-content-body");
-			const btn = el.querySelector(".review-content-toggler");
-			if(contentBody.scrollHeight <= contentBody.clientHeight) {
-				btn.style.display = "none";
+	const reviewContentDivs =
+		divs ?? document.querySelectorAll('[id^=review-content');
+	if (reviewContentDivs) {
+		for (let el of reviewContentDivs) {
+			const contentBody = el.querySelector('.review-content-body');
+			const btn = el.querySelector('.review-content-toggler');
+			if (contentBody.scrollHeight <= contentBody.clientHeight) {
+				btn.style.display = 'none';
 			}
 		}
 	}
