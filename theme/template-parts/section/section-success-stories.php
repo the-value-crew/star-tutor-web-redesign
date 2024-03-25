@@ -1,22 +1,5 @@
 <?php
 
-$ucla_img = thestartutor_get_static_img("universities/ucla.png");
-$london_school_img = thestartutor_get_static_img("universities/londonSchool.png");
-$duke_img = thestartutor_get_static_img("universities/duke.png");
-$insead_img = thestartutor_get_static_img("universities/insead.png");
-$nyu_img = thestartutor_get_static_img("universities/nyu.png");
-$london_business_img = thestartutor_get_static_img("universities/londonBusiness.png");
-$michigan_img = thestartutor_get_static_img("universities/michigan.png");
-$tuck_img = thestartutor_get_static_img("universities/tuck.png");
-$berkeley_img = thestartutor_get_static_img("universities/berkeley.png");
-$columbia_business_img = thestartutor_get_static_img("universities/columbiaBusiness.png");
-$mit_management_img = thestartutor_get_static_img("universities/mitManagement.png");
-$north_western_img = thestartutor_get_static_img("universities/northwestern.png");
-$chicago_booth_img =  thestartutor_get_static_img("universities/chicagoBooth.png");
-$harvard_business_img = thestartutor_get_static_img("universities/harvardBusiness.png");
-$wharton_img = thestartutor_get_static_img("universities/wharton.png");
-$standford_img = thestartutor_get_static_img("universities/stanford.png");
-
 $args = array(
   "post_type"         => "placements",
   "posts_per_page"    => 16

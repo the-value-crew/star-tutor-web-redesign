@@ -53,7 +53,7 @@
                   class="text-button font-button hover:cursor-pointer"
                   id="phoneNumber"
                 >
-<?php echo get_field("footer_phone",13);?>
+<?php echo get_field("phone_number",13);?>
                 </p>
                 <span
                   id="phoneCopied"
@@ -87,7 +87,7 @@
                   class="text-button font-button hover:cursor-pointer"
                   id="email"
                 >
-<?php echo get_field("footer_email", 13); ?>
+<?php echo get_field("email", 13); ?>
                 </p>
                 <span
                   id="emailCopied"

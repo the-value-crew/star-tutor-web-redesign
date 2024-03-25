@@ -1,8 +1,3 @@
-<?php
-
-$score_card_img = thestartutor_get_static_img("scoreCard.png");
-
-?>
     <!-- Score card -->
     <div
       id="scoreCardSection"

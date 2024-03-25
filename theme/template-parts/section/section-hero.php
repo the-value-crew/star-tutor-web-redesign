@@ -1,9 +1,6 @@
 <?php
 
-$star_tutor_img = thestartutor_get_static_img("starTutor.png");
-$home_review_tablet_img = thestartutor_get_static_img("homeReviewTablet.png");
 $grey_blur_img = thestartutor_get_static_img("greyBlur.png");
-$review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
 
 ?>
 
@@ -297,8 +294,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
             </defs>
           </svg>
           <div>
-            <?php echo the_field("hero_title"); ?>
-
+            <?php echo get_field("hero_title"); ?>
           </div>
 
           <p class="font-normal leading-relaxed text-secondary">

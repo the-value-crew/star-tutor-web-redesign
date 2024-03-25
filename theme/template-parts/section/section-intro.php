@@ -1,13 +1,5 @@
-<?php
-
-$intro_img = thestartutor_get_static_img("introImage.jpeg");
-
-$intro_post = get_post(646);
-$intro = $intro_post->post_content;
-
-?>
     <!-- Introduction section -->
-<div class="container flex items-center justify-center w-full m-auto">
+    <div class="container flex items-center justify-center w-full m-auto">
       <div
         class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]"
       >
