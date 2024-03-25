@@ -7,7 +7,6 @@
 get_header();
 
 $about_bg_img = thestartutor_get_static_img("about-bg.png");
-$music_img = thestartutor_get_static_img("music.png");
 
 $aboutme_args = array(
   "post_type"         => "about_me_content",

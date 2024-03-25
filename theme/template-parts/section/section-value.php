@@ -1,10 +1,5 @@
 <?php
 
-$placement_img = thestartutor_get_static_img("placementImage.png");
-$quality_img = thestartutor_get_static_img("qualityImage.png");
-$coaching_img = thestartutor_get_static_img("coachingImage.png");
-
-
 $args = array(
   "post_type"         => "12reasons",
   "posts_per_page"    => 3

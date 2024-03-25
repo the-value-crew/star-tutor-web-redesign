@@ -15,11 +15,6 @@
 
 get_header();
 
-$test_img = thestartutor_get_static_img("test.png");
-$stress_img = thestartutor_get_static_img("stress.png");
-$intro_img_png = thestartutor_get_static_img("introImage.png");
-
-
 ?>
 
 
