@@ -43,12 +43,17 @@ $comment_field = '<div class="comment-form-comment flex py-[24px] px-[24px] gap-
                     'comment_field' => $comment_field,
                 )
             ); ?>
-            <hr>
-            <?php wp_list_comments(
-                array(
-                    'style' => 'div',
-                    'callback' => 'thestartutor_list_comments',
-                )
-            ); ?>
-            <hr>
+            <?php
+                if(get_comments_number()) {
+                    echo "<hr>";
+                    wp_list_comments(
+                        array(
+                            'style' => 'div',
+                            'callback' => 'thestartutor_list_comments',
+                        )
+                    );
+                    echo "<hr>";
+                } else {
+                    echo '<div class="mt-[50px] text-title font-title text-center">No comments yet!</div>';
+                } ?>
         </section>
