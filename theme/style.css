@@ -44,7 +44,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
  * plugins, then adds custom base styles.
  */
 
-/*! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1332,16 +1332,8 @@ body{
   bottom: -30px;
 }
 
-.bottom-\[-70px\]{
-  bottom: -70px;
-}
-
 .bottom-\[-80px\]{
   bottom: -80px;
-}
-
-.bottom-\[-px\]{
-  bottom: -px;
 }
 
 .left-24{
@@ -1351,9 +1343,6 @@ body{
 .left-\[-160px\]{
   left: -160px;
 }
-.left-\[-110px\]{
-  left: -110px;
-}
 
 .left-\[-90px\]{
   left: -90px;
@@ -1361,15 +1350,6 @@ body{
 
 .left-\[20px\]{
   left: 20px;
-}
-
-.left-\[20px\]{
-  left: 20px;
-}
-
-
-.left-\[25px\]{
-  left: 25px;
 }
 
 .left-\[260px\]{
@@ -1424,11 +1404,6 @@ body{
   top: 0px;
 }
 
-.top-\[-45px\]{
-  top: -45px;
-}
-
-
 .top-\[-100px\]{
   top: -100px;
 }
@@ -1439,13 +1414,6 @@ body{
 
 .top-\[-55px\]{
   top: -55px;
-}
-
-.top-\[-110px\]{
-  top: -110px;
-}
-.top-\[-62px\]{
-  top: -62px;
 }
 
 .top-\[-70px\]{
@@ -1475,49 +1443,15 @@ body{
 .top-\[74\.9px\]{
   top: 74.9px;
 }
+
 .-z-10{
   z-index: -10;
-}
-
-.left-\[20px\]{
-  left: 20px;
-}
-
-.bottom-\[-30px\]{
-  bottom: -30px;
-}
-
-.bottom-\[-40px\]{
-  bottom: -40px;
-}
-
-.bottom-\[-25px\]{
-  bottom: -25px;
-}
-
-.left-\[40px\]{
-  left: 40px;
-}
-
-.top-\[-55px\]{
-  top: -55px;
-}
-
-.left-\[-50\%\]{
-  left: -50%;
 }
 
 .z-10{
   z-index: 10;
 }
 
-.z-0{
-  z-index: 0;
-}
-
-.-z-10{
-  z-index: -10;
-}
 .z-\[100\]{
   z-index: 100;
 }
@@ -1550,10 +1484,6 @@ body{
 
 .mb-\[80px\]{
   margin-bottom: 80px;
-}
-
-.ml-\[31\.52px\]{
-  margin-left: 31.52px;
 }
 
 .mt-\[100px\]{
@@ -1592,10 +1522,6 @@ body{
   margin-top: 40px;
 }
 
-.mt-\[44px\]{
-  margin-top: 44px;
-}
-
 .mt-\[48px\]{
   margin-top: 48px;
 }
@@ -1618,10 +1544,6 @@ body{
 
 .mt-\[96px\]{
   margin-top: 96px;
-}
-
-.mb-\[55px\]{
-  margin-bottom: 55px;
 }
 
 .line-clamp-6{
@@ -1678,6 +1600,7 @@ body{
 .h-\[220px\]{
   height: 220px;
 }
+
 .h-\[25\%\]{
   height: 25%;
 }
@@ -1730,10 +1653,6 @@ body{
   height: 558px;
 }
 
-.h-\[67px\]{
-  height: 67px;
-}
-
 .h-\[78px\]{
   height: 78px;
 }
@@ -1742,14 +1661,6 @@ body{
   height: 100%;
 }
 
-
-.h-\[25\%\]{
-  height: 25%;
-}
-
-.w-\[135px\]{
-  width: 135px;
-}
 .max-h-0{
   max-height: 0px;
 }
@@ -2020,12 +1931,6 @@ body{
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[16px\] > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(16px * var(--tw-space-y-reverse));
-}
-
 .space-y-\[8px\] > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(8px * calc(1 - var(--tw-space-y-reverse)));
@@ -2115,11 +2020,6 @@ body{
 
 .border-solid{
   border-style: solid;
-}
-
-.border-\[\#C84A3D\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(200 74 61 / var(--tw-border-opacity));
 }
 
 .border-\[\#F1F1F1\]{
@@ -2598,11 +2498,6 @@ body{
 .text-brand-invert{
   --tw-text-opacity: 1;
   color: rgb(228 192 69 / var(--tw-text-opacity));
-}
-
-.text-cta-default{
-  --tw-text-opacity: 1;
-  color: rgb(217 55 38 / var(--tw-text-opacity));
 }
 
 .text-grey-900{
@@ -3194,46 +3089,6 @@ body{
   color: rgb(252 252 252 / var(--tw-text-opacity));
 }
 
-@media (min-width: 1920px){
-  .\32xl\:container{
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  @media (min-width: 360px){
-    .\32xl\:container{
-      max-width: 360px;
-    }
-  }
-
-  @media (min-width: 640px){
-    .\32xl\:container{
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 1024px){
-    .\32xl\:container{
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1440px){
-    .\32xl\:container{
-      max-width: 1440px;
-    }
-  }
-
-  @media (min-width: 1920px){
-    .\32xl\:container{
-      max-width: 1920px;
-    }
-  }
-}
-
 .contact-button {
   --tw-bg-opacity: 1;
   background-color: rgb(217 55 38 / var(--tw-bg-opacity));
@@ -3416,6 +3271,46 @@ body{
   display: none;
 }
 
+@media (min-width: 1920px){
+  .\32xl\:container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  @media (min-width: 360px){
+    .\32xl\:container{
+      max-width: 360px;
+    }
+  }
+
+  @media (min-width: 640px){
+    .\32xl\:container{
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 1024px){
+    .\32xl\:container{
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1440px){
+    .\32xl\:container{
+      max-width: 1440px;
+    }
+  }
+
+  @media (min-width: 1920px){
+    .\32xl\:container{
+      max-width: 1920px;
+    }
+  }
+}
+
 .hover\:cursor-pointer:hover{
   cursor: pointer;
 }
@@ -3432,10 +3327,9 @@ body{
 }
 
 @media (min-width: 640px){
-  .md\:top-\[-120px\]{ 
+  .md\:top-\[-120px\]{
     top: -120px;
   }
-
 
   .md\:mb-\[120px\]{
     margin-bottom: 120px;
@@ -3544,6 +3438,10 @@ body{
 }
 
 @media (min-width: 1024px){
+  .lg\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:mb-\[140px\]{
     margin-bottom: 140px;
   }
@@ -3572,11 +3470,9 @@ body{
     height: 546px;
   }
 
-
   .lg\:max-h-\[500px\]{
     max-height: 500px;
   }
-
 
   .lg\:w-\[343px\]{
     width: 343px;
@@ -3732,10 +3628,6 @@ body{
 
   .xl\:z-10{
     z-index: 10;
-  }
-
-  .xl\:col-span-3{
-    grid-column: span 3 / span 3;
   }
 
   .xl\:mb-\[200px\]{
@@ -3917,10 +3809,6 @@ body{
 
   .\32xl\:mt-\[37\.5px\]{
     margin-top: 37.5px;
-  }
-
-  .\32xl\:mt-\[60px\]{
-    margin-top: 60px;
   }
 
   .\32xl\:flex{
