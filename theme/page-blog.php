@@ -57,7 +57,7 @@ $recents_wp_query = new WP_Query(
                         <?php
                         if ($wp_query->have_posts()) {
                             while ($wp_query->have_posts()) {
-                                the_post();
+                                $wp_query->the_post();
                                 ?>
                                 <div class="w-full border-2 border-grey-200 rounded-lg">
                                     <img class="w-full h-[304px] rounded-t-lg object-cover"

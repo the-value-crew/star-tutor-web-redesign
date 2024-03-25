@@ -17,9 +17,6 @@ get_header();
 
 ?>
 
-
-
-
 <?php get_template_part("template-parts/section/section", "hero"); ?>
 
     <?php get_template_part("template-parts/section/section", "score-card"); ?>
@@ -39,7 +36,5 @@ get_header();
     <?php get_template_part("template-parts/section/section", "contact"); ?>
 
 <?php
-
-
 
 get_footer();

@@ -1,10 +1,11 @@
 <?php
 
-$args = array(
-  "post_type"         => "12reasons",
-  "posts_per_page"    => 3
+$wp_query = new WP_Query(
+  array(
+    "post_type"         => "12reasons",
+    "posts_per_page"    => 3,
+  )
 );
-$wp_query = new WP_Query($args);
 
 ?>
 

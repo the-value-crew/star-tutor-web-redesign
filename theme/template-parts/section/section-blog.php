@@ -1,11 +1,11 @@
 <?php
 
-$args = array(
-  "post_type"         => "post",
-  "posts_per_page"    => 2
+$wp_query = new WP_Query(
+  array(
+    "post_type"         => "post",
+    "posts_per_page"    => 2
+  )
 );
-
-$wp_query = new WP_Query($args);
 
 ?>
 <div class="container flex items-center justify-center w-full m-auto">
@@ -71,9 +71,9 @@ $wp_query = new WP_Query($args);
             id="blogsContent"
           >
         <?php
-          if(have_posts()) {
-            while(have_posts()) {
-              the_post();
+          if($wp_query->have_posts()) {
+            while($wp_query->have_posts()) {
+              $wp_query->the_post();
         ?>
         <article
           class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg bg-surface-primary shadow-md 2xl:w-[532px] xl:w-[511px] max-w-[462px] overflow-hidden"

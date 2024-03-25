@@ -6,17 +6,19 @@
 
 get_header();
 
-$args = array(
-  "post_type"         => "reviews",
-  "posts_per_page"    => 10
+$wp_query = new WP_Query(
+	array(
+		"post_type"         => "reviews",
+		"posts_per_page"    => 10
+	)
 );
-$wp_query = new WP_Query($args);
 
-$reviews_from_args = array(
-  "post_type"         => "reviews_from",
-  "posts_per_page"    => 10
+$reviews_from_wp_query = new WP_Query(
+	array(
+		"post_type"         => "reviews_from",
+		"posts_per_page"    => 10
+	)
 );
-$reviews_from_wp_query = new WP_Query($reviews_from_args);
 
 ?>
 

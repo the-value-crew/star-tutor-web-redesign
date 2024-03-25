@@ -20,10 +20,6 @@ $wp_query = new WP_Query(
     )
 );
 
-echo "<pre>";
-var_dump($wp_query);
-echo "</pre>";
-
 $recents_wp_query = new WP_Query(
     array(
         "post_type" => "post",
@@ -68,7 +64,7 @@ $recents_wp_query = new WP_Query(
                             <?php
                             if ($wp_query->have_posts()) {
                                 while ($wp_query->have_posts()) {
-                                    the_post();
+                                    $wp_query->the_post();
                                     ?>
                                     <div class="border-2 border-grey-200 rounded-lg">
                                         <img class="w-full h-[304px] rounded-t-lg object-cover"
@@ -141,9 +137,9 @@ $recents_wp_query = new WP_Query(
                         </form>
                         <div class="mt-[24px] flex flex-col gap-[24px]">
                             <?php
-                            if ($wp_query->have_posts()) {
-                                while ($wp_query->have_posts()) {
-                                    $wp_query->the_post();
+                            if ($recents_wp_query->have_posts()) {
+                                while ($recents_wp_query->have_posts()) {
+                                    $recents_wp_query->the_post();
                                     ?>
                                     <div>
                                         <p class="text-semibold font-semibold"><a href="<?php the_permalink(); ?>">

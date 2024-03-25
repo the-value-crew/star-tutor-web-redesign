@@ -1,10 +1,11 @@
 <?php
 
-$args = array(
-  "post_type"         => "reviews",
-  "posts_per_page"    => 10
+$wp_query = new WP_Query(
+  array(
+    "post_type"         => "reviews",
+    "posts_per_page"    => 9,
+  )
 );
-$wp_query = new WP_Query($args);
 ?>
     <!-- Reviews section -->
     <div class="container flex items-center justify-center w-full m-auto">

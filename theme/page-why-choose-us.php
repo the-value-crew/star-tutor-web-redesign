@@ -8,12 +8,12 @@ get_header();
 
 $about_bg_img = thestartutor_get_static_img("about-bg.png");
 
-$args = array(
-  "post_type"         => "12reasons",
-  "posts_per_page"    => 12
+$wp_query = new WP_Query(
+  array(
+    "post_type"         => "12reasons",
+    "posts_per_page"    => 12
+  )
 );
-$wp_query = new WP_Query($args);
-
 
 
 ?>

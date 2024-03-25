@@ -1,10 +1,11 @@
 <?php
 
-$args = array(
-  "post_type"         => "placements",
-  "posts_per_page"    => 16
+$wp_query = new WP_Query(
+  array(
+    "post_type"         => "placements",
+    "posts_per_page"    => 16
+  )
 );
-$wp_query = new WP_Query($args);
 
 ?>
 
