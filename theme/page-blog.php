@@ -30,7 +30,7 @@ $recents_wp_query = new WP_Query(
     <section class="flex flex-col justify-center h-[350px] text-title font-title"
         style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
         <div
-            class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+            class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
             <div class="text-primary-dark">
                 <p class="text-title font-title">Access Resources in The</p>
                 <p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
@@ -38,7 +38,7 @@ $recents_wp_query = new WP_Query(
         </div>
     </section>
 
-    <section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+    <section class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
         <div class="flex flex-col lg:flex-row items-start gap-[56px]">
             <div class="w-full lg:max-w-[627px] mt-[90px] flex">
                 <div class="w-full flex flex-col justify-center">

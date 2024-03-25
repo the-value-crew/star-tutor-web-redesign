@@ -27,7 +27,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
 
     <main>
       <section style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-          <div  class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+          <div  class="2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
             <div class="text-primary-dark">
                 <p class="text-title font-title">Learn <span class="text-brand-invert">about</span></p>
                 <p class="text-title font-title">The Star Tutor</p>
@@ -36,7 +36,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
         </section>
 
 
-        <section class="flex flex-col items-start py-[120px]">
+        <section class="2xl:container  flex flex-col items-start py-[120px]">
             <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
                 <div class="relative flex flex-col justify-start gap-[28px]">
                     <svg class="hidden xl:block absolute top-[-70px] left-[260px]" xmlns="http://www.w3.org/2000/svg" width="174" height="128" viewBox="0 0 174 128" fill="none">
@@ -109,7 +109,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
             </div>
         </section>
 
-        <section class="flex flex-col items-start py-[120px]">
+        <section class="2xl:container flex flex-col items-start py-[120px]">
             <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
               <div class="relative flex flex-col justify-start gap-[28px]">
                 <svg class="hidden xl:block absolute top-[-70px] left-[35px]" xmlns="http://www.w3.org/2000/svg" width="174" height="128" viewBox="0 0 174 128" fill="none">
