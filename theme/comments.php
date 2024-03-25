@@ -28,7 +28,7 @@ $comment_field = '<div class="comment-form-comment flex py-[24px] px-[24px] gap-
 
 ?>
 
-        <section class="w-full mt-[76px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px">
+        <section class="w-full mt-[76px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
             <h2 class="text-heading2 font-heading2">Comments (<?php echo get_comments_number(); ?>)</h2>
             <?php comment_form(
                 array(

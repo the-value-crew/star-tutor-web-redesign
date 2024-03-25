@@ -24,7 +24,7 @@ $similar_wp_query = new WP_Query(
             the_post();
     ?>
     <section class="mt-[60px]">
-        <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+        <div class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
             <!-- <div style="background-image: url('')" class="h-[558px] bg-center bg-cover"></div> -->
             <?php thestartutor_post_thumbnail(); ?>
             <p class="my-[30px] text-heading1 font-heading1">
@@ -42,7 +42,7 @@ $similar_wp_query = new WP_Query(
         }
     ?>
 
-    <section class="w-full mt-[60px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+    <section class="w-full mt-[60px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
         <h2 class="text-heading2 font-heading2">More Blogs For You</h2>
         <div class="w-full flex flex-col my-[16px] gap-[10px]">
             <div class="w-full flex flex-wrap lg:flex-nowrap gap-[20px]">
@@ -107,7 +107,7 @@ $similar_wp_query = new WP_Query(
         </div>
     </section>
 
-    <section class="w-full mt-[48px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+    <section class="w-full mt-[48px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
         <button
             class="border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Explore
             More Topics</button>
