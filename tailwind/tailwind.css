@@ -36,6 +36,14 @@
 @import "tailwindcss/utilities";
 @import "./custom/utilities.css";
 
+body {
+	background: linear-gradient(
+		to right,
+		rgba(238, 238, 187, 0.2),
+		rgba(212, 211, 220, 0.2)
+	);
+}
+
 @keyframes slideInLeft {
 	from {
 		opacity: 0;
@@ -529,9 +537,20 @@
 	padding-bottom: 16px;
 	padding-left: 32px;
 	padding-right: 32px;
-	--tw-text-opacity: 1;
-	color: rgb(252 252 252 / var(--tw-text-opacity));
+	--tw-bg-opacity: 1;
+	background-color: rgb(200 74 61 / var(--tw-bg-opacity));
+	color: white;
 	font-weight: 600;
+}
+
+.contact-button:hover {
+	background-color: #d93726;
+	cursor: pointer;
+}
+
+.contact-button:active {
+	--tw-bg-opacity: 1;
+	background-color: rgb(235 77 61 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
@@ -649,7 +668,7 @@
 	height: 100%;
 }
 
-@media (min-width: 360px) {
+@screen sm {
 	.isActiveImageLeft {
 		left: -80%;
 	}
@@ -659,43 +678,149 @@
 	}
 }
 
-@media (min-width: 640px) {
+@screen md {
 	.isActiveImageLeft {
-		left: -50%;
+		position: absolute;
+		left: -45%;
 	}
 
 	.isActiveImageRight {
-		right: -50%;
+		position: absolute;
+		right: -45%;
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) and (max-width: 680px) {
 	.isActiveImageLeft {
+		position: absolute;
+		left: -75%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -75%;
+	}
+}
+
+@media (min-width: 680px) and (max-width: 710px) {
+	.isActiveImageLeft {
+		position: absolute;
+		left: -70%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -70%;
+	}
+}
+
+@media (min-width: 710px) and (max-width: 756px) {
+	.isActiveImageLeft {
+		position: absolute;
+		left: -65%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -65%;
+	}
+}
+
+@media (min-width: 756px) and (max-width: 865px) {
+	.isActiveImageLeft {
+		position: absolute;
+		left: -58%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -58%;
+	}
+}
+
+@screen lg {
+	.isActiveImageLeft {
+		position: absolute;
 		left: -55%;
 	}
 
 	.isActiveImageRight {
+		position: absolute;
 		right: -55%;
 	}
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1101px) {
 	.isActiveImageLeft {
-		left: -40%;
+		position: absolute;
+		left: -73%;
 	}
 
 	.isActiveImageRight {
-		right: -40%;
+		position: absolute;
+		right: -73%;
 	}
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1101px) and (max-width: 1165px) {
 	.isActiveImageLeft {
-		left: -25%;
+		position: absolute;
+		left: -67%;
 	}
 
 	.isActiveImageRight {
-		right: -25%;
+		position: absolute;
+		right: -67%;
+	}
+}
+
+@media (min-width: 1165px) and (max-width: 1220px) {
+	.isActiveImageLeft {
+		position: absolute;
+		left: -60%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -60%;
+	}
+}
+
+@screen xl {
+	.isActiveImageLeft {
+		position: absolute;
+		left: -45%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -45%;
+	}
+}
+
+@media (min-width: 1441px) and (max-width: 1520px) {
+	.isActiveImageLeft {
+		position: absolute;
+		left: -55%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+		right: -55%;
+	}
+}
+
+@screen 2xl {
+	.isActiveImageLeft {
+		position: absolute;
+
+		left: -30%;
+	}
+
+	.isActiveImageRight {
+		position: absolute;
+
+		right: -30%;
 	}
 }
 

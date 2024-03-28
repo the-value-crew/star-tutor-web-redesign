@@ -184,7 +184,7 @@ $wp_query = new WP_Query($args);
           </section>
           <div id="valueButton">
             <button
-              class="bg-[#C84A3D] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
+              class="bg-[#C84A3D] hover:bg-cta-default active:bg-[#eb4d3d] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
             >
             <?php echo get_field("value_button", 13); ?>
 

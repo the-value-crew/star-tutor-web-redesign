@@ -273,6 +273,7 @@ email.addEventListener('click', () => {
 	}, 2000);
 });
 
+const scoreCardSection = document.getElementById('scoreCardSection');
 const scoreCardDup = document.getElementById('scoreCardDup');
 const scoresCard = document.getElementById('scoresCard');
 const mainScoreCard = document.getElementById('mainScoreCard');
@@ -333,8 +334,17 @@ function startAutoplay() {
 	autoplayId = setInterval(() => {
 		activeIndex = (activeIndex + 1) % elements.length;
 		updateClasses();
-	}, 2000);
+	}, 4000);
 }
+
+scoreCardSection.addEventListener('mouseover', () => {
+	if (autoplayId !== null) {
+		clearInterval(autoplayId);
+		autoplayId = null;
+	}
+});
+
+scoreCardSection.addEventListener('mouseout', startAutoplay);
 
 updateClasses();
 startAutoplay();

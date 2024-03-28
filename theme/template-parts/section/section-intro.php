@@ -7,7 +7,7 @@ $intro = $intro_post->post_content;
 
 ?>
     <!-- Introduction section -->
-<div class="container flex items-center justify-center w-full m-auto">
+<div class="container flex items-center justify-center w-full m-auto overflow-x-hidden">
       <div
         class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]"
       >
@@ -131,7 +131,7 @@ $intro = $intro_post->post_content;
             </article>
             <div id="introButton">
               <button
-                class="bg-[#C84A3D] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
+                class="bg-cta-400 hover:bg-cta-default active:bg-cta-800 rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
               >
                 Read More...
               </button>

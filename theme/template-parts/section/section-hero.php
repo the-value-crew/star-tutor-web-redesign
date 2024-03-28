@@ -307,7 +307,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
         </div>
         <div>
           <button
-            class="bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
+            class= "bg-[#C84A3D] hover:bg-cta-default active:bg-[#eb4d3d] rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
           <?php echo get_field('hero_button'); ?>
           </button>
@@ -414,7 +414,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
         <div>
           <a
             href="/#contact"
-            class="bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
+            class="bg-[#C84A3D] hover:bg-cta-default active:bg-[#eb4d3d] rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
             Book A Free Consultation
           </a>
@@ -487,7 +487,7 @@ $review_michelle_img = thestartutor_get_static_img("reviewMichelle.png");
         </div>
         <div>
           <button
-            class="bg-cta-default rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
+            class=" bg-cta-400 hover:bg-cta-default active:bg-cta-800 rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
           <?php echo get_field("hero_button"); ?>
 
