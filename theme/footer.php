@@ -38,7 +38,7 @@
 
                     <div class="relative">
                         <p class="text-button font-button hover:cursor-pointer hover:underline" id="phoneNumber">
-                            <?php echo get_field("footer_phone",13);?>
+                            <?php echo get_field("phone_number",13);?>
                         </p>
                         <span id="phoneCopied"
                             class="rounded-[4px] text-xs font-medium text-[#344054] px-2 py-[2px] bg-[#EAECF0] whitespace-nowrap hidden absolute border border-solid">Phone
@@ -58,7 +58,7 @@
                     </div>
                     <div class="relative">
                         <p class="text-button font-button hover:cursor-pointer hover:underline" id="email">
-                            <?php echo get_field("footer_email", 13); ?>
+                            <?php echo get_field("email", 13); ?>
                         </p>
                         <span id="emailCopied"
                             class=" rounded-[4px] text-xs font-medium text-[#344054] px-2 py-[2px] bg-[#EAECF0] whitespace-nowrap hidden absolute border border-solid ">Email

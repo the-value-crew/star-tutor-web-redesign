@@ -44,7 +44,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
  * plugins, then adds custom base styles.
  */
 
-/*! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1530,6 +1530,10 @@ body{
   margin-top: 48px;
 }
 
+.mt-\[50px\]{
+  margin-top: 50px;
+}
+
 .mt-\[60px\]{
   margin-top: 60px;
 }
@@ -2124,18 +2128,6 @@ body{
   background-color: transparent;
 }
 
-.bg-\[url\(\'\.\/images\/blog-article\.png\'\)\]{
-  background-image: url('./images/blog-article.png');
-}
-
-.bg-\[url\(\'\.\/src\/images\/user\.jpg\'\)\]{
-  background-image: url('./src/images/user.jpg');
-}
-
-.bg-\[url\(\'\.\/src\/images\/user1\.jpg\'\)\]{
-  background-image: url('./src/images/user1.jpg');
-}
-
 .bg-heroSectionGradient{
   background-image: linear-gradient(to right, rgba(238, 238, 187, 0.5), rgba(212, 211, 220, 0.5));
 }
@@ -2208,11 +2200,6 @@ body{
   padding-right: 32px;
 }
 
-.px-\[350px\]{
-  padding-left: 350px;
-  padding-right: 350px;
-}
-
 .px-\[4px\]{
   padding-left: 4px;
   padding-right: 4px;
@@ -2273,11 +2260,6 @@ body{
   padding-bottom: 24px;
 }
 
-.py-\[26px\]{
-  padding-top: 26px;
-  padding-bottom: 26px;
-}
-
 .py-\[2px\]{
   padding-top: 2px;
   padding-bottom: 2px;
@@ -2286,11 +2268,6 @@ body{
 .py-\[4px\]{
   padding-top: 4px;
   padding-bottom: 4px;
-}
-
-.py-\[6px\]{
-  padding-top: 6px;
-  padding-bottom: 6px;
 }
 
 .py-\[80px\]{

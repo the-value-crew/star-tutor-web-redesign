@@ -247,6 +247,83 @@ if (window.location.pathname === '/') {
 			contactContent.style.transform = 'translateY(10%)';
 		}
 	};
+
+	const scoreCardSection = document.getElementById('scoreCardSection');
+	const scoreCardDup = document.getElementById('scoreCardDup');
+	const scoresCard = document.getElementById('scoresCard');
+	const mainScoreCard = document.getElementById('mainScoreCard');
+	const scoresCard2 = document.getElementById('scoresCard2');
+	const scoresCard3 = document.getElementById('scoresCard3');
+
+	const elements = [
+		scoreCardDup,
+		scoresCard,
+		mainScoreCard,
+		scoresCard2,
+		scoresCard3,
+	];
+
+	let activeIndex = elements.findIndex((image) =>
+		image.classList.contains('isActive')
+	);
+
+	function updateClasses() {
+		elements.forEach((element, index) => {
+			element.className = ''; // Reset all classes
+
+			if (index === activeIndex) {
+				element.classList.add('isActive');
+			} else if (
+				index ===
+				(activeIndex - 1 + elements.length) % elements.length
+			) {
+				element.classList.add('isActiveImageLeft');
+			} else if (index === (activeIndex + 1) % elements.length) {
+				element.classList.add('isActiveImageRight');
+			} else {
+				element.classList.add('inactive');
+			}
+		});
+	}
+
+	elements.forEach((element, index) => {
+		element.addEventListener('click', () => {
+			if (element.classList.contains('isActiveImageRight')) {
+				activeIndex = (activeIndex + 1) % elements.length;
+			} else if (element.classList.contains('isActiveImageLeft')) {
+				activeIndex =
+					(activeIndex - 1 + elements.length) % elements.length;
+			}
+			updateClasses();
+
+			startAutoplay();
+		});
+	});
+
+	let autoplayId = null;
+
+	function startAutoplay() {
+		if (autoplayId !== null) {
+			clearInterval(autoplayId);
+		}
+
+		autoplayId = setInterval(() => {
+			activeIndex = (activeIndex + 1) % elements.length;
+			updateClasses();
+		}, 4000);
+	}
+
+	scoreCardSection.addEventListener('mouseover', () => {
+		if (autoplayId !== null) {
+			clearInterval(autoplayId);
+			autoplayId = null;
+		}
+	});
+
+	scoreCardSection.addEventListener('mouseout', startAutoplay);
+
+	updateClasses();
+	startAutoplay();
 }
 
 // Phone card copy to clipboard
@@ -272,82 +349,6 @@ email.addEventListener('click', () => {
 		emailCopied.style.display = 'none';
 	}, 2000);
 });
-
-const scoreCardSection = document.getElementById('scoreCardSection');
-const scoreCardDup = document.getElementById('scoreCardDup');
-const scoresCard = document.getElementById('scoresCard');
-const mainScoreCard = document.getElementById('mainScoreCard');
-const scoresCard2 = document.getElementById('scoresCard2');
-const scoresCard3 = document.getElementById('scoresCard3');
-
-const elements = [
-	scoreCardDup,
-	scoresCard,
-	mainScoreCard,
-	scoresCard2,
-	scoresCard3,
-];
-
-let activeIndex = elements.findIndex((image) =>
-	image.classList.contains('isActive')
-);
-
-function updateClasses() {
-	elements.forEach((element, index) => {
-		element.className = ''; // Reset all classes
-
-		if (index === activeIndex) {
-			element.classList.add('isActive');
-		} else if (
-			index ===
-			(activeIndex - 1 + elements.length) % elements.length
-		) {
-			element.classList.add('isActiveImageLeft');
-		} else if (index === (activeIndex + 1) % elements.length) {
-			element.classList.add('isActiveImageRight');
-		} else {
-			element.classList.add('inactive');
-		}
-	});
-}
-
-elements.forEach((element, index) => {
-	element.addEventListener('click', () => {
-		if (element.classList.contains('isActiveImageRight')) {
-			activeIndex = (activeIndex + 1) % elements.length;
-		} else if (element.classList.contains('isActiveImageLeft')) {
-			activeIndex = (activeIndex - 1 + elements.length) % elements.length;
-		}
-		updateClasses();
-
-		startAutoplay();
-	});
-});
-
-let autoplayId = null;
-
-function startAutoplay() {
-	if (autoplayId !== null) {
-		clearInterval(autoplayId);
-	}
-
-	autoplayId = setInterval(() => {
-		activeIndex = (activeIndex + 1) % elements.length;
-		updateClasses();
-	}, 4000);
-}
-
-scoreCardSection.addEventListener('mouseover', () => {
-	if (autoplayId !== null) {
-		clearInterval(autoplayId);
-		autoplayId = null;
-	}
-});
-
-scoreCardSection.addEventListener('mouseout', startAutoplay);
-
-updateClasses();
-startAutoplay();
 
 function openTabContent(event, context, tabId, containerType) {
 	let i, tabcontent, tablinks;

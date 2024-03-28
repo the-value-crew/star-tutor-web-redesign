@@ -6,22 +6,24 @@
 
 get_header();
 
-$args = array(
-  "post_type"         => "reviews",
-  "posts_per_page"    => 10
+$wp_query = new WP_Query(
+	array(
+		"post_type"         => "reviews",
+		"posts_per_page"    => 10
+	)
 );
-$wp_query = new WP_Query($args);
 
-$reviews_from_args = array(
-  "post_type"         => "reviews_from",
-  "posts_per_page"    => 10
+$reviews_from_wp_query = new WP_Query(
+	array(
+		"post_type"         => "reviews_from",
+		"posts_per_page"    => 10
+	)
 );
-$reviews_from_wp_query = new WP_Query($reviews_from_args);
 
 ?>
 
     <main>
-      <div class="mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+      <div class="2xl:container mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
         <div class="relative">
           <svg class="hidden xl:block absolute top-[-85px] left-[620px]" xmlns="http://www.w3.org/2000/svg" width="172" height="151" viewBox="0 0 172 151" fill="none">
             <g clip-path="url(#clip0_578_9161)">

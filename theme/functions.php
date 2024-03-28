@@ -242,3 +242,72 @@ if(!function_exists("thestartutor_custom_walker_nav_menu_setup")) {
 function thestartutor_get_static_img($img_name) {
   return get_template_directory_uri() . "/assets/images/" . $img_name;
 }
+
+/**
+ * Custom callback function for wp_list_comments.
+ * 
+ */
+function thestartutor_list_comments($comment, $args, $depth) {
+	if($comment->comment_approved == '0') return;
+	if ( 'div' === $args['style'] ) {
+			$tag       = 'div';
+			$add_below = 'comment';
+	} else {
+			$tag       = 'li';
+			$add_below = 'div-comment';
+	}?>
+	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? 'flex flex-col py-[24px] px-[24px] gap-[8px]' : 'parent flex flex-col py-[24px] px-[24px] gap-[8px]' ); ?> id="comment-<?php comment_ID() ?>"><?php 
+	if ( 'div' != $args['style'] ) { ?>
+			<div id="div-comment-<?php comment_ID() ?>" class="comment-body flex flex-col py-[24px] px-[24px] gap-[8px]"><?php
+	} ?>
+			<div class="comment-author vcard flex gap-[7px]">
+				<?php 
+					if ( $args['avatar_size'] != 0 ) { ?>
+						<div style="background-image: url('<?php echo esc_url( get_avatar_url( $comment->comment_author_email ) ); ?>')" class="w-[40px] h-[40px] bg-center bg-cover rounded-full"></div>
+					<?php //echo get_avatar( $comment, $args['avatar_size'] ); 
+					} 
+					// printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
+					<div class="flex flex-col">
+						<span class="text-semibold font-semibold"><?php echo $comment->comment_author; ?></span>
+						<div class="comment-meta commentmetadata text-captionSmall font-captionSmall">
+							<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
+									/* translators: 1: date, 2: time */
+									// printf( 
+									// 		__('%1$s at %2$s'), 
+									// 		get_comment_date(),
+									// 		get_comment_time() 
+									// );
+									printf( 
+											__('%1$s'),
+											date("M d, Y", strtotime(get_comment_date()))
+									); ?>
+							</a><?php 
+							edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<?php comment_text(); ?>
+			</div>
+
+			<div class="reply flex items-center gap-[4px]">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+				</svg>
+				<?php 
+						comment_reply_link( 
+								array_merge( 
+										$args, 
+										array(
+												'add_below' => $add_below, 
+												'depth'     => $depth, 
+												'max_depth' => $args['max_depth'] 
+										) 
+								) 
+						); ?>
+			</div><?php 
+	if ( 'div' != $args['style'] ) : ?>
+			</div><?php 
+	endif;
+}
