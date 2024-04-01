@@ -110,7 +110,7 @@ $wp_query = new WP_Query(
                     <div class="px-[20px] flex flex-col gap-[20px] text-justify">
                         <div class="flex flex-col items-start gap-[12px] self-stretch">
                             <h2
-                                class="overflow-hidden capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2 text-left">
+                                class="overflow-hidden text-left capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2">
                                 <a href="<?php the_permalink(); ?>"><?php  wp_trim_words(the_title(), 20); ?></a>
                             </h2>
                             <?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
@@ -155,10 +155,11 @@ $wp_query = new WP_Query(
         ?>
             </section>
             <div id="blogsButton">
-                <button
+                <a
+                href= "/blog"
                     class="bg-cta-400 hover:bg-cta-default active:bg-cta-800 rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button">
                     <?php echo get_field("blogs_button", 13); ?>
-                </button>
+                </a>
             </div>
         </section>
     </div>

@@ -1,4 +1,4 @@
-<div class="container flex items-center justify-center w-full m-auto">
+<!-- <div class="container flex items-center justify-center w-full m-auto">
     <div class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]">
 
         <section id="videosSection"
@@ -23,7 +23,7 @@
                 </h3>
             </section>
 
-            <!-- <section id="videosContent" class="grid grid-cols-2">
+             <section id="videosContent" class="grid grid-cols-2">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/mqbJqtfVvqs?si=JQQomPRn37KNuimA"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -72,8 +72,8 @@
                             href="https://www.tiktok.com/music/original-sound-7337897004611554049?refer=embed">♬
                             original sound - The Star Tutor,GMAT &#38; GRE Prep</a> </section>
                 </blockquote>
-                <!-- <script async src="https://www.tiktok.com/embed.js"></script> -->
-            <!-- </section> --> 
+                <script async src="https://www.tiktok.com/embed.js"></script> 
+             </section>
 
 
             <div id="videosButton">
@@ -86,4 +86,4 @@
 
         </section>
     </div>
-</div>
+</div> -->

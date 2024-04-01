@@ -243,6 +243,19 @@ function thestartutor_get_static_img($img_name) {
   return get_template_directory_uri() . "/assets/images/" . $img_name;
 }
 
+
+
+function add_custom_class_to_menu_item($classes, $item, $args) {
+    if (is_page($item->title)) {
+        // Add the 'text-brand-invert' class to the current menu item
+        $classes[] = 'text-brand-invert';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_custom_class_to_menu_item', 10, 3);
+
+
+
 /**
  * Custom callback function for wp_list_comments.
  * 
@@ -268,7 +281,7 @@ function thestartutor_list_comments($comment, $args, $depth) {
 					} 
 					// printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
 					<div class="flex flex-col">
-						<span class="text-semibold font-semibold"><?php echo $comment->comment_author; ?></span>
+						<span class="font-semibold text-semibold"><?php echo $comment->comment_author; ?></span>
 						<div class="comment-meta commentmetadata text-captionSmall font-captionSmall">
 							<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
 									/* translators: 1: date, 2: time */

@@ -302,11 +302,12 @@ $grey_blur_img = thestartutor_get_static_img("greyBlur.png");
           </p>
         </div>
         <div>
-          <button
+          <a
+          href="/#contact"
             class= "bg-[#C84A3D] hover:bg-cta-default active:bg-[#eb4d3d] rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
           <?php echo get_field('hero_button'); ?>
-          </button>
+          </a>
         </div>
       </div>
       <div
@@ -482,12 +483,13 @@ $grey_blur_img = thestartutor_get_static_img("greyBlur.png");
           </p>
         </div>
         <div>
-          <button
+          <a
+          href="/#contact"
             class=" bg-cta-400 hover:bg-cta-default active:bg-cta-800 rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button"
           >
           <?php echo get_field("hero_button"); ?>
 
-          </button>
+          </a>
         </div>
       </div>
     </main>

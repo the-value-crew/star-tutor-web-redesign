@@ -9,6 +9,7 @@
  * @package thestartutor
  */
 
+$currentUri = $_SERVER['REQUEST_URI'];
 ?>
 <footer class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark">
     <div
@@ -16,12 +17,19 @@
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
             <p class="capitalize text-heading2 font-heading2">Links</p>
 
-            <a class="font-normal capitalize text-normal hover:cursor-pointer" href="/">Home</a>
-            <a class="font-normal capitalize text-normal hover:cursor-pointer" href="/about/">About us</a>
 
-            <a class="font-normal capitalize text-normal hover:cursor-pointer" href="/reviews/">Reviews</a>
-            <a class="font-normal capitalize text-normal hover:cursor-pointer" href="/blog/">Blog</a>
-            <a class="font-normal capitalize text-normal hover:cursor-pointer" href="/#contact/">Contact</a>
+            <a class="font-normal capitalize text-normal hover:cursor-pointer hover:underline <?php echo $currentUri === '/' ? ' text-brand-invert' : ''; ?>"
+                href="/">Home</a>
+            <a class="font-normal capitalize text-normal hover:cursor-pointer hover:underline <?php echo $currentUri === '/about/' ? ' text-brand-invert' : ''; ?>"
+                href="/about">About
+                us</a>
+
+            <a class="font-normal capitalize text-normal hover:cursor-pointer hover:underline <?php echo $currentUri === '/reviews/' ? ' text-brand-invert' : ''; ?>"
+                href="/reviews">Reviews</a>
+            <a class="font-normal capitalize text-normal hover:cursor-pointer hover:underline <?php echo $currentUri === '/blog/' ? ' text-brand-invert' : ''; ?>"
+                href="/blog">Blog</a>
+            <a class="font-normal capitalize text-normal hover:cursor-pointer hover:underline"
+                href="/#contact">Contact</a>
         </div>
         <div>
             <div class="w-[256px] flex flex-col gap-[12px] items-start">

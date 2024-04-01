@@ -3173,7 +3173,7 @@ body {
 }
 
 .flipCardTransform {
-  transition: transform 0.8s;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
@@ -3189,14 +3189,12 @@ body {
   position: absolute;
   transition: 0.6s;
   transform: scale(0.7);
-  opacity: 0.6;
 }
 
 .isActiveImageRight {
   position: absolute;
   transition: 0.6s;
   transform: scale(0.7);
-  opacity: 0.6;
 }
 
 .isActiveImageLeft::before,
@@ -3208,7 +3206,7 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .isActive {
@@ -3216,7 +3214,7 @@ body {
   left: 50%;
   z-index: 100;
   transform: translateX(-50%);
-  transition: 1s;
+  transition: 0.6s;
   height: 100%;
 }
 

@@ -11,6 +11,8 @@
  * @package thestartutor
  */
 
+ $currentUri = $_SERVER['REQUEST_URI'];
+
 ?>
 
 

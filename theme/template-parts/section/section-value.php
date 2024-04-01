@@ -179,12 +179,13 @@ $wp_query = new WP_Query(
             
           </section>
           <div id="valueButton">
-            <button
-              class="bg-[#C84A3D] hover:bg-cta-default active:bg-[#eb4d3d] rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
+            <a
+            href="/why-choose-us/"
+              class="bg-cta-400 hover:bg-cta-default active:bg-cta-800  rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button"
             >
             <?php echo get_field("value_button", 13); ?>
 
-            </button>
+            </a>
           </div>
         </section>
       </div>
