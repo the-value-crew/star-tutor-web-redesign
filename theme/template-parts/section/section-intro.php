@@ -76,10 +76,10 @@
                         </p>
                     </article>
                     <div id="introButton">
-                        <button
+                        <a href="/about/"
                             class="bg-cta-400 hover:bg-cta-default active:bg-cta-800 rounded-[60px] 2xl:py-[16px] py-[14px] px-[32px] text-primary-dark font-button">
                             Read More...
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>

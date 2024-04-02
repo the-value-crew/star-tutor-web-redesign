@@ -155,8 +155,7 @@ $wp_query = new WP_Query(
         ?>
             </section>
             <div id="blogsButton">
-                <a
-                href= "/blog"
+                <a href="/blog"
                     class="bg-cta-400 hover:bg-cta-default active:bg-cta-800 rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button">
                     <?php echo get_field("blogs_button", 13); ?>
                 </a>
