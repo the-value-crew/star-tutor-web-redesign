@@ -36,6 +36,10 @@
 @import "tailwindcss/utilities";
 @import "./custom/utilities.css";
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: linear-gradient(
 		to right,

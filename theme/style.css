@@ -2772,6 +2772,10 @@ body{
  * https://tailwindcss.com/docs/plugins#adding-utilities
  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(
 		to right,
