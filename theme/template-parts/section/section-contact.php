@@ -84,7 +84,7 @@
                 </div>
 
                 <section id="contactContent"
-                    class="flex 2xl:gap-[112px] lg:gap-[60px] gap-5 flex-wrap items-center justify-center">
+                    class="flex 2xl:gap-[112px] lg:gap-[60px] gap-5 items-center justify-center flex-col lg:flex-row">
                     <div class="flex flex-col gap-[39px] items-start lg:w-[463px]">
                         <figure>
                             <iframe
