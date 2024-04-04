@@ -119,13 +119,13 @@ $wp_query = new WP_Query(
                             </div>
                             <div class="flex flex-col gap-2">
                                 <p class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-                                    <?php echo wp_trim_words(get_field("review"), 20); ?>
+                                    <?php echo wp_trim_words(get_field("review"),16); ?>
 
                                     <!-- <span class="visible-content">
   <?php 
     $content = get_field("review");
     if(strlen($content) > 60) {
-        echo wp_trim_words(get_field("review"), 60);
+        echo wp_trim_words(get_field("review"), 50);
     } else {
         echo $content;
     }
