@@ -13,27 +13,27 @@ $score_card_img = thestartutor_get_static_img("scoreCard.png");
 
         <div class="isActiveImageLeft" id="scoreCardDup">
             <div
-                class="xl:h-[621px] lg:h-[546px] sm: 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px]">
+                class="xl:h-[621px] lg:h-[546px] sm: 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden">
                 <img src="<?php echo get_field("score_card"); ?>" class="w-full h-full rounded-2xl" />
             </div>
         </div>
 
         <div class="isActiveImageRight" id="scoresCard">
             <div
-                class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px]">
+                class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden">
                 <img src="<?php echo get_field("scores"); ?>" class="w-full h-full rounded-2xl" />
             </div>
         </div>
 
         <div id="scoresCard2" class="inactive">
             <div
-                class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px]">
+                class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden">
                 <img src="<?php echo get_field("scores"); ?>" class="w-full h-full rounded-2xl" />
             </div>
         </div>
         <div id="scoresCard3" class="inactive">
             <div
-                class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px]">
+                class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden">
                 <img src="<?php echo get_field("score_card"); ?>" class="w-full h-full rounded-2xl" />
             </div>
         </div>
