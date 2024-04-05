@@ -13,7 +13,7 @@ $currentUri = $_SERVER['REQUEST_URI'];
 ?>
 <footer class="mt-[160px] py-[80px] bg-surface-primary-dark text-primary-dark">
     <div
-        class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start">
+        class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex justify-between items-start md:flex-row flex-col gap-[60px]">
         <div class="w-[256px] flex flex-col gap-[12px] items-start">
             <p class="capitalize text-heading2 font-heading2">Links</p>
 

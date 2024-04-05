@@ -3507,6 +3507,14 @@ body {
   .sm\:text-center{
     text-align: center;
   }
+
+  .sm\:text-heading2{
+    font-size: 36px;
+  }
+
+  .sm\:font-heading2{
+    font-weight: 600;
+  }
 }
 
 @media (min-width: 640px){
@@ -3574,6 +3582,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
   .md\:items-center{
     align-items: center;
   }
@@ -3620,6 +3632,10 @@ body {
     font-size: 48px;
   }
 
+  .md\:text-heading2{
+    font-size: 36px;
+  }
+
   .md\:font-normal{
     font-weight: 400;
   }
@@ -3630,6 +3646,10 @@ body {
 
   .md\:font-title{
     font-weight: 700;
+  }
+
+  .md\:font-heading2{
+    font-weight: 600;
   }
 }
 
