@@ -136,7 +136,7 @@ $total_reviews = 0;
 						foreach($review_of as $key => $val) {
 					?>
             <div id="reviews-post-<?php echo $key; ?>"
-                class="reviews--tabcontent max-w-[720px] mt-[28px] grid hidden grid-rows-[repeat(2, auto)] items-start lg:grid-cols-2 gap-[21px] xl:gap-y-[32px]">
+                class="reviews--tabcontent max-w-[742px] mt-[28px] grid hidden grid-rows-[repeat(2, auto)] items-start lg:grid-cols-2 gap-[21px] xl:gap-y-[32px]">
                 <?php
 							$current_post = 0;
 							if(!$thestartutor_reviews[$key]) {
