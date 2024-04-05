@@ -33,7 +33,7 @@ $wp_query = new WP_Query(
 
 
 
-    <div class="mt-[125px] flex flex-col gap-[160px] justify-center items-center mb-[171px]">
+    <div class="mt-[125px] flex flex-col gap-[160px] justify-center items-center mb-[171px] container">
 
 
         <?php
@@ -63,11 +63,12 @@ $wp_query = new WP_Query(
 
 
 
-            <div class="py-[20px] flex flex-col w-[624px] gap-[29px]">
+            <div class="py-[20px] flex flex-col max-w-[624px] gap-[29px]">
                 <h1 class="font-heading1 text-heading1 text-primary">
                     <?php the_title(); ?>
                 </h1>
-                <div class="flex gap-[20px]">
+                <div class="flex gap-[20px] lg:flex-row flex-col">
+
                     <div
                         class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
                         <div class="flex gap-[4px]">
@@ -220,11 +221,11 @@ $wp_query = new WP_Query(
         <?php if($post_count % 2 == 1) { ?>
         <div class="flex gap-[111px] flex-col-reverse xl:flex-row justify-center items-center">
 
-            <div class="py-[20px] flex w-[624px] flex-col gap-[29px]">
+            <div class="py-[20px] flex max-w-[624px] flex-col gap-[29px]">
                 <h1 class="font-heading1 text-heading1 text-primary">
                     <?php the_title(); ?>
                 </h1>
-                <div class="flex gap-[20px]">
+                <div class="flex gap-[20px] lg:flex-row flex-col">
                     <div
                         class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
                         <div class="flex gap-[4px]">
@@ -388,10 +389,6 @@ $wp_query = new WP_Query(
         </div>
 
         <?php } ?>
-
-
-
-
         <?php
   $post_count++;    
                   }

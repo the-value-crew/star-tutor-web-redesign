@@ -104,10 +104,10 @@ $wp_query = new WP_Query(
             ?>
 
                 <article
-                    class="flex-grow rounded-xl bg-grey-100 hover:border-solid hover:border hover:border-brand-default shadow-md">
-                    <figure class="flex items-center justify-center">
+                    class="flex-grow rounded-xl bg-grey-100 hover:border-solid hover:border hover:border-brand-default shadow-md overflow-hidden">
+                    <figure class="flex items-center justify-center overflow-hidden">
                         <div style="background-image: url('<?php echo get_field("reason_image"); ?>');"
-                            class="bg-cover xl:h-[180px] 2xl:h-[180px] 2xl:w-[348px] xl:w-[333px] h-[220px] w-[328px] md:h-[350px] md:w-[600px] lg:h-[350px] lg:w-[452px]">
+                            class="bg-cover xl:h-[180px] 2xl:h-[180px] 2xl:w-[348px] xl:w-[333px] h-[220px] w-[328px] md:h-[350px] md:w-[600px] lg:h-[350px] lg:w-[452px] hover:scale-125 transition-all duration-300">
                         </div>
                     </figure>
                     <div class="flex flex-col pt-[24px] pl-[20px] pb-[32px] pr-[20px] gap-[20px]">
