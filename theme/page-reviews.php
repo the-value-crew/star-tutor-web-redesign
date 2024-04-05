@@ -102,7 +102,8 @@ $total_reviews = 0;
                 We pride in having over <span class="text-brand"> 300 Reviews </span>
             </p>
 
-            <div class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200">
+            <div
+                class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200 overflow-scroll">
                 <?php
 							$thestartutor_reviews = [];
 							$review_of = [];

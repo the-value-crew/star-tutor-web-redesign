@@ -1953,6 +1953,10 @@ body{
   overflow: hidden;
 }
 
+.overflow-scroll{
+  overflow: scroll;
+}
+
 .overflow-x-hidden{
   overflow-x: hidden;
 }
