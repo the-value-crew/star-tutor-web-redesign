@@ -114,7 +114,7 @@ $total_reviews = 0;
 								$thestartutor_reviews[$key] = [];
             ?>
                 <button
-                    class="reviews--tablinks text-primary pr-[10px] pb-[8px] font-normal text-normal hover:underline"
+                    class="reviews--tablinks text-primary pr-[10px] pb-[8px] font-normal text-normal hover:underline whitespace-nowrap"
                     onclick="openTabContent(event, 'reviews', '<?php echo $key; ?>', 'grid')"><?php echo $val; ?></button>
                 <?php
               }
