@@ -1613,10 +1613,6 @@ body{
   height: 304px;
 }
 
-.h-\[31px\]{
-  height: 31px;
-}
-
 .h-\[330px\]{
   height: 330px;
 }
@@ -1675,10 +1671,6 @@ body{
 
 .w-\[164px\]{
   width: 164px;
-}
-
-.w-\[166px\]{
-  width: 166px;
 }
 
 .w-\[240px\]{
@@ -2123,10 +2115,6 @@ body{
   background-image: linear-gradient(to right, rgba(238, 238, 187, 0.5), rgba(212, 211, 220, 0.5));
 }
 
-.bg-\[url\(\'\/src\/images\/theStarTutorLogo\.png\'\)\]{
-  background-image: url('/src/images/theStarTutorLogo.png');
-}
-
 .bg-cover{
   background-size: cover;
 }
@@ -2521,16 +2509,6 @@ body{
 .text-tertiary{
   --tw-text-opacity: 1;
   color: rgb(122 122 122 / var(--tw-text-opacity));
-}
-
-.text-red-500{
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
-.text-brand-dark{
-  --tw-text-opacity: 1;
-  color: rgb(228 192 69 / var(--tw-text-opacity));
 }
 
 .shadow-lg{
@@ -3464,11 +3442,6 @@ body {
   border-color: rgb(228 192 69 / var(--tw-border-opacity));
 }
 
-.hover\:bg-cta-800:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 77 61 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-cta-default:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(217 55 38 / var(--tw-bg-opacity));
@@ -3484,11 +3457,6 @@ body {
 }
 
 .active\:bg-cta-800:active{
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 77 61 / var(--tw-bg-opacity));
-}
-
-.active\:bg-cta-default-dark:active{
   --tw-bg-opacity: 1;
   background-color: rgb(235 77 61 / var(--tw-bg-opacity));
 }
@@ -3751,10 +3719,6 @@ body {
 
   .lg\:justify-center{
     justify-content: center;
-  }
-
-  .lg\:justify-between{
-    justify-content: space-between;
   }
 
   .lg\:gap-\[20px\]{

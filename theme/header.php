@@ -30,7 +30,8 @@
     <header
         class="w-full sticky top-0 z-[1000] bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
         <nav class="2xl:max-w-[1084px] 2xl:container relative lg:flex lg:justify-center lg:items-center">
-            <div class="lg:flex lg:items-center justify-between lg:justify-start">
+            <div class="flex items-center justify-between lg:justify-start">
+
                 <?php
           $custom_logo_id = get_theme_mod("custom_logo");
           $logo = wp_get_attachment_image_src($custom_logo_id, "full");
