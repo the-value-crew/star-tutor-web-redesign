@@ -68,6 +68,7 @@ module.exports = {
 				button: 600,
 				normal: 400,
 				semibold: 600,
+				largeRegular: 400,
 				captionBig: 500,
 				captionSmall: 400,
 			},
