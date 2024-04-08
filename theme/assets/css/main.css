@@ -18,3 +18,7 @@
 .tst-single h2, .tst-single h3, .tst-single h4, .tst-single h5, .tst-single h6 {
 	padding-bottom: 8px;
 }
+
+.tst-single img {
+	margin: 24px 0px;
+}
