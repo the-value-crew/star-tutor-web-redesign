@@ -1,6 +1,7 @@
 const navBtn = document.getElementById('navBtn');
 navBtn.addEventListener('click', () => {
 	const navMenu = document.getElementById('navMenu');
+
 	if (navMenu.classList.contains('max-h-0')) {
 		navMenu.classList.remove('max-h-0');
 		navMenu.classList.add('max-h-[600px]');
@@ -12,7 +13,7 @@ navBtn.addEventListener('click', () => {
 		navMenu.classList.add('text-center');
 	} else {
 		navMenu.classList.remove('max-h-[600px]');
-		navMenu.classList.remove('max-h-0');
+		navMenu.classList.add('max-h-0');
 		navMenu.classList.remove('py-4');
 		navMenu.classList.remove('my-4');
 		navMenu.classList.remove('space-y-6');

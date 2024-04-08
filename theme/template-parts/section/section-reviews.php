@@ -102,7 +102,7 @@ $wp_query = new WP_Query(
                   $wp_query->the_post();
             ?>
                         <article
-                            class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px] flex-initial">
+                            class="2xl:w-[348px] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px] flex-initial hover:border-solid hover:border hover:border-brand-default hover:bg-surface-secondary shadow-sm overflow-hidden">
                             <div class="flex gap-[4px]">
                                 <?php
                   for ($i = 0; $i < (int)get_field("stars"); $i++) {
