@@ -59,8 +59,8 @@
 								"container" => false,
 								"container_class" => 'py-4',
                 "menu_class" => "flex flex-col lg:w-full lg:flex-row lg:justify-center lg:items-center",
-                "items_wrap" => '<div class="%2$s hover:underline">%3$s</div>',
-                "walker" => new Custom_Walker_Nav_Menu
+                "items_wrap" => '<div class="%2$s">%3$s</div>',
+                "walker" => new Custom_Walker_Nav_Menu,
               )
             );
           ?>
