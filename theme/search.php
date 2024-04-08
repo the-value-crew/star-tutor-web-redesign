@@ -11,17 +11,17 @@ get_header();
 
 $recents_wp_query = new WP_Query(
 	array(
-		"post_type" => "post",
-		"posts_per_page" => 5,
+		'post_type'      => 'post',
+		'posts_per_page' => 5,
 	)
 );
 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$paged         = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $post_wp_query = new WP_Query(
 	array(
-		"post_type" => "post",
-		"posts_per_page" => 5,
-		"paged" => $paged,
+		'post_type'      => 'post',
+		'posts_per_page' => 5,
+		'paged'          => $paged,
 	)
 );
 ?>
@@ -33,7 +33,7 @@ $post_wp_query = new WP_Query(
 		printf(
 			/* translators: 1: search result title. 2: search term. */
 			'<h1>%1$s <span>%2$s</span></h1>',
-			esc_html__('Search results for:', 'thestartutor'),
+			esc_html__( 'Search results for:', 'thestartutor' ),
 			get_search_query()
 		);
 		?>
@@ -56,12 +56,12 @@ $post_wp_query = new WP_Query(
 
 					<div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">
 						<?php
-						if ($post_wp_query->have_posts()) {
-							while ($post_wp_query->have_posts()) {
+						if ( $post_wp_query->have_posts() ) {
+							while ( $post_wp_query->have_posts() ) {
 								$post_wp_query->the_post();
 								?>
 								<div class="border-2 border-grey-200 rounded-lg lg:max-w-[627px]">
-									<img class="w-full h-[304px] rounded-t-lg object-cover" src="<?php the_post_thumbnail_url() ?>" />
+									<img class="w-full h-[304px] rounded-t-lg object-cover" src="<?php the_post_thumbnail_url(); ?>" />
 									<div class="mt-[16px] px-[20px]">
 										<h2 class="text-heading2 font-heading2"><a href="<?php the_permalink(); ?>">
 												<?php the_title(); ?>
@@ -86,17 +86,6 @@ $post_wp_query = new WP_Query(
 														stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round" />
 												</svg>
 												<span class="text-captionBig font-captionBig text-secondary">3 Comments</span>
-											</div>
-											<div class="flex items-center gap-[4px]">
-												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-													<path
-														d="M4.7918 7.84375H3.80555C2.98851 7.84375 2.32617 8.50613 2.32617 9.32313V16.2269C2.32617 17.044 2.98851 17.7063 3.80555 17.7063H4.7918C5.60884 17.7063 6.27118 17.044 6.27118 16.2269V9.32313C6.27118 8.50613 5.60884 7.84375 4.7918 7.84375Z"
-														stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round" />
-													<path
-														d="M17.6331 10.2L16.4496 16.1175C16.3594 16.5716 16.1124 16.9795 15.7518 17.2697C15.3911 17.5601 14.94 17.7142 14.4771 17.7054H8.24398C7.72085 17.7054 7.21913 17.4976 6.84922 17.1276C6.4793 16.7577 6.27148 16.256 6.27148 15.7329V9.8154C6.28733 9.43556 6.38341 9.06348 6.55339 8.72348C6.72338 8.38356 6.96343 8.0834 7.25773 7.84286L8.07633 2.9116C8.09478 2.79656 8.14014 2.68751 8.20873 2.59332C8.27732 2.49914 8.36722 2.42249 8.47097 2.36961C8.5748 2.31674 8.68963 2.28914 8.80622 2.28906C8.92272 2.28899 9.03755 2.31643 9.14147 2.36916L10.0587 2.82285C10.6646 3.12245 11.1498 3.62055 11.4333 4.23423C11.7168 4.84791 11.7816 5.54017 11.617 6.19582L11.2027 7.833H15.7001C15.9926 7.83294 16.2815 7.89794 16.5457 8.0233C16.8101 8.14867 17.0432 8.33123 17.2282 8.55781C17.4132 8.7844 17.5455 9.04931 17.6156 9.33331C17.6856 9.61731 17.6916 9.9134 17.6331 10.2Z"
-														stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round" />
-												</svg>
-												<span class="text-captionBig font-captionBig text-secondary">24 Likes</span>
 											</div>
 										</div>
 									</div>
@@ -135,8 +124,8 @@ $post_wp_query = new WP_Query(
 					</form>
 					<div class="mt-[24px] flex flex-col gap-[24px]">
 						<?php
-						if ($recents_wp_query->have_posts()) {
-							while ($recents_wp_query->have_posts()) {
+						if ( $recents_wp_query->have_posts() ) {
+							while ( $recents_wp_query->have_posts() ) {
 								$recents_wp_query->the_post();
 								?>
 								<div>
