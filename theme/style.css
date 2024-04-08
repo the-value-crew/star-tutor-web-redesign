@@ -2123,6 +2123,10 @@ body{
   background-image: linear-gradient(to right, rgba(238, 238, 187, 0.5), rgba(212, 211, 220, 0.5));
 }
 
+.bg-\[url\(\'\/src\/images\/theStarTutorLogo\.png\'\)\]{
+  background-image: url('/src/images/theStarTutorLogo.png');
+}
+
 .bg-cover{
   background-size: cover;
 }
@@ -3747,6 +3751,10 @@ body {
 
   .lg\:justify-center{
     justify-content: center;
+  }
+
+  .lg\:justify-between{
+    justify-content: space-between;
   }
 
   .lg\:gap-\[20px\]{
