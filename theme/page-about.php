@@ -39,7 +39,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
 
     <section class="2xl:container  flex flex-col items-start py-[120px]">
         <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
-            <div class="relative flex flex-col justify-start gap-[28px]">
+            <div class="relative">
                 <svg class="hidden xl:block absolute top-[-70px] left-[260px]" xmlns="http://www.w3.org/2000/svg"
                     width="174" height="128" viewBox="0 0 174 128" fill="none">
                     <g clip-path="url(#clip0_578_9261)">
@@ -112,8 +112,8 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
                         </clipPath>
                     </defs>
                 </svg>
-                <p class="text-title font-title">Who is <span class="text-brand">The Star Tutor?</span></p>
-                <div class="inline-flex gap-[40px] border-b-[1px] overflow-scroll">
+                <p class="text-title font-title mb-[28px]">Who is <span class="text-brand">The Star Tutor?</span></p>
+                <div class="flex gap-[40px] border-b-[1px] overflow-scroll">
                     <?php
                           if($aboutme_wp_query->have_posts()) {
                             while($aboutme_wp_query->have_posts()) {
@@ -152,7 +152,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
 
     <section class="2xl:container flex flex-col items-start py-[120px]">
         <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
-            <div class="relative flex flex-col justify-start gap-[28px]">
+            <div class="relative">
                 <svg class="hidden xl:block absolute top-[-70px] left-[35px]" xmlns="http://www.w3.org/2000/svg"
                     width="174" height="128" viewBox="0 0 174 128" fill="none">
                     <g clip-path="url(#clip0_578_9261)">
@@ -223,7 +223,8 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
 
                     </defs>
                 </svg>
-                <p class="text-title font-title"><span class="text-brand">Other Hobbies</span> outside of work</p>
+                <p class="text-title font-title mb-[28px]"><span class="text-brand">Other Hobbies</span> outside of work
+                </p>
 
                 <div class="flex gap-[40px] border-b-[1px] overflow-scroll">
                     <?php
