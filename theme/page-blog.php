@@ -6,37 +6,37 @@
 
 get_header();
 
-$about_bg_img = thestartutor_get_static_img("about-bg.png");
+$about_bg_img = thestartutor_get_static_img( 'about-bg.png' );
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 2;
 $wp_query = new WP_Query(
-    array(
-        "post_type" => "post",
-        "posts_per_page" => 5,
-        "paged" => $paged,
-    )
+	array(
+		'post_type'      => 'post',
+		'posts_per_page' => 5,
+		'paged'          => $paged,
+	)
 );
 
 $recents_wp_query = new WP_Query(
-    array(
-        "post_type" => "post",
-        "posts_per_page" => 5,
-    )
+	array(
+		'post_type'      => 'post',
+		'posts_per_page' => 5,
+	)
 );
 
 ?>
 
 <main>
-    <section class="flex flex-col justify-center h-[350px] text-title font-title"
-        style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-        <div
-            class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
-            <div class="text-primary-dark">
-                <p class="text-title font-title">Access Resources in The</p>
-                <p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
-            </div>
-        </div>
-    </section>
+	<section class="flex flex-col justify-center h-[350px] text-title font-title"
+		style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
+		<div
+			class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+			<div class="text-primary-dark">
+				<p class="text-title font-title">Access Resources in The</p>
+				<p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
+			</div>
+		</div>
+	</section>
 
     <section class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
         <div class="flex flex-col lg:flex-row items-start gap-[56px]">
@@ -45,13 +45,13 @@ $recents_wp_query = new WP_Query(
                     <div class="flex gap-5 border-b-[1px] overflow-scroll">
                         <button class="text-button font-button border-b-2 text-[#D93726]">All</button>
 
-                        <button>GMAT</button>
-                        <button>ACT & SAT</button>
+						<button>GMAT</button>
+						<button>ACT & SAT</button>
 
-                        <button>GRE</button>
-                        <button>ACT & SAT</button>
-                        <button>ACT & SAT</button>
-                    </div>
+						<button>GRE</button>
+						<button>ACT & SAT</button>
+						<button>ACT & SAT</button>
+					</div>
 
                     <div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">
                         <?php
@@ -151,17 +151,17 @@ $recents_wp_query = new WP_Query(
                             }
                         }
 
-                        wp_reset_postdata();
-                        ?>
-                    </div>
-                    <section class="w-full mt-[48px]">
-                        <button
-                            class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect
-                            on Facebook</button>
-                    </section>
-                </div>
-            </div>
-    </section>
+						wp_reset_postdata();
+						?>
+					</div>
+					<section class="w-full mt-[48px]">
+						<button
+							class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect
+							on Facebook</button>
+					</section>
+				</div>
+			</div>
+	</section>
 </main>
 
 <?php
