@@ -44,7 +44,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
  * plugins, then adds custom base styles.
  */
 
-/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1478,6 +1478,10 @@ body{
   margin-bottom: 171px;
 }
 
+.mb-\[28px\]{
+  margin-bottom: 28px;
+}
+
 .mb-\[55px\]{
   margin-bottom: 55px;
 }
@@ -1550,18 +1554,11 @@ body{
   margin-top: 96px;
 }
 
-.line-clamp-6{
+.line-clamp-3{
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-}
-
-.line-clamp-2{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
 }
 
 .block{
@@ -2052,6 +2049,10 @@ body{
 .border-secondary-800{
   --tw-border-opacity: 1;
   border-color: rgb(235 77 61 / var(--tw-border-opacity));
+}
+
+.border-transparent{
+  border-color: transparent;
 }
 
 .bg-\[\#121212\]{
@@ -3601,10 +3602,6 @@ body {
     text-align: center;
   }
 
-  .md\:text-heading2{
-    font-size: 36px;
-  }
-
   .md\:text-heading3{
     font-size: 20px;
   }
@@ -3615,10 +3612,6 @@ body {
 
   .md\:text-title{
     font-size: 48px;
-  }
-
-  .md\:font-heading2{
-    font-weight: 600;
   }
 
   .md\:font-normal{

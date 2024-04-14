@@ -150,7 +150,7 @@ $total_reviews = 0;
                     class="lg:col-span-2 flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]">
                     <div class="space-y-[8px]">
                         <div class="flex items-center justify-between">
-                            <p class="leading-relaxed text-heading2 font-heading2 text-primary">
+                            <p class="leading-relaxed text-heading3 font-heading3 text-primary">
                                 <?php echo $val["reviewer_name"]; ?>
                             </p>
 
@@ -179,11 +179,11 @@ $total_reviews = 0;
                     </div>
 
                     <div class="flex flex-col gap-2">
-                        <div class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-                            <div class="line-clamp-6 review-content-body font-normal text-normal">
+                        <div class="self-stretch font-normal leading-relaxed text-normal text-secondary space-y-2">
+                            <div class="line-clamp-3 review-content-body font-normal text-normal">
                                 <?php echo $val["review"]; ?>
                             </div>
-                            <button class="review-content-toggler font-bold" data-status="less"
+                            <button class="review-content-toggler font-semibold text-secondary" data-status="less"
                                 onclick="expandReviewContent(event, 'review-content', '<?php echo $key; ?>' + '-' +'<?php echo $key_index; ?>')">See
                                 More...</button>
                         </div>
@@ -199,8 +199,7 @@ $total_reviews = 0;
                     class="lg:col-span-2 flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]">
                     <div class="space-y-[8px]">
                         <div class="flex items-center justify-between">
-                            <p
-                                class="leading-relaxed text-heading3 font-heading3 md:text-heading2 md:font-heading2 text-primary">
+                            <p class="leading-relaxed text-heading3 font-heading3 text-primary">
                                 <?php echo $val["reviewer_name"]; ?>
                             </p>
 
@@ -229,11 +228,11 @@ $total_reviews = 0;
                     </div>
 
                     <div class="flex flex-col gap-2">
-                        <div class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-                            <div class="line-clamp-6 review-content-body font-normal text-normal">
+                        <div class="self-stretch font-normal leading-relaxed text-normal text-secondary space-y-2">
+                            <div class="line-clamp-3 review-content-body font-normal text-normal">
                                 <?php echo $val["review"]; ?>
                             </div>
-                            <button class="review-content-toggler font-bold" data-status="less"
+                            <button class="review-content-toggler font-semibold text-secondary" data-status="less"
                                 onclick="expandReviewContent(event, 'review-content', '<?php echo $key; ?>' + '-' +'<?php echo $key_index; ?>')">See
                                 More...</button>
                         </div>
@@ -245,7 +244,7 @@ $total_reviews = 0;
                     class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]">
                     <div class="space-y-[8px]">
                         <div class="flex items-center justify-between">
-                            <p class="leading-relaxed text-heading2 font-heading2 text-primary">
+                            <p class="leading-relaxed text-heading3 font-heading3 text-primary">
                                 <?php echo $val["reviewer_name"]; ?>
                             </p>
 
@@ -294,11 +293,11 @@ $total_reviews = 0;
                     </div>
 
                     <div class="flex flex-col gap-2 justify-start">
-                        <div class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-                            <div class="line-clamp-6 review-content-body font-normal text-normal">
+                        <div class="self-stretch font-normal leading-relaxed text-normal text-secondary space-y-2">
+                            <div class="line-clamp-3 review-content-body font-normal text-normal">
                                 <?php echo $val["review"]; ?>
                             </div>
-                            <button class="review-content-toggler font-bold" data-status="less"
+                            <button class="review-content-toggler font-semibold text-secondary" data-status="less"
                                 onclick="expandReviewContent(event, 'review-content', '<?php echo $key; ?>' + '-' +'<?php echo $key_index; ?>')">See
                                 More...</button>
                         </div>
