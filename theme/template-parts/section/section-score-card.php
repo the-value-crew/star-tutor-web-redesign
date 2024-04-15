@@ -8,7 +8,7 @@ $score_card_img = thestartutor_get_static_img("scoreCard.png");
 <div class="relative">
     <div class="bg-heroSectionGradient h-[50%] w-screen absolute top-[-90px] md:top-[-120px]"></div>
     <div id="scoreCardSection"
-        class=" xl:h-[621px] lg:h-[546px] md:h-[347px] mt-[90px] mb-[120px] w-full m-auto relative md:mt-[120px] hidden md:block overflow-x-hidden">
+        class=" xl:h-[621px] lg:h-[546px] md:h-[347px] mt-[90px] mb-[120px] w-full m-auto relative md:mt-[120px] hidden md:block overflow-x-hidden scoreCardSectionUp">
 
 
         <div class="isActiveImageLeft" id="scoreCardDup">

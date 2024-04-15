@@ -109,7 +109,7 @@ $wp_query = new WP_Query(
 
 
                 <figure
-                    class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl shadow-md">
+                    class="h-[140px] p-[10px] flex flex-col items-center justify-center bg-surface-primary rounded-xl successStoriesShadow">
                     <img src="<?php echo get_field("image_source") ?>" />
                 </figure>
 

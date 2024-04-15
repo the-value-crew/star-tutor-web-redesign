@@ -101,7 +101,7 @@ body {
 @keyframes slideInXLeft {
 	0% {
 		opacity: 0.8;
-		transform: translateX(-100%) translateY(250px);
+		transform: translateX(-150%) translateY(250px);
 	}
 	50% {
 		opacity: 1;
@@ -250,22 +250,72 @@ body {
 	}
 }
 
+@keyframes moveUp {
+	0% {
+		transform: translateX(0) translateY(100px);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+
 @layer utilities {
 	/* .heroSectionIn {
     animation: heroSectionSlideInLeft 1s ease-in-out;
   } */
-
-	.heroSectionIn {
+	.heroSectionInTitle {
 		animation:
 			slideInXLeft 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
 			slideInYLeft 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
 	}
 
-	.heroSectionRight {
+	.heroSectionInContent {
+		animation:
+			slideInXLeft 1s cubic-bezier(0.21, 1, 0.85, 1) 0.1s forwards,
+			slideInYLeft 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+	}
+
+	.heroSectionInButton {
+		animation:
+			slideInXLeft 1s cubic-bezier(0.21, 1, 0.85, 1) 0.125s forwards,
+			slideInYLeft 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+	}
+
+	/* .heroSectionIn {
+		animation:
+			slideInXLeft 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
+			slideInYLeft 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+	} */
+
+	.heroSectionRightImage {
 		animation:
 			slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
 			slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
 	}
+
+	.heroSectionRightReview {
+		animation:
+			slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) 0.1s forwards,
+			slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+	}
+
+	.heroSectionRightGray {
+		animation:
+			slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) 0.125s forwards,
+			slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+	}
+
+	.scoreCardSectionUp {
+		transform: translateY(200px); /* Initial state */
+		animation: moveUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s
+			forwards;
+	}
+
+	/* .heroSectionRight {
+		animation:
+			slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
+			slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
+	} */
 
 	.dotted-arrow path {
 		stroke-dasharray: 100%;
@@ -832,4 +882,8 @@ body {
 
 .inactive {
 	display: none;
+}
+
+.successStoriesShadow {
+	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.05);
 }
