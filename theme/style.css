@@ -3560,6 +3560,11 @@ body {
   background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
 
+.hover\:text-primary-dark:hover{
+  --tw-text-opacity: 1;
+  color: rgb(252 252 252 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover{
   text-decoration-line: underline;
 }

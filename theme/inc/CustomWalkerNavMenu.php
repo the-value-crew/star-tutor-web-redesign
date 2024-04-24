@@ -6,7 +6,7 @@
     // }
 
     public function start_el( &$output, $data_object, $depth = 0, $args = null, $current_object_id = 0 ) {
-      $classes = 'py-[4px] px-[8px] hover:underline';
+      $classes = 'py-[4px] px-[8px] hover:text-primary-dark';
   
     $current_path = rtrim($_SERVER['REQUEST_URI'], '/');
 
