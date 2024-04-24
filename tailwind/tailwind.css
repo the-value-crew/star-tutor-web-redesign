@@ -687,12 +687,31 @@ body {
 	backface-visibility: hidden;
 }
 
+@keyframes slideInLeft {
+	0% {
+		transform: translateX(-100%) scale(0.7);
+	}
+	100% {
+		transform: translateX(0) scale(0.7);
+	}
+}
+
+@keyframes slideInRight {
+	0% {
+		transform: translateX(100%) scale(0.7);
+	}
+	100% {
+		transform: translateX(0) scale(0.7);
+	}
+}
+
 .isActiveImageLeft {
 	position: absolute;
 	transition: 0.6s;
 	transform: scale(0.7);
 	border-radius: 20px;
 	overflow: hidden;
+	/* animation: slideInLeft 0.6s forwards; */
 }
 
 .isActiveImageRight {
@@ -701,6 +720,7 @@ body {
 	transform: scale(0.7);
 	border-radius: 20px;
 	overflow: hidden;
+	/* animation: slideInRight 0.6s forwards; */
 }
 
 .isActiveImageLeft::before,
@@ -722,6 +742,7 @@ body {
 	transform: translateX(-50%);
 	transition: 0.6s;
 	height: 100%;
+	/* animation: normal 0.6s forwards; */
 }
 
 @screen sm {

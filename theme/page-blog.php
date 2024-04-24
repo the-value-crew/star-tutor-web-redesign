@@ -8,7 +8,7 @@ get_header();
 
 $about_bg_img = thestartutor_get_static_img( 'about-bg.png' );
 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 2;
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $wp_query = new WP_Query(
 	array(
 		'post_type'      => 'post',
@@ -41,7 +41,7 @@ $recents_wp_query = new WP_Query(
     <section class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
         <div class="flex flex-col lg:flex-row items-start gap-[56px]">
             <div class="w-full lg:max-w-[627px] mt-[90px] flex">
-                <div class="w-full flex flex-col justify-center">
+                <div class="flex flex-col justify-center w-full">
                     <div class="flex gap-5 border-b-[1px] overflow-scroll">
                         <button class="text-button font-button border-b-2 text-[#D93726]">All</button>
 
@@ -59,7 +59,7 @@ $recents_wp_query = new WP_Query(
                             while ($wp_query->have_posts()) {
                                 $wp_query->the_post();
                                 ?>
-                        <!-- <div class="w-full border-2 border-grey-200 rounded-lg">
+                        <!-- <div class="w-full border-2 rounded-lg border-grey-200">
                             <img class="w-full h-[304px] rounded-t-lg object-cover"
                                 src="<?php the_post_thumbnail_url() ?>" />
                             <div class="mt-[16px] px-[20px]">
@@ -173,7 +173,7 @@ $recents_wp_query = new WP_Query(
                                 $recents_wp_query->the_post();
                                 ?>
                         <div>
-                            <p class="text-semibold font-semibold"><a href="<?php the_permalink(); ?>">
+                            <p class="font-semibold text-semibold"><a href="<?php the_permalink(); ?>">
                                     <?php the_title(); ?>
                                 </a></p>
                             <div class="flex items-center gap-[8px] mt-[10px]">

@@ -1,27 +1,82 @@
 const navBtn = document.getElementById('navBtn');
+const navMenu = document.getElementById('navMenu');
 navBtn.addEventListener('click', () => {
-	const navMenu = document.getElementById('navMenu');
-
 	if (navMenu.classList.contains('max-h-0')) {
 		navMenu.classList.remove('max-h-0');
-		navMenu.classList.add('max-h-[600px]');
+		navMenu.classList.add('max-h-[800px]');
+		navMenu.classList.add('flex');
+
+		navMenu.classList.add('flex-col');
+		navMenu.classList.add('gap-5');
 		navMenu.classList.add('py-4');
 		navMenu.classList.add('my-4');
-		navMenu.classList.add('space-y-6');
+		navMenu.classList.add('space-y-10');
 		navMenu.classList.add('transition-all');
 		navMenu.classList.add('duration-300');
 		navMenu.classList.add('text-center');
 	} else {
-		navMenu.classList.remove('max-h-[600px]');
+		navMenu.classList.remove('max-h-[800px]');
 		navMenu.classList.add('max-h-0');
 		navMenu.classList.remove('py-4');
+		navMenu.classList.remove('flex-col');
+		navMenu.classList.remove('gap-5');
+		navMenu.classList.remove('flex');
+
 		navMenu.classList.remove('my-4');
-		navMenu.classList.remove('space-y-6');
+		navMenu.classList.remove('space-y-10');
 		navMenu.classList.remove('transition-all');
 		navMenu.classList.remove('duration-300');
 		navMenu.classList.remove('text-center');
 	}
 });
+
+const mql = window.matchMedia('(min-width: 1024px)');
+
+function checkViewport(e) {
+	if (e.matches) {
+		// 		// If media query matches
+		navMenu.classList.remove('flex-col');
+		navMenu.classList.remove('gap-5');
+		navMenu.classList.remove('flex');
+		navMenu.classList.remove('max-h-[800px]');
+		navMenu.classList.remove('py-4');
+		navMenu.classList.remove('my-4');
+		navMenu.classList.remove('space-y-10');
+		// 		navMenu.classList.remove('transition-all');
+		// 		navMenu.classList.remove('duration-300');
+		// 		navMenu.classList.remove('text-center');
+	} else if (navMenu.classList.contains('max-h-0')) {
+		navMenu.classList.remove('max-h-[800px]');
+		// 		navMenu.classList.remove('max-h-0');
+		// 		// navMenu.classList.add('flex');
+		// 		// navMenu.classList.add('flex-col');
+		// 		// navMenu.classList.add('gap-5');
+		// 		// navMenu.classList.add('py-4');
+		// 		// navMenu.classList.add('my-4');
+		// 		// navMenu.classList.add('space-y-10');
+		// 		// navMenu.classList.add('transition-all');
+		// 		// navMenu.classList.add('duration-300');
+		// 		// navMenu.classList.add('text-center');
+	} else if (navMenu.classList.contains('max-h-[800px]')) {
+		navMenu.classList.remove('max-h-[800px]');
+
+		// 		navMenu.classList.remove('py-4');
+		// 		navMenu.classList.remove('flex-col');
+		// 		navMenu.classList.remove('gap-5');
+		// 		navMenu.classList.remove('flex');
+		// 		navMenu.classList.remove('my-4');
+		// 		navMenu.classList.remove('space-y-10');
+		// 		navMenu.classList.remove('transition-all');
+		// 		navMenu.classList.remove('duration-300');
+		// 		navMenu.classList.remove('text-center');
+	}
+}
+
+// // Call listener function at run time
+checkViewport(mql);
+
+// // Attach listener function on state changes
+mql.addEventListener('change', checkViewport);
 
 let seeMoreLinks = document.querySelectorAll('.see-more');
 
