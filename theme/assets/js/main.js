@@ -26,7 +26,7 @@
 // });
 
 var swiper = new Swiper('.swiper-container', {
-	slidesPerView: 1,
+	slidesPerView: 1.5,
 	loop: true,
 	effect: 'coverflow',
 	grabCursor: true,
