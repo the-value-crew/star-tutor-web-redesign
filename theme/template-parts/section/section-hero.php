@@ -334,7 +334,7 @@ $grey_blur_img = thestartutor_get_static_img("greyBlur.png");
         </div>
         <div>
             <a href="/#contact"
-                class="bg-[#C84A3D] hover:bg-cta-default active:bg-[#eb4d3d] rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button">
+                class="bg-cta-default hover:bg-cta-800 active:bg-cta-400 rounded-[60px] py-[16px] px-[32px] text-primary-dark font-button">
                 Book A Free Consultation
             </a>
         </div>

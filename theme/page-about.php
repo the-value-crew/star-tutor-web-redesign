@@ -37,8 +37,8 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
     </section>
 
 
-    <section class="2xl:container  flex flex-col items-start py-[120px]">
-        <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+    <section class="2xl:container  flex flex-col items-start py-[120px] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+
             <div class="relative">
                 <svg class="hidden xl:block absolute top-[-70px] left-[260px]" xmlns="http://www.w3.org/2000/svg"
                     width="174" height="128" viewBox="0 0 174 128" fill="none">
@@ -113,7 +113,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
                     </defs>
                 </svg>
                 <p class="text-title font-title mb-[28px]">Who is <span class="text-brand">The Star Tutor?</span></p>
-                <div class="flex gap-[40px] border-b-[1px] overflow-scroll">
+                <div class="flex gap-[40px] border-b-[1px] overflow-scroll hideScrollBar">
                     <?php
                           if($aboutme_wp_query->have_posts()) {
                             while($aboutme_wp_query->have_posts()) {
@@ -147,11 +147,10 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
 
                   wp_reset_postdata();
                 ?>
-        </div>
+
     </section>
 
-    <section class="2xl:container flex flex-col items-start py-[120px]">
-        <div class="p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+    <section class="2xl:container flex flex-col items-start py-[120px] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
             <div class="relative">
                 <svg class="hidden xl:block absolute top-[-70px] left-[35px]" xmlns="http://www.w3.org/2000/svg"
                     width="174" height="128" viewBox="0 0 174 128" fill="none">
@@ -226,7 +225,7 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
                 <p class="text-title font-title mb-[28px]"><span class="text-brand">Other Hobbies</span> outside of work
                 </p>
 
-                <div class="flex gap-[40px] border-b-[1px] overflow-scroll">
+                <div class="flex gap-[40px] border-b-[1px] overflow-scroll hideScrollBar">
                     <?php
                       if($myhobby_wp_query->have_posts()) {
                         while($myhobby_wp_query->have_posts()) {
@@ -242,13 +241,12 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
                     ?>
                 </div>
 
-            </div>
-
-            <?php
+                
+                <?php
                   if($myhobby_wp_query->have_posts()) {
-                    while($myhobby_wp_query->have_posts()) {
-                      $myhobby_wp_query->the_post();
-                ?>
+                      while($myhobby_wp_query->have_posts()) {
+                          $myhobby_wp_query->the_post();
+                          ?>
             <div id="myhobby-post-<?php the_ID(); ?>" class="myhobby--tabcontent hidden mt-[60px]">
                 <h2 class="text-heading2 font-heading2"><?php the_title(); ?></h2>
                 <p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
@@ -256,22 +254,23 @@ $myhobby_wp_query = new WP_Query($myhobby_args);
                 </p>
                 <?php
                     if(get_the_post_thumbnail_url()) {
-                  ?>
+                        ?>
                 <div class="mt-[40px]"
-                    style="height: 348px; border-radius: 12px; background-image: url('<?php the_post_thumbnail_url(); ?>'); background-position: center; background-size: cover;">
-                </div>
-                <?php
-                    }
-                  ?>
+                style="height: 348px; border-radius: 12px; background-image: url('<?php the_post_thumbnail_url(); ?>'); background-position: center; background-size: cover;">
             </div>
             <?php
                     }
-                  }
-
-                  wp_reset_postdata();
+                    ?>
+            </div>
+            <?php
+                    }
+                }
+                
+                wp_reset_postdata();
                 ?>
-        </div>
-    </section>
+
+</div>
+</section>
 </main>
 
 <?php

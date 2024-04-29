@@ -1,3 +1,65 @@
+// var swiper = new Swiper('.swiper-container', {
+// 	slidesPerView: 1,
+// 	loop: true,
+// 	effect: 'coverflow',
+// 	grabCursor: true,
+// 	centeredSlides: true,
+// 	spaceBetween: -100,
+// 	direction: 'horizontal',
+// 	coverflowEffect: {
+// 		rotate: 0,
+// 		stretch: 0,
+// 		depth: 800,
+// 		modifier: 1,
+// 		slideShadows: false,
+// 		orientation: 'horizontal',
+// 	},
+
+// 	pagination: {
+// 		el: '.swiper-pagination',
+// 		clickable: true,
+// 	},
+// 	navigation: {
+// 		nextEl: '.swiper-button-next',
+// 		prevEl: '.swiper-button-prev',
+// 	},
+// });
+
+var swiper = new Swiper('.swiper-container', {
+	slidesPerView: 1,
+	loop: true,
+	effect: 'coverflow',
+	grabCursor: true,
+	centeredSlides: true,
+	spaceBetween: 800,
+	speed: 600,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 0,
+		depth: 800,
+		modifier: 1,
+		slideShadows: false,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		1920: {
+			spaceBetween: 1200,
+		},
+	},
+});
+
 const navBtn = document.getElementById('navBtn');
 const navMenu = document.getElementById('navMenu');
 navBtn.addEventListener('click', () => {
@@ -580,3 +642,20 @@ removeSeeMoreLessTogglerOnLessReviewContent();
 //     paginationContainer.innerHTML = result;
 //   });
 // }
+
+// document.addEventListener('DOMContentLoaded', function () {
+// 	// const addswiper = new Swiper('.swiper', {
+// 	// 	// Optional parameters
+// 	// 	direction: 'horizontal',
+// 	// 	loop: true,
+// 	// 	autoplay: {
+// 	// 		delay: 5000,
+// 	// 	},
+// 	// 	// If we need pagination
+// 	// 	pagination: {
+// 	// 		el: '.swiper-pagination',
+// 	// 	},
+// 	// });
+
+// 	let swiper = new
+// });

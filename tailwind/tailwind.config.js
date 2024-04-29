@@ -101,11 +101,10 @@ module.exports = {
 					100: '#f4c9c5',
 					800: '#eb4d3d',
 				},
-
 				cta: {
-					default: '#d93726',
-					800: '#eb4d3d',
-					400: '#C84A3D',
+					800: '#d93726',
+					400: '#eb4d3d',
+					default: '#C84A3D',
 				},
 			},
 			textColor: (theme) => ({

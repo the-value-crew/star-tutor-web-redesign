@@ -42,15 +42,15 @@ $recents_wp_query = new WP_Query(
         <div class="flex flex-col lg:flex-row items-start gap-[56px]">
             <div class="w-full lg:max-w-[627px] mt-[90px] flex">
                 <div class="flex flex-col justify-center w-full">
-                    <div class="flex gap-5 border-b-[1px] overflow-scroll">
+                    <div class="flex gap-[30px] border-b-[1px] overflow-scroll hideScrollBar ">
                         <button class="text-button font-button border-b-2 text-[#D93726]">All</button>
 
-                        <button>GMAT</button>
-                        <button>ACT & SAT</button>
+                        <button class="whitespace-nowrap hover:underline">GMAT</button>
+                        <button class="whitespace-nowrap hover:underline">ACT & SAT</button>
 
-                        <button>GRE</button>
-                        <button>ACT & SAT</button>
-                        <button>ACT & SAT</button>
+                        <button class="whitespace-nowrap hover:underline">GRE</button>
+                        <button class="whitespace-nowrap hover:underline">ACT & SAT</button>
+                        <button class="whitespace-nowrap hover:underline">ACT & SAT</button>
                     </div>
 
                     <div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">

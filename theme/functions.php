@@ -148,12 +148,17 @@ add_action( 'widgets_init', 'thestartutor_widgets_init' );
  * Enqueue scripts and styles.
  */
 function thestartutor_scripts() {
+
+	wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+	wp_enqueue_script('swiper_script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), THESTARTUTOR_VERSION, true);
+
+
 	wp_enqueue_style( 'thestartutor-style', get_stylesheet_uri(), array(), THESTARTUTOR_VERSION );
-	wp_enqueue_script( 'thestartutor-script', get_template_directory_uri() . '/js/script.min.js', array(), THESTARTUTOR_VERSION, true );
+	wp_enqueue_script( 'thestartutor-script', get_template_directory_uri() . '/js/script.min.js', array('swiper_script'), THESTARTUTOR_VERSION, true );
 
   // Custom
   wp_enqueue_style("thestartutor-main", get_template_directory_uri() . "/assets/css/main.css", array(), THESTARTUTOR_VERSION, "all");
-  wp_enqueue_script("thestartutor-main", get_template_directory_uri() . "/assets/js/main.js", array(), THESTARTUTOR_VERSION, true);
+  wp_enqueue_script("thestartutor-main", get_template_directory_uri() . "/assets/js/main.js", array('swiper_script'), THESTARTUTOR_VERSION, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

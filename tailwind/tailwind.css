@@ -40,7 +40,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
+.homePage {
 	background: linear-gradient(
 		to right,
 		rgba(238, 238, 187, 0.2),
@@ -646,12 +646,12 @@ body {
 	margin-bottom: 16px;
 }
 
-.isActive .flipImage {
+.swiper-slide-active .flipImage {
 	transform: rotateY(180deg);
 	transition: 1s;
 }
 
-.isActive:hover .flipImage {
+.swiper-slide-active:hover .flipImage {
 	transform: rotateY(180deg);
 	transition: 1s;
 }
@@ -661,16 +661,16 @@ body {
 	transition: 1s;
 }
 
-:not(.isActive) .flipImage {
+:not(.swiper-slide-active) .flipImage {
 	transform: rotateY(0deg);
 	transition: 1s;
 }
 
-.isActive .flipImage {
+.swiper-slide-active .flipImage {
 	transition-delay: 1.5s;
 }
 
-.isActive .flipImage:hover {
+.swiper-slide-active .flipImage:hover {
 	transition-delay: 0s;
 }
 
@@ -687,21 +687,39 @@ body {
 	backface-visibility: hidden;
 }
 
+/* @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} */
+
 @keyframes slideInLeft {
 	0% {
-		transform: translateX(-100%) scale(0.7);
+		transform: translateX(-100%);
 	}
 	100% {
-		transform: translateX(0) scale(0.7);
+		transform: translateX(0);
 	}
 }
 
 @keyframes slideInRight {
 	0% {
-		transform: translateX(100%) scale(0.7);
+		transform: translateX(100%);
 	}
 	100% {
-		transform: translateX(0) scale(0.7);
+		transform: translateX(0);
 	}
 }
 
@@ -710,17 +728,19 @@ body {
 	transition: 0.6s;
 	transform: scale(0.7);
 	border-radius: 20px;
+
 	overflow: hidden;
-	/* animation: slideInLeft 0.6s forwards; */
+	animation: slideInLeft 0.6s forwards;
 }
 
 .isActiveImageRight {
 	position: absolute;
 	transition: 0.6s;
 	transform: scale(0.7);
+
 	border-radius: 20px;
 	overflow: hidden;
-	/* animation: slideInRight 0.6s forwards; */
+	animation: slideInRight 0.6s forwards;
 }
 
 .isActiveImageLeft::before,
@@ -907,4 +927,93 @@ body {
 
 .successStoriesShadow {
 	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hideScrollBar::-webkit-scrollbar {
+	display: none;
+}
+
+.hideScrollBar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.swiper-container {
+	width: 60%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.swiper-slide {
+	/* text-align: center;
+	font-size: 18px;
+	background: #fff;
+	height: 100%;
+	color: #000;
+	/* 	transform: scale(0.8); */
+	/* Center slide text vertically */
+	/* 	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center; */
+	transition: 0.3s all;
+	/* box-shadow: 0 0 20px #00000036;
+	border-radius: 10px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide:not(.swiper-slide-prev):not(.swiper-slide-active):not(
+		.swiper-slide-next
+	) {
+	opacity: 1;
+}
+
+.swiper-slide-prev::before,
+.swiper-slide-next::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	z-index: 100;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	/* Expand the clickable area to cover half of the Swiper container */
+	width: 30%;
+
+	background: none;
+	color: transparent;
+	z-index: 10; /* Ensure the buttons are above the slides */
+}
+
+.swiper-button-prev {
+	/* Position the previous button on the left half of the Swiper container */
+	left: 0;
+}
+
+.swiper-button-next {
+	/* Position the next button on the right half of the Swiper container */
+	right: 0;
+}
+
+.swiper-slide-active {
+	/* transition: 0.3s all;
+	opacity: 1;
+	background-color: orange; */
 }
