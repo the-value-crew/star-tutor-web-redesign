@@ -1460,6 +1460,10 @@ body{
   z-index: 1000;
 }
 
+.z-\[-100\]{
+  z-index: -100;
+}
+
 .m-auto{
   margin: auto;
 }
@@ -3451,6 +3455,26 @@ html {
 @media (min-width: 640px){
   .md\:top-\[-120px\]{
     top: -120px;
+  }
+
+  .md\:top-\[-100px\]{
+    top: -100px;
+  }
+
+  .md\:top-\[-60px\]{
+    top: -60px;
+  }
+
+  .md\:top-\[-30px\]{
+    top: -30px;
+  }
+
+  .md\:top-\[-40px\]{
+    top: -40px;
+  }
+
+  .md\:top-\[-50px\]{
+    top: -50px;
   }
 
   .md\:mb-\[120px\]{
