@@ -8,7 +8,7 @@ $score_card_img = thestartutor_get_static_img( 'scoreCard.png' );
 <div class="relative">
 	<div class="bg-heroSectionGradient h-[50%] w-screen absolute top-[-90px] md:top-[-120px]"></div>
 
-	<div class="swiper-container overflow-hidden">
+	<div class="swiper-container overflow-hidden hidden md:block scoreCardSectionUp">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<img src="<?php echo get_field( 'scores' ); ?>" />

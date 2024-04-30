@@ -1,16 +1,34 @@
 let swiper = new Swiper('.swiper-container', {
-	slidesPerView: 1.5,
+	slidesPerView: 1.2,
 	loop: true,
 	effect: 'coverflow',
 	centeredSlides: true,
-	spaceBetween: 10,
 	direction: 'horizontal',
+	spaceBetween: 400,
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 0,
 		depth: 800,
 		modifier: 1,
 		slideShadows: false,
+	},
+	autoplay: {
+		delay: 5000,
+		pauseOnMouseEnter: true,
+	},
+	breakpoints: {
+		600: {
+			spaceBetween: 400,
+		},
+		768: {
+			spaceBetween: 500,
+		},
+		992: {
+			spaceBetween: 600,
+		},
+		1200: {
+			spaceBetween: 800,
+		},
 	},
 });
 

@@ -2601,6 +2601,13 @@ body{
 			slideInYRight 0.5s cubic-bezier(0.21, 1, 0.85, 1) 1.3s forwards;
 }
 
+.scoreCardSectionUp {
+  transform: translateY(200px);
+  /* Initial state */
+  animation: moveUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s
+			forwards;
+}
+
 /* .heroSectionRight {
 		animation:
 			slideInXRight 1s cubic-bezier(0.21, 1, 0.85, 1) forwards,
@@ -3474,11 +3481,8 @@ html {
 }
 
 .swiper-slide {
-  width: 30%;
-}
-
-.swiper-slide-active {
-  width: 70%;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
 .swiper-slide img {
@@ -3622,6 +3626,10 @@ html {
 
   .md\:mb-\[120px\]{
     margin-bottom: 120px;
+  }
+
+  .md\:block{
+    display: block;
   }
 
   .md\:grid{

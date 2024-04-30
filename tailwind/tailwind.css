@@ -924,11 +924,8 @@ html {
 }
 
 .swiper-slide {
-	width: 30%;
-}
-
-.swiper-slide-active {
-	width: 70%;
+	overflow: hidden;
+	border-radius: 16px;
 }
 
 .swiper-slide img {
