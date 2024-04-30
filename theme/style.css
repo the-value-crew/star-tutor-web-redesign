@@ -1514,10 +1514,6 @@ body{
   margin-top: 160px;
 }
 
-.mt-\[16px\]{
-  margin-top: 16px;
-}
-
 .mt-\[24px\]{
   margin-top: 24px;
 }
@@ -1667,10 +1663,6 @@ body{
 
 .h-full{
   height: 100%;
-}
-
-.h-\[30px\]{
-  height: 30px;
 }
 
 .max-h-0{
@@ -2013,11 +2005,6 @@ body{
   border-radius: 0.75rem;
 }
 
-.rounded-t-lg{
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 .border{
   border-width: 1px;
 }
@@ -2237,6 +2224,11 @@ body{
   padding-bottom: 0.5rem;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2295,20 +2287,6 @@ body{
 .py-\[80px\]{
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.pb-\[20px\]{
-  padding-bottom: 20px;
 }
 
 .pb-\[32px\]{
@@ -2562,10 +2540,6 @@ body{
 .text-tertiary{
   --tw-text-opacity: 1;
   color: rgb(122 122 122 / var(--tw-text-opacity));
-}
-
-.bg-blend-multiply{
-  background-blend-mode: multiply;
 }
 
 .shadow-lg{
@@ -3582,22 +3556,6 @@ html {
 }
 
 @media (min-width: 1024px){
-  .lg\:top-\[-40px\]{
-    top: -40px;
-  }
-
-  .lg\:top-\[-30px\]{
-    top: -30px;
-  }
-
-  .lg\:top-\[0px\]{
-    top: 0px;
-  }
-
-  .lg\:top-\[0\]{
-    top: 0;
-  }
-
   .lg\:top-0{
     top: 0px;
   }
@@ -3747,10 +3705,6 @@ html {
   .lg\:px-\[56px\]{
     padding-left: 56px;
     padding-right: 56px;
-  }
-
-  .lg\:pt-\[50px\]{
-    padding-top: 50px;
   }
 
   .lg\:pt-\[60px\]{

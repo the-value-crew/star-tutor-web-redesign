@@ -526,7 +526,7 @@ function expandReviewContent(event, context, divId) {
 
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {
 	const reviewContentDivs =
-		divs ?? document.querySelectorAll('[id^=review-content');
+		divs ?? document.querySelectorAll('[id^=review-content]');
 	if (reviewContentDivs) {
 		for (let el of reviewContentDivs) {
 			const contentBody = el.querySelector('.review-content-body');
