@@ -646,19 +646,6 @@ html {
 	margin-bottom: 16px;
 }
 
-.flipCardTransform {
-	transition: transform 0.6s;
-	transform-style: preserve-3d;
-}
-
-.perspective {
-	perspective: 1000px;
-}
-
-.hiddenBackface {
-	backface-visibility: hidden;
-}
-
 /* @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -695,208 +682,6 @@ html {
 	}
 }
 
-.isActiveImageLeft {
-	position: absolute;
-	transition: 0.6s;
-	transform: scale(0.7);
-	border-radius: 20px;
-
-	overflow: hidden;
-	animation: slideInLeft 0.6s forwards;
-}
-
-.isActiveImageRight {
-	position: absolute;
-	transition: 0.6s;
-	transform: scale(0.7);
-
-	border-radius: 20px;
-	overflow: hidden;
-	animation: slideInRight 0.6s forwards;
-}
-
-.isActiveImageLeft::before,
-.isActiveImageRight::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 100;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-.isActive {
-	position: absolute;
-	left: 50%;
-	z-index: 100;
-	transform: translateX(-50%);
-	transition: 0.6s;
-	height: 100%;
-	/* animation: normal 0.6s forwards; */
-}
-
-@screen sm {
-	.isActiveImageLeft {
-		left: -80%;
-	}
-
-	.isActiveImageRight {
-		right: -80%;
-	}
-}
-
-@screen md {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -45%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -45%;
-	}
-}
-
-@media (min-width: 640px) and (max-width: 680px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -75%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -75%;
-	}
-}
-
-@media (min-width: 680px) and (max-width: 710px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -70%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -70%;
-	}
-}
-
-@media (min-width: 710px) and (max-width: 756px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -65%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -65%;
-	}
-}
-
-@media (min-width: 756px) and (max-width: 865px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -58%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -58%;
-	}
-}
-
-@screen lg {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -55%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -55%;
-	}
-}
-
-@media (min-width: 1024px) and (max-width: 1101px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -73%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -73%;
-	}
-}
-
-@media (min-width: 1101px) and (max-width: 1165px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -67%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -67%;
-	}
-}
-
-@media (min-width: 1165px) and (max-width: 1220px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -60%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -60%;
-	}
-}
-
-@screen xl {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -45%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -45%;
-	}
-}
-
-@media (min-width: 1441px) and (max-width: 1520px) {
-	.isActiveImageLeft {
-		position: absolute;
-		left: -55%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-		right: -55%;
-	}
-}
-
-@screen 2xl {
-	.isActiveImageLeft {
-		position: absolute;
-
-		left: -30%;
-	}
-
-	.isActiveImageRight {
-		position: absolute;
-
-		right: -30%;
-	}
-}
-
-.inactive {
-	display: none;
-}
-
 .successStoriesShadow {
 	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.05);
 }
@@ -910,28 +695,12 @@ html {
 	scrollbar-width: none;
 }
 
-.swiper-container {
-	overflow: hidden;
-	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-.swiper-wrapper {
-	width: 0%;
-	display: flex;
-	align-items: center;
+.swiper-slide-active {
+	height: 621px;
 }
 
 .swiper-slide {
-	overflow: hidden;
-	border-radius: 16px;
-}
-
-.swiper-slide img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
+	height: 500px;
 }
 
 .swiper-slide-prev, .swiper-slide-next {
@@ -945,5 +714,6 @@ html {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	z-index: 100;
 	background-color: rgba(0, 0, 0, 0.5);
 }
