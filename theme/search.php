@@ -43,15 +43,15 @@ $post_wp_query = new WP_Query(
 		<div class="flex flex-col lg:flex-row items-start gap-[56px]">
 			<div class="w-full lg:max-w-[627px] mt-[90px] flex">
 				<div class="w-full flex flex-col justify-center">
-					<div class="flex gap-5 border-b-[1px]">
+					<div class="flex py-3 gap-[30px] border-b-[1px] overflow-scroll">
 						<button class="text-button font-button border-b-2 text-[#D93726]">All</button>
 
-						<button>GMAT</button>
-						<button>ACT & SAT</button>
+						<button class="whitespace-nowrap hover:underline">GMAT</button>
+						<button class="whitespace-nowrap hover:underline">ACT & SAT</button>
 
-						<button>GRE</button>
-						<button>ACT & SAT</button>
-						<button>ACT & SAT</button>
+						<button class="whitespace-nowrap hover:underline">GRE</button>
+						<button class="whitespace-nowrap hover:underline">ACT & SAT</button>
+						<button class="whitespace-nowrap hover:underline">ACT & SAT</button>
 					</div>
 
 					<div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">
@@ -60,36 +60,42 @@ $post_wp_query = new WP_Query(
 							while ( $post_wp_query->have_posts() ) {
 								$post_wp_query->the_post();
 								?>
-								<div class="border-2 border-grey-200 rounded-lg lg:max-w-[627px]">
-									<img class="w-full h-[304px] rounded-t-lg object-cover" src="<?php the_post_thumbnail_url(); ?>" />
-									<div class="mt-[16px] px-[20px]">
-										<h2 class="text-heading2 font-heading2"><a href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a></h2>
-										<p>
-											<?php the_excerpt(); ?>
-										</p>
-									</div>
-									<div class="flex flex-col px-[20px] pb-[20px]">
-										<div class="flex items-center gap-[8px] mt-[10px]">
+								<article
+									class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg overflow-hidden bg-surface-primary w-full shadow-md">
+									<figure class="w-full">
+										<img src="<?php the_post_thumbnail_url(); ?>" class="w-full h-[304px] self-stretch" />
+									</figure>
+									<div class="px-[20px] flex flex-col gap-[20px] text-justify">
+										<div class="flex flex-col items-start gap-[12px] self-stretch">
+											<h2
+												class="overflow-hidden text-left capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2">
+												<a href="<?php the_permalink(); ?>"
+													class="hover:underline"><?php wp_trim_words( the_title(), 20 ); ?></a>
+											</h2>
+											<?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
+										</div>
+										<div class="flex gap-[16px]">
 											<span
-												class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">
+												class="bg-surface-secondary rounded-2xl px-[8px] py-[2px] text-captionBig font-captionBig">
 												<?php the_category(); ?>
 											</span>
-											<span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>
+											<span>6 minute read</span>
 										</div>
-										<div class="flex items-center gap-[16px] mt-[16px]">
-											<div class="flex items-center gap-[4px]">
-												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<div class="flex justify-between py-[12px] px-[4px]">
+											<div class="flex items-center gap-[8px]">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"
+													viewBox="0 0 20 21" fill="none">
 													<path
-														d="M17.7077 6.2567V11.7626C17.7077 12.1965 17.6223 12.6261 17.4562 13.0269C17.2902 13.4276 17.0468 13.7919 16.7401 14.0986C16.4333 14.4054 16.0691 14.6487 15.6683 14.8147C15.2675 14.9807 14.8379 15.0662 14.4041 15.0662H12.2018L10.3848 16.8831C10.3353 16.9358 10.2756 16.9778 10.2093 17.0066C10.143 17.0352 10.0716 17.0501 9.99935 17.0501C9.9271 17.0501 9.85568 17.0352 9.78935 17.0066C9.7231 16.9778 9.66335 16.9358 9.61393 16.8831L7.79697 15.0662H5.59459C4.71842 15.0662 3.87815 14.7181 3.25861 14.0986C2.63907 13.4791 2.29102 12.6388 2.29102 11.7626V6.2567C2.29102 5.38053 2.63907 4.54026 3.25861 3.92072C3.87815 3.30117 4.71842 2.95312 5.59459 2.95312H14.4041C15.2803 2.95312 16.1205 3.30117 16.7401 3.92072C17.3596 4.54026 17.7077 5.38053 17.7077 6.2567Z"
-														stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round" />
+														d="M17.7077 7.12389V12.6298C17.7077 13.0637 17.6223 13.4933 17.4562 13.8941C17.2902 14.2948 17.0468 14.6591 16.7401 14.9658C16.4333 15.2726 16.0691 15.5159 15.6683 15.6819C15.2675 15.8479 14.8379 15.9334 14.4041 15.9334H12.2018L10.3848 17.7503C10.3353 17.803 10.2756 17.845 10.2093 17.8738C10.143 17.9024 10.0716 17.9173 9.99935 17.9173C9.9271 17.9173 9.85568 17.9024 9.78935 17.8738C9.7231 17.845 9.66335 17.803 9.61393 17.7503L7.79697 15.9334H5.59459C4.71842 15.9334 3.87815 15.5853 3.25861 14.9658C2.63907 14.3463 2.29102 13.506 2.29102 12.6298V7.12389C2.29102 6.24772 2.63907 5.40745 3.25861 4.7879C3.87815 4.16836 4.71842 3.82031 5.59459 3.82031H14.4041C15.2803 3.82031 16.1205 4.16836 16.7401 4.7879C17.3596 5.40745 17.7077 6.24772 17.7077 7.12389Z"
+														stroke="#2D2D2D" stroke-linecap="round" stroke-linejoin="round" />
 												</svg>
-												<span class="text-captionBig font-captionBig text-secondary">3 Comments</span>
+												<span
+													class="font-normal text-normal text-secondary"><?php echo get_comments_number(); ?>
+													Comments</span>
 											</div>
 										</div>
 									</div>
-								</div>
+								</article>
 								<?php
 							}
 							thestartutor_the_posts_navigation();
@@ -106,7 +112,7 @@ $post_wp_query = new WP_Query(
 					</div>
 				</div>
 			</div>
-			<div class="pt-[90px] lg:px-[56px]">
+			<div class="w-full pt-[90px] lg:px-[56px]">
 				<div class="max-w-full lg:max-w-[348px]">
 					<h3 class="text-heading3 font-heading3">Recents</h3>
 

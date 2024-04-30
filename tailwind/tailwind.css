@@ -686,15 +686,6 @@ html {
 	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.05);
 }
 
-.hideScrollBar::-webkit-scrollbar {
-	display: none;
-}
-
-.hideScrollBar {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
 .swiper-slide-active {
 	height: 621px;
 }
