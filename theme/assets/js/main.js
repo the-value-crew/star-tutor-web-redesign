@@ -32,15 +32,16 @@ let swiper = new Swiper('.swiper-container', {
 	},
 });
 
-document
-	.querySelector('.swiper-wrapper')
-	.addEventListener('click', function (event) {
+const swiperWrapper = document.querySelector('.swiper-wrapper');
+if (swiperWrapper) {
+	swiperWrapper.addEventListener('click', function (event) {
 		if (event.target.classList.contains('swiper-slide-prev')) {
 			swiper.slidePrev();
 		} else if (event.target.classList.contains('swiper-slide-next')) {
 			swiper.slideNext();
 		}
 	});
+}
 
 const navBtn = document.getElementById('navBtn');
 const navMenu = document.getElementById('navMenu');

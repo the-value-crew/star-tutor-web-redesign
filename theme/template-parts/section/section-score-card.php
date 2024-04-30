@@ -6,7 +6,7 @@ $score_card_img = thestartutor_get_static_img( 'scoreCard.png' );
 <!-- Score card -->
 
 <div class="relative">
-	<div class="bg-heroSectionGradient h-[50%] w-screen absolute top-[-90px] md:top-[-60px] z-[-100]"></div>
+	<div class="bg-heroSectionGradient h-[50%] w-screen absolute top-[-90px] md:top-[-120px]"></div>
 
 	<div class="swiper-container py-[50px] w-full overflow-hidden hidden md:block scoreCardSectionUp">
 		<div class="swiper-wrapper width-0 flex items-center">
