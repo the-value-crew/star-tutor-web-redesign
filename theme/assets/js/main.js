@@ -13,7 +13,7 @@ let swiper = new Swiper('.swiper-container', {
 		slideShadows: false,
 	},
 	autoplay: {
-		delay: 5000,
+		delay: 3000,
 		pauseOnMouseEnter: true,
 	},
 	breakpoints: {

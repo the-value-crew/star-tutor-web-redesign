@@ -44,7 +44,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
  * plugins, then adds custom base styles.
  */
 
-/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+/*! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -3293,17 +3293,22 @@ html {
 
 .swiper-slide-active {
   height: 621px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide {
   height: 500px;
 }
 
-.swiper-slide-prev, .swiper-slide-next {
+.swiper-slide-prev,
+.swiper-slide-next {
   position: relative;
 }
 
-.swiper-slide-prev::before, .swiper-slide-next::before {
+.swiper-slide-prev::before,
+.swiper-slide-next::before {
   content: "";
   position: absolute;
   top: 0;

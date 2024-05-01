@@ -5,18 +5,23 @@ $score_card_img = thestartutor_get_static_img( 'scoreCard.png' );
 ?>
 <!-- Score card -->
 
-<div class="relative">
+<div class="relative 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]">
 	<div class="bg-heroSectionGradient h-[50%] w-screen absolute top-[-90px] md:top-[-55px] lg:top-0 z-[-10]"></div>
 
 	<div class="swiper-container py-[50px] w-full overflow-hidden hidden md:block scoreCardSectionUp">
-		<div class="swiper-wrapper width-0 flex items-center">
+		<div class="flex items-center swiper-wrapper width-0">
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
-				<img class="w-full h-full object-fill" src="<?php echo get_field( 'scores' ); ?>" />
+			<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
+
+				<img class="w-full h-full" src="<?php echo get_field( 'scores' ); ?>" />
+</div>
 			</div>
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden rounded-2xl">
+				<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden rounded-2xl">
+
 				<div class="w-full h-full group [perspective:1000px]">
 					<div class="w-full h-full relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-						<img class="w-full h-full absolute inset-0 w-full h-full object-fill" src="<?php echo get_field( 'score_card' ); ?>" />
+						<img class="absolute inset-0 object-fill w-full h-full" src="<?php echo get_field( 'score_card' ); ?>" />
 						<div class="w-full h-full bg-[#1D222B] flex justify-center items-center text-invert absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
 							<div class="flex flex-col gap-[47px] w-[70%] xl:w-[60%]">
 								<div class="flex flex-col">
@@ -41,12 +46,19 @@ $score_card_img = thestartutor_get_static_img( 'scoreCard.png' );
 						</div>
 					</div>
 				</div>
+</div>
 			</div>
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
-				<img class="w-full h-full object-fill" src="<?php echo get_field( 'scores' ); ?>" />
+				<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
+
+				<img class="w-full h-full " src="<?php echo get_field( 'scores' ); ?>" />
+</div>
 			</div>
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
-				<img class="w-full h-full object-fill" src="<?php echo get_field( 'score_card' ); ?>" />
+			<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
+
+				<img class="w-full h-full " src="<?php echo get_field( 'score_card' ); ?>" />
+</div>
 			</div>
 		</div>
 	</div>
