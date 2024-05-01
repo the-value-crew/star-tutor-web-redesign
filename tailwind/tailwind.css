@@ -702,6 +702,16 @@ html {
 	position: relative;
 }
 
+.swiper-slide-prev {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.swiper-slide-next {
+	display: flex;
+	justify-content: flex-start;
+}
+
 .swiper-slide-prev::before,
 .swiper-slide-next::before {
 	content: "";
