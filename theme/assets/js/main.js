@@ -443,6 +443,7 @@ function expandReviewContent(event, context, divId) {
 		}
 	}
 	divEl.parentElement.innerHTML = divEl.outerHTML + newAllReviewsDivHTML;
+	window.scrollTo(0, 0);
 }
 
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {
