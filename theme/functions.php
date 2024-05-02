@@ -59,8 +59,8 @@ if ( ! function_exists( 'thestartutor_setup' ) ) :
 		 */
 		load_theme_textdomain( 'thestartutor', get_template_directory() . '/languages' );
 
-    // Custom logo support
-    add_theme_support( 'custom-logo' );
+		// Custom logo support
+		add_theme_support( 'custom-logo' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -82,11 +82,11 @@ if ( ! function_exists( 'thestartutor_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
-      array(
-        'primary_menu' => __( 'Primary Menu', 'thestartutor' ),
-        'footer_menu' => __( 'Footer Menu', 'thestartutor' ),
-      )
-    );
+			array(
+				'primary_menu' => __( 'Primary Menu', 'thestartutor' ),
+				'footer_menu'  => __( 'Footer Menu', 'thestartutor' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -148,17 +148,15 @@ add_action( 'widgets_init', 'thestartutor_widgets_init' );
  * Enqueue scripts and styles.
  */
 function thestartutor_scripts() {
+	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.css' );
+	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.js' );
 
-	wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-	wp_enqueue_script('swiper_script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), THESTARTUTOR_VERSION, true);
+	wp_enqueue_style( 'thestartutor-style', get_stylesheet_uri(), array(), THESTARTUTOR_VERSION, 'all' );
+	wp_enqueue_script( 'thestartutor-script', get_template_directory_uri() . '/js/script.min.js', array( 'swiper' ), THESTARTUTOR_VERSION, true );
 
-
-	wp_enqueue_style( 'thestartutor-style', get_stylesheet_uri(), array(), THESTARTUTOR_VERSION );
-	wp_enqueue_script( 'thestartutor-script', get_template_directory_uri() . '/js/script.min.js', array('swiper_script'), THESTARTUTOR_VERSION, true );
-
-  // Custom
-  wp_enqueue_style("thestartutor-main", get_template_directory_uri() . "/assets/css/main.css", array(), THESTARTUTOR_VERSION, "all");
-  wp_enqueue_script("thestartutor-main", get_template_directory_uri() . "/assets/js/main.js", array('swiper_script'), THESTARTUTOR_VERSION, true);
+	// Custom
+	wp_enqueue_style( 'thestartutor-main', get_template_directory_uri() . '/assets/css/main.css', array(), THESTARTUTOR_VERSION, 'all' );
+	wp_enqueue_script( 'thestartutor-main', get_template_directory_uri() . '/assets/js/main.js', array( 'swiper' ), THESTARTUTOR_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -229,12 +227,12 @@ require get_template_directory() . '/inc/template-functions.php';
 
 
 // Custom walker nav menu
-if(!function_exists("thestartutor_custom_walker_nav_menu_setup")) {
-  function thestartutor_custom_walker_nav_menu_setup() {
-    require_once("inc/CustomWalkerNavMenu.php");
-  }
+if ( ! function_exists( 'thestartutor_custom_walker_nav_menu_setup' ) ) {
+	function thestartutor_custom_walker_nav_menu_setup() {
+		require_once 'inc/CustomWalkerNavMenu.php';
+	}
 
-  add_action("after_setup_theme", "thestartutor_custom_walker_nav_menu_setup");
+	add_action( 'after_setup_theme', 'thestartutor_custom_walker_nav_menu_setup' );
 }
 
 
@@ -244,38 +242,39 @@ if(!function_exists("thestartutor_custom_walker_nav_menu_setup")) {
  * @param string $img_name Image name.
  * @return string
  */
-function thestartutor_get_static_img($img_name) {
-  return get_template_directory_uri() . "/assets/images/" . $img_name;
+function thestartutor_get_static_img( $img_name ) {
+	return get_template_directory_uri() . '/assets/images/' . $img_name;
 }
 
 
 
-function add_additional_class_on_li($classes, $item, $args) {
-    if(isset($args->add_li_class)) {
-        $classes[] = $args->add_li_class;
-    }
-    return $classes;
+function add_additional_class_on_li( $classes, $item, $args ) {
+	if ( isset( $args->add_li_class ) ) {
+		$classes[] = $args->add_li_class;
+	}
+	return $classes;
 }
-add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
 
 
-function add_custom_class_to_menu_item($classes, $item, $args) {
-    if (is_page($item->title)) {
-        // Add the 'text-brand-invert' class to the current menu item
-        $classes[] = 'text-brand-invert';
-    }
-    return $classes;
+function add_custom_class_to_menu_item( $classes, $item, $args ) {
+	if ( is_page( $item->title ) ) {
+		// Add the 'text-brand-invert' class to the current menu item
+		$classes[] = 'text-brand-invert';
+	}
+	return $classes;
 }
-add_filter('nav_menu_css_class', 'add_custom_class_to_menu_item', 10, 3);
+add_filter( 'nav_menu_css_class', 'add_custom_class_to_menu_item', 10, 3 );
 
 
 
 /**
  * Custom callback function for wp_list_comments.
- * 
  */
-function thestartutor_list_comments($comment, $args, $depth) {
-	if($comment->comment_approved == '0') return;
+function thestartutor_list_comments( $comment, $args, $depth ) {
+	if ( $comment->comment_approved == '0' ) {
+		return;
+	}
 	if ( 'div' === $args['style'] ) {
 			$tag       = 'div';
 			$add_below = 'comment';
@@ -284,61 +283,77 @@ function thestartutor_list_comments($comment, $args, $depth) {
 			$add_below = 'div-comment';
 	}?>
 <<?php echo $tag; ?>
-    <?php comment_class( empty( $args['has_children'] ) ? 'flex flex-col py-[24px] px-[24px] gap-[8px]' : 'parent flex flex-col py-[24px] px-[24px] gap-[8px]' ); ?>
-    id="comment-<?php comment_ID() ?>"><?php 
-	if ( 'div' != $args['style'] ) { ?>
-    <div id="div-comment-<?php comment_ID() ?>" class="comment-body flex flex-col py-[24px] px-[24px] gap-[8px]"><?php
-	} ?>
-        <div class="comment-author vcard flex gap-[7px]">
-            <?php 
-					if ( $args['avatar_size'] != 0 ) { ?>
-            <div style="background-image: url('<?php echo esc_url( get_avatar_url( $comment->comment_author_email ) ); ?>')"
-                class="w-[40px] h-[40px] bg-center bg-cover rounded-full"></div>
-            <?php //echo get_avatar( $comment, $args['avatar_size'] ); 
-					} 
-					// printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
-            <div class="flex flex-col">
-                <span class="font-semibold text-semibold"><?php echo $comment->comment_author; ?></span>
-                <div class="comment-meta commentmetadata text-captionSmall font-captionSmall">
-                    <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>"><?php
-									/* translators: 1: date, 2: time */
-									// printf( 
-									// 		__('%1$s at %2$s'), 
-									// 		get_comment_date(),
-									// 		get_comment_time() 
-									// );
-									printf( 
-											__('%1$s'),
-											date("M d, Y", strtotime(get_comment_date()))
-									); ?>
-                    </a><?php 
-							edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
-                </div>
-            </div>
-        </div>
+	<?php comment_class( empty( $args['has_children'] ) ? 'flex flex-col py-[24px] px-[24px] gap-[8px]' : 'parent flex flex-col py-[24px] px-[24px] gap-[8px]' ); ?>
+	id="comment-<?php comment_ID(); ?>">
+									<?php
+									if ( 'div' != $args['style'] ) {
+										?>
+	<div id="div-comment-<?php comment_ID(); ?>" class="comment-body flex flex-col py-[24px] px-[24px] gap-[8px]">
+											<?php
+									}
+									?>
+		<div class="comment-author vcard flex gap-[7px]">
+			<?php
+			if ( $args['avatar_size'] != 0 ) {
+				?>
+			<div style="background-image: url('<?php echo esc_url( get_avatar_url( $comment->comment_author_email ) ); ?>')"
+				class="w-[40px] h-[40px] bg-center bg-cover rounded-full"></div>
+				<?php
+				// echo get_avatar( $comment, $args['avatar_size'] );
+			}
+					// printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() );
+			?>
+			<div class="flex flex-col">
+				<span class="font-semibold text-semibold"><?php echo $comment->comment_author; ?></span>
+				<div class="comment-meta commentmetadata text-captionSmall font-captionSmall">
+					<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+										<?php
+										/*
+										translators: 1: date, 2: time */
+										// printf(
+										// __('%1$s at %2$s'),
+										// get_comment_date(),
+										// get_comment_time()
+										// );
+										printf(
+											__( '%1$s' ),
+											date( 'M d, Y', strtotime( get_comment_date() ) )
+										);
+										?>
+					</a>
+					<?php
+							edit_comment_link( __( '(Edit)' ), '  ', '' );
+					?>
+				</div>
+			</div>
+		</div>
 
-        <div>
-            <?php comment_text(); ?>
-        </div>
+		<div>
+			<?php comment_text(); ?>
+		</div>
 
-        <div class="reply flex items-center gap-[4px]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
-                stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-            </svg>
-            <?php 
-						comment_reply_link( 
-								array_merge( 
-										$args, 
-										array(
-												'add_below' => $add_below, 
-												'depth'     => $depth, 
-												'max_depth' => $args['max_depth'] 
-										) 
-								) 
-						); ?>
-        </div><?php 
-	if ( 'div' != $args['style'] ) : ?>
-    </div><?php 
+		<div class="reply flex items-center gap-[4px]">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+				stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+			</svg>
+			<?php
+						comment_reply_link(
+							array_merge(
+								$args,
+								array(
+									'add_below' => $add_below,
+									'depth'     => $depth,
+									'max_depth' => $args['max_depth'],
+								)
+							)
+						);
+			?>
+		</div>
+		<?php
+		if ( 'div' != $args['style'] ) :
+			?>
+	</div>
+			<?php
 	endif;
 }
