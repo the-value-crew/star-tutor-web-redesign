@@ -432,14 +432,18 @@ function expandReviewContent(event, context, divId) {
 	const allReviewsDiv = divEl.parentElement.children;
 	let newAllReviewsDivHTML = '';
 	for (let reviewDiv of allReviewsDiv) {
+		const contentBody = reviewDiv.querySelector('.review-content-body');
+		const btn = reviewDiv.querySelector('.review-content-toggler');
 		if (reviewDiv !== divEl) {
-			const contentBody = reviewDiv.querySelector('.review-content-body');
-			const btn = reviewDiv.querySelector('.review-content-toggler');
 			reviewDiv.classList.remove('lg:col-span-2');
 			contentBody.classList.add('line-clamp-3');
 			btn.innerHTML = 'See More...';
 			btn.setAttribute('data-status', 'less');
+			btn.style.display = 'block';
 			newAllReviewsDivHTML += reviewDiv.outerHTML;
+		}
+		if (contentBody.scrollHeight <= contentBody.clientHeight) {
+			btn.style.display = 'none';
 		}
 	}
 	divEl.parentElement.innerHTML = divEl.outerHTML + newAllReviewsDivHTML;
