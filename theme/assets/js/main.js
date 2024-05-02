@@ -360,85 +360,6 @@ if (window.location.pathname === '/') {
 			contactContent.style.transform = 'translateY(10%)';
 		}
 	};
-
-	const scoreCardSection = document.getElementById('scoreCardSection');
-	const scoreCardDup = document.getElementById('scoreCardDup');
-	const scoresCard = document.getElementById('scoresCard');
-	const mainScoreCard = document.getElementById('mainScoreCard');
-	const scoresCard2 = document.getElementById('scoresCard2');
-	const scoresCard3 = document.getElementById('scoresCard3');
-
-	const elements = [
-		scoreCardDup,
-		scoresCard,
-		mainScoreCard,
-		scoresCard2,
-		scoresCard3,
-	];
-
-	let activeIndex = elements.findIndex((image) =>
-		image.classList.contains('isActive')
-	);
-
-	// eslint-disable-next-line no-inner-declarations
-	function updateClasses() {
-		elements.forEach((element, index) => {
-			element.className = ''; // Reset all classes
-
-			if (index === activeIndex) {
-				element.classList.add('isActive');
-			} else if (
-				index ===
-				(activeIndex - 1 + elements.length) % elements.length
-			) {
-				element.classList.add('isActiveImageLeft');
-			} else if (index === (activeIndex + 1) % elements.length) {
-				element.classList.add('isActiveImageRight');
-			} else {
-				element.classList.add('inactive');
-			}
-		});
-	}
-
-	elements.forEach((element, index) => {
-		element.addEventListener('click', () => {
-			if (element.classList.contains('isActiveImageRight')) {
-				activeIndex = (activeIndex + 1) % elements.length;
-			} else if (element.classList.contains('isActiveImageLeft')) {
-				activeIndex =
-					(activeIndex - 1 + elements.length) % elements.length;
-			}
-			updateClasses();
-
-			startAutoplay();
-		});
-	});
-
-	let autoplayId = null;
-
-	// eslint-disable-next-line no-inner-declarations
-	function startAutoplay() {
-		if (autoplayId !== null) {
-			clearInterval(autoplayId);
-		}
-
-		autoplayId = setInterval(() => {
-			activeIndex = (activeIndex + 1) % elements.length;
-			updateClasses();
-		}, 4000);
-	}
-
-	scoreCardSection.addEventListener('mouseover', () => {
-		if (autoplayId !== null) {
-			clearInterval(autoplayId);
-			autoplayId = null;
-		}
-	});
-
-	scoreCardSection.addEventListener('mouseout', startAutoplay);
-
-	updateClasses();
-	startAutoplay();
 }
 
 // Phone card copy to clipboard
@@ -499,11 +420,11 @@ function expandReviewContent(event, context, divId) {
 	divEl.classList.add('lg:col-span-2');
 	const divContentBody = divEl.querySelector('.review-content-body');
 	if (status === 'less') {
-		divContentBody.classList.remove('line-clamp-6');
+		divContentBody.classList.remove('line-clamp-3');
 		event.target.innerHTML = 'See Less...';
 		event.target.setAttribute('data-status', 'more');
 	} else {
-		divContentBody.classList.add('line-clamp-6');
+		divContentBody.classList.add('line-clamp-3');
 		event.target.innerHTML = 'See More...';
 		event.target.setAttribute('data-status', 'less');
 		return;
@@ -515,7 +436,7 @@ function expandReviewContent(event, context, divId) {
 			const contentBody = reviewDiv.querySelector('.review-content-body');
 			const btn = reviewDiv.querySelector('.review-content-toggler');
 			reviewDiv.classList.remove('lg:col-span-2');
-			contentBody.classList.add('line-clamp-6');
+			contentBody.classList.add('line-clamp-3');
 			btn.innerHTML = 'See More...';
 			btn.setAttribute('data-status', 'less');
 			newAllReviewsDivHTML += reviewDiv.outerHTML;
@@ -526,7 +447,7 @@ function expandReviewContent(event, context, divId) {
 
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {
 	const reviewContentDivs =
-		divs ?? document.querySelectorAll('[id^=review-content]');
+		divs ?? document.querySelectorAll('[id^="review-content-*"]');
 	if (reviewContentDivs) {
 		for (let el of reviewContentDivs) {
 			const contentBody = el.querySelector('.review-content-body');
