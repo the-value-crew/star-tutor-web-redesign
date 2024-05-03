@@ -66,7 +66,7 @@ $score_card_img = thestartutor_get_static_img( 'scoreCard.png' );
 
 
 <div class="relative flex items-center justify-center w-screen m-auto md:hidden">
-	<div class="bg-heroSectionGradient h-[25%] absolute top-[-55px] -z-10 w-screen"></div>
+	<div class="bg-heroSectionGradient h-[25%] absolute top-[-80px] -z-10 w-screen"></div>
 	<div class="block md:hidden mb-[80px] relative">
 		<div class="flex gap-[12px] flex-col">
 			<div>

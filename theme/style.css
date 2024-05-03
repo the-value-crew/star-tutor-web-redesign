@@ -1448,6 +1448,22 @@ body{
   top: 74.9px;
 }
 
+.top-\[-60px\]{
+  top: -60px;
+}
+
+.top-\[-40px\]{
+  top: -40px;
+}
+
+.top-\[-30px\]{
+  top: -30px;
+}
+
+.top-\[-80px\]{
+  top: -80px;
+}
+
 .-z-10{
   z-index: -10;
 }

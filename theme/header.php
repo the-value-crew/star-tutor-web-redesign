@@ -25,7 +25,7 @@ $currentUri = $_SERVER['REQUEST_URI'];
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'overflow-x-hidden' ); ?>>
 	<?php wp_body_open(); ?>
 	<header
 		class="w-full sticky top-0 z-[1000] bg-[#121212] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
