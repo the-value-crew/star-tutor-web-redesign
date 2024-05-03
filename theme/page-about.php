@@ -112,7 +112,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 					</defs>
 				</svg>
 				<p class="text-title font-title mb-[28px]">Who is <span class="text-brand">The Star Tutor?</span></p>
-				<div class="flex gap-[40px] border-b-[1px] py-3 overflow-scroll">
+				<div class="flex gap-[40px] border-b-[1px] py-3 overflow-x-auto">
 					<?php
 					if ( $aboutme_wp_query->have_posts() ) {
 						while ( $aboutme_wp_query->have_posts() ) {
@@ -224,7 +224,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 				<p class="text-title font-title mb-[28px]"><span class="text-brand">Other Hobbies</span> outside of work
 				</p>
 
-				<div class="flex gap-[40px] border-b-[1px] py-3 overflow-scroll">
+				<div class="flex gap-[40px] border-b-[1px] py-3 overflow-x-auto">
 					<?php
 					if ( $myhobby_wp_query->have_posts() ) {
 						while ( $myhobby_wp_query->have_posts() ) {

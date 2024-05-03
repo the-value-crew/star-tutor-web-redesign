@@ -42,7 +42,7 @@ $recents_wp_query = new WP_Query(
 		<div class="flex flex-col lg:flex-row items-start gap-[56px]">
 			<div class="w-full lg:max-w-[627px] mt-[90px] flex">
 				<div class="flex flex-col justify-center w-full">
-					<div class="flex py-3 gap-[30px] border-b-[1px] overflow-scroll">
+					<div class="flex py-3 gap-[30px] border-b-[1px] overflow-x-auto">
 						<button class="text-button font-button border-b-2 text-[#D93726]">All</button>
 
 						<button class="whitespace-nowrap hover:underline">GMAT</button>

@@ -100,7 +100,7 @@ $total_reviews = 0;
 			</p>
 
 			<div
-				class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200 py-3 overflow-scroll">
+				class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200 py-3 overflow-x-auto">
 				<?php
 							$thestartutor_reviews        = array();
 							$review_of                   = array();
