@@ -228,7 +228,13 @@ if (window.location.pathname === '/') {
 		const top = window.scrollY;
 		const bottom = top + window.innerHeight;
 
-		if (bottom > introOffset + height / 2) {
+		if (bottom > introOffset) {
+			const progress = Math.max(
+				0,
+				Math.min(1, (bottom - introOffset) / (introOffset / 3))
+			);
+			introSection.style.opacity = progress;
+
 			introLeft.style.transform = 'translateX(0%)';
 
 			introIntroduction.style.transform = 'translateX(0%)';
