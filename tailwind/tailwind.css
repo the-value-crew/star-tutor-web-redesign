@@ -723,3 +723,19 @@ html {
 	z-index: 100;
 	background-color: rgba(0, 0, 0, 0.5);
 }
+
+@keyframes imageZoomIn {
+	from {
+		transform: scale(1.2, 1.2);
+	}
+
+	to {
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes slideInRightText {
+	to {
+		margin-left: 0px;
+	}
+}

@@ -25,16 +25,29 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 ?>
 
 <main>
-	<section
-		style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
+	<section class="relative h-[345px] overflow-hidden">
+		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat; animation: imageZoomIn 0.5s ease-in-out forwards;"></div>
+			<div
+				class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center text-title font-title h-full">
+				<div class="text-primary-dark">
+					<p class="ml-[-102px] text-title font-title" style="animation: slideInRightText 0.5s ease-in-out forwards;">Learn <span class="text-brand-invert">about</span></p>
+					<p class="ml-[-70px] text-title font-title" style="animation: slideInRightText 0.5s ease-in-out forwards;">The Star Tutor</p>
+				</div>
+			</div>
+	</section>
+	<!-- <section class="relative h-[350px] overflow-hidden">
 		<div
-			class="2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
-			<div class="text-primary-dark">
-				<p class="text-title font-title">Learn <span class="text-brand-invert">about</span></p>
-				<p class="text-title font-title">The Star Tutor</p>
+			class="absolute inset-0"
+			style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat; animation: imageZoomIn 0.5s ease-in-out forwards;">
+			<div
+				class="2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center text-title font-title">
+				<div class="text-primary-dark">
+					<p class="text-title font-title">Learn <span class="text-brand-invert">about</span></p>
+					<p class="text-title font-title">The Star Tutor</p>
+				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 
 	<section class="2xl:container  flex flex-col items-start py-[120px] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">

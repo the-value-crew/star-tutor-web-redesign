@@ -1448,6 +1448,10 @@ body{
   top: 74.9px;
 }
 
+.left-\[-10px\]{
+  left: -10px;
+}
+
 .-z-10{
   z-index: -10;
 }
@@ -1554,6 +1558,30 @@ body{
   margin-top: 96px;
 }
 
+.ml-\[-10px\]{
+  margin-left: -10px;
+}
+
+.ml-\[-64px\]{
+  margin-left: -64px;
+}
+
+.ml-\[32px\]{
+  margin-left: 32px;
+}
+
+.ml-\[-102px\]{
+  margin-left: -102px;
+}
+
+.ml-\[70px\]{
+  margin-left: 70px;
+}
+
+.ml-\[-70px\]{
+  margin-left: -70px;
+}
+
 .line-clamp-3{
   overflow: hidden;
   display: -webkit-box;
@@ -1619,6 +1647,10 @@ body{
 
 .h-\[330px\]{
   height: 330px;
+}
+
+.h-\[345px\]{
+  height: 345px;
 }
 
 .h-\[348\.46px\]{
@@ -2571,6 +2603,14 @@ body{
   transition-duration: 150ms;
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300{
   transition-duration: 300ms;
 }
@@ -3327,6 +3367,22 @@ html {
   height: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes imageZoomIn {
+  from {
+    transform: scale(1.2, 1.2);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes slideInRightText {
+  to {
+    margin-left: 0px;
+  }
 }
 
 @media (min-width: 1920px){
