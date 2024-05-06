@@ -173,6 +173,14 @@ if (window.location.pathname === '/') {
 	const reviewsSubTitle = document.getElementById('reviewsSubTitle');
 	const reviewsButton = document.getElementById('reviewsButton');
 
+	// Videos section animation
+	const videosSection = document.getElementById('videosSection');
+	const videosHeading = document.getElementById('videosHeading');
+	const videosContent = document.getElementById('videosContent');
+	const videosTitle = document.getElementById('videosTitle');
+	const videosSubTitle = document.getElementById('videosSubTitle');
+	const videosButton = document.getElementById('videosButton');
+
 	// Value section animation
 	const valueSection = document.getElementById('valueSection');
 	const valueSubHeading = document.getElementById('valueSubHeading');
@@ -211,7 +219,10 @@ if (window.location.pathname === '/') {
 	const contactContent = document.getElementById('contactContent');
 
 	window.onscroll = () => {
-		const { offsetTop: introOffset, offsetHeight: height } = introSection;
+		const { offsetTop: videosOffset, offsetHeight: videosHeight } =
+			videosSection;
+		const { offsetTop: introOffset, offsetHeight: introHeight } =
+			introSection;
 		const { offsetTop: reviewsOffset, offsetHeight: reviewsHeight } =
 			reviewsSection;
 		const { offsetTop: valueOffset, offsetHeight: valueHeight } =
@@ -228,10 +239,32 @@ if (window.location.pathname === '/') {
 		const top = window.scrollY;
 		const bottom = top + window.innerHeight;
 
+		if (bottom > videosOffset) {
+			// Calculate scroll progress through the videos section
+			const progress = Math.max(
+				0,
+				Math.min(1, (bottom - videosOffset) / (videosHeight / 3))
+			);
+			// Set the opacity based on scroll progress
+			videosSection.style.opacity = progress;
+			videosHeading.style.transform = 'translateY(0%)';
+
+			videosTitle.style.transform = 'translateY(0%)';
+			videosSubTitle.style.transform = 'translateY(0%)';
+			videosContent.style.transform = 'translateY(0%)';
+			videosButton.style.transform = 'translateY(0%)';
+		} else {
+			videosHeading.style.transform = 'translateY(100%)';
+			videosTitle.style.transform = 'translateY(100%)';
+			videosSubTitle.style.transform = 'translateY(300%)';
+			videosContent.style.transform = 'translateY(10%)';
+			videosButton.style.transform = 'translateY(100%)';
+		}
+
 		if (bottom > introOffset) {
 			const progress = Math.max(
 				0,
-				Math.min(1, (bottom - introOffset) / (introOffset / 3))
+				Math.min(1, (bottom - introOffset) / (introHeight / 3))
 			);
 			introSection.style.opacity = progress;
 

@@ -18,26 +18,25 @@ get_header();
 ?>
 
 <div class="bg-otherSectionGradient">
-    <?php get_template_part( 'template-parts/section/section', 'hero' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'hero' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'score-card' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'score-card' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'intro' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'videos' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'reviews' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'intro' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'value' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'reviews' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'stats' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'value' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'success-stories' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'stats' ); ?>
 
+	<?php get_template_part( 'template-parts/section/section', 'success-stories' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'videos' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'blog' ); ?>
 
-    <?php get_template_part( 'template-parts/section/section', 'blog' ); ?>
-
-    <?php get_template_part( 'template-parts/section/section', 'contact' ); ?>
+	<?php get_template_part( 'template-parts/section/section', 'contact' ); ?>
 </div>
 
 <?php

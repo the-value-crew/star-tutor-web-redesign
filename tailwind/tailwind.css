@@ -409,6 +409,37 @@ html {
 		transition: 2s;
 	}
 
+	#videosSection {
+		opacity: 0.1;
+	}
+	#videosHeading {
+		transform: translateY(100%);
+		transition: 2s;
+	}
+	#videosTitle {
+		transform: translateY(100%);
+		transition: 2s;
+	}
+	#videosSubTitle {
+		transform: translateY(300%);
+		transition: 2s;
+	}
+	#videosContent {
+		transform: translateY(10%);
+		transition: 2s;
+	}
+
+	#videosContent iframe {
+		height: 100%;
+		width: 100%;
+	}
+
+	#videosButton {
+		transform: translateY(100%);
+		transition: 2s;
+	}
+
+
 	#valueSection {
 		opacity: 0.1;
 	}
@@ -691,6 +722,14 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.swiper-slide img {
+	height: 100%;
+}
+
+.swiper-slide-active img {
+	height: auto;
 }
 
 .swiper-slide {
