@@ -6,7 +6,7 @@
 
 get_header();
 
-$about_bg_img = thestartutor_get_static_img( 'about-bg.png' );
+$blog_bg_img = get_the_post_thumbnail_url();
 
 $paged    = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $wp_query = new WP_Query(
@@ -27,15 +27,15 @@ $recents_wp_query = new WP_Query(
 ?>
 
 <main>
-	<section class="flex flex-col justify-center h-[350px] text-title font-title"
-		style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>'), lightgray 50% / cover no-repeat; background-position: center; background-size: cover;">
-		<div
-			class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
-			<div class="text-primary-dark">
-				<p class="text-title font-title">Access Resources in The</p>
-				<p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
+	<section class="relative h-[345px] overflow-hidden">
+		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $blog_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+			<div
+				class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+				<div class="text-primary-dark">
+					<p class="text-title font-title">Access Resources in The</p>
+					<p class="text-title font-title">Star Tutor's <span class="text-brand-invert">Blog</span></p>
+				</div>
 			</div>
-		</div>
 	</section>
 
 	<section class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
