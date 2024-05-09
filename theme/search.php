@@ -19,6 +19,7 @@ $recents_wp_query = new WP_Query(
 $paged         = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $post_wp_query = new WP_Query(
 	array(
+		's'              => get_search_query(),
 		'post_type'      => 'post',
 		'posts_per_page' => 5,
 		'paged'          => $paged,
