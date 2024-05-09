@@ -8,14 +8,14 @@ get_header();
 
 $category_bg_img = thestartutor_get_static_img( 'books-flipped.png' );
 
-$current_page_cat = get_the_category() ? get_the_category()[0] : null;
+$current_page_cat = get_queried_object();
 
 $paged    = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $wp_query = new WP_Query(
 	array(
 		'post_type'      => 'post',
 		'posts_per_page' => 5,
-		'category_name'  => $current_page_cat->slug ?? null,
+		'category_name'  => $current_page_cat->slug,
 		'paged'          => $paged,
 	)
 );
@@ -31,7 +31,7 @@ $recents_wp_query = new WP_Query(
 
 <main>
 	<?php
-	if ( is_category( $current_page_cat->slug ?? null ) ) {
+	if ( is_category( $current_page_cat->name ) ) {
 		?>
 		<section class="relative h-[345px] overflow-hidden">
 			<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $category_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
