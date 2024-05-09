@@ -1,21 +1,21 @@
 <?php
 
 /*
- * Template Name: Category Page
+ * Template Name: Tag Page
  */
 
 get_header();
 
-$category_bg_img = thestartutor_get_static_img( 'books-flipped.png' );
+$tag_bg_img = thestartutor_get_static_img( 'books-flipped.png' );
 
-$current_page_cat = get_the_category() ? get_the_category()[0] : null;
+$current_page_tag = get_the_tags() ? get_the_tags()[0] : null;
 
 $paged    = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $wp_query = new WP_Query(
 	array(
 		'post_type'      => 'post',
 		'posts_per_page' => 5,
-		'category_name'  => $current_page_cat->slug ?? null,
+		'tag'            => $current_page_tag->slug ?? null,
 		'paged'          => $paged,
 	)
 );
@@ -31,15 +31,15 @@ $recents_wp_query = new WP_Query(
 
 <main>
 	<?php
-	if ( is_category( $current_page_cat->slug ?? null ) ) {
+	if ( is_tag( $current_page_tag->slug ?? null ) ) {
 		?>
 		<section class="relative h-[345px] overflow-hidden">
-			<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $category_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+			<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $tag_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
 			<div
 				class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 				<div class="text-primary-dark">
-					<p class="text-title font-title">Category:
-						<?php echo get_the_category()[0]->name; ?>
+					<p class="text-title font-title">Tag:
+						<?php echo get_the_tags()[0]->name; ?>
 					</p>
 				</div>
 			</div>
@@ -166,7 +166,7 @@ $recents_wp_query = new WP_Query(
 			<div
 				class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 				<div class="text-primary-dark">
-					<p class="text-title font-title">No such category found!</p>
+					<p class="text-title font-title">No such tag found!</p>
 				</div>
 			</div>
 		</section>

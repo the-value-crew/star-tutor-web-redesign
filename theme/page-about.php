@@ -27,10 +27,10 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 <main>
 	<section class="relative h-[345px] overflow-hidden">
 		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat; animation: imageZoomIn 0.5s ease-in-out forwards;"></div>
-			<div
-				class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center text-title font-title h-full">
-				<?php echo get_field( 'about_header_text' ); ?>
-			</div>
+		<div
+			class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center text-title font-title h-full">
+			<?php echo get_field( 'about_header_text' ); ?>
+		</div>
 	</section>
 
 	<section class="2xl:container  flex flex-col items-start py-[120px] p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">

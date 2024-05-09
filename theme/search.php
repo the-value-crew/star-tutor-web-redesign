@@ -44,14 +44,12 @@ $post_wp_query = new WP_Query(
 			<div class="w-full lg:max-w-[627px] mt-[90px] flex">
 				<div class="w-full flex flex-col justify-center">
 					<div class="flex py-3 gap-[30px] border-b-[1px] overflow-x-auto">
-						<button class="text-button font-button border-b-2 text-[#D93726] text-semibold font-semibold border-b-2 border-brand-default">All</button>
-
-						<button class="whitespace-nowrap hover:underline">GMAT</button>
-						<button class="whitespace-nowrap hover:underline">ACT & SAT</button>
-
-						<button class="whitespace-nowrap hover:underline">GRE</button>
-						<button class="whitespace-nowrap hover:underline">ACT & SAT</button>
-						<button class="whitespace-nowrap hover:underline">ACT & SAT</button>
+						<a href="/tag/all" class="text-button font-button border-b-2 text-[#D93726] text-semibold font-semibold border-b-2 border-brand-default">All</a>
+						<a href="/tag/gmat" class="whitespace-nowrap hover:underline">GMAT</a>
+						<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>
+						<a href="/tag/gre" class="whitespace-nowrap hover:underline">GRE</a>
+						<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>
+						<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>
 					</div>
 
 					<div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">
@@ -154,9 +152,9 @@ $post_wp_query = new WP_Query(
 						?>
 					</div>
 					<section class="w-full mt-[48px]">
-						<button
+						<a href="https://facebook.com/thestartutor"
 							class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect
-							on Facebook</button>
+							on Facebook</a>
 					</section>
 				</div>
 			</div>
