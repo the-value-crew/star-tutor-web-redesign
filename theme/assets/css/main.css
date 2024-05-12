@@ -22,3 +22,7 @@
 .tst-single img {
 	margin: 24px 0px;
 }
+
+.aboutme--tabcontent p, .myhobby--tabcontent p {
+	padding-bottom: 24px;
+}

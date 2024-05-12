@@ -17,7 +17,8 @@ get_header();
 
 ?>
 
-<div class="bg-otherSectionGradient">
+
+<main class="bg-otherSectionGradient pb-[120px]">
 	<?php get_template_part( 'template-parts/section/section', 'hero' ); ?>
 
 	<?php get_template_part( 'template-parts/section/section', 'score-card' ); ?>
@@ -37,7 +38,7 @@ get_header();
 	<?php get_template_part( 'template-parts/section/section', 'blog' ); ?>
 
 	<?php get_template_part( 'template-parts/section/section', 'contact' ); ?>
-</div>
+</main>
 
 <?php
 

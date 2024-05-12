@@ -64,7 +64,7 @@ $currentUri = $_SERVER['REQUEST_URI'];
 				?>
 
 				<a href="/#contact"
-				class="bg-cta-400 hover:bg-cta-default active:bg-cta-800 font-button shrink-0 py-[10px] px-[20px] rounded-[60px] text-primary-dark font-button">
+				class="bg-cta-default hover:bg-cta-400 active:bg-cta-800 font-button shrink-0 py-[10px] px-[20px] rounded-[60px] text-primary-dark font-button">
 				Book A Free Consultation
 			</a>
 

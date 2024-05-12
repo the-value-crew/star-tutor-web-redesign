@@ -18,7 +18,7 @@ $similar_wp_query = new WP_Query(
 
 ?>
 
-<main class="flex flex-col items-center">
+<main class="flex flex-col items-center pb-[120px]">
 	<?php
 	while ( have_posts() ) {
 		the_post();

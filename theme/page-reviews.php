@@ -24,7 +24,7 @@ $total_reviews = 0;
 
 ?>
 
-<main>
+<main class="pb-[120px]">
 	<div
 		class="2xl:container mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
 		<div class="relative">
@@ -100,7 +100,7 @@ $total_reviews = 0;
 			</p>
 
 			<div
-				class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200 py-3 overflow-x-auto">
+				class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200 overflow-x-auto">
 				<?php
 							$thestartutor_reviews        = array();
 							$review_of                   = array();

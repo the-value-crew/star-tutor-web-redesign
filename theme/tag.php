@@ -49,7 +49,7 @@ $recents_wp_query = new WP_Query(
 			<div class="flex flex-col lg:flex-row items-start gap-[56px]">
 				<div class="w-full lg:max-w-[627px] mt-[90px] flex">
 					<div class="w-full flex flex-col justify-center">
-						<div class="flex py-3 gap-[30px] border-b-[1px] overflow-x-auto">
+						<div class="flex gap-[30px] border-b-[1px] overflow-x-auto">
 							<a href="/tag/all" class="text-button font-button border-b-2 text-[#D93726] text-semibold font-semibold border-b-2 border-brand-default">All</a>
 							<a href="/tag/gmat" class="whitespace-nowrap hover:underline">GMAT</a>
 							<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>

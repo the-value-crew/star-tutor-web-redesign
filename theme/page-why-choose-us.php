@@ -18,9 +18,9 @@ $wp_query = new WP_Query(
 
 ?>
 
-<main>
+<main class="pb-[120px]">
 	<section class="relative h-[345px] overflow-hidden">
-		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $why_choose_us_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); background-image: url('<?php echo $why_choose_us_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
 		<div
 			class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 			<?php echo get_field( 'why_choose_us_header_text' ); ?>
@@ -42,15 +42,15 @@ $wp_query = new WP_Query(
 					<?php
 					if ( has_post_thumbnail() ) {
 
-						the_post_thumbnail( 'thumbnail', array( 'class' => 'h-[459px] w-[348px]' ) );
+						the_post_thumbnail( 'large', array( 'class' => 'rounded-xl h-[459px] w-[348px]' ) );
 					}
 					?>
 					-->
 
 					<?php
 					if ( has_post_thumbnail() ) {
-						$thumbnail_url = get_the_post_thumbnail_url( null, 'thumbnail' );
-						echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover"></div>';
+						$thumbnail_url = get_the_post_thumbnail_url( null, 'large' );
+						echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover rounded-xl"></div>';
 					}
 					?>
 
@@ -366,16 +366,13 @@ $wp_query = new WP_Query(
 						<?php if ( strlen( get_field( 'reason_content' ) ) > 470 ) : ?>
 					<a href="#" class="font-semibold see-more">See more...</a>
 					<?php endif; ?>
-
-
-
 				</p>
 
 			</div>
 						<?php
 						if ( has_post_thumbnail() ) {
-							$thumbnail_url = get_the_post_thumbnail_url( null, 'thumbnail' );
-							echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover"></div>';
+							$thumbnail_url = get_the_post_thumbnail_url( null, 'large' );
+							echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover rounded-xl"></div>';
 						}
 						?>
 

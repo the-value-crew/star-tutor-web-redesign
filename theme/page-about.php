@@ -26,7 +26,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 
 <main>
 	<section class="relative h-[345px] overflow-hidden">
-		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $about_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat; animation: imageZoomIn 0.5s ease-in-out forwards;"></div>
+		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); background-image: url('<?php echo $about_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat; animation: imageZoomIn 0.5s ease-in-out forwards;"></div>
 		<div
 			class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center text-title font-title h-full">
 			<?php echo get_field( 'about_header_text' ); ?>
@@ -108,7 +108,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 					</defs>
 				</svg>
 				<p class="text-title font-title mb-[28px]">Who is <span class="text-brand">The Star Tutor?</span></p>
-				<div class="flex gap-[40px] border-b-[1px] py-3 overflow-x-auto">
+				<div class="flex gap-[40px] border-b-[1px] overflow-x-auto">
 					<?php
 					if ( $aboutme_wp_query->have_posts() ) {
 						while ( $aboutme_wp_query->have_posts() ) {
@@ -220,7 +220,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 				<p class="text-title font-title mb-[28px]"><span class="text-brand">Other Hobbies</span> outside of work
 				</p>
 
-				<div class="flex gap-[40px] border-b-[1px] py-3 overflow-x-auto">
+				<div class="flex gap-[40px] border-b-[1px] overflow-x-auto">
 					<?php
 					if ( $myhobby_wp_query->have_posts() ) {
 						while ( $myhobby_wp_query->have_posts() ) {
