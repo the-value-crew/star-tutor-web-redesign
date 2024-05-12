@@ -115,7 +115,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 								$aboutme_wp_query->the_post();
 							?>
 					<button
-						class="aboutme--tablinks pb-[8px] pr-[10px] border-brand-default whitespace-nowrap hover:underline"
+						class="aboutme--tablinks pb-[8px] pr-[10px] border-brand-default whitespace-nowrap hover:underline text-primary"
 						onclick="openTabContent(event, 'aboutme', '<?php the_ID(); ?>', 'block')"><?php echo the_field( 'short_title' ); ?></button>
 							<?php
 						}
@@ -131,10 +131,10 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 						$aboutme_wp_query->the_post();
 					?>
 			<div id="aboutme-post-<?php the_ID(); ?>" class="aboutme--tabcontent hidden mt-[60px]">
-				<h2 class="text-heading2 font-heading2"><?php the_title(); ?></h2>
-				<p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
+				<h2 class="text-mobileHeading2 font-mobileHeading2 text-[#2a2a2a]"><?php the_title(); ?></h2>
+				<div class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
 					<?php the_field( 'content' ); ?>
-				</p>
+				</div>
 			</div>
 					<?php
 				}
@@ -226,7 +226,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 						while ( $myhobby_wp_query->have_posts() ) {
 							$myhobby_wp_query->the_post();
 							?>
-					<button class="myhobby--tablinks pb-[8px] pr-[10px] whitespace-nowrap hover:underline"
+					<button class="myhobby--tablinks pb-[8px] pr-[10px] whitespace-nowrap hover:underline text-primary"
 						onclick="openTabContent(event, 'myhobby', '<?php the_ID(); ?>', 'block')"><?php the_title(); ?></button>
 							<?php
 						}
@@ -243,10 +243,10 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 						$myhobby_wp_query->the_post();
 						?>
 			<div id="myhobby-post-<?php the_ID(); ?>" class="myhobby--tabcontent hidden mt-[60px]">
-				<h2 class="text-heading2 font-heading2"><?php the_title(); ?></h2>
-				<p class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
+				<h2 class="text-mobileHeading2 font-mobileHeading2 text-[#2a2a2a]"><?php the_title(); ?></h2>
+				<div class="lg:max-w-[720px] xl:max-w-none mt-[12px] leading-[25.6px]">
 						<?php the_content(); ?>
-				</p>
+				</div>
 						<?php
 						if ( get_the_post_thumbnail_url() ) {
 							?>
