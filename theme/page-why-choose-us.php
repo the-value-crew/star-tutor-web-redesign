@@ -22,7 +22,7 @@ $wp_query = new WP_Query(
 	<section class="relative h-[345px] overflow-hidden">
 		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); background-image: url('<?php echo $why_choose_us_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
 		<div
-			class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+			class="absolute inset-0 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 			<?php echo get_field( 'why_choose_us_header_text' ); ?>
 		</div>
 	</section>
@@ -36,7 +36,7 @@ $wp_query = new WP_Query(
 				?>
 
 				<?php if ( $post_count % 2 == 0 ) { ?>
-		<div class="flex gap-[111px] flex-col xl:flex-row justify-center items-center">
+		<div class="flex gap-[111px] flex-col xl:flex-row justify-center items-start">
 
 			<!--
 					<?php
@@ -113,12 +113,9 @@ $wp_query = new WP_Query(
 									<?php echo ltrim( substr( get_field( 'reason_review_1' ), 90 ) ); ?>
 								</span>
 								<br />
-								<?php if ( strlen( get_field( 'reason_review_1' ) ) > 90 ) : ?>
-								<a href="#" class="font-semibold see-more">See more...</a>
-								<?php endif; ?>
 							</p>
 							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-								-<?php echo get_field( 'reason_review_1_author' ); ?>
+								<?php echo get_field( 'reason_review_1_author' ); ?>
 								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
 							</p>
 						</div>
@@ -175,13 +172,9 @@ $wp_query = new WP_Query(
 									<?php echo ltrim( substr( get_field( 'reason_review_2' ), 90 ) ); ?>
 								</span>
 								<br />
-								<?php if ( strlen( get_field( 'reason_review_2' ) ) > 90 ) : ?>
-								<a href="#" class="font-semibold see-more">See more...</a>
-								<?php endif; ?>
-
 							</p>
 							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-								-<?php echo get_field( 'reason_review_2_author' ); ?>
+								<?php echo get_field( 'reason_review_2_author' ); ?>
 								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
 							</p>
 						</div>
@@ -212,7 +205,7 @@ $wp_query = new WP_Query(
 		<?php } ?>
 
 					<?php if ( $post_count % 2 == 1 ) { ?>
-		<div class="flex gap-[111px] flex-col-reverse xl:flex-row justify-center items-center">
+		<div class="flex gap-[111px] flex-col-reverse xl:flex-row justify-center items-start">
 
 			<div class="py-[20px] flex max-w-[624px] flex-col gap-[29px]">
 				<h1 class="font-heading1 text-heading1 text-primary">
@@ -269,14 +262,11 @@ $wp_query = new WP_Query(
 									<?php echo ltrim( substr( get_field( 'reason_review_1' ), 100 ) ); ?>
 								</span>
 								<br />
-								<?php if ( strlen( get_field( 'reason_review_1' ) ) > 100 ) : ?>
-								<a href="#" class="font-semibold see-more">See more...</a>
-								<?php endif; ?>
 							</p>
 
 							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
 
-								-<?php echo get_field( 'reason_review_1_author' ); ?>
+								<?php echo get_field( 'reason_review_1_author' ); ?>
 
 								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
 							</p>
@@ -336,12 +326,9 @@ $wp_query = new WP_Query(
 									<?php echo ltrim( substr( get_field( 'reason_review_2' ), 90 ) ); ?>
 								</span>
 								<br />
-								<?php if ( strlen( get_field( 'reason_review_2' ) ) > 90 ) : ?>
-								<a href="#" class="font-semibold see-more">See more...</a>
-								<?php endif; ?>
 							</p>
 							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-								-<?php echo get_field( 'reason_review_2_author' ); ?>
+								<?php echo get_field( 'reason_review_2_author' ); ?>
 								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
 
 							</p>

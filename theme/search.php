@@ -29,7 +29,7 @@ $post_wp_query = new WP_Query(
 
 <main class="pb-[120px]">
 	<section
-		class="flex flex-col text-title font-title mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+		class="flex flex-col text-title font-title mt-[100px] xl:mt-[116.3px] 2xl:mt-[122px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
 		<?php
 		printf(
 			/* translators: 1: search result title. 2: search term. */
@@ -40,9 +40,9 @@ $post_wp_query = new WP_Query(
 		?>
 	</section>
 
-	<section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+	<section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
 		<div class="flex flex-col lg:flex-row items-start gap-[56px]">
-			<div class="w-full lg:max-w-[627px] mt-[90px] flex">
+			<div class="w-full lg:w-[600px] mt-[90px] flex">
 				<div class="w-full flex flex-col justify-center">
 					<div class="flex gap-[30px] border-b-[1px] overflow-x-auto">
 						<a href="/tag/all" class="text-button font-button border-b-2 text-[#D93726] text-semibold font-semibold border-b-2 border-brand-default">All</a>
@@ -113,8 +113,8 @@ $post_wp_query = new WP_Query(
 					</div>
 				</div>
 			</div>
-			<div class="w-full pt-[90px] lg:px-[56px]">
-				<div class="max-w-full lg:max-w-[348px]">
+			<div class="w-full lg:w-[332px] pt-[90px] shrink-0">
+				<div class="w-full">
 					<h3 class="text-heading3 font-heading3">Recents</h3>
 
 					<form class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]"

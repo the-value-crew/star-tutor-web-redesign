@@ -30,14 +30,14 @@ $recents_wp_query = new WP_Query(
 	<section class="relative h-[345px] overflow-hidden">
 		<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); background-image: url('<?php echo $blog_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
 		<div
-			class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+			class="w-full absolute inset-0 p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center text-title font-title h-full 2xl:container">
 			<?php echo get_field( 'blog_header_text' ); ?>
 		</div>
 	</section>
 
 	<section class="2xl:container px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
-		<div class="flex flex-col lg:flex-row items-start gap-[56px]">
-			<div class="w-full lg:max-w-[627px] mt-[90px] flex">
+		<div class="flex flex-col lg:flex-row items-start gap-[112px]">
+			<div class="w-full lg:w-[600px] mt-[90px] flex">
 				<div class="flex flex-col justify-center w-full">
 					<div class="flex gap-[30px] border-b-[1px] overflow-x-auto">
 						<a href="/tag/all" class="text-button font-button border-b-2 text-[#D93726] text-semibold font-semibold border-b-2 border-brand-default">All</a>
@@ -101,11 +101,11 @@ $recents_wp_query = new WP_Query(
 					</div>
 				</div>
 			</div>
-			<div class="w-full pt-[90px] lg:px-[56px]">
-				<div class="max-w-full lg:max-w-[348px]">
-					<h3 class="text-heading3 font-heading3">Recents</h3>
+			<div class="w-full lg:w-[332px] pt-[90px] shrink-0">
+				<div class="w-full">
+					<h3 class="text-primary text-heading3 font-heading3">Recents</h3>
 
-					<form class="flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]"
+					<form class="w-full flex items-center gap-[5px] border-2 border-[#dadada] px-5 py-2 rounded-full mt-[8px]"
 						action="<?php echo get_home_url(); ?>">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 							<path
@@ -125,12 +125,12 @@ $recents_wp_query = new WP_Query(
 								$recents_wp_query->the_post();
 								?>
 						<div>
-							<p class="font-semibold text-semibold"><a href="<?php the_permalink(); ?>">
+							<p class="text-primary font-semibold text-semibold"><a href="<?php the_permalink(); ?>">
 									<?php the_title(); ?>
 								</a></p>
 							<div class="flex items-center gap-[8px] mt-[10px]">
 								<span
-									class="text-captionBig font-captionBig bg-grey-200 text-grey-900 px-[8px] py-[2px] rounded-[16px]">
+									class="text-captionBig font-captionBig bg-grey-200 text-[#0f1825] px-[8px] py-[2px] rounded-[16px]">
 									<?php the_category(); ?>
 								</span>
 								<span class="text-tertiary text-captionBig font-captionBig">8 minute read</span>

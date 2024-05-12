@@ -36,7 +36,7 @@ $recents_wp_query = new WP_Query(
 		<section class="relative h-[345px] overflow-hidden">
 			<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $tag_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
 			<div
-				class="absolute 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
+				class="absolute inset-0 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 				<div class="text-primary-dark">
 					<p class="text-title font-title">Tag:
 						<?php echo $current_page_tag->name; ?>
@@ -45,7 +45,7 @@ $recents_wp_query = new WP_Query(
 			</div>
 		</section>
 
-		<section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px]">
+		<section class="px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
 			<div class="flex flex-col lg:flex-row items-start gap-[56px]">
 				<div class="w-full lg:max-w-[627px] mt-[90px] flex">
 					<div class="w-full flex flex-col justify-center">
