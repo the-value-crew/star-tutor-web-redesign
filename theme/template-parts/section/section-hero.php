@@ -4,8 +4,6 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 
 ?>
 
-
-
 <!-- Hero section -->
 <!-- for 1440 and higher -->
 <div class="xl:h-[600px] xl:flex xl:justify-center items-center gap-[112px] hidden bg-heroSectionGradient">
@@ -250,7 +248,7 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 		</div>
 	</div>
 	<div class="xl:relative xl:w-[348px] xl:h-[420px] hidden xl:block heroSectionRight">
-		<div style="background-image: url(<?php echo get_field( 'hero_image' ); ?>)"
+		<div style="background-image: url(<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'hero_image' ) ), 'large', false ); ?>)"
 			class=" w-[348px] h-[420px] bg-cover bg-[#F1E4B8] rounded-[40px] object-cover heroSectionRightImage"></div>
 
 		<div class="absolute bottom-0 z-10 left-24">
@@ -285,7 +283,7 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 <div class="items-center gap-[60px] lg:pt-[60px] lg:flex lg:flex-col hidden xl:hidden bg-heroSectionGradient">
 	<div class="flex items-center gap-[49px]">
 		<figure>
-			<div style="background-image: url(<?php echo get_field( 'hero_image' ); ?>)"
+			<div style="background-image: url(<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'hero_image' ) ), 'large', false ); ?>)"
 				class="w-[464px] h-[510px] rounded-lg bg-cover"></div>
 
 		</figure>
@@ -344,7 +342,7 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 <!-- for 0-1023 -->
 <div class="items-center gap-[117.55px] flex flex-col lg:hidden bg-heroSectionGradient mb-[55px]">
 	<div class="relative">
-		<div style="background-image: url(<?php echo get_field( 'hero_image' ); ?>)" class="
+		<div style="background-image: url(<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'hero_image' ) ), 'large', false ); ?>)" class="
 			w-[360px] h-[348.46px] md:w-[640px] md:h-[634.75px] rounded-lg bg-cover"></div>
 
 

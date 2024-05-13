@@ -1593,6 +1593,14 @@ body{
   aspect-ratio: 16 / 9;
 }
 
+.aspect-\[4\/3\]{
+  aspect-ratio: 4/3;
+}
+
+.aspect-auto{
+  aspect-ratio: auto;
+}
+
 .h-\[104px\]{
   height: 104px;
 }
@@ -1677,8 +1685,16 @@ body{
   height: 100%;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .max-h-0{
   max-height: 0px;
+}
+
+.max-h-full{
+  max-height: 100%;
 }
 
 .w-\[149px\]{
@@ -1745,6 +1761,10 @@ body{
   width: 100vw;
 }
 
+.w-auto{
+  width: auto;
+}
+
 .max-w-\[624px\]{
   max-width: 624px;
 }
@@ -1755,6 +1775,10 @@ body{
 
 .max-w-none{
   max-width: none;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .flex-initial{
@@ -2507,6 +2531,11 @@ body{
   color: rgb(15 24 37 / var(--tw-text-opacity));
 }
 
+.text-\[\#2a2a2a\]{
+  --tw-text-opacity: 1;
+  color: rgb(42 42 42 / var(--tw-text-opacity));
+}
+
 .text-\[\#344054\]{
   --tw-text-opacity: 1;
   color: rgb(52 64 84 / var(--tw-text-opacity));
@@ -2565,11 +2594,6 @@ body{
 .text-tertiary{
   --tw-text-opacity: 1;
   color: rgb(122 122 122 / var(--tw-text-opacity));
-}
-
-.text-\[\#2a2a2a\]{
-  --tw-text-opacity: 1;
-  color: rgb(42 42 42 / var(--tw-text-opacity));
 }
 
 .shadow-lg{
@@ -3437,6 +3461,37 @@ html {
 #contactButton input[type="submit"]:active{
   --tw-bg-opacity: 1;
   background-color: rgb(235 77 61 / var(--tw-bg-opacity));
+}
+
+/* custom */
+
+.page-numbers {
+  border: 1px solid #bbb;
+  padding: 2px 5px;
+}
+
+.page-numbers.current {
+  color: #bbb;
+}
+
+.tst-single {
+  line-height: 30px;
+}
+
+.tst-single p {
+  padding-bottom: 24px;
+}
+
+.tst-single h2, .tst-single h3, .tst-single h4, .tst-single h5, .tst-single h6 {
+  padding-bottom: 8px;
+}
+
+.tst-single img {
+  margin: 24px 0px;
+}
+
+.aboutme--tabcontent p, .myhobby--tabcontent p {
+  padding-bottom: 24px;
 }
 
 @media (min-width: 1920px){
