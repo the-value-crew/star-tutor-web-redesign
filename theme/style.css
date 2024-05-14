@@ -1593,14 +1593,6 @@ body{
   aspect-ratio: 16 / 9;
 }
 
-.aspect-\[4\/3\]{
-  aspect-ratio: 4/3;
-}
-
-.aspect-auto{
-  aspect-ratio: auto;
-}
-
 .h-\[104px\]{
   height: 104px;
 }
@@ -1685,16 +1677,8 @@ body{
   height: 100%;
 }
 
-.h-auto{
-  height: auto;
-}
-
 .max-h-0{
   max-height: 0px;
-}
-
-.max-h-full{
-  max-height: 100%;
 }
 
 .w-\[149px\]{
@@ -1761,10 +1745,6 @@ body{
   width: 100vw;
 }
 
-.w-auto{
-  width: auto;
-}
-
 .max-w-\[624px\]{
   max-width: 624px;
 }
@@ -1775,10 +1755,6 @@ body{
 
 .max-w-none{
   max-width: none;
-}
-
-.max-w-full{
-  max-width: 100%;
 }
 
 .flex-initial{

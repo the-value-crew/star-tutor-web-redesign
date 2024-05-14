@@ -6,14 +6,14 @@
 		<div class="flex items-center swiper-wrapper width-0">
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
 				<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
-					<img class="w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'scores' ) ), 'large', false ); ?>" />
+					<img class="w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'scores' ) ), 'large', false ); ?>" alt="Scores" />
 				</div>
 			</div>
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden rounded-2xl">
 				<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px] overflow-hidden rounded-2xl">
 					<div class="w-full h-full group [perspective:1000px]">
 						<div class="w-full h-full relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-							<img class="absolute inset-0 object-fill w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'score_card' ) ), 'large', false ); ?>" />
+							<img class="absolute inset-0 object-fill w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'score_card' ) ), 'large', false ); ?>" alt="Score Card" />
 							<div class="w-full h-full bg-[#1D222B] flex justify-center items-center text-invert absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
 								<div class="flex flex-col gap-[47px] w-[70%] xl:w-[60%]">
 									<div class="flex flex-col">
@@ -42,12 +42,12 @@
 			</div>
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
 				<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
-					<img class="w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'scores' ) ), 'large', false ); ?>" />
+					<img class="w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'scores' ) ), 'large', false ); ?>" alt="Scores" />
 				</div>
 			</div>
 			<div class="swiper-slide xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
 				<div class="xl:h-[621px] lg:h-[546px] 2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] md:h-[347px] w-[327px overflow-hidden rounded-2xl">
-					<img class="w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'score_card' ) ), 'large', false ); ?>" />
+					<img class="w-full rounded-2xl" src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'score_card' ) ), 'large', false ); ?>" alt="Score Card" />
 				</div>
 			</div>
 		</div>
@@ -61,12 +61,12 @@
 		<div class="flex gap-[12px] flex-col">
 			<div>
 				<div class="w-[328px] h-[190px]">
-					<img src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'score_card' ) ), 'large', false ); ?>" class="w-full h-full shadow-lg rounded-2xl" />
+					<img src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'score_card' ) ), 'large', false ); ?>" class="w-full h-full shadow-lg rounded-2xl" alt="Score Card" />
 				</div>
 			</div>
 			<div>
 				<div class="w-[328px] h-[190px]">
-					<img src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'scores' ) ), 'large', false ); ?>" class="w-full h-full shadow-lg rounded-2xl" />
+					<img src="<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'scores' ) ), 'large', false ); ?>" class="w-full h-full shadow-lg rounded-2xl"  alt="Scores" />
 				</div>
 			</div>
 		</div>

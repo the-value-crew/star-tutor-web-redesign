@@ -273,9 +273,10 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 			</div>
 		</div>
 
-		<img src="<?php echo $grey_blur_img; ?>"
+		<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
+			alt="Grey Blur Image"
 			class="xl:absolute xl:mt-[14px] xl:ml-[121.25px] xl:bottom-[-28.5px] heroSectionRightGray" />
-		<img src="<?php echo $grey_blur_img; ?>"
+		<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
 			class="xl:w-[348px] xl:h-[140px] xl:absolute xl:z-1000 xl:bottom-0 xl:left-[92px] heroSectionRightGray" />
 	</div>
 </div>
@@ -312,8 +313,8 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 				</div>
 			</div>
 
-			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[42.33px] left-[41.3px]" />
-			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[74.9px] left-[72px]" />
+			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[42.33px] left-[41.3px]" alt="Grey Blur Image" />
+			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[74.9px] left-[72px]" alt="Grey Blur Image" />
 		</figure>
 	</div>
 	<div class="lg:w-[944px] lg:flex lg:gap-[28px] lg:flex-col lg:justify-center lg:items-center text-center">
@@ -371,9 +372,9 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 						</span>
 					</div>
 				</div>
-				<img src="<?php echo $grey_blur_img; ?>"
+				<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
 					class="absolute bottom-[-25px]  transform left-[40px] w-[240px] h-[104px]" />
-				<img src="<?php echo $grey_blur_img; ?>"
+				<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
 					class="absolute bottom-[-30px]  transform left-[30px] w-[240px] h-[104px]" />
 			</figure>
 		</div>

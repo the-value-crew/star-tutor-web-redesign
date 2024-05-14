@@ -344,7 +344,7 @@ $total_reviews = 0;
 						<div
 							class="w-[164px] p-10 flex justify-center items-center rounded-xl border border-solid border-grey-200">
 							<a href="<?php echo get_field( 'review_page_url' ); ?>"><img
-									src="<?php echo get_field( 'reviews_from_image' ); ?>" /></a>
+									src="<?php echo get_field( 'reviews_from_image' ); ?>" alt="<?php echo get_field( 'review_page_url' ); ?>" /></a>
 						</div>
 								<?php
 							}

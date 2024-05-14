@@ -67,7 +67,7 @@ $recents_wp_query = new WP_Query(
 									<article
 										class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg overflow-hidden bg-surface-primary w-full shadow-md">
 										<figure class="w-full">
-											<img src="<?php the_post_thumbnail_url(); ?>" class="w-full h-[304px] self-stretch" />
+											<img src="<?php the_post_thumbnail_url(); ?>" class="w-full h-[304px] self-stretch" alt="<?php echo get_the_title(); ?>" />
 										</figure>
 										<div class="px-[20px] flex flex-col gap-[20px] text-justify">
 											<div class="flex flex-col items-start gap-[12px] self-stretch">
