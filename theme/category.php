@@ -38,7 +38,7 @@ $recents_wp_query = new WP_Query(
 			<div
 				class="absolute inset-0 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 				<div class="text-primary-dark">
-					<p class="text-title font-title">Category: dsada
+					<p class="text-title font-title">Category:
 						<?php echo get_the_category()[0]->name; ?>
 					</p>
 				</div>
