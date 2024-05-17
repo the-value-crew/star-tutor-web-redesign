@@ -115,7 +115,7 @@ $total_reviews = 0;
 								?>
 				<button
 					class="reviews--tablinks text-primary pr-[10px] pb-[8px] font-normal text-normal hover:underline whitespace-nowrap"
-					onclick="openTabContent(event, 'reviews', '<?php echo $key; ?>', 'grid')"><?php echo $val; ?></button>
+					data-context="reviews" data-id="<?php echo $key; ?>" data-display="grid"><?php echo $val; ?></button>
 								<?php
 							}
 							?>

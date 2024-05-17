@@ -455,6 +455,16 @@ function openTabContent(event, context, tabId, containerType) {
 		' text-semibold font-semibold border-b-2 border-brand-default';
 }
 
+const tabLinks = document.querySelectorAll("[class*='tablinks']");
+for (let tabLink of tabLinks) {
+	tabLink.addEventListener('click', (event) => {
+		const context = tabLink.getAttribute('data-context');
+		const tabId = tabLink.getAttribute('data-id');
+		const display = tabLink.getAttribute('data-display');
+		openTabContent(event, context, tabId, display);
+	});
+}
+
 const aboutMeTabLink = document.querySelectorAll('.aboutme--tablinks')[0];
 if (aboutMeTabLink) aboutMeTabLink.click();
 

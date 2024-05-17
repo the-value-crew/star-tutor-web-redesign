@@ -116,7 +116,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 							?>
 					<button
 						class="aboutme--tablinks pb-[8px] pr-[10px] border-brand-default whitespace-nowrap hover:underline text-primary"
-						onclick="openTabContent(event, 'aboutme', '<?php the_ID(); ?>', 'block')"><?php echo the_field( 'short_title' ); ?></button>
+						data-context="aboutme" data-id="<?php the_ID(); ?>" data-display="block"><?php echo the_field( 'short_title' ); ?></button>
 							<?php
 						}
 					}
@@ -227,7 +227,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 							$myhobby_wp_query->the_post();
 							?>
 					<button class="myhobby--tablinks pb-[8px] pr-[10px] whitespace-nowrap hover:underline text-primary"
-						onclick="openTabContent(event, 'myhobby', '<?php the_ID(); ?>', 'block')"><?php the_title(); ?></button>
+						data-context="myhobby" data-id="<?php the_ID(); ?>" data-display="block"><?php the_title(); ?></button>
 							<?php
 						}
 					}
