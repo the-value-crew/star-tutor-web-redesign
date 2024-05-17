@@ -34,11 +34,11 @@ $recents_wp_query = new WP_Query(
 	if ( is_category( $current_page_cat->name ) ) {
 		?>
 		<section class="relative h-[345px] overflow-hidden">
-			<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('<?php echo $category_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+			<div class="absolute inset-0" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 66.62%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); background-image: url('<?php echo $category_bg_img; ?>') lightgray 50% / cover no-repeat; background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
 			<div
 				class="absolute inset-0 2xl:container p-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] flex flex-col justify-center h-[350px] text-title font-title">
 				<div class="text-primary-dark">
-					<p class="text-title font-title">Category:
+					<p class="text-title font-title">Category: dsada
 						<?php echo get_the_category()[0]->name; ?>
 					</p>
 				</div>
