@@ -122,7 +122,7 @@ $wp_query = new WP_Query(
 									class="bg-surface-secondary rounded-2xl px-[8px] py-[2px] text-captionBig font-captionBig">
 									<?php the_category(); ?>
 								</span>
-									<span><?php echo thestartutor_read_time( get_the_content() ); ?> minute read</span>
+								<span><?php thestartutor_post_read_time(); ?></span>
 							</div>
 							<div class="flex justify-between hidden md:block">
 								<div class="flex items-center gap-[8px]">

@@ -115,7 +115,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 								$aboutme_wp_query->the_post();
 							?>
 					<button
-						class="aboutme--tablinks pb-[8px] pr-[10px] border-brand-default whitespace-nowrap hover:underline text-primary"
+						class="aboutme--tablinks pb-[8px] pr-[10px] border-brand-default whitespace-nowrap text-primary hover:text-brand"
 						data-context="aboutme" data-id="<?php the_ID(); ?>" data-display="block"><?php echo the_field( 'short_title' ); ?></button>
 							<?php
 						}
@@ -226,7 +226,7 @@ $myhobby_wp_query = new WP_Query( $myhobby_args );
 						while ( $myhobby_wp_query->have_posts() ) {
 							$myhobby_wp_query->the_post();
 							?>
-					<button class="myhobby--tablinks pb-[8px] pr-[10px] whitespace-nowrap hover:underline text-primary"
+					<button class="myhobby--tablinks pb-[8px] pr-[10px] whitespace-nowrap text-primary hover:text-brand"
 						data-context="myhobby" data-id="<?php the_ID(); ?>" data-display="block"><?php the_title(); ?></button>
 							<?php
 						}

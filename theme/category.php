@@ -51,11 +51,11 @@ $recents_wp_query = new WP_Query(
 					<div class="w-full flex flex-col justify-center">
 						<div class="flex gap-[30px] border-b-[1px] overflow-x-auto">
 							<a href="/tag/all" class="text-button font-button border-b-2 text-[#D93726] text-semibold font-semibold border-b-2 border-brand-default">All</a>
-							<a href="/tag/gmat" class="whitespace-nowrap hover:underline">GMAT</a>
-							<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>
-							<a href="/tag/gre" class="whitespace-nowrap hover:underline">GRE</a>
-							<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>
-							<a href="/tag/act&sat" class="whitespace-nowrap hover:underline">ACT & SAT</a>
+							<a href="/tag/gmat" class="whitespace-nowrap hover:text-brand">GMAT</a>
+							<a href="/tag/act&sat" class="whitespace-nowrap hover:text-brand">ACT & SAT</a>
+							<a href="/tag/gre" class="whitespace-nowrap hover:text-brand">GRE</a>
+							<a href="/tag/act&sat" class="whitespace-nowrap hover:text-brand">ACT & SAT</a>
+							<a href="/tag/act&sat" class="whitespace-nowrap hover:text-brand">ACT & SAT</a>
 						</div>
 
 						<div id="tst-pagination-container" class="flex flex-col my-[16px] gap-[20px]">
@@ -84,7 +84,7 @@ $recents_wp_query = new WP_Query(
 														class="bg-surface-secondary rounded-2xl px-[8px] py-[2px] text-captionBig font-captionBig">
 														<?php the_category(); ?>
 													</span>
-													<span>6 minute read</span>
+													<span><?php thestartutor_post_read_time(); ?></span>
 												</div>
 												<div class="flex justify-between hidden md:block">
 													<div class="flex items-center gap-[8px]">
@@ -154,7 +154,7 @@ $recents_wp_query = new WP_Query(
 						</div>
 						<section class="w-full mt-[48px]">
 							<a href="https://facebook.com/thestartutor"
-								class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Connect
+								class="w-full xl:w-fit border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726] hover:bg-[#d93726] hover:text-white">Connect
 								on Facebook</a>
 						</section>
 					</div>

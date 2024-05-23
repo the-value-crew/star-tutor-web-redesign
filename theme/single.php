@@ -72,7 +72,7 @@ $similar_wp_query = new WP_Query(
 											class="bg-surface-secondary rounded-2xl px-[8px] py-[2px] text-captionBig font-captionBig">
 											<?php the_category(); ?>
 										</span>
-										<span>6 minute read</span>
+										<span><?php thestartutor_post_read_time(); ?></span>
 									</div>
 									<div class="flex justify-between hidden md:block">
 										<div class="flex items-center gap-[8px]">
@@ -102,7 +102,7 @@ $similar_wp_query = new WP_Query(
 
 	<section class="w-full mt-[48px] px-[16px] md:px-[80px] lg:px-[40px] xl:px-[200px] 2xl:px-[418px] 2xl:container">
 		<button
-			class="border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726]">Explore
+			class="border-2 border-secondary-800 rounded-[60px] py-[16px] px-[32px] text-button font-button text-[#d93726] hover:bg-[#d93726] hover:text-white">Explore
 			More Topics</button>
 	</section>
 </main>

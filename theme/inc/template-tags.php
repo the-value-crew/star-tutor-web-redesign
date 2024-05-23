@@ -305,14 +305,19 @@ if ( ! function_exists( 'thestartutor_content_class' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'thestartutor_read_time' ) ) :
+if ( ! function_exists( 'thestartutor_post_read_time' ) ) :
 	/**
 	 * Display read time for posts
-	 *
-	 * @param string $content Post content.
 	 */
-	function thestartutor_read_time( $content ) {
-		$words = explode( '', $content );
-		return ceil( count( $words ) / 200 );
+	function thestartutor_post_read_time() {
+		$content          = get_post_field( 'post_content', get_the_ID() );
+		$word_count       = str_word_count( wp_strip_all_tags( $content ) );
+		$words_per_minute = 200; // Average reading speed.
+		$read_time        = ceil( $word_count / $words_per_minute );
+		if ( $read_time > 1 ) {
+			echo $read_time . ' minutes read';
+		} else {
+			echo $read_time . ' minute read';
+		}
 	}
 endif;

@@ -114,7 +114,7 @@ $total_reviews = 0;
 								$thestartutor_reviews[ $key ] = array();
 								?>
 				<button
-					class="reviews--tablinks text-primary pr-[10px] pb-[8px] font-normal text-normal hover:underline whitespace-nowrap"
+					class="reviews--tablinks text-primary pr-[10px] pb-[8px] font-normal text-normal whitespace-nowrap hover:text-brand"
 					data-context="reviews" data-id="<?php echo $key; ?>" data-display="grid"><?php echo $val; ?></button>
 								<?php
 							}
