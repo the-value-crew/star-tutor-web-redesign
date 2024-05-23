@@ -69,7 +69,7 @@ $post_wp_query = new WP_Query(
 												<h2
 													class="overflow-hidden text-left capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2">
 													<a href="<?php the_permalink(); ?>"
-														class="hover:underline"><?php wp_trim_words( the_title(), 20 ); ?></a>
+														class="hover:underline overflow-hidden line-clamp-2"><?php the_title(); ?></a>
 												</h2>
 												<?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
 											</div>
@@ -81,7 +81,7 @@ $post_wp_query = new WP_Query(
 													</span>
 													<span>6 minute read</span>
 												</div>
-												<div class="flex justify-between">
+												<div class="flex justify-between hidden md:block">
 													<div class="flex items-center gap-[8px]">
 														<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"
 															viewBox="0 0 20 21" fill="none">

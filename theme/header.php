@@ -36,10 +36,10 @@ $currentUri = $_SERVER['REQUEST_URI'];
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 				$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 				if ( has_custom_logo() ) {
-					echo '<a href="/" style="background: url(' . $logo[0] . ') no-repeat center center; display: inline-block; width: 166px; height: 31px;"></a>';
+					echo '<a href="/" aria-label="' . get_bloginfo( 'name' ) . '" style="background: url(' . $logo[0] . ') no-repeat center center; display: inline-block; width: 166px; height: 31px;"></a>';
 				}
 				?>
-				<button id="navBtn" class="lg:hidden">
+				<button id="navBtn" aria-label="Nav Menu" class="lg:hidden">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
 						<path d="M3 12.5H21M3 6.5H21M9 18.5H21" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round"
 							stroke-linejoin="round" />

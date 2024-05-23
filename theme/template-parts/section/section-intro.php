@@ -3,7 +3,7 @@
 		<div class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]">
 			<section id="introSection"
 				class="2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px] flex lg:flex-row flex-col gap-[40px] xl:gap-[108px] 2xl:[gap-112px] lg:gap-[88px] md:items-center">
-				<figure style="background-image: url(<?php echo get_field( 'hero_image' ); ?>)"
+				<figure style="background-image: url(<?php echo wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'hero_image' ) ), 'large', false ); ?>)"
 					class=" bg-[#F1E4B8] xl:w-[348px] xl:h-[426px] lg:h-[338px] lg:w-[343px] w-[149px] h-[138px] flex-shrink-0 bg-cover bg-no-repeat rounded-lg"
 					id="introLeft"></figure>
 

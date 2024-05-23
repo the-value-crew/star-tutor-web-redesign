@@ -304,3 +304,15 @@ if ( ! function_exists( 'thestartutor_content_class' ) ) :
 		echo 'class="' . esc_attr( implode( ' ', $combined_classes ) ) . '"';
 	}
 endif;
+
+if ( ! function_exists( 'thestartutor_read_time' ) ) :
+	/**
+	 * Display read time for posts
+	 *
+	 * @param string $content Post content.
+	 */
+	function thestartutor_read_time( $content ) {
+		$words = explode( '', $content );
+		return ceil( count( $words ) / 200 );
+	}
+endif;

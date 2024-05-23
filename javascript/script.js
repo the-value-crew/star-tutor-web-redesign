@@ -507,7 +507,28 @@ function expandReviewContent(event, context, divId) {
 		}
 	}
 	divEl.parentElement.innerHTML = divEl.outerHTML + newAllReviewsDivHTML;
+	const reviewContentsBtn = document.querySelectorAll(
+		"button[data-context='review-content']"
+	);
+	for (let btn of reviewContentsBtn) {
+		btn.addEventListener('click', (event) => {
+			const context = btn.getAttribute('data-context');
+			const divId = btn.getAttribute('data-id');
+			expandReviewContent(event, context, divId);
+		});
+	}
 	window.scrollTo(0, 0);
+}
+
+const reviewContentsBtn = document.querySelectorAll(
+	"button[data-context='review-content']"
+);
+for (let btn of reviewContentsBtn) {
+	btn.addEventListener('click', (event) => {
+		const context = btn.getAttribute('data-context');
+		const divId = btn.getAttribute('data-id');
+		expandReviewContent(event, context, divId);
+	});
 }
 
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {

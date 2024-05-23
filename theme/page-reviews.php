@@ -195,9 +195,7 @@ $total_reviews = 0;
 							<div class="font-normal line-clamp-3 review-content-body text-normal">
 								<?php echo $val['review']; ?>
 							</div>
-							<button class="font-semibold review-content-toggler text-secondary" data-status="less"
-								onclick="expandReviewContent(event, 'review-content', '<?php echo $key; ?>' + '-' +'<?php echo $key_index; ?>')">See
-								More...</button>
+							<button class="font-semibold review-content-toggler text-secondary" data-status="less" data-context="review-content" data-id="<?php echo $key; ?>-<?php echo $key_index; ?>">See More...</button>
 						</div>
 					</div>
 				</div>
@@ -244,9 +242,7 @@ $total_reviews = 0;
 							<div class="font-normal line-clamp-3 review-content-body text-normal">
 								<?php echo $val['review']; ?>
 							</div>
-							<button class="font-semibold review-content-toggler text-secondary" data-status="less"
-								onclick="expandReviewContent(event, 'review-content', '<?php echo $key; ?>' + '-' +'<?php echo $key_index; ?>')">See
-								More...</button>
+							<button class="font-semibold review-content-toggler text-secondary" data-status="less" data-context="review-content" data-id="<?php echo $key; ?>-<?php echo $key_index; ?>">See More...</button>
 						</div>
 					</div>
 				</div>
@@ -309,9 +305,7 @@ $total_reviews = 0;
 							<div class="font-normal line-clamp-3 review-content-body text-normal">
 								<?php echo $val['review']; ?>
 							</div>
-							<button class="font-semibold review-content-toggler text-secondary" data-status="less"
-								onclick="expandReviewContent(event, 'review-content', '<?php echo $key; ?>' + '-' +'<?php echo $key_index; ?>')">See
-								More...</button>
+							<button class="font-semibold review-content-toggler text-secondary" data-status="less" data-context="review-content" data-id="<?php echo $key; ?>-<?php echo $key_index; ?>">See More...</button>
 						</div>
 					</div>
 				</div>

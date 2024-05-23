@@ -105,15 +105,15 @@ $wp_query = new WP_Query(
 				<article
 					class="pb-[8px] flex flex-col gap-[32px] items-start rounded-lg overflow-hidden bg-surface-primary w-[328px] md:w-[600px] lg:w-[462px] shadow-md 2xl:w-[532px] xl:w-[511px]">
 					<figure class="w-full">
-						<img src="<?php get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="w-full h-[304px] self-stretch" alt="<?php get_the_title(); ?>" />
+						<img src="<?php echo the_post_thumbnail_url( 'large' ); ?>" class="w-full h-[304px] self-stretch" alt="<?php the_title(); ?>" />
 					</figure>
 					<div class="w-full px-[20px] flex flex-col gap-[20px] text-justify">
 						<div class="flex flex-col items-start gap-[12px] self-stretch">
-							<h2
+							<h4
 								class="overflow-hidden text-left capitalize text-primary text-ellipsis font-mobileHeading2 text-mobileHeading2">
 								<a href="<?php the_permalink(); ?>"
-									class="hover:underline"><?php wp_trim_words( the_title(), 20 ); ?></a>
-							</h2>
+									class="hover:underline overflow-hidden line-clamp-2"><?php the_title(); ?></a>
+							</h4>
 							<?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
 						</div>
 						<div class="w-full pb-[12px] flex justify-between items-start">
@@ -122,9 +122,9 @@ $wp_query = new WP_Query(
 									class="bg-surface-secondary rounded-2xl px-[8px] py-[2px] text-captionBig font-captionBig">
 									<?php the_category(); ?>
 								</span>
-								<span>6 minute read</span>
+									<span><?php echo thestartutor_read_time( get_the_content() ); ?> minute read</span>
 							</div>
-							<div class="flex justify-between">
+							<div class="flex justify-between hidden md:block">
 								<div class="flex items-center gap-[8px]">
 									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
 										fill="none">

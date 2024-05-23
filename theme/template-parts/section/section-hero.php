@@ -273,10 +273,10 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 			</div>
 		</div>
 
-		<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
+		<img src="<?php echo $grey_blur_img; ?>" alt=""
 			alt="Grey Blur Image"
 			class="xl:absolute xl:mt-[14px] xl:ml-[121.25px] xl:bottom-[-28.5px] heroSectionRightGray" />
-		<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
+		<img src="<?php echo $grey_blur_img; ?>" alt=""
 			class="xl:w-[348px] xl:h-[140px] xl:absolute xl:z-1000 xl:bottom-0 xl:left-[92px] heroSectionRightGray" />
 	</div>
 </div>
@@ -313,17 +313,17 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 				</div>
 			</div>
 
-			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[42.33px] left-[41.3px]" alt="Grey Blur Image" />
-			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[74.9px] left-[72px]" alt="Grey Blur Image" />
+			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[42.33px] left-[41.3px]" alt="" />
+			<img src="<?php echo $grey_blur_img; ?>" class="absolute top-[74.9px] left-[72px]" alt="" />
 		</figure>
 	</div>
 	<div class="lg:w-[944px] lg:flex lg:gap-[28px] lg:flex-col lg:justify-center lg:items-center text-center">
 		<div class="lg:w-[624px] flex flex-col gap-[20px] items-center justify-center">
 			<div>
-				<h1 class="leading-tight text-primary text-title font-title">
+				<h2 class="leading-tight text-primary text-title font-title">
 					Excel in your tests for
 					<span class="text-brand"> GMAT/GRE. </span>
-				</h1>
+				</h2>
 			</div>
 
 			<p class="font-normal leading-relaxed text-secondary">
@@ -372,9 +372,9 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 						</span>
 					</div>
 				</div>
-				<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
+				<img src="<?php echo $grey_blur_img; ?>" alt=""
 					class="absolute bottom-[-25px]  transform left-[40px] w-[240px] h-[104px]" />
-				<img src="<?php echo $grey_blur_img; ?>" alt="Grey Blur Image"
+				<img src="<?php echo $grey_blur_img; ?>" alt=""
 					class="absolute bottom-[-30px]  transform left-[30px] w-[240px] h-[104px]" />
 			</figure>
 		</div>
@@ -382,11 +382,11 @@ $grey_blur_img = thestartutor_get_static_img( 'greyBlur.png' );
 	<div class="flex flex-col gap-[28px] container">
 		<div class="flex flex-col md:gap-[20px] gap-[12px]">
 			<div>
-				<h1
+				<h2
 					class="leading-tight text-primary md:text-title md:font-title text-mobileHeading2 font-mobileHeading2">
 					Excel in your tests for
 					<span class="text-brand"> GMAT/GRE. </span>
-				</h1>
+				</h2>
 			</div>
 
 			<p class="font-normal leading-relaxed text-secondary">
