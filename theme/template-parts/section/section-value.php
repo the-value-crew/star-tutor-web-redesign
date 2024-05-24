@@ -3,7 +3,7 @@
 $wp_query = new WP_Query(
 	array(
 		'post_type'      => '12reasons',
-		'posts_per_page' => 3,
+		'posts_per_page' => 12,
 	)
 );
 
@@ -95,42 +95,40 @@ $wp_query = new WP_Query(
 
 				</h3>
 			</section>
-			<section id="valueContent" class="grid xl:grid-cols-3 md:grid-cols-1 lg:grid-cols-2 gap-[20px]">
+			<section id="valueContent" class="w-full">
+				<div class="value-swiper-container w-full">
+					<div class="swiper-wrapper w-full">
+						<?php
+						if ( $wp_query->have_posts() ) {
+							while ( $wp_query->have_posts() ) {
+								$wp_query->the_post();
+								?>
 
-				<?php
-				if ( $wp_query->have_posts() ) {
-					while ( $wp_query->have_posts() ) {
-						$wp_query->the_post();
+						<article
+							class="swiper-slide flex-grow overflow-hidden border border-transparent shadow-md rounded-xl bg-grey-100 hover:border-solid hover:border-brand-default">
+							<figure class="flex items-center justify-center overflow-hidden">
+								<div style="background-image: url('<?php echo get_field( 'reason_image' ); ?>');"
+									class="bg-cover xl:h-[180px] 2xl:h-[180px] 2xl:w-[348px] xl:w-[333px] h-[220px] w-[328px] md:h-[350px] md:w-[600px] lg:h-[350px] lg:w-[452px] hover:scale-105 transition-all duration-300">
+								</div>
+							</figure>
+							<div class="flex flex-col pt-[24px] pl-[20px] pb-[32px] pr-[20px] gap-[20px]">
+								<p class="capitalize text-primary font-mobileHeading2 text-mobileHeading2 overflow-hidden line-clamp-2" title="<?php echo get_field( 'reason_title' ); ?>">
+									<?php echo get_field( 'reason_title' ); ?>
+								</p>
+								<p class="h-[78px] overflow-hidden text-ellipsis overflow-hidden line-clamp-3" title="<?php echo get_field( 'reason_content' ); ?>">
+									<?php echo get_field( 'reason_content' ); ?>
+								</p>
+							</div>
+						</article>
+
+								<?php
+							}
+						}
+						wp_reset_postdata();
 						?>
 
-				<article
-					class="flex-grow overflow-hidden border border-transparent shadow-md rounded-xl bg-grey-100 hover:border-solid hover:border-brand-default">
-					<figure class="flex items-center justify-center overflow-hidden">
-						<div style="background-image: url('<?php echo get_field( 'reason_image' ); ?>');"
-							class="bg-cover xl:h-[180px] 2xl:h-[180px] 2xl:w-[348px] xl:w-[333px] h-[220px] w-[328px] md:h-[350px] md:w-[600px] lg:h-[350px] lg:w-[452px] hover:scale-105 transition-all duration-300">
-						</div>
-					</figure>
-					<div class="flex flex-col pt-[24px] pl-[20px] pb-[32px] pr-[20px] gap-[20px]">
-						<p class="capitalize text-primary font-mobileHeading2 text-mobileHeading2">
-							<?php echo get_field( 'reason_title' ); ?>
-
-						</p>
-						<p class="h-[78px] overflow-hidden text-ellipsis">
-							<?php echo get_field( 'reason_content' ); ?>
-
-
-						</p>
 					</div>
-				</article>
-
-						<?php
-					}
-				}
-				wp_reset_postdata();
-				?>
-
-
-
+				</div>
 			</section>
 			<div id="valueButton">
 				<a href="/why-choose-us/"

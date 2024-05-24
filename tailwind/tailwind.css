@@ -717,42 +717,29 @@ html {
 	box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.05);
 }
 
-.swiper-slide-active {
-	height: 621px;
+#scoreCardContainer .swiper-slide-active {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.swiper-slide img {
-	height: 100%;
-}
-
-.swiper-slide-active img {
-	height: auto;
-}
-
-.swiper-slide {
-	height: 500px;
-}
-
-.swiper-slide-prev,
-.swiper-slide-next {
+#scoreCardContainer .swiper-slide-prev,
+#scoreCardContainer .swiper-slide-next {
 	position: relative;
 }
 
-.swiper-slide-prev {
+#scoreCardContainer .swiper-slide-prev {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.swiper-slide-next {
+#scoreCardContainer .swiper-slide-next {
 	display: flex;
 	justify-content: flex-start;
 }
 
-.swiper-slide-prev::before,
-.swiper-slide-next::before {
+#scoreCardContainer .swiper-slide-prev::before,
+#scoreCardContainer .swiper-slide-next::before {
 	content: "";
 	position: absolute;
 	top: 0;

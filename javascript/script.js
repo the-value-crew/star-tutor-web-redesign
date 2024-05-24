@@ -9,7 +9,7 @@
  * https://esbuild.github.io/
  */
 
-let swiper = new Swiper('.swiper-container', {
+let swiper = new Swiper('#scoreCardContainer', {
 	slidesPerView: 1.2,
 	loop: true,
 	effect: 'coverflow',
@@ -41,6 +41,11 @@ let swiper = new Swiper('.swiper-container', {
 			spaceBetween: 800,
 		},
 	},
+});
+
+let valueSwiper = new Swiper('.value-swiper-container', {
+	slidesPerView: 3,
+	spaceBetween: 24,
 });
 
 const swiperWrapper = document.querySelector('.swiper-wrapper');
