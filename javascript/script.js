@@ -489,61 +489,143 @@ if (myHobbyTabLink) myHobbyTabLink.click();
 const reviewsTabLink = document.querySelectorAll('.reviews--tablinks')[0];
 if (reviewsTabLink) reviewsTabLink.click();
 
-function expandReviewContent(event, context, divId) {
-	const status = event.target.getAttribute('data-status');
-	const divEl = document.getElementById(`${context}-${divId}`);
-	divEl.classList.add('lg:col-span-2');
-	const divContentBody = divEl.querySelector('.review-content-body');
-	if (status === 'less') {
-		divContentBody.classList.remove('line-clamp-3');
-		event.target.innerHTML = 'See Less...';
-		event.target.setAttribute('data-status', 'more');
-	} else {
-		divContentBody.classList.add('line-clamp-3');
-		event.target.innerHTML = 'See More...';
-		event.target.setAttribute('data-status', 'less');
-		return;
-	}
-	const allReviewsDiv = divEl.parentElement.children;
-	let newAllReviewsDivHTML = '';
-	for (let reviewDiv of allReviewsDiv) {
-		const contentBody = reviewDiv.querySelector('.review-content-body');
-		const btn = reviewDiv.querySelector('.review-content-toggler');
-		if (reviewDiv !== divEl) {
-			reviewDiv.classList.remove('lg:col-span-2');
-			contentBody.classList.add('line-clamp-3');
-			btn.innerHTML = 'See More...';
-			btn.setAttribute('data-status', 'less');
-			btn.style.display = 'block';
-			newAllReviewsDivHTML += reviewDiv.outerHTML;
-		}
-		if (contentBody.scrollHeight <= contentBody.clientHeight) {
-			btn.style.display = 'none';
-		}
-	}
-	divEl.parentElement.innerHTML = divEl.outerHTML + newAllReviewsDivHTML;
-	const reviewContentsBtn = document.querySelectorAll(
-		"button[data-context='review-content']"
-	);
-	for (let btn of reviewContentsBtn) {
-		btn.addEventListener('click', (event) => {
-			const context = btn.getAttribute('data-context');
-			const divId = btn.getAttribute('data-id');
-			expandReviewContent(event, context, divId);
-		});
-	}
-	window.scrollTo(0, 0);
+function createReviewModalContent(review) {
+	return `<div class="space-y-[8px]">
+		<div class="flex items-center justify-between">
+			<p class="leading-relaxed text-heading3 font-heading3 text-primary">
+				${review['reviewerName']}
+			</p>
+
+			<div class="flex gap-[4px]">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+					fill="none">
+					<path
+						d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
+						fill="#E4C045" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+					fill="none">
+					<path
+						d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
+						fill="#E4C045" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+					fill="none">
+					<path
+						d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
+						fill="#E4C045" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+					fill="none">
+					<path
+						d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
+						fill="#E4C045" />
+				</svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+					fill="none">
+					<path
+						d="M18.3079 8.62241C18.2601 8.80724 18.1654 8.97666 18.0329 9.11407L14.4245 12.1224L15.5329 16.7057C15.5739 16.9216 15.5506 17.1447 15.4662 17.3474C15.3856 17.5223 15.2625 17.6742 15.1079 17.7891C14.949 17.9039 14.7617 17.9731 14.5663 17.9891H14.4663C14.3074 17.9867 14.1509 17.9498 14.0079 17.8807L9.98295 15.3391L6.02461 17.7974C5.83391 17.9029 5.61716 17.9521 5.39961 17.9391C5.20858 17.9152 5.02586 17.8467 4.86626 17.7391C4.71022 17.6226 4.58681 17.4678 4.50798 17.2897C4.42916 17.1117 4.39756 16.9162 4.41622 16.7224L5.54121 12.0641L1.9913 9.11407C1.95167 9.08432 1.91769 9.04766 1.8912 9.00574C1.78464 8.86824 1.71315 8.70691 1.68266 8.53566C1.65218 8.36432 1.66366 8.18826 1.71623 8.02243C1.77322 7.85626 1.86733 7.70523 1.9913 7.58076C2.11266 7.45478 2.26487 7.36282 2.43289 7.3141C2.4769 7.30534 2.52224 7.30534 2.56625 7.3141L7.24124 6.92243L9.01628 2.63908C9.10636 2.4534 9.24445 2.29517 9.4162 2.18076C9.57345 2.07984 9.75461 2.02232 9.9412 2.01408C10.1246 2.002 10.308 2.03639 10.4746 2.11408C10.6427 2.19808 10.7884 2.32093 10.8996 2.47243L10.9579 2.58908L12.7412 6.88075L17.4079 7.3141H17.4913C17.6767 7.3621 17.8481 7.45351 17.9913 7.58076C18.131 7.71351 18.2343 7.87994 18.2913 8.06409C18.3413 8.24621 18.347 8.43766 18.3079 8.62241Z"
+						fill="#E4C045" />
+				</svg>
+			</div>
+		</div>
+		<div
+			class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]">
+			<p>${review['reviewDate']}</p>
+			<p>(Review on ${review['reviewFrom']})</p>
+		</div>
+	</div>
+
+	<div class="flex flex-col justify-start gap-2">
+		<div class="self-stretch space-y-2 font-normal leading-relaxed text-normal text-secondary">
+			<div class="font-normal content-body text-normal max-h-[400px] overflow-y-auto">
+				${review['reviewContent']}
+			</div>
+		</div>
+	</div>`;
 }
 
+function openModal(content) {
+	// check if modal div is present else create one
+	let modalDiv = document.getElementById('modalDiv');
+	if (!modalDiv) {
+		modalDiv = document.createElement('div');
+		modalDiv.setAttribute('id', 'modalDiv');
+		document.body.appendChild(modalDiv);
+	}
+
+	// disable scrolling on body
+	document.body.style.overflow = 'hidden';
+
+	// styles for modal div
+	modalDiv.className =
+		'w-full h-full px-2 fixed top-0 left-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)]';
+
+	// get content div and set max width
+	const contentDiv = document.createElement('div');
+	contentDiv.innerHTML = content;
+	contentDiv.className =
+		'flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]';
+	contentDiv.className += ' max-w-[742px]';
+
+	// set modal content
+	modalDiv.innerHTML = contentDiv.outerHTML;
+
+	window.addEventListener('click', (event) => {
+		if (event.target === modalDiv) {
+			modalDiv.remove();
+			document.body.style.overflow = 'visible';
+		}
+	});
+}
+
+// reviews page modal
 const reviewContentsBtn = document.querySelectorAll(
 	"button[data-context='review-content']"
 );
 for (let btn of reviewContentsBtn) {
-	btn.addEventListener('click', (event) => {
+	btn.addEventListener('click', (_) => {
 		const context = btn.getAttribute('data-context');
-		const divId = btn.getAttribute('data-id');
-		expandReviewContent(event, context, divId);
+		const id = btn.getAttribute('data-id');
+		const contentDiv = document.getElementById(`${context}-${id}`);
+		const review = {};
+		review['reviewContent'] =
+			contentDiv.querySelector('.content-body').textContent;
+		review['reviewFrom'] = contentDiv.querySelector(
+			'.content-review-from'
+		).textContent;
+		review['reviewDate'] = contentDiv.querySelector(
+			'.content-review-date'
+		).textContent;
+		review['reviewerName'] = contentDiv.querySelector(
+			'.content-reviewer-name'
+		).textContent;
+		const content = createReviewModalContent(review);
+		openModal(content);
 	});
+}
+
+const reviewsContent = document.querySelector('#reviewsContent');
+if (reviewsContent) {
+	const articles = reviewsContent.querySelectorAll('article');
+	for (let article of articles) {
+		article.addEventListener('click', () => {
+			const review = {};
+			review['reviewContent'] =
+				article.querySelector('.content-body').textContent;
+			review['reviewFrom'] = article.querySelector(
+				'.content-review-from'
+			).textContent;
+			review['reviewDate'] = article.querySelector(
+				'.content-review-date'
+			).textContent;
+			review['reviewerName'] = article.querySelector(
+				'.content-reviewer-name'
+			).textContent;
+			const content = createReviewModalContent(review);
+			openModal(content);
+		});
+	}
 }
 
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {

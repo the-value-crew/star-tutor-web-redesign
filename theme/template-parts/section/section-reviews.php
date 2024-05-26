@@ -118,38 +118,22 @@ $wp_query = new WP_Query(
 								?>
 							</div>
 							<div class="flex flex-col gap-2">
-								<p class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-									<?php echo wp_trim_words( get_field( 'review' ), 16 ); ?>
-
-									<!-- <span class="visible-content">
-								<?php
-								$content = get_field( 'review' );
-								if ( strlen( $content ) > 60 ) {
-															echo wp_trim_words( get_field( 'review' ), 50 );
-								} else {
-														echo $content;
-								}
-								?>
-	</span>
-	<span class="extra-content" style="display: none;">
-								<?php echo ltrim( substr( get_field( 'review' ), 60 ) ); ?>
-	</span>
-	<br />
-								<?php if ( strlen( get_field( 'review' ) ) > 60 ) : ?>
-	<a href="#" class="font-semibold see-more">See more...</a>
-	<?php endif; ?> -->
-
-								</p>
-								<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-									-<?php the_field( 'reviewer_name' ); ?>
-									<span class="text-captionBig font-captionBig text-secondary">(
-									<?php
-									$choices = get_field_object( 'review_from' )['choices'];
-									$key     = get_field( 'review_from' );
-									echo $choices[ $key ];
-									?>
-					)</span>
-								</p>
+								<div class="self-stretch font-normal content-body overflow-hidden line-clamp-3 leading-relaxed text-normal text-secondary">
+									<?php echo get_field( 'review' ); ?>
+								</div>
+								<div class="leading-relaxed text-heading3 font-heading3 text-primary">
+									<span class="content-reviewer-name"><?php the_field( 'reviewer_name' ); ?></span>
+									<span class="content-review-date hidden"><?php echo DateTime::createFromFormat( 'm/d/Y', get_field( 'date_posted' ) )->format( 'M d, Y' ); ?></span>
+									<div class="inline-block text-captionBig font-captionBig text-secondary">
+										(<span class="content-review-from">
+											<?php
+											$choices = get_field_object( 'review_from' )['choices'];
+											$key     = get_field( 'review_from' );
+											echo $choices[ $key ];
+											?>
+										</span>)
+									</div>
+								</div>
 							</div>
 						</article>
 								<?php

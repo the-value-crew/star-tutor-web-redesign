@@ -1308,6 +1308,14 @@ body{
   visibility: visible;
 }
 
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -1338,6 +1346,10 @@ body{
 
 .bottom-\[-80px\]{
   bottom: -80px;
+}
+
+.left-0{
+  left: 0px;
 }
 
 .left-24{
@@ -1468,6 +1480,11 @@ body{
   margin: auto;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-\[16px\]{
   margin-top: 16px;
   margin-bottom: 16px;
@@ -1574,6 +1591,10 @@ body{
 
 .block{
   display: block;
+}
+
+.inline-block{
+  display: inline-block;
 }
 
 .inline{
@@ -1688,6 +1709,14 @@ body{
   max-height: 0px;
 }
 
+.max-h-\[400px\]{
+  max-height: 400px;
+}
+
+.max-h-\[800px\]{
+  max-height: 800px;
+}
+
 .w-\[149px\]{
   width: 149px;
 }
@@ -1791,6 +1820,10 @@ body{
 
 .resize-none{
   resize: none;
+}
+
+.resize{
+  resize: both;
 }
 
 .grid-cols-1{
@@ -1957,6 +1990,12 @@ body{
   gap: 8px;
 }
 
+.space-y-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1979,6 +2018,10 @@ body{
 
 .overflow-x-auto{
   overflow-x: auto;
+}
+
+.overflow-y-auto{
+  overflow-y: auto;
 }
 
 .overflow-x-hidden{
@@ -2105,6 +2148,10 @@ body{
 .bg-\[\#F1E4B8\]{
   --tw-bg-opacity: 1;
   background-color: rgb(241 228 184 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.5\)\]{
+  background-color: rgba(0,0,0,0.5);
 }
 
 .bg-cta-400{
@@ -2569,6 +2616,12 @@ body{
   color: rgb(122 122 122 / var(--tw-text-opacity));
 }
 
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2590,6 +2643,28 @@ body{
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.blur{
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.invert{
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-all{
@@ -3642,10 +3717,6 @@ html {
 
   .md\:w-\[640px\]{
     width: 640px;
-  }
-
-  .md\:grid-cols-1{
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:grid-cols-2{

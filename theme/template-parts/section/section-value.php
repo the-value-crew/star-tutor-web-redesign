@@ -14,7 +14,7 @@ $wp_query = new WP_Query(
 		<section
 			class="flex flex-col md:gap-[60px] gap-[40px] md:items-center 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]"
 			id="valueSection">
-			<section class="flex-col gap-4">
+			<section class="flex-col gap-4 overflow-hidden">
 				<section class="relative flex flex-col gap-2 md:items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" width="174" height="135" viewBox="0 0 174 135" fill="none"
 						class="absolute left-[-90px] top-[-75px] hidden xl:block">

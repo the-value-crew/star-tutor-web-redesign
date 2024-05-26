@@ -162,8 +162,8 @@ $total_reviews = 0;
 					class="lg:col-span-2 flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]">
 					<div class="space-y-[8px]">
 						<div class="flex items-center justify-between">
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-						<?php echo $val['reviewer_name']; ?>
+							<p class="leading-relaxed content-reviewer-name text-heading3 font-heading3 text-primary">
+								<?php echo $val['reviewer_name']; ?>
 							</p>
 
 							<div class="flex gap-[4px]">
@@ -183,16 +183,14 @@ $total_reviews = 0;
 						</div>
 						<div
 							class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]">
-
-							<p><?php echo DateTime::createFromFormat( 'm/d/Y', $val['date_posted'] )->format( 'M d, Y' ); ?>
-							</p>
-							<p>(Review on <?php echo $review_from[ $val['review_from'] ]; ?>)</p>
+							<p class="content-review-date"><?php echo DateTime::createFromFormat( 'm/d/Y', $val['date_posted'] )->format( 'M d, Y' ); ?></p>
+							<p>(Review on <span class="content-review-from"><?php echo $review_from[ $val['review_from'] ]; ?></span>)</p>
 						</div>
 					</div>
 
 					<div class="flex flex-col gap-2">
 						<div class="self-stretch space-y-2 font-normal leading-relaxed text-normal text-secondary">
-							<div class="font-normal line-clamp-3 review-content-body text-normal">
+							<div class="font-normal line-clamp-3 content-body text-normal">
 								<?php echo $val['review']; ?>
 							</div>
 							<button class="font-semibold review-content-toggler text-secondary" data-status="less" data-context="review-content" data-id="<?php echo $key; ?>-<?php echo $key_index; ?>">See More...</button>
@@ -209,7 +207,7 @@ $total_reviews = 0;
 					class="lg:col-span-2 flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]">
 					<div class="space-y-[8px]">
 						<div class="flex items-center justify-between">
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
+							<p class="leading-relaxed content-reviewer-name text-heading3 font-heading3 text-primary">
 							<?php echo $val['reviewer_name']; ?>
 							</p>
 
@@ -230,16 +228,14 @@ $total_reviews = 0;
 						</div>
 						<div
 							class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]">
-
-							<p><?php echo DateTime::createFromFormat( 'm/d/Y', $val['date_posted'] )->format( 'M d, Y' ); ?>
-							</p>
-							<p>(Review on <?php echo $review_from[ $val['review_from'] ]; ?>)</p>
+							<p class="content-review-date"><?php echo DateTime::createFromFormat( 'm/d/Y', $val['date_posted'] )->format( 'M d, Y' ); ?></p>
+							<p>(Review on <span class="content-review-from"><?php echo $review_from[ $val['review_from'] ]; ?></span>)</p>
 						</div>
 					</div>
 
 					<div class="flex flex-col gap-2">
 						<div class="self-stretch space-y-2 font-normal leading-relaxed text-normal text-secondary">
-							<div class="font-normal line-clamp-3 review-content-body text-normal">
+							<div class="font-normal line-clamp-3 content-body text-normal">
 								<?php echo $val['review']; ?>
 							</div>
 							<button class="font-semibold review-content-toggler text-secondary" data-status="less" data-context="review-content" data-id="<?php echo $key; ?>-<?php echo $key_index; ?>">See More...</button>
@@ -252,7 +248,7 @@ $total_reviews = 0;
 					class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[24px] py-[16px] item-start gap-[16px]">
 					<div class="space-y-[8px]">
 						<div class="flex items-center justify-between">
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
+							<p class="leading-relaxed text-heading3 content-reviewer-name font-heading3 text-primary">
 								<?php echo $val['reviewer_name']; ?>
 							</p>
 
@@ -294,15 +290,14 @@ $total_reviews = 0;
 						</div>
 						<div
 							class="flex items-center justify-between w-full text-captionBig font-captionBig text-secondary mt-[8px]">
-							<p><?php echo DateTime::createFromFormat( 'm/d/Y', $val['date_posted'] )->format( 'M d, Y' ); ?>
-							</p>
-							<p>(Review on <?php echo $review_from[ $val['review_from'] ]; ?>)</p>
+							<p class="content-review-date"><?php echo DateTime::createFromFormat( 'm/d/Y', $val['date_posted'] )->format( 'M d, Y' ); ?></p>
+							<p>(Review on <span class="content-review-from"><?php echo $review_from[ $val['review_from'] ]; ?></span>)</p>
 						</div>
 					</div>
 
 					<div class="flex flex-col justify-start gap-2">
 						<div class="self-stretch space-y-2 font-normal leading-relaxed text-normal text-secondary">
-							<div class="font-normal line-clamp-3 review-content-body text-normal">
+							<div class="font-normal line-clamp-3 content-body text-normal">
 								<?php echo $val['review']; ?>
 							</div>
 							<button class="font-semibold review-content-toggler text-secondary" data-status="less" data-context="review-content" data-id="<?php echo $key; ?>-<?php echo $key_index; ?>">See More...</button>
