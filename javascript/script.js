@@ -43,9 +43,19 @@ let swiper = new Swiper('#scoreCardContainer', {
 	},
 });
 
-let valueSwiper = new Swiper('.value-swiper-container', {
+let valueSwiper = new Swiper('#valueContainer', {
 	slidesPerView: 3,
 	spaceBetween: 24,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 24,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 24,
+		},
+	},
 });
 
 const swiperWrapper = document.querySelector('.swiper-wrapper');

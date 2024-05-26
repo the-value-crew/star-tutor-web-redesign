@@ -96,8 +96,8 @@ $wp_query = new WP_Query(
 				</h3>
 			</section>
 			<section id="valueContent" class="w-full">
-				<div class="value-swiper-container w-full">
-					<div class="swiper-wrapper w-full">
+				<div id="valueContainer">
+					<div class="swiper-wrapper">
 						<?php
 						if ( $wp_query->have_posts() ) {
 							while ( $wp_query->have_posts() ) {
