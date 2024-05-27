@@ -37,24 +37,12 @@ $wp_query = new WP_Query(
 
 				<?php if ( $post_count % 2 == 0 ) { ?>
 		<div class="flex gap-[111px] flex-col xl:flex-row justify-center items-start">
-
-			<!--
-					<?php
-					if ( has_post_thumbnail() ) {
-
-						the_post_thumbnail( 'large', array( 'class' => 'rounded-xl h-[459px] w-[348px]' ) );
-					}
-					?>
-					-->
-
 					<?php
 					if ( has_post_thumbnail() ) {
 						$thumbnail_url = get_the_post_thumbnail_url( null, 'large' );
-						echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover rounded-xl"></div>';
+						echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover bg-center rounded-xl"></div>';
 					}
 					?>
-
-
 
 			<div class="py-[20px] flex flex-col max-w-[624px] gap-[29px]">
 				<h1 class="font-heading1 text-heading1 text-primary">
@@ -359,7 +347,7 @@ $wp_query = new WP_Query(
 						<?php
 						if ( has_post_thumbnail() ) {
 							$thumbnail_url = get_the_post_thumbnail_url( null, 'large' );
-							echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover rounded-xl"></div>';
+							echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover bg-center rounded-xl"></div>';
 						}
 						?>
 

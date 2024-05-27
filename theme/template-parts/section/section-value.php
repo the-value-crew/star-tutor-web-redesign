@@ -14,7 +14,7 @@ $wp_query = new WP_Query(
 		<section
 			class="flex flex-col md:gap-[60px] gap-[40px] md:items-center 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]"
 			id="valueSection">
-			<section class="flex-col gap-4 overflow-hidden">
+			<section class="flex-col gap-4">
 				<section class="relative flex flex-col gap-2 md:items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" width="174" height="135" viewBox="0 0 174 135" fill="none"
 						class="absolute left-[-90px] top-[-75px] hidden xl:block">
@@ -107,7 +107,7 @@ $wp_query = new WP_Query(
 						<article
 							class="swiper-slide flex-grow overflow-hidden border border-transparent shadow-md rounded-xl bg-grey-100 hover:border-solid hover:border-brand-default">
 							<figure class="flex items-center justify-center overflow-hidden">
-								<div style="background-image: url('<?php echo get_field( 'reason_image' ); ?>');"
+								<div style="background-image: url('<?php echo get_the_post_thumbnail_url( null, 'large' ); ?>');"
 									class="bg-cover xl:h-[180px] 2xl:h-[180px] 2xl:w-[348px] xl:w-[333px] h-[220px] w-[328px] md:h-[350px] md:w-[600px] lg:h-[350px] lg:w-[452px] hover:scale-105 transition-all duration-300">
 								</div>
 							</figure>
