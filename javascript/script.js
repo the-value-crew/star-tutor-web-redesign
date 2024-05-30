@@ -633,6 +633,32 @@ if (reviewsContent) {
 	}
 }
 
+// why choose us page modal
+const reasonContentsBtn = document.querySelectorAll(
+	"button[data-context='reason-content']"
+);
+for (let btn of reasonContentsBtn) {
+	btn.addEventListener('click', (_) => {
+		const context = btn.getAttribute('data-context');
+		const id = btn.getAttribute('data-id');
+		const contentDiv = document.getElementById(`${context}-${id}`);
+		const review = {};
+		review['reviewContent'] =
+			contentDiv.querySelector('.content-body').textContent;
+		review['reviewFrom'] = contentDiv.querySelector(
+			'.content-review-from'
+		).textContent;
+		review['reviewDate'] = contentDiv.querySelector(
+			'.content-review-date'
+		).textContent;
+		review['reviewerName'] = contentDiv.querySelector(
+			'.content-reviewer-name'
+		).textContent;
+		const content = createReviewModalContent(review);
+		openModal(content);
+	});
+}
+
 function removeSeeMoreLessTogglerOnLessReviewContent(divs) {
 	const reviewContentDivs =
 		divs ?? document.querySelectorAll('[id^="review-content-*"]');

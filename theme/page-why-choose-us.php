@@ -39,11 +39,10 @@ $wp_query = new WP_Query(
 		<div class="flex gap-[111px] flex-col xl:flex-row justify-center items-start">
 					<?php
 					if ( has_post_thumbnail() ) {
-						$thumbnail_url = get_the_post_thumbnail_url( null, 'large' );
-						echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover bg-center rounded-xl"></div>';
+						$thumbnail_url = wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'reason_image' ) ), 'large', false );
+						echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="self-center xl:self-start bg-no-repeat bg-cover bg-center rounded-xl"></div>';
 					}
 					?>
-
 			<div class="py-[20px] flex flex-col max-w-[624px] gap-[29px]">
 				<h1 class="font-heading1 text-heading1 text-primary">
 					<?php the_title(); ?>
@@ -51,7 +50,7 @@ $wp_query = new WP_Query(
 				<div class="flex gap-[20px] lg:flex-row flex-col">
 
 					<div
-						class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
+						class="lg:w-[50%] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
 						<div class="flex gap-[4px]">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
 								fill="none">
@@ -86,30 +85,30 @@ $wp_query = new WP_Query(
 									fill="#E4C045" />
 							</svg>
 						</div>
-						<div class="flex flex-col gap-2">
+						<div id="reason-content-<?php echo get_the_ID(); ?>-review-1" class="flex flex-col gap-2">
 							<p class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-								<span class="visible-content">
-									<?php
-									$content = get_field( 'reason_review_1' );
-									if ( strlen( $content ) > 100 ) {
-										echo rtrim( substr( $content, 0, 100 ) ) . '...';
-									} else {
-										echo $content;
-									}
-									?>
-								</span><span class="extra-content" style="display: none;">
-									<?php echo ltrim( substr( get_field( 'reason_review_1' ), 90 ) ); ?>
+								<span class="line-clamp-3 content-body">
+									<?php echo get_field( 'reason_review_1' )->review; ?>
 								</span>
-								<br />
+								<button class="font-semibold reason-content-toggler text-secondary" data-status="less" data-context="reason-content" data-id="<?php echo get_the_ID(); ?>-review-1">See More...</button>
 							</p>
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-								<?php echo get_field( 'reason_review_1_author' ); ?>
-								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
-							</p>
+							<div class="leading-relaxed text-heading3 font-heading3 text-primary">
+								<span class="content-reviewer-name"><?php echo get_field( 'reason_review_1' )->reviewer_name; ?></span>
+								<span class="hidden content-review-date"><?php echo DateTime::createFromFormat( 'Ymd', get_field( 'reason_review_1' )->date_posted )->format( 'M d, Y' ); ?></span>
+								<p class="text-captionBig font-captionBig text-secondary">
+									(<span class="content-review-from">
+									<?php
+										$choices = get_field_object( 'review_from', $post_id = get_field( 'reason_review_1' )->ID )['choices'];
+										$key     = get_field( 'reason_review_1' )->review_from;
+										echo $choices[ $key ];
+									?>
+									</span>)
+								</p>
+							</div>
 						</div>
 					</div>
 					<div
-						class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
+						class="lg:w-[50%] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
 						<div class="flex gap-[4px]">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
 								fill="none">
@@ -144,27 +143,26 @@ $wp_query = new WP_Query(
 									fill="#E4C045" />
 							</svg>
 						</div>
-						<div class="flex flex-col gap-2">
+						<div id="reason-content-<?php echo get_the_ID(); ?>-review-2" class="flex flex-col gap-2">
 							<p class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-
-								<span class="visible-content">
-									<?php
-									$content = get_field( 'reason_review_2' );
-									if ( strlen( $content ) > 90 ) {
-										echo rtrim( substr( $content, 0, 90 ) ) . '...';
-									} else {
-										echo $content;
-									}
-									?>
-								</span><span class="extra-content" style="display: none;">
-									<?php echo ltrim( substr( get_field( 'reason_review_2' ), 90 ) ); ?>
+								<span class="line-clamp-3 content-body">
+									<?php echo get_field( 'reason_review_2' )->review; ?>
 								</span>
-								<br />
+								<button class="font-semibold reason-content-toggler text-secondary" data-status="less" data-context="reason-content" data-id="<?php echo get_the_ID(); ?>-review-2">See More...</button>
 							</p>
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-								<?php echo get_field( 'reason_review_2_author' ); ?>
-								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
-							</p>
+							<div class="leading-relaxed text-heading3 font-heading3 text-primary">
+								<span class="content-reviewer-name"><?php echo get_field( 'reason_review_2' )->reviewer_name; ?></span>
+								<span class="hidden content-review-date"><?php echo DateTime::createFromFormat( 'Ymd', get_field( 'reason_review_2' )->date_posted )->format( 'M d, Y' ); ?></span>
+								<p class="text-captionBig font-captionBig text-secondary">
+									(<span class="content-review-from">
+									<?php
+										$choices = get_field_object( 'review_from', $post_id = get_field( 'reason_review_2' )->ID )['choices'];
+										$key     = get_field( 'reason_review_2' )->review_from;
+										echo $choices[ $key ];
+									?>
+									</span>)
+								</p>
+							</div>
 						</div>
 					</div>
 
@@ -201,7 +199,7 @@ $wp_query = new WP_Query(
 				</h1>
 				<div class="flex gap-[20px] lg:flex-row flex-col">
 					<div
-						class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
+						class="lg:w-[50%] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
 						<div class="flex gap-[4px]">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
 								fill="none">
@@ -235,33 +233,31 @@ $wp_query = new WP_Query(
 									fill="#E4C045" />
 							</svg>
 						</div>
-						<div class="flex flex-col gap-2">
+						<div id="reason-content-<?php echo get_the_ID(); ?>-review-1" class="flex flex-col gap-2">
 							<p class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-								<span class="visible-content">
-									<?php
-									$content = get_field( 'reason_review_1' );
-									if ( strlen( $content ) > 100 ) {
-										echo rtrim( substr( $content, 0, 100 ) ) . '...';
-									} else {
-										echo $content;
-									}
-									?>
-								</span><span class="extra-content" style="display: none;">
-									<?php echo ltrim( substr( get_field( 'reason_review_1' ), 100 ) ); ?>
+								<span class="line-clamp-3 content-body">
+									<?php echo get_field( 'reason_review_1' )->review; ?>
 								</span>
-								<br />
+								<button class="font-semibold reason-content-toggler text-secondary" data-status="less" data-context="reason-content" data-id="<?php echo get_the_ID(); ?>-review-1">See More...</button>
 							</p>
 
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-
-								<?php echo get_field( 'reason_review_1_author' ); ?>
-
-								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
-							</p>
+							<div class="leading-relaxed text-heading3 font-heading3 text-primary">
+								<span class="content-reviewer-name"><?php echo get_field( 'reason_review_1' )->reviewer_name; ?></span>
+								<span class="hidden content-review-date"><?php echo DateTime::createFromFormat( 'Ymd', get_field( 'reason_review_1' )->date_posted )->format( 'M d, Y' ); ?></span>
+								<p class="text-captionBig font-captionBig text-secondary">
+									(<span class="content-review-from">
+									<?php
+										$choices = get_field_object( 'review_from', $post_id = get_field( 'reason_review_1' )->ID )['choices'];
+										$key     = get_field( 'reason_review_1' )->review_from;
+										echo $choices[ $key ];
+									?>
+									</span>)
+								</p>
+							</div>
 						</div>
 					</div>
 					<div
-						class="flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
+						class="lg:w-[50%] flex flex-col border border-solid border-grey-200 bg-grey-100 rounded-lg px-[20px] py-[10px] item-start gap-[16px]">
 						<div class="flex gap-[4px]">
 
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -298,28 +294,27 @@ $wp_query = new WP_Query(
 							</svg>
 						</div>
 
-						<div class="flex flex-col gap-2">
+						<div id="reason-content-<?php echo get_the_ID(); ?>-review-2"  class="flex flex-col gap-2">
 
 							<p class="self-stretch font-normal leading-relaxed text-normal text-secondary">
-								<span class="visible-content">
-									<?php
-									$content = get_field( 'reason_review_2' );
-									if ( strlen( $content ) > 100 ) {
-										echo rtrim( substr( $content, 0, 90 ) ) . '...';
-									} else {
-										echo $content;
-									}
-									?>
-								</span><span class="extra-content" style="display: none;">
-									<?php echo ltrim( substr( get_field( 'reason_review_2' ), 90 ) ); ?>
+								<span class="line-clamp-3 content-body">
+									<?php echo get_field( 'reason_review_2' )->review; ?>
 								</span>
-								<br />
+								<button class="font-semibold reason-content-toggler text-secondary" data-status="less" data-context="reason-content" data-id="<?php echo get_the_ID(); ?>-review-2">See More...</button>
 							</p>
-							<p class="leading-relaxed text-heading3 font-heading3 text-primary">
-								<?php echo get_field( 'reason_review_2_author' ); ?>
-								<span class="text-captionBig font-captionBig text-secondary">(Google)</span>
-
-							</p>
+							<div class="leading-relaxed text-heading3 font-heading3 text-primary">
+								<span class="content-reviewer-name"><?php echo get_field( 'reason_review_2' )->reviewer_name; ?></span>
+								<span class="hidden content-review-date"><?php echo DateTime::createFromFormat( 'Ymd', get_field( 'reason_review_2' )->date_posted )->format( 'M d, Y' ); ?></span>
+								<p class="text-captionBig font-captionBig text-secondary">
+									(<span class="content-review-from">
+									<?php
+										$choices = get_field_object( 'review_from', $post_id = get_field( 'reason_review_2' )->ID )['choices'];
+										$key     = get_field( 'reason_review_2' )->review_from;
+										echo $choices[ $key ];
+									?>
+									</span>)
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -346,8 +341,8 @@ $wp_query = new WP_Query(
 			</div>
 						<?php
 						if ( has_post_thumbnail() ) {
-							$thumbnail_url = get_the_post_thumbnail_url( null, 'large' );
-							echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="bg-no-repeat bg-cover bg-center rounded-xl"></div>';
+							$thumbnail_url = wp_get_attachment_image_url( attachment_url_to_postid( get_field( 'reason_image' ) ), 'large', false );
+							echo '<div style="background-image: url(' . esc_url( $thumbnail_url ) . '); height: 459px; width: 348px;" class="self-center xl:self-start bg-no-repeat bg-cover bg-center rounded-xl"></div>';
 						}
 						?>
 
