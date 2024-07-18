@@ -90,7 +90,7 @@ $wp_query = new WP_Query(
 					<?php echo the_field( 'blogs_title', 13 ); ?>
 				</section>
 				<h3 id="blogsHeading3"
-					class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile">
+					class="md:font-normal w-[60%] md:w-auto mx-auto text-center text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile">
 					<?php echo get_field( 'blogs_subheading', 13 ); ?>
 				</h3>
 			</section>

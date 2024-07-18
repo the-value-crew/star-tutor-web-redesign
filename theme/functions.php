@@ -149,7 +149,7 @@ add_action( 'widgets_init', 'thestartutor_widgets_init' );
  */
 function thestartutor_scripts() {
 	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/swiper-bundle.min.css', array(), THESTARTUTOR_VERSION, 'all' );
-	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), THESTARTUTOR_VERSION, true );
+	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js', array(), THESTARTUTOR_VERSION, true );
 
 	wp_enqueue_style( 'thestartutor-style', get_stylesheet_uri(), array(), THESTARTUTOR_VERSION, 'all' );
 	wp_enqueue_script( 'thestartutor-script', get_template_directory_uri() . '/js/script.min.js', array( 'swiper' ), THESTARTUTOR_VERSION, true );
