@@ -179,5 +179,5 @@ module.exports = {
 		// require('@tailwindcss/aspect-ratio'),
 		// require('@tailwindcss/container-queries'),
 	],
-	safelist: ['ml-[-102px]', 'ml-[-70px]'],
+	safelist: ['ml-[-102px]', 'mb-2', 'ml-[-70px]'],
 };
