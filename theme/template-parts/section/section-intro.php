@@ -66,7 +66,7 @@
 
 					<article class="flex flex-col items-start md:gap-[20px] gap-2" id="introContent">
 						<span
-							class="font-normal leading-relaxed text-secondary text-normal overflow-hidden h-[104px] xl:h-[156px] text-ellipsis w-full">
+							class="font-normal leading-relaxed text-secondary text-normal overflow-hidden text-ellipsis w-full">
 							<?php echo get_field( 'intro_content', 13 ); ?>
 
 						</span>

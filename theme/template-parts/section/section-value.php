@@ -95,7 +95,7 @@ $wp_query = new WP_Query(
 
 				</h3>
 			</section>
-			<section id="valueContent" class="w-full">
+			<section id="valueContent" class="w-full overflow-hidden">
 				<div id="valueContainer">
 					<div class="swiper-wrapper">
 						<?php

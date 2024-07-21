@@ -89,7 +89,7 @@ $videos_wp_query = new WP_Query(
 						<?php echo the_field( 'videos_title' ); ?>
 					</div>
 					<h3 id="videosSubTitle"
-						class="md:font-normal w-[60%] md:w-auto mx-auto text-center text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile">
+						class="md:font-normal mx-auto text-center text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile">
 						<?php echo the_field( 'videos_subheading' ); ?>
 					</h3>
 				</section>
