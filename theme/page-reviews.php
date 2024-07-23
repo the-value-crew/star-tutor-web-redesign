@@ -57,7 +57,7 @@ $total_reviews = 0;
 				</defs>
 			</svg>
 			<p class="font-title text-title text-primary">
-				We pride in having over <span class="text-brand"> 300 Reviews </span>
+				We pride in having over <span class="text-brand"> 250+ Reviews </span>
 			</p>
 
 			<div class="mt-[40px] flex gap-[40px] justify-start border-b border-surf border-solid border-grey-200 overflow-x-auto">

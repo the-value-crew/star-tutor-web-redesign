@@ -1,7 +1,7 @@
 	<!-- Contact section -->
 	<div class="container flex items-center justify-center w-full m-auto">
 		<div class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]">
-			<section id="contact" class=" flex flex-col gap-[60px] 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]">
+			<section class=" flex flex-col gap-[60px] 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]">
 				<div class="inline-flex flex-col gap-4 md:items-center">
 					<div class="relative flex flex-col gap-2 md:items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" width="173" height="100" viewBox="0 0 173 100" fill="none" class="absolute top-[-100px] hidden xl:block left-[60px]">
@@ -88,9 +88,11 @@
 						</article>
 					</div>
 
-					<?php
-					echo do_shortcode('[contact-form-7 title="Contact form"]');
-					?>
+					<div id="contact">
+						<?php
+						echo do_shortcode('[contact-form-7 title="Contact form"]');
+						?>
+					</div>
 
 		</div>
 		</section>
