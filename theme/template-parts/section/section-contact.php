@@ -2,7 +2,7 @@
 	<div class="container flex items-center justify-center w-full m-auto">
 		<div class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]">
 			<section class=" flex flex-col gap-[60px] 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]">
-				<div class="inline-flex flex-col gap-4 md:items-center">
+				<div id="contact" class="inline-flex flex-col gap-4 md:items-center">
 					<div class="relative flex flex-col gap-2 md:items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" width="173" height="100" viewBox="0 0 173 100" fill="none" class="absolute top-[-100px] hidden xl:block left-[60px]">
 							<g clip-path="url(#clip0_1075_1185)">
@@ -45,14 +45,14 @@
 
 				<section id="contactContent" class="flex 2xl:gap-[112px] lg:gap-[60px] gap-5 justify-center flex-col lg:flex-row">
 					<div class="flex flex-col gap-[39px] items-start lg:w-[463px]">
-						<figure>
+						<!-- <figure>
 							<iframe class="2xl:h-[372px] 2xl:w-[532px] lg:h-[480.6px] lg:w-[463px] md:w-[600px] md:h-[372px] w-[328px] h-[330px] rounded-lg" src="https://www.youtube.com/embed/mqbJqtfVvqs?si=BvBZKcAwup9A5jev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 								picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-							<!-- <img src="https://www.youtube.com/embed/mqbJqtfVvqs?si=BvBZKcAwup9A5jev"
+							<img src="https://www.youtube.com/embed/mqbJqtfVvqs?si=BvBZKcAwup9A5jev"
 								class="2xl:h-[372px] 2xl:w-[532px] lg:h-[480.6px] lg:w-[463px] md:w-[600px] md:h-[372px] w-[328px] h-[330px]">
-							</img> -->
-						</figure>
+							</img>
+						</figure> -->
 						<article class="space-y-2">
 							<div class="flex gap-[5px]">
 								<div class="w-[24px]">
@@ -88,7 +88,7 @@
 						</article>
 					</div>
 
-					<div id="contact">
+					<div>
 						<?php
 						echo do_shortcode('[contact-form-7 title="Contact form"]');
 						?>
