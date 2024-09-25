@@ -1495,6 +1495,11 @@ body{
   margin-right: auto;
 }
 
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1647,6 +1652,10 @@ body{
   aspect-ratio: 16 / 9;
 }
 
+.h-80{
+  height: 20rem;
+}
+
 .h-\[104px\]{
   height: 104px;
 }
@@ -1721,6 +1730,10 @@ body{
 
 .h-full{
   height: 100%;
+}
+
+.h-\[300px\]{
+  height: 300px;
 }
 
 .max-h-0{
@@ -3723,6 +3736,10 @@ html {
 
   .md\:h-\[634\.75px\]{
     height: 634.75px;
+  }
+
+  .md\:h-full{
+    height: 100%;
   }
 
   .md\:w-\[348px\]{
