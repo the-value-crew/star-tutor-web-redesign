@@ -45,14 +45,12 @@
 
 				<section id="contactContent" class="flex 2xl:gap-[112px] lg:gap-[60px] gap-5 justify-center flex-col lg:flex-row">
 					<div class="flex flex-col gap-[39px] items-start lg:w-[463px]">
-						<!-- <figure>
-							<iframe class="2xl:h-[372px] 2xl:w-[532px] lg:h-[480.6px] lg:w-[463px] md:w-[600px] md:h-[372px] w-[328px] h-[330px] rounded-lg" src="https://www.youtube.com/embed/mqbJqtfVvqs?si=BvBZKcAwup9A5jev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-								picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-							<img src="https://www.youtube.com/embed/mqbJqtfVvqs?si=BvBZKcAwup9A5jev"
-								class="2xl:h-[372px] 2xl:w-[532px] lg:h-[480.6px] lg:w-[463px] md:w-[600px] md:h-[372px] w-[328px] h-[330px]">
-							</img>
-						</figure> -->
+						<div style="position: relative; width: 100%; height: 100%;">
+						<video autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" controls="false">
+							<source src="https://res.cloudinary.com/dzswzpucc/video/upload/f_auto:video,q_auto/ssq6tgriniwwczyjc0wq" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						</div>
 						<article class="space-y-2">
 							<div class="flex gap-[5px]">
 								<div class="w-[24px]">
