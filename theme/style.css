@@ -1495,11 +1495,6 @@ body{
   margin-right: auto;
 }
 
-.my-10{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1652,10 +1647,6 @@ body{
   aspect-ratio: 16 / 9;
 }
 
-.h-80{
-  height: 20rem;
-}
-
 .h-\[104px\]{
   height: 104px;
 }
@@ -1730,10 +1721,6 @@ body{
 
 .h-full{
   height: 100%;
-}
-
-.h-\[300px\]{
-  height: 300px;
 }
 
 .max-h-0{
@@ -3294,6 +3281,7 @@ html {
 }
 
 .wpcf7-custom-form input{
+  width: 100%;
   border-radius: 4px;
   border-width: 1px;
   border-style: solid;
@@ -3320,6 +3308,7 @@ html {
 
 .wpcf7-custom-form textarea{
   height: 120px;
+  width: 100%;
   border-radius: 4px;
   border-width: 1px;
   border-style: solid;
@@ -3556,7 +3545,11 @@ html {
   padding-bottom: 24px;
 }
 
-.tst-single h2, .tst-single h3, .tst-single h4, .tst-single h5, .tst-single h6 {
+.tst-single h2,
+.tst-single h3,
+.tst-single h4,
+.tst-single h5,
+.tst-single h6 {
   padding-bottom: 8px;
 }
 
@@ -3564,7 +3557,8 @@ html {
   margin: 24px 0px;
 }
 
-.aboutme--tabcontent p, .myhobby--tabcontent p {
+.aboutme--tabcontent p,
+.myhobby--tabcontent p {
   padding-bottom: 24px;
 }
 

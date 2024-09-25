@@ -78,7 +78,7 @@
 	                </div>
 	                <h3 id="contactHeading3"
 	                    class="md:font-normal text-secondary md:text-heading3 font-subtitle_mobile text-subtitle_mobile">
-	                    <?php echo get_field('contact_subheading', 13); ?>
+	                    <?php echo get_field('contact_subheading', 13); ?>.
 
 	                </h3>
 	            </div>
@@ -107,7 +107,7 @@
 	                                </svg>
 	                            </div>
 	                            <p class="font-normal text-secondary text-normal">
-	                                <?php echo get_field('contact_content_1', 13); ?>
+	                                <?php echo get_field('contact_content_1', 13); ?>.
 	                            </p>
 	                        </div>
 	                        <div class="flex gap-[5px]">
@@ -120,7 +120,7 @@
 	                                </svg>
 	                            </div>
 	                            <p class="font-normal text-secondary text-normal">
-	                                <?php echo get_field('contact_content_2', 13); ?>
+	                                <?php echo get_field('contact_content_2', 13); ?>.
 
 	                            </p>
 	                        </div>
@@ -134,7 +134,7 @@
 	                                </svg>
 	                            </div>
 	                            <p class="font-normal text-secondary text-normal">
-	                                <?php echo get_field('contact_content_3', 13); ?>
+	                                <?php echo get_field('contact_content_3', 13); ?>.
 	                            </p>
 	                        </div>
 	                    </article>
