@@ -439,7 +439,6 @@ html {
 		transition: 2s;
 	}
 
-
 	#valueSection {
 		opacity: 0.1;
 	}
@@ -603,11 +602,11 @@ html {
 }
 
 .wpcf7-custom-form input {
-	@apply md:w-[440px] lg:w-[421px] p-[10px] border rounded-[4px] border-solid border-grey-300 bg-surface-primary text-captionBig font-captionBig;
+	@apply w-full md:w-[440px] lg:w-[421px] p-[10px] border rounded-[4px] border-solid border-grey-300 bg-surface-primary text-captionBig font-captionBig;
 }
 
 .wpcf7-custom-form textarea {
-	@apply md:w-[440px] lg:w-[421px] h-[120px] pt-[17px] pl-[10px] pb-[11px] pr-[16px] border rounded-[4px] border-solid border-grey-300 bg-surface-primary text-captionBig font-captionBig;
+	@apply w-full md:w-[440px] lg:w-[421px] h-[120px] pt-[17px] pl-[10px] pb-[11px] pr-[16px] border rounded-[4px] border-solid border-grey-300 bg-surface-primary text-captionBig font-captionBig;
 }
 
 .wpcf7-custom-form input[type="submit"] {
@@ -788,7 +787,11 @@ html {
 	padding-bottom: 24px;
 }
 
-.tst-single h2, .tst-single h3, .tst-single h4, .tst-single h5, .tst-single h6 {
+.tst-single h2,
+.tst-single h3,
+.tst-single h4,
+.tst-single h5,
+.tst-single h6 {
 	padding-bottom: 8px;
 }
 
@@ -796,6 +799,7 @@ html {
 	margin: 24px 0px;
 }
 
-.aboutme--tabcontent p, .myhobby--tabcontent p {
+.aboutme--tabcontent p,
+.myhobby--tabcontent p {
 	padding-bottom: 24px;
 }
