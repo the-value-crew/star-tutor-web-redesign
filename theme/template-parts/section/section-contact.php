@@ -3,7 +3,7 @@
 	    <div class="2xl:w-[1084px] xl:w-[1040px] lg:w-[942px] md:w-[597px] w-[327px]">
 	        <section class=" flex flex-col gap-[60px] 2xl:mb-[320px] xl:mb-[200px] lg:mb-[140px] md:mb-[120px] mb-[80px]">
 
-	            <div id="contact" class="inline-flex flex-col gap-4 md:items-center">
+	            <div class="inline-flex flex-col gap-4 md:items-center">
 	                <div class="relative flex flex-col gap-2 md:items-center">
 	                    <svg xmlns="http://www.w3.org/2000/svg" width="173" height="100" viewBox="0 0 173 100" fill="none"
 	                        class="absolute top-[-100px] hidden xl:block left-[60px]">
@@ -84,8 +84,9 @@
 	            </div>
 
 	            <section id="contactContent"
+				
 	                class="flex 2xl:gap-[112px] lg:gap-[60px] gap-5 justify-center flex-col lg:flex-row">
-	                <div class="flex flex-col gap-[39px] items-start lg:w-[463px]">
+	                <div class="flex flex-col gap-[39px] items-start lg:w-[463px]" id="contact">
 	                    <div class="relative w-full h-[350px] md:h-full">
 	                        <video autoplay muted loop
 	                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
@@ -96,7 +97,7 @@
 	                            Your browser does not support the video tag.
 	                        </video>
 	                    </div>
-	                    <article class="space-y-2">
+	                    <article class="space-y-2"  >
 	                        <div class="flex gap-[5px]">
 	                            <div class="w-[24px]">
 	                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
